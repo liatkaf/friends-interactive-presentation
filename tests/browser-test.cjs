@@ -9,7 +9,7 @@ const { pathToFileURL } = require('node:url');
 const pause = ms => new Promise(resolve=>setTimeout(resolve,ms));
 const port = 9341;
 const root=path.resolve(__dirname,'..');
-const base='http://127.0.0.1:8000';
+const base=process.env.TEST_BASE || 'http://127.0.0.1:8000';
 const edge=process.env.BROWSER_PATH || 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe';
 let browser,ws,send,ownedBrowser=false;
 (async()=>{
@@ -88,7 +88,7 @@ let browser,ws,send,ownedBrowser=false;
 
 
   await check("slides.length===12 && sections.length===12 && document.querySelectorAll('.dot').length===12",'exactly twelve slides and navigation indicators');
-  const expected=['Welcome to Central Perk','Modern Anxiety & Mental Overload','Why Do We Rewatch Friends?','The Science of Predictability','PIVOT! The 3D Experience','Friends Who Feel Like Family','Giving Your Brain a Break','The Nostalgia Effect','Iconic Quotes & Emotional Triggers','The Anxiety Simulator','Customize Your Comfort Zone',"I'll Be There for You"];
+  const expected=['Welcome to Central Perk','Modern Anxiety & Mental Overload','Why Do We Rewatch Friends?','The Science of Predictability','PIVOT! The 3D Experience','Friends Who Feel Like Family','Giving Your Brain a Break','The Nostalgia Effect','Iconic Quotes & Emotional Triggers','The Anxiety Simulator','Customize Your Comfort Zone','The One With Your Perfect Episode'];
   test(JSON.stringify(await evaluate('slides.map(s=>s.title)'))===JSON.stringify(expected),'required slide order');
   await evaluate("goTo(1); document.querySelector('#stress').value=90; document.querySelector('#stress').dispatchEvent(new Event('input'))");
   await check("document.querySelector('#stress-meter').value===90 && document.querySelector('#stress-value').textContent.includes('90')",'stress meter updates');
@@ -124,6 +124,53 @@ let browser,ws,send,ownedBrowser=false;
   await evaluate("document.querySelector('#comfort-reset').click()");
   await check("document.body.dataset.comfortColor==='classic' && document.body.dataset.comfortFont==='classic' && document.body.dataset.comfortMood==='classic' && sections[8].dataset.quoteMood===''",'reset restores defaults including quote mood');
   await check("document.querySelectorAll('#slide-12 .references a').length===3",'accessible reference links');
+  // Version 0.5: real local Python, original assets, profile and research explorer.
+  await waitFor("window.FriendsLab && document.querySelector('#simulation-engine').textContent.includes('Python 3')",'Python simulator execution',30000);
+  await check("FriendsLab.episodes.length===22",'22 curated real episodes');
+  await check("[...document.querySelectorAll('.original-art')].every(img=>img.complete && img.naturalWidth>0)",'original artwork loads');
+  await evaluate("goTo(2);document.querySelector('[data-metric=loneliness]').click();document.querySelector('[data-research]').focus()");
+  await check("document.querySelector('#research-tooltip').textContent.includes('2.64') && document.querySelector('#research-axis').textContent.includes('reverse-scored')",'published loneliness chart and accessible tooltip');
+  await evaluate("document.querySelector('#slide-3 .evidence-open').click()");
+  await check("document.querySelector('#research-explorer').open",'research modal opens');
+  for(let i=0;i<7;i++){
+    await evaluate(`document.querySelector('[data-figure="${i}"]').click()`);
+    await waitFor("document.querySelector('#evidence-image').complete && document.querySelector('#evidence-image').naturalWidth>0",'original figure '+i);
+    await check(`document.querySelector('#evidence-image').src.includes(FriendsLab.figures[${i}][3]) && document.querySelector('#figure-explanation').textContent.length>50`,'figure identity and explanation '+i);
+  }
+  await evaluate("document.querySelector('[data-figure=\"3\"]').click()");
+  await check("document.querySelector('#figure-explanation').textContent.includes('not significant at .05')",'marginal rejection evidence distinguished');
+  await evaluate("document.querySelector('#enlarge-figure').click()");
+  await check("document.querySelector('#research-explorer').classList.contains('enlarged')",'figure enlargement');
+  await screenshot('v05-research-explorer');
+  await send('Input.dispatchKeyEvent',{type:'keyDown',key:'Escape',code:'Escape',windowsVirtualKeyCode:27});
+  await send('Input.dispatchKeyEvent',{type:'keyUp',key:'Escape',code:'Escape',windowsVirtualKeyCode:27});
+  await check("!document.querySelector('#research-explorer').open && document.activeElement.classList.contains('evidence-open')",'Escape closes dialog and restores focus');
+  await evaluate("goTo(1);document.querySelector('#profile-stress').value=8;document.querySelector('#profile-stress').dispatchEvent(new Event('input'));goTo(5);document.querySelector('[data-profile=character]').value='Ross';document.querySelector('[data-profile=character]').dispatchEvent(new Event('change'));goTo(8);document.querySelector('[data-quote=orange]').click();goTo(11)");
+  await waitFor("document.querySelector('#recommendation-status').textContent.includes('Python 3')",'Python recommendation execution',30000);
+  await check("FriendsLab.profile.stress===8 && FriendsLab.profile.character==='Ross' && FriendsLab.profile.quote==='PIVOT!'",'progressive answers persist across navigation');
+  await check("document.querySelector('.top-pick h3').textContent==='The One with the Cop' && document.querySelectorAll('.episode-result').length===3",'specific episode and two alternatives');
+  await evaluate("document.querySelector('#why-episode').click()");
+  await check("!document.querySelector('#score-details').hidden && document.querySelector('#score-details').textContent.includes('18 / 18')",'actual scoring breakdown exposed');
+  await screenshot('v05-recommendation');
+  await evaluate("document.querySelector('#try-again').click()");
+  await check("document.querySelector('#revise-profile').open",'Try Again opens profile editor');
+  await evaluate("document.querySelector('#surprise-me').click()");
+  await waitFor("document.querySelector('#recommendation-status').textContent.includes('random discovery')",'Surprise Me returns real episode',30000);
+  await check("document.querySelector('.top-pick h3').textContent!=='The One with the Cop' && FriendsLab.episodes.some(e=>e.title===document.querySelector('.top-pick h3').textContent)",'surprise changes to verified catalog entry');
+  const parity=await evaluate(`(async()=>{const profiles=[{}, {quote:'PIVOT!'}, {mood:'overwhelmed',stress:10,character:'Phoebe',quote:'Smelly Cat',nostalgia:'low',familiarity:'new',predictability:'surprising',experience:'warmth'}];for(const p of profiles){const result=await(await fetch('/api/recommend',{method:'POST',body:JSON.stringify(p)})).json();const js=FriendsLab.episodes.map(e=>FriendsLab.fallbackScore(e,p)).sort((a,b)=>b.score-a.score||a.episode.season-b.episode.season||a.episode.episode-b.episode.episode).slice(0,3);const canonical=x=>JSON.stringify(x,(_,v)=>v && typeof v==='object' && !Array.isArray(v)?Object.fromEntries(Object.entries(v).sort(([a],[b])=>a.localeCompare(b))):v);if(canonical(result.recommendations)!==canonical(js))return {python:result.recommendations,js};}return true;})()`);
+  assert.equal(parity,true,JSON.stringify(parity));checks++;
+  await send('Page.reload');
+  await waitFor("window.FriendsLab && FriendsLab.profile.stress===8 && FriendsLab.profile.quote==='PIVOT!'",'profile survives tab reload');
+  await evaluate("document.querySelector('#reset-profile').click()");
+  await waitFor("Object.keys(FriendsLab.profile).length===0 && document.querySelector('#recommendation-status').textContent.includes('Python 3')",'reset and incomplete profile handled',30000);
+  await check("document.querySelector('.top-pick').textContent.includes('0.00%')",'empty profile never invents a confidence score');
+  await evaluate("window.originalLabFetch=window.fetch;window.fetch=(url,...args)=>String(url).startsWith('/api/')?Promise.reject(Error('Test unavailable Python')):window.originalLabFetch(url,...args);FriendsLab.loadRecommendation()");
+  await waitFor("document.querySelector('#recommendation-status').textContent.includes('JavaScript fallback')",'unavailable Python labeled fallback');
+  await evaluate("FriendsLab.drawComfort()");
+  await waitFor("document.querySelector('#simulation-engine').textContent.includes('JavaScript illustrative fallback')",'simulation fallback');
+  await evaluate("window.fetch=window.originalLabFetch;goTo(10);document.querySelector('#comfort-size').value='1.3';document.querySelector('#comfort-size').dispatchEvent(new Event('change'));document.querySelector('#quiet-motion').click()");
+  await check("document.body.classList.contains('quiet-motion') && getComputedStyle(document.documentElement).getPropertyValue('--lab-font-scale')==='1.3'",'font size and decorative motion controls');
+  await evaluate("document.querySelector('#comfort-reset').click()");
   for(const i of [2,4,5,9,10,11]){await evaluate('goTo('+i+')');await pause(400);await screenshot('v04-slide-'+(i+1));}
 
   for(let i=0;i<12;i++){

@@ -1,0 +1,27 @@
+{
+  "source": "Derrick, Gabriel, & Hugenberg (2009), Study 1, Table 1, p. 355",
+  "doi": "https://doi.org/10.1016/j.jesp.2008.12.003",
+  "note": "Undergraduate self-reports, not Friends-specific. Doing: 1 (definitely would not do) to 7 (definitely would do). Loneliness: reverse-scored 1\u20137; lower means less likely to feel lonely. Not clinical anxiety scores. Descriptive means, not causal effects.",
+  "activities": [
+    {
+      "activity": "Favorite TV program",
+      "doing": 5.81,
+      "loneliness": 2.64
+    },
+    {
+      "activity": "Whatever is on television",
+      "doing": 4.86,
+      "loneliness": 3.69
+    },
+    {
+      "activity": "Favorite music",
+      "doing": 5.82,
+      "loneliness": 2.97
+    },
+    {
+      "activity": "Favorite movie",
+      "doing": 5.0,
+      "loneliness": 3.43
+    }
+  ]
+}

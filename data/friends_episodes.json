@@ -1,0 +1,723 @@
+{
+  "verified_on": "2026-11-01",
+  "provenance": "Episode titles, numbers and plot associations checked against TV Guide season listings. PIVOT: S5E16; greeting: S4E13; Smelly Cat performance/recording: S2E6/S2E17. Ratings 1\u20135 and all comfort tags are editorial, not measured research.",
+  "episodes": [
+    {
+      "id": "s01e01",
+      "season": 1,
+      "episode": 1,
+      "title": "The One Where Monica Gets a Roommate",
+      "description": "Rachel starts over with help from an old friend.",
+      "characters": [
+        "Rachel",
+        "Monica"
+      ],
+      "moments": [
+        "A new arrival at Central Perk"
+      ],
+      "quotes": [],
+      "comedy": 3,
+      "warmth": 5,
+      "nostalgia": 5,
+      "beginner_friendly": true,
+      "mood_tags": [
+        "lonely",
+        "sad",
+        "overwhelmed",
+        "stressed"
+      ],
+      "story_tags": [
+        "predictable"
+      ],
+      "familiarity_tags": [
+        "standalone"
+      ],
+      "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+    },
+    {
+      "id": "s01e03",
+      "season": 1,
+      "episode": 3,
+      "title": "The One with the Thumb",
+      "description": "Phoebe discovers an unusual problem with a soda.",
+      "characters": [
+        "Phoebe",
+        "Chandler"
+      ],
+      "moments": [
+        "An unexpected soda discovery"
+      ],
+      "quotes": [],
+      "comedy": 4,
+      "warmth": 3,
+      "nostalgia": 4,
+      "beginner_friendly": true,
+      "mood_tags": [
+        "bored",
+        "happy"
+      ],
+      "story_tags": [
+        "surprising"
+      ],
+      "familiarity_tags": [
+        "standalone"
+      ],
+      "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+    },
+    {
+      "id": "s01e07",
+      "season": 1,
+      "episode": 7,
+      "title": "The One with the Blackout",
+      "description": "A power outage brings the friends together.",
+      "characters": [
+        "Chandler",
+        "Ross",
+        "Rachel"
+      ],
+      "moments": [
+        "A citywide blackout"
+      ],
+      "quotes": [],
+      "comedy": 4,
+      "warmth": 5,
+      "nostalgia": 5,
+      "beginner_friendly": true,
+      "mood_tags": [
+        "lonely",
+        "stressed",
+        "overwhelmed",
+        "stressed"
+      ],
+      "story_tags": [
+        "predictable"
+      ],
+      "familiarity_tags": [
+        "standalone"
+      ],
+      "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+    },
+    {
+      "id": "s01e09",
+      "season": 1,
+      "episode": 9,
+      "title": "The One Where Underdog Gets Away",
+      "description": "Thanksgiving plans take an unexpected turn.",
+      "characters": [
+        "Monica",
+        "Rachel",
+        "Joey"
+      ],
+      "moments": [
+        "An escaped parade balloon"
+      ],
+      "quotes": [],
+      "comedy": 4,
+      "warmth": 5,
+      "nostalgia": 5,
+      "beginner_friendly": true,
+      "mood_tags": [
+        "lonely",
+        "sad",
+        "overwhelmed",
+        "stressed"
+      ],
+      "story_tags": [
+        "surprising"
+      ],
+      "familiarity_tags": [
+        "standalone"
+      ],
+      "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+    },
+    {
+      "id": "s01e10",
+      "season": 1,
+      "episode": 10,
+      "title": "The One with the Monkey",
+      "description": "New Year plans come with unexpected company.",
+      "characters": [
+        "Ross",
+        "Phoebe",
+        "Joey"
+      ],
+      "moments": [
+        "Marcel arrives"
+      ],
+      "quotes": [],
+      "comedy": 4,
+      "warmth": 4,
+      "nostalgia": 4,
+      "beginner_friendly": true,
+      "mood_tags": [
+        "bored",
+        "happy",
+        "overwhelmed",
+        "stressed"
+      ],
+      "story_tags": [
+        "surprising"
+      ],
+      "familiarity_tags": [
+        "standalone"
+      ],
+      "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+    },
+    {
+      "id": "s01e12",
+      "season": 1,
+      "episode": 12,
+      "title": "The One with the Dozen Lasagnas",
+      "description": "Monica has more food than she knows what to do with.",
+      "characters": [
+        "Monica",
+        "Rachel",
+        "Ross"
+      ],
+      "moments": [
+        "A surplus of lasagnas"
+      ],
+      "quotes": [],
+      "comedy": 3,
+      "warmth": 4,
+      "nostalgia": 4,
+      "beginner_friendly": true,
+      "mood_tags": [
+        "stressed",
+        "overwhelmed",
+        "overwhelmed",
+        "stressed"
+      ],
+      "story_tags": [
+        "predictable"
+      ],
+      "familiarity_tags": [
+        "standalone"
+      ],
+      "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+    },
+    {
+      "id": "s01e18",
+      "season": 1,
+      "episode": 18,
+      "title": "The One with All the Poker",
+      "description": "The friends bring their competitive sides to a card game.",
+      "characters": [
+        "Rachel",
+        "Ross",
+        "Monica"
+      ],
+      "moments": [
+        "A group poker game"
+      ],
+      "quotes": [],
+      "comedy": 5,
+      "warmth": 4,
+      "nostalgia": 5,
+      "beginner_friendly": true,
+      "mood_tags": [
+        "bored",
+        "happy"
+      ],
+      "story_tags": [
+        "predictable"
+      ],
+      "familiarity_tags": [
+        "standalone"
+      ],
+      "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+    },
+    {
+      "id": "s01e23",
+      "season": 1,
+      "episode": 23,
+      "title": "The One with the Birth",
+      "description": "The group gathers at the hospital for a big day.",
+      "characters": [
+        "Ross",
+        "Phoebe",
+        "Joey"
+      ],
+      "moments": [
+        "Waiting at the hospital"
+      ],
+      "quotes": [],
+      "comedy": 3,
+      "warmth": 5,
+      "nostalgia": 4,
+      "beginner_friendly": false,
+      "mood_tags": [
+        "lonely",
+        "sad",
+        "overwhelmed",
+        "stressed"
+      ],
+      "story_tags": [
+        "predictable"
+      ],
+      "familiarity_tags": [
+        "continuity"
+      ],
+      "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+    },
+    {
+      "id": "s02e06",
+      "season": 2,
+      "episode": 6,
+      "title": "The One with the Baby on the Bus",
+      "description": "Babysitting becomes an adventure while Phoebe faces a cafe change.",
+      "characters": [
+        "Joey",
+        "Chandler",
+        "Phoebe"
+      ],
+      "moments": [
+        "A bus mishap; Smelly Cat"
+      ],
+      "quotes": [
+        "Smelly Cat"
+      ],
+      "comedy": 5,
+      "warmth": 4,
+      "nostalgia": 5,
+      "beginner_friendly": true,
+      "mood_tags": [
+        "bored",
+        "happy"
+      ],
+      "story_tags": [
+        "surprising"
+      ],
+      "familiarity_tags": [
+        "standalone"
+      ],
+      "source": "https://www.tvguide.com/tvshows/friends/episodes-season-2/1030937287/"
+    },
+    {
+      "id": "s02e07",
+      "season": 2,
+      "episode": 7,
+      "title": "The One Where Ross Finds Out",
+      "description": "An unexpected message complicates an old friendship.",
+      "characters": [
+        "Rachel",
+        "Ross",
+        "Monica"
+      ],
+      "moments": [
+        "A revealing voicemail"
+      ],
+      "quotes": [],
+      "comedy": 4,
+      "warmth": 4,
+      "nostalgia": 5,
+      "beginner_friendly": false,
+      "mood_tags": [
+        "sad",
+        "happy",
+        "overwhelmed",
+        "stressed"
+      ],
+      "story_tags": [
+        "surprising"
+      ],
+      "familiarity_tags": [
+        "continuity"
+      ],
+      "source": "https://www.tvguide.com/tvshows/friends/episodes-season-2/1030937287/"
+    },
+    {
+      "id": "s02e14",
+      "season": 2,
+      "episode": 14,
+      "title": "The One with the Prom Video",
+      "description": "An old home video gives the group a new perspective.",
+      "characters": [
+        "Rachel",
+        "Ross",
+        "Monica"
+      ],
+      "moments": [
+        "The prom home video"
+      ],
+      "quotes": [],
+      "comedy": 3,
+      "warmth": 5,
+      "nostalgia": 5,
+      "beginner_friendly": false,
+      "mood_tags": [
+        "sad",
+        "lonely",
+        "overwhelmed",
+        "stressed"
+      ],
+      "story_tags": [
+        "predictable"
+      ],
+      "familiarity_tags": [
+        "continuity"
+      ],
+      "source": "https://www.tvguide.com/tvshows/friends/episodes-season-2/1030937287/"
+    },
+    {
+      "id": "s02e17",
+      "season": 2,
+      "episode": 17,
+      "title": "The One Where Eddie Moves In",
+      "description": "New living arrangements unsettle the familiar routine.",
+      "characters": [
+        "Joey",
+        "Chandler",
+        "Phoebe"
+      ],
+      "moments": [
+        "Smelly Cat recording"
+      ],
+      "quotes": [
+        "Smelly Cat"
+      ],
+      "comedy": 4,
+      "warmth": 4,
+      "nostalgia": 5,
+      "beginner_friendly": false,
+      "mood_tags": [
+        "sad",
+        "bored",
+        "overwhelmed",
+        "stressed"
+      ],
+      "story_tags": [
+        "surprising"
+      ],
+      "familiarity_tags": [
+        "continuity"
+      ],
+      "source": "https://www.tvguide.com/tvshows/friends/episodes-season-2/1030937287/"
+    },
+    {
+      "id": "s03e02",
+      "season": 3,
+      "episode": 2,
+      "title": "The One Where No One's Ready",
+      "description": "Getting everyone ready for a formal event proves difficult.",
+      "characters": [
+        "Ross",
+        "Joey",
+        "Chandler"
+      ],
+      "moments": [
+        "A battle over a chair"
+      ],
+      "quotes": [],
+      "comedy": 5,
+      "warmth": 3,
+      "nostalgia": 5,
+      "beginner_friendly": true,
+      "mood_tags": [
+        "bored",
+        "happy"
+      ],
+      "story_tags": [
+        "predictable"
+      ],
+      "familiarity_tags": [
+        "standalone"
+      ],
+      "source": "https://www.tvguide.com/tvshows/friends/episodes-season-3/1030937287/"
+    },
+    {
+      "id": "s03e09",
+      "season": 3,
+      "episode": 9,
+      "title": "The One with the Football",
+      "description": "A friendly Thanksgiving game becomes a sibling rivalry.",
+      "characters": [
+        "Monica",
+        "Ross",
+        "Rachel"
+      ],
+      "moments": [
+        "The Geller Cup"
+      ],
+      "quotes": [],
+      "comedy": 5,
+      "warmth": 4,
+      "nostalgia": 5,
+      "beginner_friendly": true,
+      "mood_tags": [
+        "bored",
+        "happy"
+      ],
+      "story_tags": [
+        "predictable"
+      ],
+      "familiarity_tags": [
+        "standalone"
+      ],
+      "source": "https://www.tvguide.com/tvshows/friends/episodes-season-3/1030937287/"
+    },
+    {
+      "id": "s04e08",
+      "season": 4,
+      "episode": 8,
+      "title": "The One with Chandler in a Box",
+      "description": "Thanksgiving includes an unusual attempt at making amends.",
+      "characters": [
+        "Chandler",
+        "Joey",
+        "Monica"
+      ],
+      "moments": [
+        "A box at Thanksgiving"
+      ],
+      "quotes": [],
+      "comedy": 4,
+      "warmth": 5,
+      "nostalgia": 4,
+      "beginner_friendly": false,
+      "mood_tags": [
+        "sad",
+        "lonely",
+        "overwhelmed",
+        "stressed"
+      ],
+      "story_tags": [
+        "surprising"
+      ],
+      "familiarity_tags": [
+        "continuity"
+      ],
+      "source": "https://www.tvguide.com/tvshows/friends/episodes-season-4/1030937287/"
+    },
+    {
+      "id": "s04e12",
+      "season": 4,
+      "episode": 12,
+      "title": "The One with the Embryos",
+      "description": "A trivia challenge tests how well the friends know each other.",
+      "characters": [
+        "Monica",
+        "Rachel",
+        "Joey",
+        "Chandler",
+        "Ross",
+        "Phoebe"
+      ],
+      "moments": [
+        "The apartment trivia contest"
+      ],
+      "quotes": [],
+      "comedy": 5,
+      "warmth": 5,
+      "nostalgia": 5,
+      "beginner_friendly": true,
+      "mood_tags": [
+        "bored",
+        "happy",
+        "lonely"
+      ],
+      "story_tags": [
+        "surprising"
+      ],
+      "familiarity_tags": [
+        "standalone"
+      ],
+      "source": "https://www.tvguide.com/tvshows/friends/episodes-season-4/1030937287/"
+    },
+    {
+      "id": "s04e13",
+      "season": 4,
+      "episode": 13,
+      "title": "The One with Rachel's Crush",
+      "description": "Rachel explores a crush as the apartments feel different.",
+      "characters": [
+        "Rachel",
+        "Joey",
+        "Chandler"
+      ],
+      "moments": [
+        "Joey offers his signature greeting"
+      ],
+      "quotes": [
+        "How you doin'?"
+      ],
+      "comedy": 4,
+      "warmth": 3,
+      "nostalgia": 4,
+      "beginner_friendly": false,
+      "mood_tags": [
+        "bored",
+        "happy"
+      ],
+      "story_tags": [
+        "predictable"
+      ],
+      "familiarity_tags": [
+        "continuity"
+      ],
+      "source": "https://www.tvguide.com/tvshows/friends/episodes-season-4/1030937287/"
+    },
+    {
+      "id": "s05e08",
+      "season": 5,
+      "episode": 8,
+      "title": "The One with All the Thanksgivings",
+      "description": "The friends look back on memorable holiday mishaps.",
+      "characters": [
+        "Monica",
+        "Chandler",
+        "Ross",
+        "Rachel"
+      ],
+      "moments": [
+        "Thanksgiving flashbacks"
+      ],
+      "quotes": [],
+      "comedy": 5,
+      "warmth": 5,
+      "nostalgia": 5,
+      "beginner_friendly": false,
+      "mood_tags": [
+        "sad",
+        "lonely",
+        "happy"
+      ],
+      "story_tags": [
+        "surprising"
+      ],
+      "familiarity_tags": [
+        "continuity"
+      ],
+      "source": "https://www.tvguide.com/tvshows/friends/episodes-season-5/1030937287/"
+    },
+    {
+      "id": "s05e14",
+      "season": 5,
+      "episode": 14,
+      "title": "The One Where Everybody Finds Out",
+      "description": "A secret inspires a playful contest of bluffing.",
+      "characters": [
+        "Phoebe",
+        "Chandler",
+        "Monica",
+        "Rachel"
+      ],
+      "moments": [
+        "They know that we know"
+      ],
+      "quotes": [],
+      "comedy": 5,
+      "warmth": 5,
+      "nostalgia": 5,
+      "beginner_friendly": false,
+      "mood_tags": [
+        "bored",
+        "happy"
+      ],
+      "story_tags": [
+        "surprising"
+      ],
+      "familiarity_tags": [
+        "continuity"
+      ],
+      "source": "https://www.tvguide.com/tvshows/friends/episodes-season-5/1030937287/"
+    },
+    {
+      "id": "s05e16",
+      "season": 5,
+      "episode": 16,
+      "title": "The One with the Cop",
+      "description": "Moving a sofa turns into a very vocal group effort.",
+      "characters": [
+        "Ross",
+        "Rachel",
+        "Chandler",
+        "Phoebe"
+      ],
+      "moments": [
+        "PIVOT! on the staircase"
+      ],
+      "quotes": [
+        "PIVOT!"
+      ],
+      "comedy": 5,
+      "warmth": 3,
+      "nostalgia": 5,
+      "beginner_friendly": true,
+      "mood_tags": [
+        "bored",
+        "happy"
+      ],
+      "story_tags": [
+        "predictable"
+      ],
+      "familiarity_tags": [
+        "standalone"
+      ],
+      "source": "https://www.tvguide.com/tvshows/friends/episodes-season-5/1030937287/"
+    },
+    {
+      "id": "s06e09",
+      "season": 6,
+      "episode": 9,
+      "title": "The One Where Ross Got High",
+      "description": "Thanksgiving secrets emerge while Rachel tries a recipe.",
+      "characters": [
+        "Monica",
+        "Ross",
+        "Rachel",
+        "Chandler"
+      ],
+      "moments": [
+        "The trifle"
+      ],
+      "quotes": [],
+      "comedy": 5,
+      "warmth": 4,
+      "nostalgia": 5,
+      "beginner_friendly": true,
+      "mood_tags": [
+        "bored",
+        "happy"
+      ],
+      "story_tags": [
+        "surprising"
+      ],
+      "familiarity_tags": [
+        "standalone"
+      ],
+      "source": "https://www.tvguide.com/tvshows/friends/episodes-season-6/1030937287/"
+    },
+    {
+      "id": "s06e17",
+      "season": 6,
+      "episode": 17,
+      "title": "The One with Unagi",
+      "description": "Ross tests a theory while his friends challenge his confidence.",
+      "characters": [
+        "Ross",
+        "Rachel",
+        "Phoebe"
+      ],
+      "moments": [
+        "Unagi and self-defense"
+      ],
+      "quotes": [],
+      "comedy": 5,
+      "warmth": 3,
+      "nostalgia": 5,
+      "beginner_friendly": true,
+      "mood_tags": [
+        "bored",
+        "happy"
+      ],
+      "story_tags": [
+        "surprising"
+      ],
+      "familiarity_tags": [
+        "standalone"
+      ],
+      "source": "https://www.tvguide.com/tvshows/friends/episodes-season-6/1030937287/"
+    }
+  ]
+}
