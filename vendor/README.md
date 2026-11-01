@@ -9,3 +9,5 @@ Upstream: https://github.com/mrdoob/three.js/tree/r170
 License: MIT; full text in `THREE-LICENSE.txt`, verified against https://github.com/mrdoob/three.js/blob/r170/LICENSE.
 
 This is a pinned dependency, not a claim to use the latest release. When updating it, use an official upstream module, retain the MIT license, and rerun the browser tests.
+
+Version 0.7 adapter fix: the private `self` shim forwards `requestAnimationFrame` and `cancelAnimationFrame` to the browser. Three.js uses these callbacks during renderer cleanup even when the application renders on demand. This fixes disposal during real WebGL context loss without changing the upstream Three.js factory or namespace. The live context-loss smoke test exercises this path.

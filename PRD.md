@@ -1,4 +1,4 @@
-# FriendsAnxietyStudio — Product Requirements Document v0.6
+# FriendsAnxietyStudio — Product Requirements Document v0.7
 
 ## Product and audience
 
@@ -10,6 +10,30 @@
 
 The v0.5 12-slide restriction is superseded: **exactly 18 primary slides** are required. Existing Git history must remain intact. No push is authorized.
 
+## Version 0.7 incremental requirements
+
+- Center only **F·R·I·E·N·D·S | The Comfort Lab** in the topbar, horizontally and vertically. Dots alternate `#e74c3c`, `#f1c40f`, `#3498db`. Use prominent lettering and a lighter lab suffix. Move controls/context/progress to a separate normal-flow utility row; retain their accessibility on mobile. Remove visible version badges and redundant header copy.
+- Replace Slide 5 with **PIVOT! Concentration & Spatial Focus**. Keep it an entertainment demonstration in Part I, not an additional questionnaire. Description: “Test your focus and spatial awareness in a playful stairwell challenge. Help Ross move the couch around a tight corner — and remember to PIVOT at the right moment!” Display “Game score only — not a clinical or cognitive assessment.” No stress wording belongs on Slide 5; stress inputs and backend field names elsewhere remain intact.
+- Use four deterministic stages: Bottom Landing, Stairflight 1, Tight Corner — PIVOT NEEDED!, Top Landing — Success! Initial score 100, bounded 0–100. A blocked MOVE UP at the corner costs 25; one successful pivot earns 10, capped at 100. Disallow pivot outside the corner and repeated rewards. Disable advancement after success. Reset every gameplay/visual/button state without reloading.
+- Enhance the existing couch architecture with a shared original couch factory and a Three.js stairwell renderer: two flights, a tight corner, walls/railings, lighting, position movement and 90-degree rotation. Include visible failure/success feedback. Stop animation while inactive/hidden, honor reduced motion, and preserve a synchronized illustrated fallback when WebGL is unavailable.
+- Keep game score entirely separate from questionnaire/session preference data and Python requests. It is not a scientific concentration score, cognitive assessment or anxiety measurement. Retain actual Python ranking, verified episode data, all research figures and analytics.
+- Enter advances from presentation/background focus on slides 1–17; no advancement beyond slide 18. Ignore held-key repeats. Preserve native Enter activation for buttons/links and exclude forms, selects, editable content, choices, game controls, canvases, modals and interactive overlays. Retain arrows and Home/End.
+- Add **Back to Start** in the final action area. Return to slide 1 and synchronize hash/counter/indicators/progress while preserving preferences and recommendation access. Keep Try Again and Reset Profile separate.
+- Preserve the 18-slide research-first design, six questionnaire slides, transitions, five-second mug, optional free-rotation couch, theme settings, responsive layout and previous screenshots/history. No white-background artwork returns to the UI. No paid services or keys.
+
+### v0.7 acceptance evidence
+
+Executed evidence, 2026-11-01: 418 browser assertions, 14 real context-loss smoke checks, 33 pure game-rule checks and 7 Python tests passed. Zero unexpected JavaScript errors and zero external requests. Three expected WebGL context errors occurred only during deliberate graphics-failure testing. All 18 slides were visually reviewed on desktop and mobile; current evidence is in `screenshots/v07/`, including six contact sheets, individual captures, game states, review notes and the browser result JSON. Previous v0.6 evidence is retained. The real context-loss test also verifies the private Three.js adapter callback fix, canvas hiding, continued gameplay and final illustrated position.
+
+- [x] Branding centered at desktop/mobile widths, correct dot colors, no competing brand-row controls/version copy or control overlap.
+- [x] Deterministic game rules, score floor/cap, one-time pivot, actual 3D translation/yaw, failure/success, repeated reset, no inactive render loop, reduced motion and illustrated fallback verified.
+- [x] Enter from all 17 eligible slide backgrounds, final boundary, repeat suppression, focused-control/native activation and dialog/form/choice exceptions verified.
+- [x] Back to Start updates navigation state, preserves answers and permits returning to the personalized result.
+- [x] Existing Python, analytics, seven figures, questionnaire, mug, settings, optional couch, fallback and responsive regressions pass with no unexpected JavaScript errors.
+- [x] All 18 slides visually reviewed on desktop/mobile with current screenshots; previous evidence retained.
+
+Release: create one new local commit named `feat: v0.7 branding stairwell challenge and keyboard navigation`. Do not rewrite previous commits or push. Report its hash separately. The v0.6 acceptance record below remains historical evidence.
+
 ## Narrative structure
 
 | Part | # | Slide | Focal element |
@@ -18,7 +42,7 @@ The v0.5 12-slide restriction is superseded: **exactly 18 primary slides** are r
 | I | 2 | Why Do We Rewatch Friends? | Python-generated descriptive research chart, metric toggle and source details |
 | I | 3 | The Psychology of Comfort TV | Four concepts and explicit evidence/interpretation distinction |
 | I | 4 | Predictability & Control | One illustrative familiar-story sequence |
-| I | 5 | Parasocial Relationships | Familiar-company couch visual and one-sided bond explanation |
+| I | 5 | PIVOT! Concentration & Spatial Focus | State-driven Three.js stairwell challenge; entertainment only |
 | I | 6 | What the Research Shows | Paper A, Study 2, Figure 1 |
 | I | 7 | Belonging, Mood & Rejection | Paper A, Study 3, Figures 2–4 |
 | I | 8 | Familiar Worlds & Self-Control | Paper B, Study 1 Figures 1–2 and Study 2 Figure 3 |
@@ -81,7 +105,7 @@ Only executed checks are marked complete. Final evidence: 358 browser assertions
 
 Visual evidence: `screenshots/v06/visual-review.md`, six full-deck contact sheets, 36 individual slide captures, three optional-detail captures and `v06-results.json`. A final screenshot run completed with no JavaScript errors.
 
-Release procedure: after implementation and checks, create exactly one new local commit named `feat: v0.6 research-first presentation redesign`, preserve all previous commits and do not push. Report the resulting commit hash separately.
+Historical v0.6 release procedure (completed): after implementation and checks, create exactly one new local commit named `feat: v0.6 research-first presentation redesign`, preserve all previous commits and do not push. Report the resulting commit hash separately.
 
 ## Research and ethical boundaries
 

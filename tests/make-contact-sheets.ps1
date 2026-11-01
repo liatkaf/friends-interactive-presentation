@@ -1,4 +1,5 @@
-﻿Add-Type -AssemblyName System.Drawing
+param([string]$Version = "v06")
+Add-Type -AssemblyName System.Drawing
 $taskRoot = Split-Path -Parent $PSScriptRoot
 foreach ($mode in @('desktop','mobile')) {
   $cellWidth = if ($mode -eq 'desktop') { 480 } else { 234 }
@@ -9,13 +10,13 @@ foreach ($mode in @('desktop','mobile')) {
     $graphics.Clear([System.Drawing.Color]::FromArgb(40,32,49))
     for ($offset=0; $offset -lt 6; $offset++) {
       $number = ($group*6+$offset+1).ToString('00')
-      $sourcePath = Join-Path $taskRoot "test-results/v06-$mode-$number.png"
+      $sourcePath = Join-Path $taskRoot "test-results/$Version-$mode-$number.png"
       $sourceImage = [System.Drawing.Image]::FromFile($sourcePath)
       $graphics.DrawImage($sourceImage,($offset%3)*$cellWidth,([int][math]::Floor($offset/3))*$cellHeight,$cellWidth,$cellHeight)
       $sourceImage.Dispose()
     }
     $graphics.Dispose()
-    $sheet.Save((Join-Path $taskRoot "test-results/v06-contact-$mode-$($group+1).png"),[System.Drawing.Imaging.ImageFormat]::Png)
+    $sheet.Save((Join-Path $taskRoot "test-results/$Version-contact-$mode-$($group+1).png"),[System.Drawing.Imaging.ImageFormat]::Png)
     $sheet.Dispose()
   }
 }
