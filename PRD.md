@@ -1,65 +1,96 @@
-# FriendsAnxietyStudio — Product Requirements Document v0.5
+# FriendsAnxietyStudio — Product Requirements Document v0.6
 
-## Audience and objectives
+## Product and audience
 
-Target audience: university course professor and AI evaluation agent. Demonstrate meaningful Python, JavaScript, Three.js, interactive charts, animation and AI-assisted development in an engaging research-informed presentation. End with an explainable recommendation for a real Friends episode based on optional personal viewing preferences.
+**Product:** FriendsAnxietyStudio / Friends Comfort Lab.
 
-Work within v0.4, retain exactly 12 primary slides and preserve its working activities, visual identity, navigation and Three.js interactions. No paid services, keys, video embeds or theme music. All authored text, labels, comments and documentation are English.
+**Target audience:** university course professor and AI evaluation agent, with a live classroom audience.
+
+**Objective:** present a coherent research story, then guide the viewer through six optional question slides and recommend a real Friends episode with explainable scoring. Professional slide composition takes priority over more features.
+
+The v0.5 12-slide restriction is superseded: **exactly 18 primary slides** are required. Existing Git history must remain intact. No push is authorized.
+
+## Narrative structure
+
+| Part | # | Slide | Focal element |
+|---|---|---|---|
+| I — Understanding the Research | 1 | Welcome to the Friends Comfort Lab | CSS purple door, yellow frame and original five-second Three.js coffee mug |
+| I | 2 | Why Do We Rewatch Friends? | Python-generated descriptive research chart, metric toggle and source details |
+| I | 3 | The Psychology of Comfort TV | Four concepts and explicit evidence/interpretation distinction |
+| I | 4 | Predictability & Control | One illustrative familiar-story sequence |
+| I | 5 | Parasocial Relationships | Familiar-company couch visual and one-sided bond explanation |
+| I | 6 | What the Research Shows | Paper A, Study 2, Figure 1 |
+| I | 7 | Belonging, Mood & Rejection | Paper A, Study 3, Figures 2–4 |
+| I | 8 | Familiar Worlds & Self-Control | Paper B, Study 1 Figures 1–2 and Study 2 Figure 3 |
+| I | 9 | Nostalgia & Cognitive Ease | Then/now visual; interpretations rather than claims of direct tests |
+| I | 10 | From Research to Recommendation | Evidence → preferences → editorial matching |
+| II — Your Personal Comfort Profile | 11 | How Are You Feeling? | Large optional mood choices |
+| II | 12 | What's Your Stress Level? | Optional self-reported stress slider, 0–10 |
+| II | 13 | Who's Your Favorite Friend? | Six original vector character choices |
+| II | 14 | Which Quote Speaks to You? | Three large quote choices |
+| II | 15 | What Kind of Comfort Do You Need? | Desired experience |
+| II | 16 | How Familiar Is Friends to You? | Familiarity and nostalgia, explicitly paired on this slide |
+| III — Your Personalized Episode | 17 | Finding Your Perfect Match | Actual computation states and factor contributions |
+| III | 18 | The One With Your Perfect Episode | Top episode, two alternatives and optional scoring details |
+
+Each primary slide has one h1/h2 headline, one main visual/interactive element, restrained supporting text, generous spacing and consistent navigation. Research slides have no personal questionnaire fields. Detail dialogs and optional activities are not primary slides.
 
 ## User stories
 
-- As a viewer, I can answer short questions throughout the presentation, skip any question, change my answers, and keep them while navigating.
-- As a research reader, I can inspect all seven supplied figures, enlarge them, read conditions/axes/citations and distinguish strong from tentative findings.
-- As an instructor, I can see actual Python execution, identify when fallback JavaScript runs, and reproduce the analytics from published values.
-- As a viewer, I receive one episode and two alternatives, inspect the exact scoring factors, revise/reset my profile or discover a random real episode.
-- As a keyboard/mobile viewer, I can navigate, operate controls, close the evidence dialog, use larger text and reduce decorative motion.
+- As a viewer, I can understand the psychological concepts and see the published evidence before answering questions.
+- As a research reader, I can inspect all seven original figures, select related outcomes, enlarge them and read accurate axes, conditions and citations.
+- As a viewer, I can answer, skip, return to, change or clear each optional preference, with automatic saving and six-question progress.
+- As a viewer, I can see honest computation status, then receive a real episode plus two alternatives and understand why they match.
+- As an instructor, I can verify actual Python execution and distinguish it from fallback JavaScript.
+- As a presenter, I can open PIVOT or settings only when wanted, without disrupting the research narrative.
+- As a mobile or keyboard user, I can navigate the whole deck, access dialogs, enlarge figures, select answers and use reduced motion.
 
-## Required slide plan
+## Functional requirements
 
-| # | Primary slide | Implemented interactions |
-|---|---|---|
-| 1 | Welcome to Central Perk | Existing 5,000 ms Three.js mug, replay/drag/keyboard and original door; both original artworks |
-| 2 | Modern Anxiety & Mental Overload | Retained imagined overload activity; separate optional self-reported stress 0–10 with clear answer |
-| 3 | Why Do We Rewatch Friends? | Two published-means charts with metric toggle, hover/focus/click values and scale/source note; familiarity question; original cafe artwork; explorer |
-| 4 | The Science of Predictability | Retained reveal; predictable/surprising preference; explorer |
-| 5 | PIVOT! The 3D Experience | Existing Three.js couch with drag/keyboard/slider/reset and angle feedback |
-| 6 | Friends Who Feel Like Family | Six retained character cards, favorite selection/feedback, animated affinity indicator, original couch artwork; explorer |
-| 7 | Giving Your Brain a Break | Retained familiar/new reading activity; desired experience question; explorer |
-| 8 | The Nostalgia Effect | Retained timeline/reflection; nostalgia preference and limits; explorer |
-| 9 | Iconic Quotes & Emotional Triggers | Retained reveal cards/theme cues; synchronized quote selection |
-| 10 | The Anxiety Simulator | Retained synthetic scenario; mood choice; extra illustrative comfort index controlled by stress, familiarity, nostalgia and minutes, executed in Python with labeled fallback |
-| 11 | Customize Your Comfort Zone | Retained palette/font/mood/reset; text size and decorative-motion controls; profile overview and original cafe artwork |
-| 12 | The One With Your Perfect Episode | Episode/synopsis, two alternatives, explanations and animated factor bars; Why This Episode?, Try Again, Surprise Me, editable/reset profile, sources/references/explorer, original couch artwork |
+1. Exactly 18 existing-project presentation sections and indicators, in the specified order. Preserve Previous/Next, arrow keys, Home/End, deep links, counter and progress. One slide visible at a time.
+2. Remove all active UI references to the two user-created white-background PNG artworks. Keep the original files unchanged; retain CSS identity, orange couch colors and 3D elements.
+3. Place the seven research figures across slides 6–8. Preserve original pixels, study/figure identity, readable full-size viewing, source citations and accurate interpretation. Native dialogs must support closing and focus restoration.
+4. Preserve Python analytics and generated descriptive data; do not fabricate extra statistics. The published chart provides clear scale/context and accessible values.
+5. Use six dedicated questionnaire slides. Answers remain optional, save to tab sessionStorage and can be changed or cleared. The last question explicitly groups familiarity and nostalgia. Stress slider defaults are not treated as answers without movement or confirmation.
+6. Map seven UI fields directly to the existing Python profile names. Omit the formerly separate predictability question from the redesigned UI while retaining backend support for compatibility. Preserve valid v0.5 tab answers for the fields still used.
+7. Preserve `python/episode_recommender.py`, the verified 22-episode catalog, persistent Python worker and transparent deterministic scoring. Only answered factors enter the score denominator. Empty profile = 0%; chronological tie-breaking.
+8. Slide 17 shows local reading, pending computation, and completed matching/ranking states tied to actual requests/results. Animate returned states without pretending to stream Python internals or measure their durations. Identify fallback execution accurately.
+9. Slide 18 displays one real episode title, season/number, short description, concise matching summary, two alternatives, Why This Episode?, Try Again and Surprise Me. Detailed actual scoring factors open in a dialog. Try Again returns to slide 11 with editable answers. Profile reset lives in settings. Surprise Me identifies JavaScript random discovery.
+10. Retain the exact 5,000 ms mug animation and replay/manual controls, genuine Three.js couch drag/keyboard/slider/reset as an optional header activity, responsive canvas sizing and no-WebGL/file fallbacks.
+11. Retain appearance settings in a compact optional dialog: palette, display font, visual mood, text size, reduced decorative motion and reset. System reduced motion applies to the mug.
+12. All authored content, labels, comments and documentation are English. No paid services, API keys, copyrighted episode embeds or theme music.
 
-## Functional and technical requirements
+## Technical requirements
 
-- Preserve 12 existing `.slide` sections, 12 indicators, active-only visibility, Previous/Next, arrow keys, Home/End and hash navigation. New panels and a native dialog do not count as slides.
-- Collect eight optional profile fields. Retain choices in tab sessionStorage; synchronize duplicate controls. Never treat untouched stress slider defaults as answers. No external transmission.
-- Maintain at least 20 real catalog records with sources, official title, numbering, spoiler-light description, featured characters, moments/quotes, editorial comedy/warmth/nostalgia ratings and mood/story/familiarity tags.
-- Use transparent deterministic Python ranking and return three episodes, exact points/maxima and explanations. Normalize over answered factors. Use chronological ties; empty profile is 0%, not invented certainty.
-- Execute Python through local Node subprocess APIs. Provide explicit JavaScript mode on absent/failed Python, API timeout or direct file access. Compare engines in tests.
-- Include all seven original research PNGs unchanged. Native dialog supplies selector/thumbnails, enlargement, alt text, paper/study/figure identity, accessible explanations and DOI citations.
-- Generate research JSON through Python using only the four supplied published descriptive mean pairs. Keep research, editorial classifications and synthetic simulations clearly distinguished.
-- Preserve local Three.js, the 5,000 ms coffee timeline and PIVOT interaction. Add CSS animations without network libraries. Respect system reduced motion; additional UI toggle affects decorative CSS motion.
-- Keep original artwork proportions with meaningful alt text and attribution. Retain responsive slide scrolling and keyboard focus styles.
-- Update README with setup, reproducible commands, research/data/art attribution, Python mode, scoring, AI use, screenshots and actual test results. Commit once with the requested message and do not push.
+- Extend the existing static browser project. Keep bundled Three.js and dependency-free Node serving.
+- Actual Python execution remains local through `serve.cjs`, JSON lines and a persistent `python/episode_recommender.py --worker` process. `/api/recommend` and `/api/simulate` remain available.
+- JavaScript fallback must be usable without Python and clearly labeled. Test ranking, factor and explanation parity.
+- Keep existing research generator, JSON and offline bundle. Preserve source datasets and original assets.
+- Use `script.js` for composition/navigation, `v06.js` for profile/research/result interactions, `lab-core.js` for retained fallback/figure metadata, and `v06.css` for redesigned layouts. Previous v0.5 UI modules remain unloaded historical files.
+- Use no remote runtime dependencies. Backend remains loopback-only with existing origin, request-size and timeout protections. Preferences go only to the local backend and remain in the tab, not server storage.
+- Update automated browser tests for 18 slides while retaining meaningful mug, couch, Python and navigation regressions. Capture every slide at desktop/mobile sizes and visually inspect the results.
 
 ## Acceptance evidence
 
-Requirements are marked complete only with implementation and executed checks. Final run: 263 browser checks passed, 7 Python tests passed, zero unexpected JavaScript errors and zero external network requests.
+Only executed checks are marked complete. Final evidence: 358 browser assertions, 7 Python tests, zero unexpected JavaScript errors and zero external network requests. Two expected context errors were confined to deliberate no-WebGL testing.
 
-- [x] Existing 12-slide regression behavior implemented and verified in the executed 227-check baseline suite, with final title expectation updated for v0.5.
-- [x] Python scripts execute; seven Python unittest cases pass for published means, catalog, deterministic/partial scoring, explanations/denominator, validation, simulation and supplied PNG signatures.
-- [x] Expanded browser acceptance run (263 passed): all artwork and research figures load, explorer works with focus restoration, Python API works, engines agree, choices survive navigation/reload, incomplete profile/reset/Why/Try Again/Surprise work, size/motion controls work, all responsive and Three.js regression checks pass with no unexpected JavaScript errors.
-- [x] Selected final screenshots reviewed and included in README.
-Release procedure: create the single requested local commit after these checks; do not push. The delivered commit hash is reported separately to avoid a self-referential hash in this file.
+- [x] Retained Python regression suite: 7 tests passed for catalog, published means, deterministic/incomplete scoring, explanations/denominator, validation, synthetic backend support and PNG signatures.
+- [x] Updated browser suite passes (358 assertions): exact 18-slide order/headlines/navigation; no user artwork DOM or requests; seven figures/readable enlargement/citations; saved/changed/reset/skipped answers; honest pending/completed matching; Python execution and fallback parity; correct final recommendation/actions; mug and optional PIVOT controls; settings; no unexpected JavaScript errors; responsive five-width layout and reduced motion.
+- [x] Every primary slide visually reviewed at 1440×1000 and 390×844; selected screenshots and full contact sheets included in documentation.
+- [x] Original artwork and supplied research PNG hashes verified unchanged.
 
-## Research and ethical limits
+Visual evidence: `screenshots/v06/visual-review.md`, six full-deck contact sheets, 36 individual slide captures, three optional-detail captures and `v06-results.json`. A final screenshot run completed with no JavaScript errors.
 
-Paper A: Derrick, Gabriel, & Hugenberg (2009), Journal of Experimental Social Psychology, 45, 352–362, DOI 10.1016/j.jesp.2008.12.003. Paper B: Derrick (2013; online 2012), Social Psychological and Personality Science, 4(3), 299–307, DOI 10.1177/1948550612454889.
+Release procedure: after implementation and checks, create exactly one new local commit named `feat: v0.6 research-first presentation redesign`, preserve all previous commits and do not push. Report the resulting commit hash separately.
 
-The studies concern favored television/familiar fictional worlds, not experiments on Friends viewers. Social surrogacy is supported in these studies; predictability/cognitive ease are broader interpretations; nostalgia is not directly tested by these two papers. The explorer labels the marginal rejection interaction and distinguishes experimental evidence from diary associations. No exact values are reconstructed from figure bar heights.
+## Research and ethical boundaries
 
-Neither the rating charts nor episode tags are clinical anxiety measures. Comfort index values are invented for interaction, explicitly labeled educational only and not a validated psychological or medical model. No cortisol, neuroscience or treatment claims. No health-effect probability is implied by algorithmic match percentages. Fictional relationships are one-sided; individual viewing experiences and memories differ.
+Paper A: Derrick, Gabriel, & Hugenberg (2009), *Journal of Experimental Social Psychology, 45*, 352–362. DOI 10.1016/j.jesp.2008.12.003.
 
-No formal user study, clinical validation or universal episode comfort claim is part of acceptance. Source assets and previous commits must remain intact.
+Paper B: Derrick (2013; online 2012), *Social Psychological and Personality Science, 4*(3), 299–307. DOI 10.1177/1948550612454889.
+
+Neither paper specifically tested Friends as an anxiety intervention. Distinguish favorite-TV/social-surrogacy research from the project's Friends examples and broader interpretations of predictability, cognitive ease and nostalgia. Distinguish significant interactions from the marginal Paper A rejection result, exploratory supplementary analyses and observational diary evidence. Non-significance is not equivalence. No values are estimated from figure bar heights.
+
+The research chart shows undergraduate descriptive self-reports, not clinical anxiety scores. Episode tags are editorial and the match percentage is an algorithmic fit, not a medical probability. Recommendations are entertainment-oriented, not medical advice. No cortisol, neuroscience or treatment claim is permitted. Existing illustrative simulator code/data remain available for compatibility but are not placed in the research narrative.
+
+No formal user study, clinical validation or universal claim about episode comfort is part of acceptance. Vertical scrolling is acceptable on small screens, enlarged figures and accessibility text settings; clipping and horizontal overflow are not.
