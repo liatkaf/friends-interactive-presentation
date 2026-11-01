@@ -43,7 +43,10 @@ def build():
             source='https://www.tvguide.com/tvshows/friends/episodes-season-%d/1030937287/'%s))
     catalog=dict(verified_on='2026-11-01',provenance='Episode titles, numbers and plot associations checked against TV Guide season listings. PIVOT: S5E16; greeting: S4E13; Smelly Cat performance/recording: S2E6/S2E17. Ratings 1–5 and all comfort tags are editorial, not measured research.',episodes=episodes)
     (ROOT/'data/friends_episodes.json').write_text(json.dumps(catalog,indent=2)+'\n',encoding='utf-8')
-    bundle=dict(catalog=catalog,research=generate())
+    quotes=json.loads((ROOT/'data/quotes.json').read_text(encoding='utf-8'))
+    assert len(quotes)==6 and len({q['id'] for q in quotes})==6
+    labels=json.loads((ROOT/'data/profile_labels.json').read_text(encoding='utf-8'))
+    bundle=dict(catalog=catalog,research=generate(),quotes=quotes,profile_labels=labels)
     (ROOT/'data/v05-data.js').write_text('window.FRIENDS_V05 = '+json.dumps(bundle)+';\n',encoding='utf-8')
     print('Built %d curated episodes and offline browser bundle.'%len(episodes))
 

@@ -1,0 +1,11 @@
+{
+  "passed": 455,
+  "errors": [],
+  "expectedFallbackErrors": [
+    "THREE.WebGLRenderer: Error creating WebGL context.",
+    "THREE.WebGLRenderer: Error creating WebGL context.",
+    "THREE.WebGLRenderer: Error creating WebGL context."
+  ],
+  "externalRequests": [],
+  "screenshots": "test-results/v08-*.png"
+}

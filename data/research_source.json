@@ -1,0 +1,114 @@
+{
+  "source": "Derrick, Gabriel, & Hugenberg (2009), Study 1, Table 1, p. 355",
+  "doi": "https://doi.org/10.1016/j.jesp.2008.12.003",
+  "note": "Undergraduate self-reports, not Friends-specific. Doing: 1 (definitely would not do) to 7 (definitely would do). Loneliness: reverse-scored 1\u20137; lower means less likely to feel lonely. Not clinical anxiety scores. Descriptive means, not causal effects.",
+  "verification_date": "2026-11-01",
+  "scale": {
+    "min": 1,
+    "max": 7
+  },
+  "activities": [
+    {
+      "activity": "Favorite TV program",
+      "doing": 5.81,
+      "loneliness": 2.64
+    },
+    {
+      "activity": "Whatever is on television",
+      "doing": 4.86,
+      "loneliness": 3.69
+    },
+    {
+      "activity": "Favorite music",
+      "doing": 5.82,
+      "loneliness": 2.97
+    },
+    {
+      "activity": "Favorite movie",
+      "doing": 5,
+      "loneliness": 3.43
+    }
+  ],
+  "papers": {
+    "A": {
+      "label": "Paper A \u00b7 Derrick, Gabriel, & Hugenberg (2009)",
+      "url": "https://doi.org/10.1016/j.jesp.2008.12.003"
+    },
+    "B": {
+      "label": "Paper B \u00b7 Derrick (2013; online 2012)",
+      "url": "https://doi.org/10.1177/1948550612454889"
+    }
+  },
+  "figures": [
+    {
+      "paper": "A",
+      "study": 2,
+      "figure": 1,
+      "file": "2009-fig1-belongingness-essay.png",
+      "title": "Essay time",
+      "explanation": "Y: seconds writing. X: control versus aroused belongingness needs. Bars: favorite versus control TV. Aroused needs followed recalling a fight; control listed possessions. Significant interaction (p < .01): longer favorite-TV essays after threat.",
+      "exact_series_available": false,
+      "takeaway": "Belongingness threat increased time spent recalling favorite TV."
+    },
+    {
+      "paper": "A",
+      "study": 3,
+      "figure": 2,
+      "file": "2009-fig2-self-esteem.png",
+      "title": "Self-esteem",
+      "explanation": "Y: standardized state self-esteem composite. Same conditions as Figure 1. Significant interaction (p = .04); the threat contrast within favorite TV was non-significant (p = .42).",
+      "exact_series_available": false,
+      "takeaway": "The self-esteem interaction supported a buffering pattern; the threat contrast within favorite TV was non-significant."
+    },
+    {
+      "paper": "A",
+      "study": 3,
+      "figure": 3,
+      "file": "2009-fig3-negative-mood.png",
+      "title": "Negative mood",
+      "explanation": "Y: negative mood ratings. Same conditions. Significant interaction (p = .03); favorite-versus-control TV under threat was marginal (p = .09).",
+      "exact_series_available": false,
+      "takeaway": "The mood interaction was significant; favorite versus control TV under threat was only marginal."
+    },
+    {
+      "paper": "A",
+      "study": 3,
+      "figure": 4,
+      "file": "2009-fig4-rejection.png",
+      "title": "Rejection",
+      "explanation": "Y: standardized rejection composite. Same conditions. Interaction marginal (p = .09), not significant at .05. Treat the pattern cautiously.",
+      "exact_series_available": false,
+      "takeaway": "The rejection interaction was marginal, not significant at .05. Treat the pattern cautiously."
+    },
+    {
+      "paper": "B",
+      "study": 1,
+      "figure": 1,
+      "file": "self-control-fig1-rat.png",
+      "title": "Puzzle performance",
+      "explanation": "X: neutral room listing versus favorite-TV essay. Bars: free versus regulated writing (avoiding specified letters). Y: correct Remote Associates Test items. Significant interaction (p < .05); the regulated/free difference was non-significant after the TV essay.",
+      "exact_series_available": false,
+      "takeaway": "The puzzle-performance interaction was significant; regulated/free differences were non-significant after favorite-TV recall."
+    },
+    {
+      "paper": "B",
+      "study": 1,
+      "figure": 2,
+      "file": "self-control-fig2-negative-mood.png",
+      "title": "Negative mood",
+      "explanation": "Same experimental conditions as Paper B Figure 1. Y: negative mood. Significant interaction (p = .04); the regulated/free difference was non-significant after the TV essay. Error bars in Paper B figures represent standard errors.",
+      "exact_series_available": false,
+      "takeaway": "The negative-mood interaction was significant; regulated/free differences were non-significant after favorite-TV recall."
+    },
+    {
+      "paper": "B",
+      "study": 2,
+      "figure": 3,
+      "file": "self-control-fig3-daily-mood.png",
+      "title": "Daily diary",
+      "explanation": "X: familiar fictional world use on Day 2 (yes/no). Bars: effortful self-control on Day 1. Y: negative mood on Day 3. Significant interaction; the Day 1 association was significant without familiar-world use (p = .012), non-significant with use (p = .261). Observational diary evidence, not a randomized viewing effect.",
+      "exact_series_available": false,
+      "takeaway": "The diary interaction linked familiar-world use and later mood. This association is not a randomized viewing effect."
+    }
+  ]
+}

@@ -21,7 +21,7 @@ function executePython(operation,payload){
   return new Promise((resolve,reject)=>{const id=++sequence;const timer=setTimeout(()=>{pendingPython.delete(id);reject(Error('Python timeout'));},12000);pendingPython.set(id,{resolve,reject,timer});pythonWorker.stdin.write(JSON.stringify({id,operation,payload})+'\n');});
 }
 process.on('exit',()=>pythonWorker?.kill());
-const types = { '.html': 'text/html', '.css': 'text/css', '.js': 'text/javascript', '.mjs': 'text/javascript', '.svg': 'image/svg+xml', '.png': 'image/png', '.md': 'text/plain', '.txt': 'text/plain' };
+const types = { '.html': 'text/html', '.css': 'text/css', '.js': 'text/javascript', '.mjs': 'text/javascript', '.svg': 'image/svg+xml', '.png': 'image/png', '.json': 'application/json', '.md': 'text/plain', '.txt': 'text/plain' };
 const server = http.createServer((request, response) => {
   if (request.url === '/api/recommend' || request.url === '/api/simulate') {
     if(request.method !== 'POST') {response.writeHead(405).end();return;}
@@ -53,4 +53,4 @@ const server = http.createServer((request, response) => {
   });
 });
 server.on('error', error => { console.error(error.message); process.exitCode = 1; });
-server.listen(port, '127.0.0.1', () => console.log(`Friends v0.7: http://127.0.0.1:${port} (Ctrl+C to stop; Python API enabled)`));
+server.listen(port, '127.0.0.1', () => console.log(`Friends v0.8: http://127.0.0.1:${port} (Ctrl+C to stop; Python API enabled)`));

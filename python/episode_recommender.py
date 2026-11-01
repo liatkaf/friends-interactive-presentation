@@ -5,11 +5,12 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+QUOTES = {q['id']:q for q in json.loads((ROOT/'data/quotes.json').read_text(encoding='utf-8'))}
 WEIGHTS = dict(mood=18, stress=10, character=18, quote=18, nostalgia=10,
                familiarity=8, predictability=8, experience=10)
 OPTIONS = dict(mood=['stressed', 'sad', 'lonely', 'bored', 'happy', 'overwhelmed'],
                character=['Monica', 'Rachel', 'Phoebe', 'Joey', 'Chandler', 'Ross'],
-               quote=['PIVOT!', "How you doin'?", 'Smelly Cat'],
+               quote=list(QUOTES),
                nostalgia=['low', 'medium', 'high'],
                familiarity=['new', 'some', 'rewatcher'],
                predictability=['predictable', 'surprising'],
@@ -38,7 +39,12 @@ def score_episode(episode, profile):
     fit = (target*e['warmth'] + (1-target)*e['comedy'])/5
     add('stress', fit, 'Editorial warmth/comedy blend weighted by your self-reported stress; no predicted health effect.')
     add('character', int(p.get('character') in e['characters']), 'Featured character match: ' + str(p.get('character')) + '.')
-    add('quote', int(p.get('quote') in e['quotes']), 'Exact selected quote association: ' + str(p.get('quote')) + '.')
+    quote = QUOTES.get(p.get('quote'))
+    if quote and quote['match_mode'] == 'character':
+        add('quote', 0.5 if quote['character'] in e['characters'] else 0,
+            'Editorial quote-to-character match: '+quote['label']+' → '+quote['character']+'. Half credit when featured; no exact scene claimed.')
+    else:
+        add('quote', int(p.get('quote') in e['quotes']), 'Exact selected quote association: ' + str(p.get('quote')) + '.')
     target_n = {'low': 1, 'medium': 3, 'high': 5}.get(p.get('nostalgia'), 3)
     add('nostalgia', 1-abs(e['nostalgia']-target_n)/4, 'Closeness to your nostalgia preference (editorial 1–5 rating).')
     familiarity = p.get('familiarity')

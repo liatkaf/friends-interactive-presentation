@@ -1,9 +1,8 @@
 import THREE from './vendor/three.module.js';
-import { SPIN_DURATION, REST_YAW, sampleSpin } from './animation-timeline.mjs';
+import { REST_YAW, advanceYaw, approachSpeed } from './animation-timeline.mjs';
 
 export async function mountCoffeeMug(host) {
   const view = host.querySelector('.coffee-view');
-  const replay = host.querySelector('#replay-mug');
   const status = host.querySelector('#mug-status');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const slide = host.closest('.slide');
@@ -22,7 +21,7 @@ export async function mountCoffeeMug(host) {
   const canvas = renderer.domElement;
   canvas.tabIndex = 0;
   canvas.setAttribute('role', 'img');
-  canvas.setAttribute('aria-label', 'Orange ceramic Central Perk mug with coffee and steam. After the spin, drag to rotate. With the mug focused, use Left and Right to turn, Up and Down to tilt, and Home to reset.');
+  canvas.setAttribute('aria-label', 'Orange ceramic Central Perk mug with coffee and steam. Rotates slowly while visible. Drag to explore; automatic rotation resumes after release. With the mug focused, use Left and Right to turn, Up and Down to tilt, and Home to reset.');
   canvas.setAttribute('aria-describedby', 'mug-status');
   view.append(canvas);
 
@@ -114,109 +113,59 @@ export async function mountCoffeeMug(host) {
     const puff=new THREE.Sprite(material);puff.scale.set(.35,.85,1);scene.add(puff);steam.push(puff);
   }
 
-  let frame=0, endTimer=0, startedAt=null, spinning=false, dragging=null, inView=false, destroyed=false, lastRendered=-Infinity;
-  let hasStarted=false, contextLost=false;
-  const active=()=>!destroyed&&!contextLost&&!slide.hidden&&!document.hidden&&inView;
+  let frame=0, dragging=null, destroyed=false, contextLost=false;
+  let lastRendered=-Infinity,lastMotion=null,autoSpeed=0,manualUntil=0,renderCount=0,wasActive=false;
+  const quiet=()=>reduced.matches||document.body.classList.contains('quiet-motion');
+  let rememberedQuiet=quiet();
+  const active=()=>!destroyed&&!contextLost&&!slide.hidden&&!document.hidden;
   function setState(state,message){host.dataset.state=state;status.textContent=message;}
   function drawSteam(now){
     steam.forEach((puff,i)=>{
-      puff.visible=!reduced.matches;
-      const phase=((now*.00022+i/steam.length)%1);
+      puff.visible=!quiet();const phase=((now*.00022+i/steam.length)%1);
       puff.position.set(Math.sin(phase*6+i*1.7)*(.1+phase*.28),2.3+phase*1.55,Math.cos(i*2.4)*.24);
-      puff.scale.set(.22+phase*.43,.45+phase*.7,1);
-      puff.material.opacity=Math.sin(phase*Math.PI)*.27;
+      puff.scale.set(.22+phase*.43,.45+phase*.7,1);puff.material.opacity=Math.sin(phase*Math.PI)*.27;
     });
-  }
-  function finishSpin(){
-    if(!spinning)return;
-    spinning=false;clearTimeout(endTimer);mug.rotation.y=sampleSpin(startedAt,startedAt+SPIN_DURATION).yaw;
-    renderer.shadowMap.needsUpdate=true;
-    host.dataset.elapsedMs=String(SPIN_DURATION);
-    replay.disabled=false;
-    setState('ready','Drag to rotate · Focus mug for arrow-key controls.');
   }
   function render(now=performance.now()){
     frame=0;if(!active())return;
-    // Steam needs only 30 fps; avoid repeatedly rendering unchanged shadow maps.
-    if(!reduced.matches&&now-lastRendered<1000/30){frame=requestAnimationFrame(render);return;}
-    lastRendered=now;
-    if(spinning){const sample=sampleSpin(startedAt,now);mug.rotation.y=sample.yaw;host.dataset.elapsedMs=String(Math.round(sample.elapsed));if(sample.done)finishSpin();}
-    if(spinning)renderer.shadowMap.needsUpdate=true;
-    drawSteam(now);renderer.render(scene,camera);
-    if(spinning||!reduced.matches)frame=requestAnimationFrame(render);
+    if(!quiet()&&now-lastRendered<1000/30){requestRender();return;}
+    const dt=lastMotion===null?0:Math.max(0,now-lastMotion);lastMotion=now;lastRendered=now;
+    if(!quiet()&&!dragging&&now>=manualUntil){autoSpeed=approachSpeed(autoSpeed,.22,dt);mug.rotation.y=advanceYaw(mug.rotation.y,dt,autoSpeed);renderer.shadowMap.needsUpdate=true;}
+    else autoSpeed=0;
+    drawSteam(now);renderer.render(scene,camera);renderCount++;
+    if(!quiet())requestRender();
   }
   function requestRender(){if(active()&&!frame)frame=requestAnimationFrame(render);}
-  function spin(){
-    if(reduced.matches){mug.rotation.set(0,REST_YAW,0);renderer.shadowMap.needsUpdate=true;replay.disabled=false;setState('reduced','Reduced motion: static 3D mug. Drag or use arrow keys to explore.');requestRender();return;}
-    clearTimeout(endTimer);dragging=null;mug.rotation.set(0,REST_YAW,0);startedAt=performance.now();spinning=true;hasStarted=true;
-    replay.disabled=true;host.dataset.elapsedMs='0';setState('spinning','A five-second coffee break. Manual rotation unlocks after the spin.');
-    endTimer=setTimeout(()=>{finishSpin();requestRender();},SPIN_DURATION);requestRender();
-  }
-  function resize(){
-    const {width,height}=view.getBoundingClientRect();if(!width||!height)return;
-    renderer.setPixelRatio(Math.min(devicePixelRatio||1,2));renderer.setSize(width,height,false);camera.aspect=width/height;camera.updateProjectionMatrix();requestRender();
-  }
-  function updateVisibility(){
-    if(active()){
-      resize();
-      if(!hasStarted){hasStarted=true;spin();}
-      requestRender();
-    }else{cancelAnimationFrame(frame);frame=0;dragging=null;}
-  }
-  function motionChanged(){
-    if(reduced.matches){clearTimeout(endTimer);spinning=false;mug.rotation.set(0,REST_YAW,0);replay.disabled=false;setState('reduced','Reduced motion: static 3D mug. Drag or use arrow keys to explore.');}
-    else setState('ready','Drag to rotate · Replay the five-second animation anytime.');
-    // A single static redraw also hides previously rendered steam immediately.
-    renderer.shadowMap.needsUpdate=true;requestRender();
-  }
-  function pointerDown(event){
-    if(spinning||event.button!==0)return;
-    dragging={id:event.pointerId,x:event.clientX,y:event.clientY};canvas.setPointerCapture(event.pointerId);canvas.focus({preventScroll:true});
-    canvas.classList.add('is-dragging');
-  }
-  function pointerMove(event){
-    if(!dragging||event.pointerId!==dragging.id)return;
-    mug.rotation.y+=(event.clientX-dragging.x)*.012;
-    mug.rotation.x=THREE.MathUtils.clamp(mug.rotation.x+(event.clientY-dragging.y)*.008,-.35,.35);
-    dragging.x=event.clientX;dragging.y=event.clientY;requestRender();
-    renderer.shadowMap.needsUpdate=true;
-  }
-  function pointerEnd(){dragging=null;canvas.classList.remove('is-dragging');}
-  function keyDown(event){
-    if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Home'].includes(event.key))return;
-    event.preventDefault();event.stopPropagation();if(spinning)return;
-    if(event.key==='Home')mug.rotation.set(0,REST_YAW,0);
-    if(event.key==='ArrowLeft')mug.rotation.y-=.15;
-    if(event.key==='ArrowRight')mug.rotation.y+=.15;
-    if(event.key==='ArrowUp')mug.rotation.x=THREE.MathUtils.clamp(mug.rotation.x-.08,-.35,.35);
-    if(event.key==='ArrowDown')mug.rotation.x=THREE.MathUtils.clamp(mug.rotation.x+.08,-.35,.35);
-    renderer.shadowMap.needsUpdate=true;requestRender();
-  }
-  function lost(event){event.preventDefault();contextLost=true;clearTimeout(endTimer);spinning=false;cancelAnimationFrame(frame);frame=0;replay.disabled=true;setState('fallback','3D rendering was interrupted. Reload to try again; slide navigation is still available.');}
+  function resize(){const {width,height}=view.getBoundingClientRect();if(!width||!height)return;renderer.setPixelRatio(Math.min(devicePixelRatio||1,2));renderer.setSize(width,height,false);camera.aspect=width/height;camera.updateProjectionMatrix();requestRender();}
+  function updateVisibility(){const visible=active();if(visible){if(!wasActive){lastMotion=null;autoSpeed=0;}resize();requestRender();}else{cancelAnimationFrame(frame);frame=0;lastMotion=null;autoSpeed=0;dragging=null;canvas.classList.remove('is-dragging');}wasActive=visible;}
+  function motionChanged(){rememberedQuiet=quiet();cancelAnimationFrame(frame);frame=0;lastMotion=null;autoSpeed=0;renderer.shadowMap.needsUpdate=true;setState(quiet()?'reduced':'rotating',quiet()?'Reduced motion: static mug. Drag or use arrow keys to explore.':'Slow rotation. Drag to explore; arrow keys when focused.');requestRender();}
+  function pointerDown(event){if(event.button!==0)return;dragging={id:event.pointerId,x:event.clientX,y:event.clientY};autoSpeed=0;canvas.setPointerCapture(event.pointerId);canvas.focus({preventScroll:true});canvas.classList.add('is-dragging');}
+  function pointerMove(event){if(!dragging||event.pointerId!==dragging.id)return;mug.rotation.y+=(event.clientX-dragging.x)*.012;mug.rotation.x=THREE.MathUtils.clamp(mug.rotation.x+(event.clientY-dragging.y)*.008,-.35,.35);dragging.x=event.clientX;dragging.y=event.clientY;renderer.shadowMap.needsUpdate=true;requestRender();}
+  function pointerEnd(){if(dragging)manualUntil=performance.now()+900;dragging=null;canvas.classList.remove('is-dragging');autoSpeed=0;requestRender();}
+  function keyDown(event){if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Home'].includes(event.key))return;event.preventDefault();event.stopPropagation();manualUntil=performance.now()+1200;autoSpeed=0;if(event.key==='Home')mug.rotation.set(0,REST_YAW,0);if(event.key==='ArrowLeft')mug.rotation.y-=.15;if(event.key==='ArrowRight')mug.rotation.y+=.15;if(event.key==='ArrowUp')mug.rotation.x=THREE.MathUtils.clamp(mug.rotation.x-.08,-.35,.35);if(event.key==='ArrowDown')mug.rotation.x=THREE.MathUtils.clamp(mug.rotation.x+.08,-.35,.35);renderer.shadowMap.needsUpdate=true;requestRender();}
+  function lost(event){event.preventDefault();contextLost=true;cancelAnimationFrame(frame);frame=0;setState('fallback','3D interrupted. The illustrated coffee and presentation remain available.');}
   canvas.addEventListener('webglcontextlost',lost);
   canvas.addEventListener('pointerdown',pointerDown);canvas.addEventListener('pointermove',pointerMove);
   canvas.addEventListener('pointerup',pointerEnd);canvas.addEventListener('pointercancel',pointerEnd);canvas.addEventListener('lostpointercapture',pointerEnd);canvas.addEventListener('keydown',keyDown);
-  replay.addEventListener('click',spin);reduced.addEventListener('change',motionChanged);
+  reduced.addEventListener('change',motionChanged);
+  const motionObserver=new MutationObserver(()=>{if(quiet()!==rememberedQuiet)motionChanged();});motionObserver.observe(document.body,{attributes:true,attributeFilter:['class']});
   document.addEventListener('friends:slidechange',updateVisibility);document.addEventListener('visibilitychange',updateVisibility);
   const resizeObserver=new ResizeObserver(resize);resizeObserver.observe(view);
-  const observer=new IntersectionObserver(entries=>{inView=entries[0].isIntersecting;updateVisibility();},{threshold:.15});
-  // Compile before starting the five-second clock, so shader setup isn't counted as rotation time.
+  // Compile before activating the single continuous render loop.
   resize();
   await renderer.compileAsync(scene,camera);
   drawSteam(performance.now());renderer.render(scene,camera);
   host.dataset.threeRevision=THREE.REVISION;
-  host.dataset.durationMs=String(SPIN_DURATION);
   host.classList.add('has-webgl');
-  replay.disabled=false;setState('ready','Your coffee is ready.');
+  setState('rotating','Slow rotation. Drag to explore; arrow keys when focused.');
   if(reduced.matches)motionChanged();
-  observer.observe(host);
+  updateVisibility();
 
   // Expose read-only state for browser QA, without coupling the slide controller to Three.js.
-  host.coffeeMug={get state(){return {spinning,yaw:mug.rotation.y,tilt:mug.rotation.x,startedAt,duration:SPIN_DURATION,elapsed:spinning?sampleSpin(startedAt,performance.now()).elapsed:Number(host.dataset.elapsedMs||0),reducedMotion:reduced.matches,renderCalls:renderer.info.render.calls};}};
+  host.coffeeMug={get state(){return {yaw:mug.rotation.y,tilt:mug.rotation.x,dragging:!!dragging,active:active(),autoSpeed,pendingFrames:frame?1:0,renderCount,reducedMotion:quiet(),renderCalls:renderer.info.render.calls};}};
   function dispose(){
-    destroyed=true;clearTimeout(endTimer);cancelAnimationFrame(frame);observer.disconnect();resizeObserver.disconnect();
+    destroyed=true;cancelAnimationFrame(frame);frame=0;resizeObserver.disconnect();motionObserver.disconnect();
     document.removeEventListener('friends:slidechange',updateVisibility);document.removeEventListener('visibilitychange',updateVisibility);reduced.removeEventListener('change',motionChanged);
-    replay.removeEventListener('click',spin);
     const geometries=new Set(),materials=new Set(),textures=new Set([labelTexture,steamTexture]);
     scene.traverse(object=>{if(object.geometry)geometries.add(object.geometry);if(object.material)materials.add(object.material);});
     geometries.forEach(geometry=>geometry.dispose());materials.forEach(material=>material.dispose());textures.forEach(texture=>texture.dispose());environment.dispose();renderer.dispose();

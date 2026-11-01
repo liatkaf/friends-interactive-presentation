@@ -7,12 +7,9 @@
  const controller={get state(){return {...state};},subscribe(listener){listeners.add(listener);return ()=>listeners.delete(listener);},dispatch(action){const next=PivotChallengeModel.transition(state,action);if(next===state)return;state=next;render(action);listeners.forEach(listener=>listener({...state},action));}};
  const $=selector=>document.querySelector(selector);
  function render(action){
-   $('#focus-score').value=state.score;$('#focus-score').textContent=state.score+'%';$('#focus-value').textContent=state.score+'%';
    $('#move-up').disabled=state.stage===3;$('#pivot-couch').disabled=state.stage!==2||state.pivotCompleted;
-   $('#pivot-feedback').textContent=state.feedback;
-   document.querySelectorAll('.stairwell-stages li').forEach((li,i)=>{li.dataset.completed=String(i<state.stage);if(i===state.stage)li.setAttribute('aria-current','step');else li.removeAttribute('aria-current');});
+   $('#pivot-feedback').textContent=state.stage===0?'Move the couch upstairs!':state.stage===3?'Success! You reached the top landing.':state.feedback.startsWith('STUCK')?'STUCK! Pivot first!':state.pivotCompleted?'PERFECT PIVOT!':state.stage===2?'Tight corner \u2014 PIVOT needed!':'Keep going. Tight corner ahead.';
    host.dataset.stage=String(state.stage);host.dataset.pivoted=String(state.pivotCompleted);
-   $('#stairwell-stage-label').textContent=`${state.stage+1} / 4 · ${['Bottom Landing','Stairflight 1','Tight Corner — PIVOT NEEDED!','Top Landing — Success!'][state.stage]}`;
    const positions=[[25,79],[25,60],[25,39],[77,22]];
    host.style.setProperty('--couch-left',positions[state.stage][0]+'%');host.style.setProperty('--couch-top',positions[state.stage][1]+'%');host.style.setProperty('--couch-turn',state.pivotCompleted?'90deg':'0deg');
    $('#pivot-challenge').classList.remove('game-failure','game-success');
