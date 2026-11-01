@@ -1,148 +1,56 @@
-# Product Requirements Document (PRD)
+﻿# Product Requirements Document — v0.4
 
-## Project Title
-**The One With The Interactive Presentation**
+## Objective
 
-## 1. Project Overview
-Build a nostalgic, interactive, browser-based presentation inspired by the TV series *Friends*. The project will demonstrate planning, AI-assisted development, frontend programming, Python-based data processing, 3D animation, live editing, and version control.
+Deliver an English browser presentation with **exactly 12 fully functional slides** explaining possible psychological mechanisms behind comfort viewing through Friends-inspired examples. This structure supersedes earlier 10-slide or optional-12-slide plans. Preserve the established Classic Friends styling and working five-second Three.js mug.
 
-## 2. Objectives
-- Deliver at least 10 slides; target **12 slides**.
-- Recreate the feel of the 1990s *Friends* aesthetic without requiring copyrighted media assets.
-- Demonstrate working JavaScript interactions and one Three.js 3D animation.
-- Use Python to generate meaningful data consumed by the presentation.
-- Demonstrate direct content editing in the browser.
-- Document iterative development through Git commits and pushes.
-- Publish an accessible GitHub repository with professional English documentation.
+## Audience and design
 
-## 3. Audience and Constraints
-- Audience: course instructor and fellow students.
-- Team: two students.
-- Time budget: approximately four hours of collaborative work.
-- Language: presentation and all documentation in English.
-- Platform: desktop browser, with responsive fallback for mobile.
-- Main deliverable: `index.html`, supported by local CSS/JS, data and documentation files as needed.
+Educational presentation for students and an instructor. Use purple (#674A83), yellow (#F4C542), orange (#D98748), cream (#FFF4DE), original portraits, a purple door, coffee imagery, and an orange couch. Support desktop and mobile, keyboard access, readable focus states, reduced motion, and static WebGL fallbacks. All content and documentation must be in English.
 
-## 4. Visual Design
-- Theme: **Classic Friends**.
-- Palette: purple (#674A83), warm yellow (#F4C542), orange (#D98748), cream (#FFF4DE), dark brown (#302820).
-- Motifs: purple apartment door, yellow frame, orange cafe sofa, coffee mugs, warm retro typography.
-- Style: nostalgic but polished, accessible contrast, restrained motion.
-- Consistent slide numbering, transitions, and navigation.
+## Required slide plan
 
-## 5. Slide Plan
-| # | Slide | Content | Interactive / Technical Feature |
-|---|---|---|---|
-| 1 | Welcome to Friends | Project title and introduction | Five-second rotating 3D coffee mug using Three.js |
-| 2 | The One Where It All Began | Series overview and timeline | Clickable timeline |
-| 3 | Meet the Six Friends | Character introductions | Flip cards and editable descriptions |
-| 4 | Welcome to Central Perk | Cafe setting | Clickable objects and information panels |
-| 5 | Monica's Apartment | Iconic apartment setting | Animated door opening (CSS/3D) |
-| 6 | The Relationships | Character connections | Interactive relationship map |
-| 7 | Iconic Moments | Memorable scenes described in original text | Animated gallery |
-| 8 | Who Said That? | Character quote quiz | JavaScript scoring and feedback |
-| 9 | Which Friend Are You? | Personality quiz | JavaScript result calculation |
-| 10 | Friends by the Numbers | Series statistics | Python-generated JSON and JavaScript charts |
-| 11 | Behind the Scenes | Production facts | Interactive reveal cards |
-| 12 | The Last One | Summary and closing | Closing animation and restart control |
+| # | Slide | Required behavior |
+|---|---|---|
+| 1 | Welcome to Central Perk | Preserve the existing five-second animated Three.js coffee mug, replay, manual exploration, and fallbacks |
+| 2 | Modern Anxiety & Mental Overload | Interactive imagined stress meter with visible numeric and descriptive feedback |
+| 3 | Why Do We Rewatch Friends? | Comfort viewing explanation and Python-generated illustrative chart with interactive explanations |
+| 4 | The Science of Predictability | Mechanism 1 with interactive reveal and limitations |
+| 5 | PIVOT! The 3D Experience | Interactive rotating Three.js couch, drag, keyboard, slider, reset and illustration fallback |
+| 6 | Friends Who Feel Like Family | Mechanism 2: parasocial relationships, six character reveal cards |
+| 7 | Giving Your Brain a Break | Mechanism 3: low cognitive load, interactive comparison with answer reveals |
+| 8 | The Nostalgia Effect | Mechanism 4 with interactive timeline and optional temporary reflection |
+| 9 | Iconic Quotes & Emotional Triggers | Interactive quote cards, attribution and playful theme changes |
+| 10 | The Anxiety Simulator | Python-generated illustrative curves, JavaScript visualization, working controls, accessible table and explicit nonclinical labeling |
+| 11 | Customize Your Comfort Zone | Working accent color, font, mood and reset controls applied throughout the deck |
+| 12 | I'll Be There for You | Conclusions, scientific limitations, accessible reference links and restart |
 
-## 6. Functional Requirements
-- [ ] 12 distinct slides, each reachable by navigation.
-- [ ] Previous/Next buttons and keyboard arrow navigation.
-- [ ] Current slide indicator and clickable progress navigation.
-- [ ] Functional 3D coffee mug on slide 1; animation lasts five seconds and stops.
-- [ ] At least one fully functioning quiz with scoring.
-- [ ] Editable text on slide 3, with immediate visible changes and a reset option.
-- [ ] Python script processes a small, documented dataset and outputs JSON.
-- [ ] JavaScript loads and visualizes the generated data.
-- [ ] Responsive layout and usable keyboard focus states.
-- [ ] Respect reduced-motion preferences where practical.
+## Functional acceptance criteria
 
-## 7. Technical Approach
-- HTML5 and CSS3 for layout and visuals.
-- Vanilla JavaScript for navigation, interaction and content editing.
-- Three.js for 3D graphics (document dependency and offline limitations).
-- Python 3 for data transformation into `data/friends_stats.json`.
-- Git and GitHub for version control and hosting.
-- Prefer original CSS/SVG illustrations; use externally sourced assets only with appropriate rights and attribution.
+- Exactly 12 sections and 12 clickable navigation indicators, in the prescribed order.
+- Previous/Next, keyboard navigation, Home/End, hash deep links and refresh all work; only one slide is visible.
+- Counter, page title and progress reflect the current slide; boundary controls disable appropriately.
+- Every interaction in the table works, with meaningful keyboard support and visible feedback.
+- Slide 1 retains the exact 5,000 ms clamped spin, replay lock, reduced-motion behavior and manual controls.
+- Slide 5 uses genuine locally bundled Three.js geometry, with no network model dependency.
+- Python deterministically generates JSON, a browser-compatible data bundle, and an illustrative SVG; browser charts consume its output.
+- Settings apply across slides and reset restores the classic defaults, including quote mood overrides.
+- Forms and scene controls do not accidentally trigger slide navigation.
+- Navigation remains usable with missing WebGL, direct file access, reduced motion and narrow windows.
+- Run the browser regression suite successfully before creating the local v0.4 Git commit. No GitHub push is authorized for this milestone.
 
-## 8. Repository Structure
-```text
-friends-interactive-presentation/
-├── index.html
-├── styles.css
-├── script.js
-├── python/
-│   └── generate_stats.py
-├── data/
-│   └── friends_stats.json
-├── images/
-│   └── screenshots/
-├── PRD.md
-├── README.md
-└── AI_CONVERSATION.md
-```
-The final structure may be simplified if that improves reliability.
+## Evidence and data requirements
 
-## 9. Workflow and Team Responsibilities
-**Student A:** slide content, layout, retro visual design, content editing feature, screenshots, and README.
+All numeric chart values are synthetic arbitrary units, explicitly identified as nonclinical in context. They are not clinical stress scores, cortisol levels, survey results, measured outcomes, predictions or proven treatment effects. The simulator ranking is invented. The stress meter is an imagined reflection prompt with no data collection.
 
-**Student B:** navigation, quiz interactions, Three.js animation, Python data processing, and technical testing.
+Use cautious language for proposed predictability and low-load mechanisms. Distinguish nonreciprocal parasocial bonds from reciprocal friendships. Explain individual differences and possible bittersweet nostalgia. Include accessible links to the APA definition, University at Buffalo research coverage, and a University of Southampton research record on nostalgia and self-continuity. No claim that watching Friends treats anxiety.
 
-**Both:** PRD review, integration, testing, documentation of prompts and changes, Git commits and pushes.
+## Architecture and scope
 
-### Four-Hour Plan
-| Time | Milestone |
-|---|---|
-| 0:00–0:30 | Approve PRD, initialize repository, create slide skeleton |
-| 0:30–1:30 | Build all slides, navigation, and visual theme |
-| 1:30–2:30 | Add Three.js, quizzes, live editing, and Python-generated data |
-| 2:30–3:15 | Integration, content review, responsive checks, bug fixes |
-| 3:15–4:00 | Screenshots, README, conversation log, final Git pushes, submission |
+HTML/CSS and vanilla JavaScript; local Three.js r170; standard-library Python preprocessing; dependency-free Node static server and Edge/Chromium tests. Data is pre-generated for static hosting; no server-side Python or runtime external services. No participant information, persistent settings, telemetry or clinical assessment. Original illustrations and short attributed quotes; retain bundled Three.js license and provenance.
 
-## 10. Version Control Plan
-Use meaningful incremental commits and push them to GitHub after completed milestones:
-1. `docs: add initial PRD and project scope`
-2. `feat: create 12-slide layout and navigation`
-3. `style: implement Classic Friends theme`
-4. `feat: add 3D mug and interactive quizzes`
-5. `feat: add Python statistics and live text editing`
-6. `docs: add screenshots, README and AI conversation log`
-7. `fix: complete testing and final polish`
+The prescribed comfort-viewing structure replaces obsolete quizzes, production-fact previews and live character-description editing. Existing functional navigation, mug, responsive composition and original artwork are retained.
 
-Each commit should reflect actual completed changes. The AI conversation log must accurately reflect real prompts, decisions, revisions, and outcomes; do not fabricate development history.
+## Verification and delivery
 
-## 11. Documentation Requirements
-### README.md
-- Project summary and learning goals.
-- Screenshots of several actual slides.
-- Feature list and technology stack.
-- Instructions to run locally and regenerate Python data.
-- Repository structure and team contributions.
-- Development workflow and selected Git milestones.
-- Known limitations and asset attributions.
-
-### AI_CONVERSATION.md
-- Chronological record of actual prompts and important responses.
-- What changed after each iteration.
-- Issues encountered, fixes, and what the team learned.
-
-## 12. Acceptance Criteria
-- [ ] At least 10 slides; target 12 complete slides.
-- [ ] Navigation works without console errors.
-- [ ] 3D animation visibly renders and stops after five seconds.
-- [ ] At least one quiz produces correct feedback and scoring.
-- [ ] Text can be edited live and reset without editing source code.
-- [ ] Python-generated data is used in a slide and can be regenerated.
-- [ ] English documentation is accurate and complete.
-- [ ] README contains at least three genuine presentation screenshots.
-- [ ] Repository is public or explicitly shared with the instructor.
-- [ ] Git history shows meaningful development iterations and pushes.
-- [ ] Both students can explain and demonstrate the implemented features.
-
-## 13. Risks and Mitigations
-- **Time pressure:** finish all slide skeletons before advanced features.
-- **Three.js availability:** test CDN access and provide a graceful fallback.
-- **Copyright:** avoid unlicensed screenshots and logos; use original illustrations or properly licensed assets.
-- **Data accuracy:** document the source and methodology of all statistics; do not invent figures.
-- **GitHub Pages compatibility:** pre-generate JSON using Python; no server-side Python at runtime.
+The browser suite covers animation boundaries, actual WebGL drawing, interactions, required titles and exact count, navigation/counter/progress, deep links, input isolation, responsive widths, reduced motion and fallback operation. Capture real browser screenshots for visual review. README must accurately describe run commands, Python regeneration, all 12 slides, synthetic data, controls, accessibility, scientific limitations, and local-only Git delivery. Commit only after passing verification; do not push.

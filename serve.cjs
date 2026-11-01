@@ -21,4 +21,4 @@ const server = http.createServer((request, response) => {
   });
 });
 server.on('error', error => { console.error(error.message); process.exitCode = 1; });
-server.listen(8000, '127.0.0.1', () => console.log('Friends v0.3: http://127.0.0.1:8000 (Ctrl+C to stop)'));
+server.listen(8000, '127.0.0.1', () => console.log('Friends v0.4: http://127.0.0.1:8000 (Ctrl+C to stop)'));

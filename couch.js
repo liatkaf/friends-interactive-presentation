@@ -1,0 +1,17 @@
+﻿import THREE from './vendor/three.module.js';
+export function mountCouch(host){
+ const renderer=new THREE.WebGLRenderer({alpha:true,antialias:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+ const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(38,1,.1,100);camera.position.set(0,3.2,8);camera.lookAt(0,.7,0);
+ scene.add(new THREE.HemisphereLight(0xfff4de,0x49344f,3));const light=new THREE.DirectionalLight(0xffffff,4);light.position.set(3,6,4);scene.add(light);
+ const couch=new THREE.Group(),orange=new THREE.MeshStandardMaterial({color:0xd98748,roughness:.85}),wood=new THREE.MeshStandardMaterial({color:0x49301e});
+ function box(w,h,d,x,y,z,material=orange){const mesh=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),material);mesh.position.set(x,y,z);couch.add(mesh);}
+ box(3.8,.45,1.5,0,.5,0);box(3.6,1.1,.3,0,1.2,-.65);[-1.85,1.85].forEach(x=>box(.38,.85,1.6,x,.95,0));[-1.15,0,1.15].forEach(x=>{box(1.06,.23,1.2,x,.83,.08);box(1.04,.8,.24,x,1.28,-.43);});[-1.5,1.5].forEach(x=>[-.5,.5].forEach(z=>box(.15,.35,.15,x,.12,z,wood)));scene.add(couch);
+ const slider=document.querySelector('#couch-turn'),status=document.querySelector('#couch-status'),canvas=renderer.domElement;canvas.tabIndex=0;canvas.setAttribute('role','img');canvas.setAttribute('aria-label','Interactive 3D orange couch. Drag or use Left and Right to rotate; Home resets.');host.append(canvas);host.querySelector('.sofa').hidden=true;host.dataset.state='ready';
+ function draw(){if(host.closest('.slide').hidden)return;const r=host.getBoundingClientRect();renderer.setSize(r.width,Math.max(240,r.height),false);camera.aspect=r.width/Math.max(240,r.height);camera.updateProjectionMatrix();renderer.render(scene,camera);}
+ function update(){couch.rotation.y=Number(slider.value)*Math.PI/180;document.querySelector('#couch-angle').textContent=`${slider.value} degrees`;host.dataset.angle=slider.value;draw();}
+ function reset(){slider.value=25;update();}slider.addEventListener('input',update);document.querySelector('#couch-reset').addEventListener('click',reset);
+ let previous=null;canvas.style.touchAction='pan-y';canvas.addEventListener('pointerdown',e=>{previous=e.clientX;canvas.setPointerCapture(e.pointerId);});canvas.addEventListener('pointermove',e=>{if(previous===null)return;slider.value=Math.max(-180,Math.min(180,Number(slider.value)+(e.clientX-previous)*.6));previous=e.clientX;update();});['pointerup','pointercancel','lostpointercapture'].forEach(name=>canvas.addEventListener(name,()=>previous=null));
+ canvas.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','Home'].includes(e.key))return;e.preventDefault();e.stopPropagation();slider.value=e.key==='Home'?25:Math.max(-180,Math.min(180,Number(slider.value)+(e.key==='ArrowRight'?10:-10)));update();});
+ canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();host.dataset.state='fallback';canvas.hidden=true;host.querySelector('.sofa').hidden=false;status.textContent='Graphics context lost. Use the slider to rotate the illustration.';slider.addEventListener('input',()=>host.querySelector('.sofa').style.transform=`perspective(600px) rotateY(${slider.value}deg)`);});
+ const resize=new ResizeObserver(draw);resize.observe(host);document.addEventListener('friends:slidechange',draw);window.addEventListener('pagehide',()=>{resize.disconnect();renderer.dispose();scene.traverse(o=>{o.geometry?.dispose();});orange.dispose();wood.dispose();},{once:true});status.textContent='Ready. Drag, use the slider, or focus the couch and use arrow keys.';update();
+}

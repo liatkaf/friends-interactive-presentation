@@ -86,9 +86,50 @@ let browser,ws,send,ownedBrowser=false;
   await waitFor(`!document.querySelector('.coffee-experience').coffeeMug.state.spinning`,'replay finishes');
   // Simulate loss of GPU support and ensure the fallback preserves navigation.
 
+
+  await check("slides.length===12 && sections.length===12 && document.querySelectorAll('.dot').length===12",'exactly twelve slides and navigation indicators');
+  const expected=['Welcome to Central Perk','Modern Anxiety & Mental Overload','Why Do We Rewatch Friends?','The Science of Predictability','PIVOT! The 3D Experience','Friends Who Feel Like Family','Giving Your Brain a Break','The Nostalgia Effect','Iconic Quotes & Emotional Triggers','The Anxiety Simulator','Customize Your Comfort Zone',"I'll Be There for You"];
+  test(JSON.stringify(await evaluate('slides.map(s=>s.title)'))===JSON.stringify(expected),'required slide order');
+  await evaluate("goTo(1); document.querySelector('#stress').value=90; document.querySelector('#stress').dispatchEvent(new Event('input'))");
+  await check("document.querySelector('#stress-meter').value===90 && document.querySelector('#stress-value').textContent.includes('90')",'stress meter updates');
+  await evaluate("goTo(2);document.querySelector('[data-reason]').click()");
+  await check("document.querySelector('#comfort-detail').textContent.includes('Recognizing') && window.COMFORT_DATA.reasons.length===4",'Python data and interactive comfort chart');
+  await evaluate("goTo(3);document.querySelector('#slide-4 summary').click()");
+  await check("document.querySelector('#slide-4 details').open",'predictability reveal');
+  await evaluate('goTo(4)');
+  await waitFor("document.querySelector('#couch-view').dataset.state==='ready'",'Three.js couch mount');
+  await evaluate("document.querySelector('#couch-turn').value=90;document.querySelector('#couch-turn').dispatchEvent(new Event('input'))");
+  await check("document.querySelector('#couch-view').dataset.angle==='90'",'couch slider rotates scene');
+  await evaluate("document.querySelector('#couch-view canvas').dispatchEvent(new KeyboardEvent('keydown',{key:'ArrowRight',bubbles:true}))");
+  await check("current===4 && document.querySelector('#couch-view').dataset.angle==='100'",'couch keyboard rotation consumes navigation key');
+  await evaluate("document.querySelector('#couch-reset').click()");
+  await check("document.querySelector('#couch-view').dataset.angle==='25'",'couch reset');
+  await check("document.querySelectorAll('#slide-6 .character').length===6",'six character cards');
+  await evaluate("goTo(5);document.querySelector('#slide-6 summary').click()");
+  await check("document.querySelector('#slide-6 details').open",'character card reveal');
+  await evaluate("goTo(6);document.querySelector('[data-load=new]').click()");
+  await check("document.querySelector('#load-result').textContent==='Seli.' && document.querySelector('#load-scene').textContent.includes('Nera')",'cognitive load demonstration switches');
+  await evaluate("document.querySelector('[data-load=familiar]').click()");
+  await check("document.querySelector('#load-result').textContent==='Joey.'",'familiar scene restores');
+  await evaluate("goTo(7);document.querySelector('[data-memory=\"2\"]').click()");
+  await check("document.querySelector('#memory-year').textContent.startsWith('Today')",'nostalgia timeline');
+  await evaluate("goTo(8);document.querySelector('[data-quote]').click()");
+  await check("sections[8].dataset.quoteMood==='orange' && !document.querySelector('.quote-explanation').hidden",'quote reveal and theme');
+  await evaluate("goTo(9);document.querySelector('#sim-start').value=40;document.querySelector('#sim-start').dispatchEvent(new Event('input'))");
+  await check("document.querySelector('#sim-summary').textContent.includes('40 to 26') && document.querySelector('#slide-10').textContent.includes('NONCLINICAL')",'nonclinical simulation scales synthetic data');
+  await evaluate("document.querySelector('#sim-mode').value='new';document.querySelector('#sim-mode').dispatchEvent(new Event('change'))");
+  await check("document.querySelector('#sim-summary').textContent.includes('40 to 36')",'simulation scenario changes');
+  await evaluate("goTo(10);for(const [id,value] of [['comfort-color','green'],['comfort-font','sans'],['comfort-mood','quiet']]){const el=document.getElementById(id);el.value=value;el.dispatchEvent(new Event('change'));}");
+  await check("document.body.dataset.comfortColor==='green' && getComputedStyle(document.querySelector('#slide-11 h2')).fontFamily.includes('Arial') && getComputedStyle(sections[10]).backgroundColor==='rgb(255, 244, 222)'",'palette font and mood controls apply');
+  await evaluate("document.querySelector('#comfort-reset').click()");
+  await check("document.body.dataset.comfortColor==='classic' && document.body.dataset.comfortFont==='classic' && document.body.dataset.comfortMood==='classic' && sections[8].dataset.quoteMood===''",'reset restores defaults including quote mood');
+  await check("document.querySelectorAll('#slide-12 .references a').length===3",'accessible reference links');
+  for(const i of [2,4,5,9,10,11]){await evaluate('goTo('+i+')');await pause(400);await screenshot('v04-slide-'+(i+1));}
+
   for(let i=0;i<12;i++){
     await evaluate(`document.querySelectorAll('.dot')[${i}].click()`);
     await check(`current===${i}&&document.querySelectorAll('.slide:not([hidden])').length===1`,'indicator '+(i+1));
+    await check("document.querySelector('#current').textContent===String(current+1).padStart(2,'0') && Math.abs(parseFloat(document.querySelector('#progress-fill').style.width)-(current+1)/12*100)<.01",'counter and progress '+i);
   }
   await check(`document.querySelector('#next').disabled`,'last boundary');
   await evaluate(`document.querySelector('[data-go="0"]').click()`);await check(`current===0&&document.querySelector('#previous').disabled`,'restart and first boundary');
