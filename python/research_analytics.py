@@ -27,6 +27,15 @@ def validate(data):
             raise ValueError('Invalid original figure.')
         if f['paper'] not in data['papers'] or f['exact_series_available'] is not False:
             raise ValueError('Do not invent numerical series for original figures.')
+        evidence = f.get('evidence')
+        if evidence:
+            if evidence['kind'] != 'qualitative' or not evidence['verification_url'].startswith('https://'):
+                raise ValueError('Qualitative evidence needs a verified source.')
+            for contrast in evidence['contrasts']:
+                if contrast['status'] not in ('significant', 'marginal', 'nonsignificant'):
+                    raise ValueError('Unknown reported significance category.')
+                if set(contrast) != {'comparison', 'status', 'reported_p'}:
+                    raise ValueError('No estimated group means or effect magnitudes allowed.')
     return data
 
 def generate(source=SOURCE, output=None):
@@ -38,6 +47,11 @@ def generate(source=SOURCE, output=None):
         row['display_percent'] = {key: round(row[key]/7*100, 6) for key in ('doing','loneliness')}
     for f in data['figures']:
         f['sha256'] = hashlib.sha256((ROOT/'assets/research'/f['file']).read_bytes()).hexdigest()
+        if f.get('evidence'):
+            f['evidence']['display_note'] = 'Qualitative evidence map. Columns are reported statistical categories, not effect sizes or outcome values. Non-significance does not establish equivalence.'
+            f['evidence']['categories'] = ['significant', 'marginal', 'nonsignificant']
+            for contrast in f['evidence']['contrasts']:
+                contrast['display_column'] = f['evidence']['categories'].index(contrast['status']) + 1
     target = Path(output) if output else ROOT/'data/research_analytics.json'
     target.write_text(json.dumps(data, indent=2, ensure_ascii=True)+'\n', encoding='utf-8')
     return data

@@ -65,6 +65,40 @@
       "explanation": "Y: seconds writing. X: control versus aroused belongingness needs. Bars: favorite versus control TV. Aroused needs followed recalling a fight; control listed possessions. Significant interaction (p < .01): longer favorite-TV essays after threat.",
       "exact_series_available": false,
       "takeaway": "Belongingness threat increased time spent recalling favorite TV.",
+      "evidence": {
+        "kind": "qualitative",
+        "outcome": "Essay-writing time",
+        "original_unit": "Seconds",
+        "source_locator": "Study 2 results, p. 356",
+        "verified_on": "2026-11-02",
+        "verification_url": "https://ubwp.buffalo.edu/gabriellab/wp-content/uploads/sites/65/2025/04/Derrick-J.-L.-Gabriel-S.-Hugenberg-K.-J.-2009.-Social-surrogacy-How-favored-television-programs-provide-the-experience-of-belonging.pdf",
+        "contrasts": [
+          {
+            "comparison": "Needs by TV essay interaction",
+            "status": "significant",
+            "reported_p": "p < .01",
+            "display_column": 1
+          },
+          {
+            "comparison": "Threat vs control, favorite-TV essay",
+            "status": "significant",
+            "reported_p": "p = .04",
+            "display_column": 1
+          },
+          {
+            "comparison": "Favorite vs control TV, no threat",
+            "status": "nonsignificant",
+            "reported_p": "p = .24",
+            "display_column": 3
+          }
+        ],
+        "display_note": "Qualitative evidence map. Columns are reported statistical categories, not effect sizes or outcome values. Non-significance does not establish equivalence.",
+        "categories": [
+          "significant",
+          "marginal",
+          "nonsignificant"
+        ]
+      },
       "sha256": "fb2ad8544dca641edabb099fb6cf1bb9ffd49934af17b42fead94a402f101536"
     },
     {
@@ -76,6 +110,34 @@
       "explanation": "Y: standardized state self-esteem composite. Same conditions as Figure 1. Significant interaction (p = .04); the threat contrast within favorite TV was non-significant (p = .42).",
       "exact_series_available": false,
       "takeaway": "The self-esteem interaction supported a buffering pattern; the threat contrast within favorite TV was non-significant.",
+      "evidence": {
+        "kind": "qualitative",
+        "outcome": "State self-esteem",
+        "original_unit": "Standardized composite",
+        "source_locator": "Study 3, pp. 357-358",
+        "verified_on": "2026-11-02",
+        "verification_url": "https://ubwp.buffalo.edu/gabriellab/wp-content/uploads/sites/65/2025/04/Derrick-J.-L.-Gabriel-S.-Hugenberg-K.-J.-2009.-Social-surrogacy-How-favored-television-programs-provide-the-experience-of-belonging.pdf",
+        "contrasts": [
+          {
+            "comparison": "Needs by TV essay interaction",
+            "status": "significant",
+            "reported_p": "p = .04",
+            "display_column": 1
+          },
+          {
+            "comparison": "Threat vs control, favorite-TV essay",
+            "status": "nonsignificant",
+            "reported_p": "p = .42",
+            "display_column": 3
+          }
+        ],
+        "display_note": "Qualitative evidence map. Columns are reported statistical categories, not effect sizes or outcome values. Non-significance does not establish equivalence.",
+        "categories": [
+          "significant",
+          "marginal",
+          "nonsignificant"
+        ]
+      },
       "sha256": "18d976efe1f7e8b50dedcb944c0df5f0f82ee30f1ba28d59d39ea2b313a4e370"
     },
     {
@@ -87,6 +149,34 @@
       "explanation": "Y: negative mood ratings. Same conditions. Significant interaction (p = .03); favorite-versus-control TV under threat was marginal (p = .09).",
       "exact_series_available": false,
       "takeaway": "The mood interaction was significant; favorite versus control TV under threat was only marginal.",
+      "evidence": {
+        "kind": "qualitative",
+        "outcome": "Negative mood",
+        "original_unit": "Mood rating composite",
+        "source_locator": "Study 3, p. 358",
+        "verified_on": "2026-11-02",
+        "verification_url": "https://ubwp.buffalo.edu/gabriellab/wp-content/uploads/sites/65/2025/04/Derrick-J.-L.-Gabriel-S.-Hugenberg-K.-J.-2009.-Social-surrogacy-How-favored-television-programs-provide-the-experience-of-belonging.pdf",
+        "contrasts": [
+          {
+            "comparison": "Needs by TV essay interaction",
+            "status": "significant",
+            "reported_p": "p = .03",
+            "display_column": 1
+          },
+          {
+            "comparison": "Favorite vs control TV, under threat",
+            "status": "marginal",
+            "reported_p": "p = .09",
+            "display_column": 2
+          }
+        ],
+        "display_note": "Qualitative evidence map. Columns are reported statistical categories, not effect sizes or outcome values. Non-significance does not establish equivalence.",
+        "categories": [
+          "significant",
+          "marginal",
+          "nonsignificant"
+        ]
+      },
       "sha256": "ac8026e2136836b92a7cc63eb63a43ee327c6bb602302f1e517648664cb572be"
     },
     {
@@ -98,6 +188,28 @@
       "explanation": "Y: standardized rejection composite. Same conditions. Interaction marginal (p = .09), not significant at .05. Treat the pattern cautiously.",
       "exact_series_available": false,
       "takeaway": "The rejection interaction was marginal, not significant at .05. Treat the pattern cautiously.",
+      "evidence": {
+        "kind": "qualitative",
+        "outcome": "Feelings of rejection",
+        "original_unit": "Standardized composite",
+        "source_locator": "Study 3, p. 358",
+        "verified_on": "2026-11-02",
+        "verification_url": "https://ubwp.buffalo.edu/gabriellab/wp-content/uploads/sites/65/2025/04/Derrick-J.-L.-Gabriel-S.-Hugenberg-K.-J.-2009.-Social-surrogacy-How-favored-television-programs-provide-the-experience-of-belonging.pdf",
+        "contrasts": [
+          {
+            "comparison": "Needs by TV essay interaction",
+            "status": "marginal",
+            "reported_p": "p = .09",
+            "display_column": 2
+          }
+        ],
+        "display_note": "Qualitative evidence map. Columns are reported statistical categories, not effect sizes or outcome values. Non-significance does not establish equivalence.",
+        "categories": [
+          "significant",
+          "marginal",
+          "nonsignificant"
+        ]
+      },
       "sha256": "d2069d3ea80715b079006eab2a6d3299deb59e6ee3d86a0930e5f4259f750f59"
     },
     {
@@ -109,6 +221,34 @@
       "explanation": "X: neutral room listing versus favorite-TV essay. Bars: free versus regulated writing (avoiding specified letters). Y: correct Remote Associates Test items. Significant interaction (p < .05); the regulated/free difference was non-significant after the TV essay.",
       "exact_series_available": false,
       "takeaway": "The puzzle-performance interaction was significant; regulated/free differences were non-significant after favorite-TV recall.",
+      "evidence": {
+        "kind": "qualitative",
+        "outcome": "Correct RAT items",
+        "original_unit": "Number of correct puzzle answers",
+        "source_locator": "Study 1 results and Figure 1",
+        "verified_on": "2026-11-02",
+        "verification_url": "https://citeseerx.ist.psu.edu/document?doi=cfe2b9c03f302fe27a2702d4391a56f11105ee71&repid=rep1&type=pdf",
+        "contrasts": [
+          {
+            "comparison": "Writing regulation by recall interaction",
+            "status": "significant",
+            "reported_p": "p < .05",
+            "display_column": 1
+          },
+          {
+            "comparison": "Regulated vs free, favorite-TV recall",
+            "status": "nonsignificant",
+            "reported_p": "Exact p not reported in this passage",
+            "display_column": 3
+          }
+        ],
+        "display_note": "Qualitative evidence map. Columns are reported statistical categories, not effect sizes or outcome values. Non-significance does not establish equivalence.",
+        "categories": [
+          "significant",
+          "marginal",
+          "nonsignificant"
+        ]
+      },
       "sha256": "6a30c17c7631f4601ccbc069e37101ef8b831cd0dec0c37b19f7f16dcc542433"
     },
     {
@@ -120,6 +260,34 @@
       "explanation": "Same experimental conditions as Paper B Figure 1. Y: negative mood. Significant interaction (p = .04); the regulated/free difference was non-significant after the TV essay. Error bars in Paper B figures represent standard errors.",
       "exact_series_available": false,
       "takeaway": "The negative-mood interaction was significant; regulated/free differences were non-significant after favorite-TV recall.",
+      "evidence": {
+        "kind": "qualitative",
+        "outcome": "Negative mood",
+        "original_unit": "Mean rating, 1-7",
+        "source_locator": "Study 1 results and Figure 2",
+        "verified_on": "2026-11-02",
+        "verification_url": "https://citeseerx.ist.psu.edu/document?doi=cfe2b9c03f302fe27a2702d4391a56f11105ee71&repid=rep1&type=pdf",
+        "contrasts": [
+          {
+            "comparison": "Writing regulation by recall interaction",
+            "status": "significant",
+            "reported_p": "p = .04",
+            "display_column": 1
+          },
+          {
+            "comparison": "Regulated vs free, favorite-TV recall",
+            "status": "nonsignificant",
+            "reported_p": "Exact p not reported in this passage",
+            "display_column": 3
+          }
+        ],
+        "display_note": "Qualitative evidence map. Columns are reported statistical categories, not effect sizes or outcome values. Non-significance does not establish equivalence.",
+        "categories": [
+          "significant",
+          "marginal",
+          "nonsignificant"
+        ]
+      },
       "sha256": "8303a8499f30047726c0a1c8c7db6143933ddd8e0a5f1f298b904720cad58c25"
     },
     {
@@ -131,10 +299,44 @@
       "explanation": "X: familiar fictional world use on Day 2 (yes/no). Bars: effortful self-control on Day 1. Y: negative mood on Day 3. Significant interaction; the Day 1 association was significant without familiar-world use (p = .012), non-significant with use (p = .261). Observational diary evidence, not a randomized viewing effect.",
       "exact_series_available": false,
       "takeaway": "The diary interaction linked familiar-world use and later mood. This association is not a randomized viewing effect.",
+      "evidence": {
+        "kind": "qualitative",
+        "outcome": "Day 3 negative mood",
+        "original_unit": "Mean rating, 1-7",
+        "source_locator": "Study 2 results, Table 2 and Figure 3",
+        "verified_on": "2026-11-02",
+        "verification_url": "https://citeseerx.ist.psu.edu/document?doi=cfe2b9c03f302fe27a2702d4391a56f11105ee71&repid=rep1&type=pdf",
+        "contrasts": [
+          {
+            "comparison": "Day 1 self-control by Day 2 familiar-world use",
+            "status": "significant",
+            "reported_p": "p < .01",
+            "display_column": 1
+          },
+          {
+            "comparison": "Day 1 association, no familiar-world use",
+            "status": "significant",
+            "reported_p": "p = .012",
+            "display_column": 1
+          },
+          {
+            "comparison": "Day 1 association, familiar-world use",
+            "status": "nonsignificant",
+            "reported_p": "p = .261",
+            "display_column": 3
+          }
+        ],
+        "display_note": "Qualitative evidence map. Columns are reported statistical categories, not effect sizes or outcome values. Non-significance does not establish equivalence.",
+        "categories": [
+          "significant",
+          "marginal",
+          "nonsignificant"
+        ]
+      },
       "sha256": "42baf59fc5997c32adb30a3e95482360b2d6ac2baa87305b12ba0934692e192b"
     }
   ],
   "generated_by": "Python 3 build-time research_analytics.py; not a live browser Python session",
   "transform_note": "Bar widths are mean / 7 \u00d7 100 for display only. No figure values are estimated.",
-  "source_sha256": "f0cf624317f43297cc95dcf7ae100957f5a818db70edb1f6a95daa06684e719a"
+  "source_sha256": "d419b8bff7e652218cfa5de062980f89fa6720a8092775de9b70bc8c98c00930"
 }

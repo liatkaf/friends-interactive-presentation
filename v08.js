@@ -15,16 +15,16 @@
 
  // Reveal without an event-catching overlay: the bottom zone never blocks slide content.
  const overlay=$('#navigation-overlay'),toggle=$('#nav-toggle');
- let timer=0,manual=false,inZone=false;
+ let timer=0,manual=false,inZone=false,hovering=false;
  const focused=()=>overlay.contains(document.activeElement);
  function show(){clearTimeout(timer);timer=0;document.body.classList.add('nav-open');toggle.setAttribute('aria-expanded','true');}
- function hide(){if(focused()||manual)return;document.body.classList.remove('nav-open');toggle.setAttribute('aria-expanded','false');}
- function delayHide(){if(timer||focused()||manual)return;timer=setTimeout(()=>{timer=0;hide();},1300);}
+ function hide(force=false){if(!force&&(focused()||manual||hovering))return;document.body.classList.remove('nav-open');toggle.setAttribute('aria-expanded','false');}
+ function delayHide(){if(timer||focused()||manual||hovering)return;timer=setTimeout(()=>{timer=0;hide();},1300);}
  document.addEventListener('pointermove',event=>{if(event.pointerType==='touch')return;const next=event.clientY>=innerHeight-88;if(next){show();}else if(inZone){delayHide();}inZone=next;});
- overlay.addEventListener('pointerenter',()=>show());overlay.addEventListener('pointerleave',()=>{inZone=false;delayHide();});
+ overlay.addEventListener('pointerenter',event=>{if(event.pointerType!=='touch'){hovering=true;show();}});overlay.addEventListener('pointerleave',()=>{hovering=false;inZone=false;delayHide();});
  overlay.addEventListener('focusin',()=>show());overlay.addEventListener('focusout',()=>queueMicrotask(()=>{if(!focused())delayHide();}));
  toggle.onclick=()=>{manual=!manual;if(manual)show();else hide();};
  document.addEventListener('pointerdown',event=>{if(!overlay.contains(event.target)&&!toggle.contains(event.target)){manual=false;delayHide();}});
- document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!document.querySelector('dialog[open]')){manual=false;if(focused())presentation.focus({preventScroll:true});hide();}});
+ document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!document.querySelector('dialog[open]')){manual=false;if(focused())presentation.focus({preventScroll:true});hide(true);}});
  window.FriendsNavigation={show,hide:()=>{manual=false;hide();},get visible(){return document.body.classList.contains('nav-open');}};
 })();

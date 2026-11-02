@@ -1,4 +1,4 @@
-# FriendsAnxietyStudio — Product Requirements v0.8
+# FriendsAnxietyStudio — Product Requirements v0.9
 
 ## Product, audience and objectives
 
@@ -28,8 +28,8 @@ The centered **F·R·I·E·N·D·S | The Comfort Lab** brand retains alternating
 | 6 | What the Research Shows | Grouped/switchable exact descriptive-means chart |
 | 7 | Belonging, Mood & Rejection | All four original Paper A figures |
 | 8 | Familiar Worlds & Self-Control | All three original Paper B figures |
-| 9 | Nostalgia & Cognitive Ease | Memory/familiarity illustration |
-| 10 | From Research to Recommendation | Evidence → preferences → real episode |
+| 9 | The One With The Rewind | Replayable VHS/TV reveal and interpretive concepts |
+| 10 | Finding Your Episode Lobster! | Three sequential stages and illustrated lobster meeting |
 | 11 | How Are You Feeling? | Optional mood cards |
 | 12 | What's Your Stress Level? | Optional 0–10 self-report slider |
 | 13 | Who's Your Favorite Friend? | Preserved six character cards |
@@ -39,11 +39,24 @@ The centered **F·R·I·E·N·D·S | The Comfort Lab** brand retains alternating
 | 17 | Finding Your Perfect Match | Actual request/computation states and factors |
 | 18 | The One With Your Perfect Episode | Top episode, two alternatives, explanations and actions |
 
-## Functional requirements
+## Version 0.9 functional requirements
+
+- Remove the secondary status bar on every slide. Keep profile progress tracking without a permanent replacement. Move optional Settings/Couch 3D controls into the existing keyboard/touch-accessible reveal-on-demand dock. Preserve primary branding and all navigation exclusions.
+- Preserve the genuine continuous Three.js mug. Remove every visible instruction beneath it and replay controls. Pause hidden rendering, retain materials/lighting/steam, and support Pages module loading and reduced motion.
+- Preserve the existing Three.js PIVOT implementation, proportions, camera framing, movement/corner rules, score logic, controls and tension wording. Do not redesign its scene or add dashboards.
+- Replace the main scans on Slides 7-8 with cream/purple/orange interactive Python-generated evidence maps. Use fifteen source-verified comparisons over seven measures. Because documented exact group means are unavailable, plot reported significance categories as qualitative findings, never estimated measurements/effect sizes. Show units, categories, p labels, interpretation, accessible tables and keyboard/hover details. Preserve measure selectors and View Original Figure for all seven unmodified references. Static Pages must consume the generated bundle without Python.
+- Slide 9: original VHS cassette left, TV right, central REWIND control. Reels spin and TV powers on, revealing an original cozy apartment illustration and the exact nostalgia/cognitive-ease definitions. Allow replay/native keyboard activation; complete immediately under reduced motion; cancel hidden work. Clearly label broader interpretations rather than experimental outcomes.
+- Slide 10: exact requested title/subtitle; two original lobster characters; sequential needs/style/episode stages and a gentle meeting heart. Find My Lobster Episode advances to Slide 11 without computing a recommendation. Support reduced motion.
+- Remove Slide 12's Use this value control/text entirely; retain slider input, validation and persistence.
+- Preserve the existing Slide 17-to-18 reveal flow but label its larger yellow animated button Reveal My Perfect Episode! Give visible focus, hover feedback and reduced-motion handling.
+- Slide 18: hide implementation diagnostics from ordinary users, retain console/API diagnostics and both scoring engines. Use friendly incomplete-profile wording. Separate two smaller alternative cards under Two More Episodes You Might Love. Give Back to Start its own prominent lower navigation area and preserve answers.
+- **Try Again must reset**, using the single existing profile state system: all seven preference fields across six steps, session/local profile-key persistence, result/cache/fingerprint/pending state, scoring detail, card appearance and slider/default output. Progress becomes 0/6 and navigation returns to Slide 11. Keep unrelated appearance/settings/storage intact. Reject late old requests. Normal navigation and Back to Start preserve answers; normal refresh preserves an attempt; refresh after reset does not resurrect it. Both Python and fallback must use only new answers after reset.
+
+## Retained requirements
 
 ### Presentation and graphics
 
-The mug rotates seamlessly for the entire visible opening slide, retaining its model/materials/light/drag controls. Ease automatic rotation back after interaction; prevent duplicate frame loops; cancel while the slide/document is hidden. Reduced motion keeps manual exploration without automatic rotation. Remove replay controls and copy.
+The mug rotates seamlessly for the entire visible opening slide, retaining its model/materials/light/drag controls. Ease automatic rotation back after interaction; prevent duplicate frame loops; cancel while the slide/document is hidden. Reduced motion keeps manual exploration without automatic rotation. Remove replay controls and all visible copy beneath the mug.
 
 Slide 3 uses a spacious 2×2 desktop grid, two columns on medium mobile and one on very narrow screens. Each focusable card has a number, subtle icon, heading, requested tagline and brief qualified explanation. Use consistent heights and restrained hover/focus feedback.
 
@@ -57,7 +70,7 @@ Extend `python/research_analytics.py`; do not add a redundant analytics module. 
 
 Slide 6 plots only Paper A, Study 1, Table 1 means: favorite TV 5.81/2.64; whatever TV 4.86/3.69; favorite music 5.82/2.97; favorite movie 5.00/3.43. Explain the 1–7 scales/reversed loneliness measure and distinguish them from clinical anxiety. Include axis, legend, series switch, pointer/focus tooltip, accessible table, animation, attribution and reduced-motion support.
 
-Slides 7–8 use Python-bundled figure metadata and all seven unchanged originals, with interactive selectors, explanatory captions, paper/study/figure identities, axes/conditions, citations and enlargement. No numerical series are inferred from bar heights. Original figures remain the fallback where exact values are not documented.
+Slides 7-8 use source-based qualitative evidence maps and accessible tables as their main visuals; all seven unchanged originals remain accessible references. No group means are inferred from bar heights. Significance categories and reported p labels are not effect magnitudes.
 
 ### Profile and recommendation
 
@@ -78,7 +91,7 @@ Slide 16 retains internal IDs and saved answers:
 
 Keep three equal desktop cards per question; wrap longer labels without clipping and stack on mobile. Preserve Clear answer, Skip / continue and single selection per group.
 
-Preserve actual Python worker scoring, 22 verified episodes, deterministic normalization/tie-breaking, two alternatives and explanations; use identical labeled JavaScript fallback on failure/static hosts. Incomplete profiles remain valid. Slide 17 must reflect actual pending/completed computation, never a false Python claim. Why This Episode? reveals actual factors. Try Again returns to editable questions; Surprise Me selects another real episode with its mode labeled. Back to Start returns to slide 1, updating hash/indicators without erasing answers. No game score enters recommendation inputs.
+Preserve actual Python worker scoring, 22 verified episodes, deterministic normalization/tie-breaking, two alternatives and explanations; use identical JavaScript fallback on failure/static hosts, with engine labels retained in developer diagnostics. Incomplete profiles remain valid. Slide 17 must reflect actual pending/completed computation, never a false Python claim. Why This Episode? reveals actual factors. Try Again fully clears the attempt and returns to Slide 11; Surprise Me selects another real episode with its mode recorded in developer diagnostics. Back to Start returns to slide 1, updating hash/indicators without erasing answers. No game score enters recommendation inputs.
 
 ### Navigation and accessibility
 
@@ -90,22 +103,21 @@ Preserve Enter from non-interactive slide/background focus on slides 1–17, fin
 
 Use existing local Node server, Python worker, generated research JSON/offline bundle, vanilla JavaScript, SVG/CSS and bundled Three.js. No new runtime packages or remote dependencies. Browser rendering of Python-generated JSON is build-time data use, not live Python. GitHub Pages cannot run the worker and must show JavaScript fallback; local server remains the full Python demonstration. Profile data is tab/local-loopback only, not server-stored.
 
-Maintain original research/artwork bytes, previous screenshots and Git history. Update README, this PRD, prompt log, tests and reviewed screenshots. Only list the Pages URL as verified with accurate deployed version. Create one local v0.8 commit after verification; do not push.
+Maintain original research/artwork bytes, previous screenshots and Git history. Update README, this PRD, prompt log, tests and reviewed screenshots. Only list the Pages URL as verified with accurate deployed version. Create one local v0.9 commit after verification; do not push.
 
 ## Acceptance evidence
 
-Only executed, verified checks are marked complete. The final [v0.8 review](screenshots/v08/visual-review.md) and [browser report](screenshots/v08/v08-results.json) record actual outcomes.
+Only executed checks are marked complete. Reports and final screenshots belong in `screenshots/v09/`.
 
-- [x] Python regression and v0.8 source/mapping suites: 14 tests passed.
-- [x] Deterministic isolated game rules: 33 checks passed.
-- [x] Research generation commands execute; exact means, generated data reproducibility and unchanged figure hashes verified by Python tests.
-- [x] Published v0.7 Pages baseline verified in browser: 5 checks; not presented as deployed v0.8.
-- [x] Final v0.8 browser regression: 455 assertions passed, no unexpected JavaScript errors or external requests. Three expected renderer errors were confined to deliberately unavailable WebGL.
-- [x] Latest real WebGL context-loss recovery run: 14 checks passed, no unexpected errors.
-- [x] All 18 final slides visually reviewed at 1440×1000 and 390×844; six contact sheets and individual captures retained. Final capture run: 11 checks, including real touch mug drag/release, no unexpected errors.
-- [x] Final chart-axis correction independently tested: 18 checks passed, verifying zero/seven alignment, exact bar proportions and no horizontal overflow at five widths; refreshed slide 6 captures reviewed.
-- [x] Fifteen JavaScript syntax checks and `git diff --check` passed; 48 local documentation links resolve. Original assets, vendor library and 22-episode catalog unchanged against v0.7.
-- [ ] Physical-device testing and formal screen-reader/user-study validation (outside current automated desktop/mobile emulation).
+- [x] Updated browser regression: 448 assertions passed; 18 ordered slides, authentic continuous 3D, isolated game, persistent profile, six quotes, Python/fallback parity, keyboard exclusions, final actions and five responsive widths. Zero unexpected JavaScript errors or external requests.
+- [x] Dedicated v0.9 UX: 60 checks passed for seven qualitative measures/tables/tooltips, rewind/replay/keyboard/reduced motion, lobster stages/CTA, hidden implementation details, complete reset, unrelated-setting preservation, normal/cleared refresh, new answers and late-response rejection.
+- [x] Python: 18 tests passed across retained and v0.9 suites, run sequentially. Source categories, p distinctions, absence of fabricated means and generated-bundle parity verified.
+- [x] Deterministic PIVOT rules: 33 checks passed; live WebGL context-loss recovery: 14 passed.
+- [x] Original research/artwork/vendor/game geometry/state and Python recommendation/catalog files unchanged against v0.8.
+- [x] Final capture: 15 checks passed; all 18 desktop/mobile slides reviewed, plus final reveal and laptop research captures. Supplemental layout: 97 checks; all seven maps fit 1366×768 without scrolling. Retained Slide 6 chart: 18 checks passed.
+- [x] Static HTTP without a recommendation backend: 8 checks passed; genuine Three.js, generated maps/original reference, fallback matching, friendly status and reset work. This is compatibility verification, not a v0.9 Pages deployment.
+- [x] Final 20 JavaScript syntax checks, `git diff --check` and 51 local documentation-link checks passed.
+- [ ] Physical-device testing, formal screen-reader/user study and universal browser certification (outside current emulated QA).
 
 ## Research and ethical boundaries
 
@@ -117,4 +129,4 @@ Known limits: subjective 22-episode subset; small original figure text needs enl
 
 ## Development history
 
-v0.5 introduced the research explorer and Python recommender; v0.6 established this 18-slide research-first format; v0.7 added centered branding, shared-couch stairwell, Enter and Back to Start. v0.8 refines presentation visuals, source processing, six quote inputs and optional navigation. Prior requirements and their historical evidence are preserved in [archived v0.7 PRD](docs/v07-PRD.md), [README history](README.md#deployment-attribution-and-history) and existing v0.6/v0.7 screenshots. Codex-assisted work is recorded in [the v0.8 prompt log](llm_logs/llm_prompts_log.md), without fabricated earlier prompts.
+v0.5 introduced the research explorer and Python recommender; v0.6 established this 18-slide research-first format; v0.7 added centered branding, shared-couch stairwell, Enter and Back to Start. v0.8 refined presentation visuals, source processing, six quote inputs and optional navigation. v0.9 adds qualitative research maps, original VHS/lobster illustrations, a quieter header and a fully resetting recommendation retry. Prior requirements and their historical evidence are preserved in [archived v0.7 PRD](docs/v07-PRD.md), [v0.8 PRD](docs/v08-PRD.md), [README history](README.md#deployment-attribution-and-history) and existing v0.6/v0.7 screenshots. Codex-assisted work is recorded in [the v0.8/v0.9 prompt log](llm_logs/llm_prompts_log.md), without fabricated earlier prompts.

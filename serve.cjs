@@ -53,4 +53,4 @@ const server = http.createServer((request, response) => {
   });
 });
 server.on('error', error => { console.error(error.message); process.exitCode = 1; });
-server.listen(port, '127.0.0.1', () => console.log(`Friends v0.8: http://127.0.0.1:${port} (Ctrl+C to stop; Python API enabled)`));
+server.listen(port, '127.0.0.1', () => console.log(`Friends v0.9: http://127.0.0.1:${port} (Ctrl+C to stop; Python API enabled)`));

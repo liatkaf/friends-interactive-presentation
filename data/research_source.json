@@ -48,7 +48,32 @@
       "title": "Essay time",
       "explanation": "Y: seconds writing. X: control versus aroused belongingness needs. Bars: favorite versus control TV. Aroused needs followed recalling a fight; control listed possessions. Significant interaction (p < .01): longer favorite-TV essays after threat.",
       "exact_series_available": false,
-      "takeaway": "Belongingness threat increased time spent recalling favorite TV."
+      "takeaway": "Belongingness threat increased time spent recalling favorite TV.",
+      "evidence": {
+        "kind": "qualitative",
+        "outcome": "Essay-writing time",
+        "original_unit": "Seconds",
+        "source_locator": "Study 2 results, p. 356",
+        "verified_on": "2026-11-02",
+        "verification_url": "https://ubwp.buffalo.edu/gabriellab/wp-content/uploads/sites/65/2025/04/Derrick-J.-L.-Gabriel-S.-Hugenberg-K.-J.-2009.-Social-surrogacy-How-favored-television-programs-provide-the-experience-of-belonging.pdf",
+        "contrasts": [
+          {
+            "comparison": "Needs by TV essay interaction",
+            "status": "significant",
+            "reported_p": "p < .01"
+          },
+          {
+            "comparison": "Threat vs control, favorite-TV essay",
+            "status": "significant",
+            "reported_p": "p = .04"
+          },
+          {
+            "comparison": "Favorite vs control TV, no threat",
+            "status": "nonsignificant",
+            "reported_p": "p = .24"
+          }
+        ]
+      }
     },
     {
       "paper": "A",
@@ -58,7 +83,27 @@
       "title": "Self-esteem",
       "explanation": "Y: standardized state self-esteem composite. Same conditions as Figure 1. Significant interaction (p = .04); the threat contrast within favorite TV was non-significant (p = .42).",
       "exact_series_available": false,
-      "takeaway": "The self-esteem interaction supported a buffering pattern; the threat contrast within favorite TV was non-significant."
+      "takeaway": "The self-esteem interaction supported a buffering pattern; the threat contrast within favorite TV was non-significant.",
+      "evidence": {
+        "kind": "qualitative",
+        "outcome": "State self-esteem",
+        "original_unit": "Standardized composite",
+        "source_locator": "Study 3, pp. 357-358",
+        "verified_on": "2026-11-02",
+        "verification_url": "https://ubwp.buffalo.edu/gabriellab/wp-content/uploads/sites/65/2025/04/Derrick-J.-L.-Gabriel-S.-Hugenberg-K.-J.-2009.-Social-surrogacy-How-favored-television-programs-provide-the-experience-of-belonging.pdf",
+        "contrasts": [
+          {
+            "comparison": "Needs by TV essay interaction",
+            "status": "significant",
+            "reported_p": "p = .04"
+          },
+          {
+            "comparison": "Threat vs control, favorite-TV essay",
+            "status": "nonsignificant",
+            "reported_p": "p = .42"
+          }
+        ]
+      }
     },
     {
       "paper": "A",
@@ -68,7 +113,27 @@
       "title": "Negative mood",
       "explanation": "Y: negative mood ratings. Same conditions. Significant interaction (p = .03); favorite-versus-control TV under threat was marginal (p = .09).",
       "exact_series_available": false,
-      "takeaway": "The mood interaction was significant; favorite versus control TV under threat was only marginal."
+      "takeaway": "The mood interaction was significant; favorite versus control TV under threat was only marginal.",
+      "evidence": {
+        "kind": "qualitative",
+        "outcome": "Negative mood",
+        "original_unit": "Mood rating composite",
+        "source_locator": "Study 3, p. 358",
+        "verified_on": "2026-11-02",
+        "verification_url": "https://ubwp.buffalo.edu/gabriellab/wp-content/uploads/sites/65/2025/04/Derrick-J.-L.-Gabriel-S.-Hugenberg-K.-J.-2009.-Social-surrogacy-How-favored-television-programs-provide-the-experience-of-belonging.pdf",
+        "contrasts": [
+          {
+            "comparison": "Needs by TV essay interaction",
+            "status": "significant",
+            "reported_p": "p = .03"
+          },
+          {
+            "comparison": "Favorite vs control TV, under threat",
+            "status": "marginal",
+            "reported_p": "p = .09"
+          }
+        ]
+      }
     },
     {
       "paper": "A",
@@ -78,7 +143,22 @@
       "title": "Rejection",
       "explanation": "Y: standardized rejection composite. Same conditions. Interaction marginal (p = .09), not significant at .05. Treat the pattern cautiously.",
       "exact_series_available": false,
-      "takeaway": "The rejection interaction was marginal, not significant at .05. Treat the pattern cautiously."
+      "takeaway": "The rejection interaction was marginal, not significant at .05. Treat the pattern cautiously.",
+      "evidence": {
+        "kind": "qualitative",
+        "outcome": "Feelings of rejection",
+        "original_unit": "Standardized composite",
+        "source_locator": "Study 3, p. 358",
+        "verified_on": "2026-11-02",
+        "verification_url": "https://ubwp.buffalo.edu/gabriellab/wp-content/uploads/sites/65/2025/04/Derrick-J.-L.-Gabriel-S.-Hugenberg-K.-J.-2009.-Social-surrogacy-How-favored-television-programs-provide-the-experience-of-belonging.pdf",
+        "contrasts": [
+          {
+            "comparison": "Needs by TV essay interaction",
+            "status": "marginal",
+            "reported_p": "p = .09"
+          }
+        ]
+      }
     },
     {
       "paper": "B",
@@ -88,7 +168,27 @@
       "title": "Puzzle performance",
       "explanation": "X: neutral room listing versus favorite-TV essay. Bars: free versus regulated writing (avoiding specified letters). Y: correct Remote Associates Test items. Significant interaction (p < .05); the regulated/free difference was non-significant after the TV essay.",
       "exact_series_available": false,
-      "takeaway": "The puzzle-performance interaction was significant; regulated/free differences were non-significant after favorite-TV recall."
+      "takeaway": "The puzzle-performance interaction was significant; regulated/free differences were non-significant after favorite-TV recall.",
+      "evidence": {
+        "kind": "qualitative",
+        "outcome": "Correct RAT items",
+        "original_unit": "Number of correct puzzle answers",
+        "source_locator": "Study 1 results and Figure 1",
+        "verified_on": "2026-11-02",
+        "verification_url": "https://citeseerx.ist.psu.edu/document?doi=cfe2b9c03f302fe27a2702d4391a56f11105ee71&repid=rep1&type=pdf",
+        "contrasts": [
+          {
+            "comparison": "Writing regulation by recall interaction",
+            "status": "significant",
+            "reported_p": "p < .05"
+          },
+          {
+            "comparison": "Regulated vs free, favorite-TV recall",
+            "status": "nonsignificant",
+            "reported_p": "Exact p not reported in this passage"
+          }
+        ]
+      }
     },
     {
       "paper": "B",
@@ -98,7 +198,27 @@
       "title": "Negative mood",
       "explanation": "Same experimental conditions as Paper B Figure 1. Y: negative mood. Significant interaction (p = .04); the regulated/free difference was non-significant after the TV essay. Error bars in Paper B figures represent standard errors.",
       "exact_series_available": false,
-      "takeaway": "The negative-mood interaction was significant; regulated/free differences were non-significant after favorite-TV recall."
+      "takeaway": "The negative-mood interaction was significant; regulated/free differences were non-significant after favorite-TV recall.",
+      "evidence": {
+        "kind": "qualitative",
+        "outcome": "Negative mood",
+        "original_unit": "Mean rating, 1-7",
+        "source_locator": "Study 1 results and Figure 2",
+        "verified_on": "2026-11-02",
+        "verification_url": "https://citeseerx.ist.psu.edu/document?doi=cfe2b9c03f302fe27a2702d4391a56f11105ee71&repid=rep1&type=pdf",
+        "contrasts": [
+          {
+            "comparison": "Writing regulation by recall interaction",
+            "status": "significant",
+            "reported_p": "p = .04"
+          },
+          {
+            "comparison": "Regulated vs free, favorite-TV recall",
+            "status": "nonsignificant",
+            "reported_p": "Exact p not reported in this passage"
+          }
+        ]
+      }
     },
     {
       "paper": "B",
@@ -108,7 +228,32 @@
       "title": "Daily diary",
       "explanation": "X: familiar fictional world use on Day 2 (yes/no). Bars: effortful self-control on Day 1. Y: negative mood on Day 3. Significant interaction; the Day 1 association was significant without familiar-world use (p = .012), non-significant with use (p = .261). Observational diary evidence, not a randomized viewing effect.",
       "exact_series_available": false,
-      "takeaway": "The diary interaction linked familiar-world use and later mood. This association is not a randomized viewing effect."
+      "takeaway": "The diary interaction linked familiar-world use and later mood. This association is not a randomized viewing effect.",
+      "evidence": {
+        "kind": "qualitative",
+        "outcome": "Day 3 negative mood",
+        "original_unit": "Mean rating, 1-7",
+        "source_locator": "Study 2 results, Table 2 and Figure 3",
+        "verified_on": "2026-11-02",
+        "verification_url": "https://citeseerx.ist.psu.edu/document?doi=cfe2b9c03f302fe27a2702d4391a56f11105ee71&repid=rep1&type=pdf",
+        "contrasts": [
+          {
+            "comparison": "Day 1 self-control by Day 2 familiar-world use",
+            "status": "significant",
+            "reported_p": "p < .01"
+          },
+          {
+            "comparison": "Day 1 association, no familiar-world use",
+            "status": "significant",
+            "reported_p": "p = .012"
+          },
+          {
+            "comparison": "Day 1 association, familiar-world use",
+            "status": "nonsignificant",
+            "reported_p": "p = .261"
+          }
+        ]
+      }
     }
   ]
 }

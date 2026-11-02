@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="v06.css">
   <link rel="stylesheet" href="v07.css">
   <link rel="stylesheet" href="v08.css">
+  <link rel="stylesheet" href="v09.css">
   <script src="data/illustrations.js" defer></script>
   <script src="data/v05-data.js" defer></script>
   <script src="lab-core.js" defer></script>
@@ -18,15 +19,17 @@
   <script src="pivot-state.js" defer></script>
   <script src="v07.js" defer></script>
   <script src="v08.js" defer></script>
+  <script src="v09.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#presentation">Skip to presentation</a>
   <header class="topbar"><a class="lab-brand" href="#slide-1" aria-label="Friends | The Comfort Lab"><span class="friends-word" aria-hidden="true">F<i>&middot;</i>R<i>&middot;</i>I<i>&middot;</i>E<i>&middot;</i>N<i>&middot;</i>D<i>&middot;</i>S</span><span class="brand-lab" aria-hidden="true">| The Comfort Lab</span></a></header>
-  <div class="utility-bar" aria-label="Presentation tools"><div class="deck-context"><span id="section-name">THE RESEARCH</span><span id="profile-progress">0 / 6 questions answered</span></div><span class="keyboard-hint">Enter: next slide &middot; &larr; &rarr;: navigate &middot; Tab: controls</span><div class="header-tools"><button data-open="pivot-activity">Couch 3D</button><button data-open="settings">Settings</button></div></div>
+  <span id="section-name" class="sr-only"></span><span id="profile-progress" class="sr-only" role="status">0 / 6 questions answered</span>
   <main id="presentation" tabindex="-1" aria-label="Friends presentation"></main>
   <button id="nav-toggle" aria-expanded="false" aria-controls="navigation-overlay">Navigation &#8593;</button>
   <div id="nav-activation" aria-hidden="true"></div>
   <div id="navigation-overlay">
+  <div class="dock-tools"><button data-open="pivot-activity">Couch 3D</button><button data-open="settings">Settings</button></div>
   <footer class="controls" aria-label="Slide navigation">
     <div class="counter" aria-live="polite" aria-atomic="true"><strong id="current">01</strong><span>/ 18</span></div>
     <nav id="indicators" aria-label="Go to slide"></nav>
