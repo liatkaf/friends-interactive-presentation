@@ -6,6 +6,22 @@
 
 An original, research-first HTML presentation exploring why familiar television can feel comforting, followed by an optional six-step profile and an explainable recommendation from **22 real Friends episodes**. It has **17 primary slides**: nine research/story slides, six questionnaire slides and two recommendation slides. The student approved removing the previous social mini-story after review; the lecturer's approximately ten-slide suggestion remains flexible.
 
+### A look inside
+
+**Slide 01 — Welcome and the 3D coffee mug**
+
+![Slide 01 of 17 — Welcome and the genuine 3D coffee mug](screenshots/readme-gallery/slide-01.webp)
+
+**Slide 12 — The painted character gallery**
+
+![Slide 12 of 17 — Painted character portraits with Monica selected](screenshots/readme-gallery/slide-12.webp)
+
+**Slide 17 — Your personalized episode**
+
+![Slide 17 of 17 — Personalized episode and two alternatives](screenshots/readme-gallery/slide-17.webp)
+
+[Browse all 17 slides and 11 interactive states](#complete-final-presentation-gallery).
+
 ## Purpose and creative direction
 
 Friends provides a recognizable cultural example through which to explain belonging, familiarity and comfort viewing. The user selected the topic and directed successive changes to the narrative, branding, research presentation, 3D game, questionnaire and reset behavior. These choices, rather than an invented personal biography, demonstrate personal involvement. Original code illustrations translate the user's coffee-shop, VHS, lobster and recognizable sitcom concepts into a coherent purple, yellow, cream and orange visual identity.
@@ -80,13 +96,192 @@ Historical `python/generate_data.py` produces explicitly synthetic educational i
 
 ## Real screenshots and Python previews
 
-![Freeze and predict](screenshots/v10-final/v10-final-joey-desktop-freeze.png)
-![Reaction and educational purpose](screenshots/v10-final/v10-final-joey-desktop-reveal.png)
-![Retained research lab](screenshots/v10-final/v10-final-desktop-07.png)
+### Complete final presentation gallery
+
+**17 slides · 11 additional interaction screenshots · current v1.0 FINAL.** All images are real Microsoft Edge captures of the final presentation at 1440 × 1000, captured November 6, 2026 after publication. Slide IDs and order were checked during capture. Open a section below; click an image to inspect its full resolution.
+
+The questionnaire uses an explicitly selected demonstration profile (Happy, stress 5, Monica, “I know!”, Warmth, rewatcher, high nostalgia). These are example answers, not defaults. Additional states show deliberate changes. Screenshots are optimized WebP at the original dimensions; they are not mockups or reconstructed slides.
+
+<details>
+<summary>Welcome, comfort psychology and play — Slides 1–5</summary>
+
+#### Slide 01 — Welcome to the Friends Comfort Lab
+
+![Slide 01 of 17 — Welcome to the Friends Comfort Lab](screenshots/readme-gallery/slide-01.webp)
+
+#### Slide 02 — Why Do We Rewatch Friends?
+
+![Slide 02 of 17 — Why Do We Rewatch Friends?](screenshots/readme-gallery/slide-02.webp)
+
+#### Slide 03 — The Psychology of Comfort TV
+
+![Slide 03 of 17 — The Psychology of Comfort TV](screenshots/readme-gallery/slide-03.webp)
+
+#### Slide 04 — The One With the Missing Punchline
+
+![Slide 04 of 17 — The One With the Missing Punchline](screenshots/readme-gallery/slide-04.webp)
+
+#### Slide 05 — PIVOT! Concentration & Spatial Focus
+
+![Slide 05 of 17 — PIVOT! Concentration & Spatial Focus](screenshots/readme-gallery/slide-05.webp)
+
+</details>
+
+<details>
+<summary>Research, familiarity and the journey — Slides 6–9</summary>
+
+#### Slide 06 — What the Research Shows
+
+![Slide 06 of 17 — What the Research Shows](screenshots/readme-gallery/slide-06.webp)
+
+#### Slide 07 — The Self-Control Recovery Lab
+
+![Slide 07 of 17 — The Self-Control Recovery Lab](screenshots/readme-gallery/slide-07.webp)
+
+#### Slide 08 — The One With The Rewind
+
+![Slide 08 of 17 — The One With The Rewind](screenshots/readme-gallery/slide-08.webp)
+
+#### Slide 09 — Finding Your Episode Lobster!
+
+![Slide 09 of 17 — Finding Your Episode Lobster!](screenshots/readme-gallery/slide-09.webp)
+
+</details>
+
+<details>
+<summary>Your personal comfort profile — Slides 10–15</summary>
+
+#### Slide 10 — How Are You Feeling?
+
+![Slide 10 of 17 — How Are You Feeling?](screenshots/readme-gallery/slide-10.webp)
+
+#### Slide 11 — What's Your Stress Level?
+
+![Slide 11 of 17 — What's Your Stress Level?](screenshots/readme-gallery/slide-11.webp)
+
+#### Slide 12 — Who's Your Favorite Friend?
+
+![Slide 12 of 17 — Who's Your Favorite Friend?](screenshots/readme-gallery/slide-12.webp)
+
+#### Slide 13 — Which Quote Speaks to You?
+
+![Slide 13 of 17 — Which Quote Speaks to You?](screenshots/readme-gallery/slide-13.webp)
+
+#### Slide 14 — What Kind of Comfort Do You Need?
+
+![Slide 14 of 17 — What Kind of Comfort Do You Need?](screenshots/readme-gallery/slide-14.webp)
+
+#### Slide 15 — How Familiar Is Friends to You?
+
+![Slide 15 of 17 — How Familiar Is Friends to You?](screenshots/readme-gallery/slide-15.webp)
+
+</details>
+
+<details>
+<summary>Matching and recommendations — Slides 16–17</summary>
+
+#### Slide 16 — Finding Your Perfect Match
+
+![Slide 16 of 17 — Finding Your Perfect Match](screenshots/readme-gallery/slide-16.webp)
+
+#### Slide 17 — The One With Your Perfect Episode
+
+![Slide 17 of 17 — The One With Your Perfect Episode](screenshots/readme-gallery/slide-17.webp)
+
+</details>
+
+### Interactions in action
+
+These still images capture real UI states; use the [live presentation](https://liatkaf.github.io/friends-interactive-presentation/) to explore motion and interaction.
+
+<details>
+<summary>3D mug, Joey prediction and PIVOT game</summary>
+
+#### Slide 1 — Rotating the genuine 3D coffee mug
+
+The mug responds to a real pointer drag.
+
+![Slide 1 — Rotating the genuine 3D coffee mug](screenshots/readme-gallery/mug-drag.webp)
+
+#### Slide 4 — Freeze and predict
+
+The scene pauses for one of three optional predictions.
+
+![Slide 4 — Freeze and predict](screenshots/readme-gallery/joey-prediction.webp)
+
+#### Slide 4 — Reaction and educational takeaway
+
+The familiar payoff reveals why knowing the ending can still be enjoyable.
+
+![Slide 4 — Reaction and educational takeaway](screenshots/readme-gallery/joey-payoff.webp)
+
+#### Slide 5 — PIVOT challenge completed
+
+Move, turn at the corner and reach the landing; game points stay separate from the profile.
+
+![Slide 5 — PIVOT challenge completed](screenshots/readme-gallery/pivot-success.webp)
+
+</details>
+
+<details>
+<summary>Python research animation, questionnaire and portraits</summary>
+
+#### Slide 7 — Python-generated research animation
+
+A real exported animation frame, paused during playback; the adjacent study design and limitations remain visible.
+
+![Slide 7 — Python-generated research animation](screenshots/readme-gallery/research-animation.webp)
+
+#### Slide 11 — Stress-O-Meter selection
+
+An explicitly selected 8/10 updates the needle, value and caption; it is not a clinical score.
+
+![Slide 11 — Stress-O-Meter selection](screenshots/readme-gallery/stress-selected.webp)
+
+#### Slide 12 — Painted portrait selection
+
+Selecting Joey highlights the portrait and reveals his description.
+
+![Slide 12 — Painted portrait selection](screenshots/readme-gallery/portrait-selected.webp)
+
+#### Slide 14 — Comfort menu selection
+
+Choosing Friendship produces immediate order feedback.
+
+![Slide 14 — Comfort menu selection](screenshots/readme-gallery/comfort-order.webp)
+
+</details>
+
+<details>
+<summary>Personalized results, score explanation and discovery</summary>
+
+#### Slide 17 — Updated personalized recommendations
+
+The changed illustrative profile produces a new ranking and two alternatives.
+
+![Slide 17 — Updated personalized recommendations](screenshots/readme-gallery/personalized-result.webp)
+
+#### Slide 17 — Why this episode?
+
+The dialog explains actual factor contributions and the algorithmic match percentage.
+
+![Slide 17 — Why this episode?](screenshots/readme-gallery/score-details.webp)
+
+#### Slide 17 — Surprise Me
+
+A different catalog episode appears after the real Surprise Me interaction.
+
+![Slide 17 — Surprise Me](screenshots/readme-gallery/surprise-result.webp)
+
+</details>
+
+### Python animation preview
+
+This finite GIF is an actual Python-rendered asset played inside the research lab, not a screenshot.
 
 ![Python-rendered puzzle module](assets/generated/evidence-4-preview.gif)
 
-[Current 17-slide visual review](screenshots/v10-final/visual-review.md) includes all-slide desktop/mobile contact sheets, new interaction states and actual test results. Earlier `screenshots/v10/` records the superseded 18-slide implementation and is retained as history.
+[Current 17-slide visual review](screenshots/v10-final/visual-review.md) and [published final verification](docs/FINAL_PUBLICATION.md) retain the functional evidence. Earlier screenshot folders remain historical records; the gallery above uses only fresh captures of the final 17-slide presentation.
 
 ## The 17-slide story
 
@@ -189,6 +384,6 @@ To re-export from the original generated PNGs (not included as large runtime ass
 
 Original generation is nondeterministic and needs an image-generation capability; the app itself uses only the bundled optimized files. [Current before/after screenshots, executed tests and limitations](screenshots/profile-upgrade/visual-review.md). [Recorded instruction and design rationale](llm_logs/profile-upgrade.md). No publication or release is part of this local upgrade.
 
-![Updated painted character gallery](screenshots/profile-upgrade/profile-after-desktop-12.png)
+![Updated painted character gallery — Slide 12 of 17](screenshots/readme-gallery/slide-12.webp)
 
 [Changed and added files](docs/PROFILE_UPGRADE_FILES.md). Executed current QA: 267 dedicated profile checks, 433 presentation checks, 91 retained UX checks, 26 Python tests, 36 layout cases and 34 static-host checks; before/after capture runs each passed 14 checks. See the current profile visual review for raw results and the Rachel likeness limitation.
