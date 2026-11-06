@@ -1,0 +1,5 @@
+{
+  "passed": 33,
+  "suite": "Deterministic PIVOT game rules",
+  "command": "node tests/pivot-state-test.cjs"
+}

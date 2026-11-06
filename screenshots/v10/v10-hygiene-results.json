@@ -1,0 +1,35 @@
+{
+  "syntaxFiles": [
+    "script.js",
+    "serve.cjs",
+    "v10-art.js",
+    "v10.js",
+    "tests/browser-test.cjs",
+    "tests/v10-ux-test.cjs",
+    "tests/v10-layout-test.cjs",
+    "tests/v10-static-test.cjs",
+    "tests/capture-v10.cjs"
+  ],
+  "unchangedFiles": [
+    "mug.js",
+    "couch.js",
+    "pivot-state.js",
+    "v07.js",
+    "python/episode_recommender.py",
+    "data/friends_episodes.json",
+    "data/quotes.json",
+    "data/profile_labels.json",
+    "assets/research/2009-fig1-belongingness-essay.png",
+    "assets/research/2009-fig2-self-esteem.png",
+    "assets/research/2009-fig3-negative-mood.png",
+    "assets/research/2009-fig4-rejection.png",
+    "assets/research/self-control-fig1-rat.png",
+    "assets/research/self-control-fig2-negative-mood.png",
+    "assets/research/self-control-fig3-daily-mood.png"
+  ],
+  "secretPatternMatches": [],
+  "missingDocumentationLinks": [],
+  "errors": [],
+  "textComparison": "Normalized CRLF/LF; original PNGs compared byte-for-byte",
+  "note": "Historical imported prompt archive references are preserved quotations, not current documentation links."
+}

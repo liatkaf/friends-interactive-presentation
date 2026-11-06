@@ -1,166 +1,159 @@
-# FriendsAnxietyStudio — Version 0.9
+# Friends Comfort Lab - v1.0 FINAL
 
-**[Published demo: Friends Comfort Lab](https://liatkaf.github.io/friends-interactive-presentation/)** — verified November 1, 2026: the deployed **v0.7 baseline** loads 18 slides, seven research figures and both Three.js scenes. **Version 0.9 is local, not pushed or deployed.** [Verification record](llm_logs/pages_verification.json).
+[Published presentation](https://liatkaf.github.io/friends-interactive-presentation/) - [Public repository](https://github.com/liatkaf/friends-interactive-presentation)
 
-A research-first university presentation about comfort viewing, six optional profile questions, and an explainable recommendation from **22 real Friends episodes**. Exactly **18 primary slides** preserve the purple door, yellow frame, warm colors and centered **F·R·I·E·N·D·S | The Comfort Lab** branding. No paid services, API keys or remote runtime dependencies are needed.
+**Release status:** v1.0 is a local release candidate pending final review and publication approval. The public repository and Pages root returned HTTP 200 on November 6, 2026 ([read-only verification](llm_logs/v1-public-verification.json)). The published presentation is an earlier release, not evidence that v1.0 has been deployed. No push or release tag is part of this finalization.
 
-## Run locally
+An original, research-first HTML presentation exploring why familiar television can feel comforting, followed by an optional six-step profile and an explainable recommendation from **22 real Friends episodes**. It has **18 primary slides**: ten research/story slides, six questionnaire slides and two recommendation slides. This retains the user's approved scope; the lecturer's approximately ten-slide suggestion is flexible.
 
-Requirements: Node.js 18+ (22+ for browser tests), Python 3.8+, a modern browser, and optional WebGL 2. No package installation is needed.
+## Purpose and creative direction
+
+Friends provides a recognizable cultural example through which to explain belonging, familiarity and comfort viewing. The user selected the topic and directed successive changes to the narrative, branding, research presentation, 3D game, questionnaire and reset behavior. These choices, rather than an invented personal biography, demonstrate personal involvement. Original code illustrations translate the user's coffee-shop, VHS, lobster and comic concepts into a coherent purple, yellow, cream and orange visual identity.
+
+The featured papers did **not** test Friends as a clinical treatment. The presentation separates published evidence, broader psychological interpretations, fictional examples, editorial matching scores and educational simulations. It contains no episode footage or theme music.
+
+## Start locally
+
+Requirements: Node.js 18+ (22+ for browser QA), Python 3.8+, a modern browser; WebGL 2 is optional with fallbacks. No npm installation or API key is required.
 
 ```powershell
 node serve.cjs
 ```
 
-Open **http://127.0.0.1:8000**. Windows uses `py -3`; other systems use `python3`. Set `FRIENDS_PYTHON` to an interpreter executable if needed. For the QA port, set `$env:PORT = '8009'` before starting the server.
+Open http://127.0.0.1:8000. On Windows the server invokes `py -3`; elsewhere `python3`. Set `FRIENDS_PYTHON` to a Python executable if necessary. The current review session uses http://127.0.0.1:8011.
 
-## Version 0.9 experience
+For a clean static-host preview:
 
-- **Slide 1:** the original continuously rotating Three.js mug retains its realistic model, materials, lighting, steam, Central Perk branding and manual drag controls. Replay controls and all visible instructions beneath it are absent. Rendering pauses when the slide/document is hidden; reduced motion preserves a static genuine 3D model with manual exploration.
-- **Global interface:** the secondary status bar is removed. The centered FRIENDS header remains alone. Underlying profile progress continues, with question-step indicators and a screen-reader status. Settings and the optional original couch viewer move into the existing auto-hiding dock, not a replacement permanent bar.
-- **Slide 5:** the large centered Three.js stairwell, couch, camera/framing, score rules, MOVE UP/PIVOT!/Reset controls and tension terminology are preserved. No side dashboard or stage checklist returns.
-- **Slides 7-8:** Python-generated interactive **qualitative evidence maps** replace the oversized scans as the main visual. Fifteen reported comparisons across seven measures retain significant, marginal and nonsignificant distinctions, focus/hover explanations, units, legends and accessible tables. View Original Figure opens each unchanged reference scan. These categorical maps show reported tests, not effect sizes or invented group means.
-- **Slide 9 - The One With The Rewind:** an original CSS VHS and SVG apartment/retro-TV illustration reveal nostalgia and cognitive ease through a short, replayable keyboard-accessible interaction. No footage or unlicensed screenshots are used. The disclaimer distinguishes these interpretations from the featured experiments.
-- **Slide 10 - Finding Your Episode Lobster!:** two original SVG lobsters meet while three stages reveal sequentially. The yellow CTA goes to Slide 11; it does not compute a premature recommendation. Reduced motion reveals stages immediately.
-- **Slide 12:** the Use this value instruction is removed. Moving the 0-10 slider still records an optional self-report.
-- **Slides 17-18:** Reveal My Perfect Episode! is a prominent yellow animated button on the existing pre-result slide, opening Slide 18. The final episode stays primary, two smaller cards appear under Two More Episodes You Might Love, and a separate lower Back to Start button preserves answers. Ordinary users see friendly status text; Python/fallback diagnostics remain in the developer console and `FriendsLab.diagnostics`.
-- **Try Again:** clears every questionnaire answer, saved profile data, previous result, score details, pending/cache state and selections; resets the slider to its unanswered default (5); returns to Slide 11 at 0/6 completed. A generation guard rejects late old Python responses. Unrelated appearance/settings/storage survive. A normal refresh preserves the current attempt, but cleared answers never return after refresh.
+```powershell
+python -m http.server 8013 --bind 127.0.0.1
+```
 
-Enter advances from non-interactive background/slide focus on slides 1-17. Native button/form/choice/canvas/dialog behavior, arrows, Home/End, hashes, Previous/Next and the touch-accessible idle-hidden dock remain. All six optional questions can be skipped or revised. **Back to Start and normal navigation preserve answers; Try Again resets them.** Session storage remains the single existing profile persistence mechanism.
+Open http://127.0.0.1:8013. Serve over HTTP; direct file opening is not the supported way to load Three.js modules.
 
-## The 18-slide story
+## What is new in v1.0
 
-| Slide | Headline |
+- **Slide 3:** four original SVG illustrated concept cards. Native buttons reveal explanations, a Friends example and the evidence level, updating a shared takeaway. Idle and interaction animations respect reduced motion.
+- **Slide 4:** an original three-scene coffee-shop comic: a familiar place, mixed-up orders, then a shared moment. Step, select and replay controls connect predictable structure to an explicitly interpretive comfort takeaway.
+- **Slide 7:** a gentle three-stage story: Python-animated fictional social moment, a familiar/new viewing choice, then actual research. The choice changes the narrative response without entering the profile or becoming experimental data. Four Python-authored research sequences retain the original figures and reported-test audit tables.
+- **Slide 8:** three selectable lab modules: Puzzle Performance, Negative Mood and Daily Diary, with distinct Python-authored animations, design explanations, reported findings, limits, playback, replay and enlargement.
+
+Preserved: continuous genuine Three.js mug with drag and inactive-slide pause; centered branding and idle-hidden navigation; 3D PIVOT stairwell and isolated game scoring; Study 1 chart; VHS rewind; lobster transition; six character and six quote choices; familiarity/nostalgia mapping; deterministic matching and alternatives; theme controls; keyboard navigation; responsive layouts; all seven original figures.
+
+**Try Again clears the entire profile, persisted attempt, cached results and pending recommendation state, then returns to Slide 11. Back to Start and ordinary navigation preserve answers.** Enter advances only from noninteractive slide/background focus; native controls and dialogs keep normal keyboard behavior. Use the bottom Navigation button on touch devices or Tab to reach the dock.
+
+## Architecture: what actually runs
+
+| Layer | Responsibility |
 |---|---|
-| 1 | Welcome to the Friends Comfort Lab |
-| 2 | Why Do We Rewatch Friends? |
-| 3 | The Psychology of Comfort TV |
-| 4 | Predictability & Control |
-| 5 | PIVOT! Concentration & Spatial Focus |
-| 6 | What the Research Shows |
-| 7 | Belonging, Mood & Rejection |
-| 8 | Familiar Worlds & Self-Control |
-| 9 | The One With The Rewind |
-| 10 | Finding Your Episode Lobster! |
-| 11 | How Are You Feeling? |
-| 12 | What's Your Stress Level? |
-| 13 | Who's Your Favorite Friend? |
-| 14 | Which Quote Speaks to You? |
-| 15 | What Kind of Comfort Do You Need? |
-| 16 | How Familiar Is Friends to You? |
-| 17 | Finding Your Perfect Match |
-| 18 | The One With Your Perfect Episode |
+| HTML/CSS | Accessible presentation shell, visual identity, responsive cards, original scene composition |
+| `script.js`, `v06.js` | Slide templates/navigation, existing single profile state, recommendations and research dialogs |
+| `v10-art.js`, `v10.js`, `v10.css` | Original SVG cards/comic, branching story, finite Python-frame playback and lab UI |
+| `v08.js`, `v09.js` | Research chart, qualitative evidence access, navigation dock, rewind and lobster interactions |
+| `mug.js`, `couch.js`, bundled Three.js r170 | Genuine 3D coffee and stairwell; no remote CDN dependency |
+| `python/research_analytics.py` | Validate documented means and seven figure records; export research JSON |
+| `python/generate_animations.py` | Render every animation pixel with Pillow; export posters, sprite atlases and GIF previews |
+| `python/episode_recommender.py` | Actual persistent local Python worker, deterministic scoring through `/api/recommend` |
+| `lab-core.js` | Equivalent JavaScript scoring fallback for static hosting or Python failure |
 
-## Architecture and actual Python execution
+On GitHub Pages there is **no live Python runtime**. Python-generated data/assets still work, with JavaScript controlling frame playback and fallback matching. Locally the included server actually executes Python for matching. Engine diagnostics stay in the console and `FriendsLab.diagnostics`, outside ordinary user status text. No user profile is stored server-side or sent to an external AI service.
 
-| Environment | Research | Recommendation |
+### Reproduce the Python animation pipeline
+
+**Verified evidence - validated JSON - Python/Pillow frames - exported assets - JavaScript playback.**
+
+```powershell
+py -3 -m venv .venv
+.venv/Scripts/python.exe -m pip install -r python/requirements-animation.txt
+.venv/Scripts/python.exe python/research_analytics.py
+.venv/Scripts/python.exe python/build_catalog.py
+.venv/Scripts/python.exe python/generate_animations.py
+```
+
+On macOS/Linux use `python3` and `.venv/bin/python`. Pillow 10.4.0 is pinned; the generator uses its bundled default scalable font. A clean virtual environment avoids the broken system Pillow DLL encountered during this build. Dependency download needs internet, but regeneration and presentation playback do not. pandas/Matplotlib are unnecessary for categorical evidence and original frame artwork; Pillow is the actual authoring library.
+
+Inputs: `data/research_source.json` (citations, verified means, study designs and categorical findings). Outputs: `data/research_analytics.json`, `data/v05-data.js`, `data/python_animations.json`, `data/python_animations.js`, and `assets/generated/`. The animation manifest records source/code/asset SHA-256 hashes. Eight sequences each have 16 frames, a 960x400 poster, a PNG frame atlas and a finite GIF preview: **24 image assets**, about 3.9 MB total. `--output <directory>` supports isolated generation. JavaScript does not redraw or invent the Python scenes; it displays the exported frames.
+
+Historical `python/generate_data.py` produces explicitly synthetic educational illustrations, not published research measurements and not the data source for Slides 6-8. Do not confuse that retained artifact with the verified pipeline.
+
+## Real screenshots and Python previews
+
+![Interactive psychology cards](screenshots/v10/v10-desktop-03.png)
+![Original interactive comic](screenshots/v10/v10-desktop-04.png)
+![Branching story and published research](screenshots/v10/v10-desktop-07-research.png)
+![Research lab](screenshots/v10/v10-desktop-08-module-6.png)
+
+Python-authored fictional scene (not a study or assessment):
+
+![Python-rendered social scene](assets/generated/social-scene-preview.gif)
+
+Python-authored Study 1 puzzle evidence animation (qualitative tests, not measured effect sizes):
+
+![Python-rendered puzzle module](assets/generated/evidence-4-preview.gif)
+
+[All-slide contact sheets and visual review](screenshots/v10/visual-review.md) include desktop/mobile evidence, the preserved 3D game, reset and enlarged source/player views.
+
+## The 18-slide scope
+
+| # | Slide | Main educational or interactive role |
 |---|---|---|
-| Included local server | Python-generated bundle; browser rendering | Actual persistent Python 3 worker via `/api/recommend` |
-| GitHub Pages/static server | Same generated data; JavaScript interactions | JavaScript fallback; no live Python; developer diagnostics only |
-| Python unavailable/request fails | Same generated data | Identical deterministic JavaScript fallback; friendly user status |
-| Direct `file:` access | Offline bundle/original PNGs | JavaScript fallback; illustrated coffee/stairwell |
+| 1 | Welcome to the Friends Comfort Lab | Original 3D opening and framing |
+| 2 | Why Do We Rewatch Friends? | Introduce Study 1 descriptive comparisons |
+| 3 | The Psychology of Comfort TV | Four interactive illustrated concepts |
+| 4 | The One Where You Know What Happens Next | Original narrative comic |
+| 5 | PIVOT! Concentration & Spatial Focus | Optional playful spatial interaction, no assessment |
+| 6 | What the Research Shows | Detailed switchable Study 1 chart and data table |
+| 7 | The One Where You Feel Left Out | Fictional social story followed by actual evidence |
+| 8 | The Self-Control Recovery Lab | Three selectable Python research modules |
+| 9 | The One With The Rewind | Broader nostalgia/ease interpretation |
+| 10 | Finding Your Episode Lobster! | Explain entertainment matching, start questionnaire |
+| 11 | How Are You Feeling? | Optional mood |
+| 12 | What's Your Stress Level? | Optional 0-10 self-report, no diagnostic scale |
+| 13 | Who's Your Favorite Friend? | Six character choices |
+| 14 | Which Quote Speaks to You? | Six integrated quote choices |
+| 15 | What Kind of Comfort Do You Need? | Desired viewing experience |
+| 16 | How Familiar Is Friends to You? | Familiarity and nostalgia, one profile step |
+| 17 | Finding Your Perfect Match | Actual computation state and reveal |
+| 18 | The One With Your Perfect Episode | Main match, two alternatives, explanations, restart/reset |
 
-`script.js` composes/navigates slides; `v06.js` manages profiles, evidence and real computation states; `lab-core.js` supplies fallback scoring. `v07.js`/`pivot-state.js` isolate gameplay. `v08.js` retains the Slide 6 chart/navigation interactions; `v09.js` adds qualitative charts and illustrated interactions. `mug.js`/`couch.js` use bundled Three.js r170. The loopback Node server invokes `python/episode_recommender.py --worker`, with request timeouts and no server-side profile storage. Matching steps distinguish pending and completed computation; engine details remain in developer diagnostics instead of ordinary status text. **Displaying Python-generated JSON is not live Python execution.** The retained illustrative simulator endpoint also executes Python locally, but is not placed in the research narrative.
+Slides 2 and 6 intentionally preview then explain the same descriptive data. Slides 7 and 8 differ in interaction and research design. All 18 were retained and reviewed for purpose; none were merged without approval.
 
-### Reproduce the research pipeline
+## Recommendation and data provenance
 
-```powershell
-py -3 python/research_analytics.py
-py -3 python/build_catalog.py
-```
+The catalog contains 22 real episodes. Titles, season/episode numbers and moment associations retain the prior release's documented verification. Mood/warmth/comedy/nostalgia/predictability tags are **editorial**, not measured psychological properties. Six quotes use `data/quotes.json` in both engines. Weights: mood 18, self-reported stress 10, character 18, quote 18, nostalgia 10, familiarity 8, predictability 8, experience 10. Only answered factors contribute to the available denominator; ties resolve by season/episode. The result includes actual contributing factors and two alternatives. Missing answers are allowed; match percentages are algorithmic, not scientific probabilities or prescriptions.
 
-Use `python3` elsewhere. `data/research_source.json` documents exact published means, scales, citations and figure explanations. `research_analytics.py` loads/validates four unique activities, finite 1–7 ratings, seven PNG signatures and figure identities; transforms means into display widths (`mean / 7 × 100`); exports `data/research_analytics.json` with source/figure SHA-256 hashes. It also validates the documented qualitative comparisons and exports their categorical chart positions (not measured magnitudes). It never estimates bar heights. `build_catalog.py` regenerates the catalog and compatibility-named `data/v05-data.js` offline bundle, including research, quotes and profile labels. Charts consume this Python output. No additional analytics module or chart dependency is needed.
+## Research references and boundaries
 
-## Research and data provenance
+1. Derrick, J. L., Gabriel, S., & Hugenberg, K. (2009). Social surrogacy: How favored television programs provide the experience of belonging. *Journal of Experimental Social Psychology, 45*, 352-362. https://doi.org/10.1016/j.jesp.2008.12.003
+2. Derrick, J. L. (2013). Energized by Television: Familiar Fictional Worlds Restore Self-Control. *Social Psychological and Personality Science, 4*(3), 299-307. https://doi.org/10.1177/1948550612454889 (first online 2012).
 
-- Derrick, J. L., Gabriel, S., & Hugenberg, K. (2009). Social surrogacy: How favored television programs provide the experience of belonging. *Journal of Experimental Social Psychology, 45*, 352–362. [DOI](https://doi.org/10.1016/j.jesp.2008.12.003). [Author-lab paper](https://ubwp.buffalo.edu/gabriellab/wp-content/uploads/sites/65/2025/04/Derrick-J.-L.-Gabriel-S.-Hugenberg-K.-J.-2009.-Social-surrogacy-How-favored-television-programs-provide-the-experience-of-belonging.pdf).
-- Derrick, J. L. (2013; online 2012). Energized by Television: Familiar Fictional Worlds Restore Self-Control. *Social Psychological and Personality Science, 4*(3), 299–307. [DOI](https://doi.org/10.1177/1948550612454889).
+[Research integrity audit](docs/RESEARCH_INTEGRITY_AUDIT.md) identifies sources, design, claims and limits. Study 1 uses published 1-7 descriptive means, not clinical anxiety scores. Other animations summarize verified significant, marginal or nonsignificant tests without estimating group means from scans. Non-significance does not establish equivalence, p-values are not effect magnitudes, diary associations are not causal effects, and no physical cognitive-energy units were measured. The papers do not prove Friends treats anxiety or lowers cortisol. Predictability, cognitive ease and nostalgia examples are broader interpretations. All seven original PNG figures remain unchanged and accessible through View Original Figure.
 
-Paper A, Study 1, Table 1, p. 355 supplies these descriptive means:
+The two user-created original artworks remain in `assets/` with attribution to the user but are deliberately absent from the UI following the user's design feedback. New illustrations are original code/Python artwork, AI-assisted under user direction, not copied television screenshots. Research figure copyright remains with the respective authors/publishers; scholarly attribution is not a license for unrestricted redistribution.
 
-| Activity | Doing when lonely | Feeling lonely |
-|---|---:|---:|
-| Favorite TV program | 5.81 | 2.64 |
-| Whatever is on television | 4.86 | 3.69 |
-| Favorite music | 5.82 | 2.97 |
-| Favorite movie | 5.00 | 3.43 |
+## Development, QA and academic evidence
 
-Responses use 1–7 scales. Loneliness is reverse-scored: lower means less likely to feel lonely. The display axis starts at zero; the response scale remains 1–7. These undergraduate descriptive ratings are **not clinical anxiety scores or causal estimates**.
+[Release file manifest](docs/V1_RELEASE_MANIFEST.md) lists created/modified files. [Development journey](DEVELOPMENT_JOURNEY.md) links authentic Git milestones. [Prompt history](llm_logs/README.md) distinguishes recorded summaries from transcripts. Codex assisted implementation, research checks, testing and documentation; the user supplied creative direction and successive corrective specifications. No live LLM or paid service is required by the product.
 
-Slide 7 maps reported tests for all four Paper A measures and retains their original references: belongingness essay time, self-esteem, negative mood and rejection. Slide 8 maps reported tests for all three Paper B measures and retains their original references: RAT puzzle performance, negative mood and daily mood. All seven PNGs remain unchanged in `assets/research/`. Numerical series are unavailable in the documented dataset, so the main charts use explicitly labeled qualitative categories rather than quantitative outcome bars. Reported p values are transcribed from the papers; where only non-significance is stated, no exact p value is invented. These labels do not measure effect size; the original figures remain available on demand. Captions distinguish significant interactions, the marginal rejection interaction (p = .09), non-significant comparisons and observational diary associations. Non-significance does not establish equivalence.
-
-These studies did not specifically test Friends viewers or establish clinical anxiety treatment, cortisol reduction or cognitive energy in physical units. Predictability, cognitive ease and nostalgia are broader educational interpretations; Friends examples and comfort tags are editorial. The retained synthetic simulator is labeled **Educational illustration only — not a validated psychological or medical model**.
-
-## Explainable episode matching
-
-The existing 22-episode catalog retains verified titles, episode numbers, spoiler-light descriptions, moments and TV Guide season sources. v0.9 adds no episodes. Comedy/warmth/nostalgia ratings and comfort tags are subjective editorial classifications.
-
-| Factor | Maximum | Rule |
-|---|---:|---|
-| Mood | 18 | Exact editorial mood-tag match |
-| Self-reported stress | 10 | `(stress/10 × warmth + (1−stress/10) × comedy) / 5` |
-| Character | 18 | Featured-character match |
-| Quote | 18 | Exact catalog association, or half credit for documented character association |
-| Nostalgia | 10 | `1 − abs(episode nostalgia − target) / 4`; targets 1, 3, 5 |
-| Familiarity | 8 | New: standalone flag; some: 0.75; rewatcher: nostalgia / 5 |
-| Desired experience | 10 | Comedy / 5, warmth / 5 or nostalgia / 5 as appropriate |
-| Predictability | 8 | Legacy API compatibility only: exact editorial story-tag match |
-
-Only answered factors enter the denominator. Match = 100 × earned/available points, labeled **algorithmic, not scientific**. Factors round to four decimals; percentages to two. Ties use season then episode. Empty profiles return valid episodes at 0%. Why This Episode? shows actual points, maxima, reasons and sources; two alternatives remain. Surprise Me selects another real episode and records its random-discovery mode in developer diagnostics.
-
-`data/quotes.json` defines six shared IDs and associations. PIVOT! → Ross, How you doin'? → Joey, and Smelly Cat → Phoebe retain exact catalog associations. We were on a break! → Ross, Could I BE any more...? → Chandler, and I know! → Monica receive **9 of 18 points when their character is featured**. These recurring catchphrases/template are transparently editorial character matches; no exact scene in an unrelated episode is claimed. Every quote has a positive scoring path; a unique recommendation per quote is not guaranteed.
-
-`data/profile_labels.json` retains familiarity IDs `new`, `some`, `rewatcher`, displaying **Who's Chandler?**, **I watch it when it's on TV**, **I know it by heart — 7! 7! 7!**. Nostalgia IDs `low`, `medium`, `high` display **Light Comfort**, **Central Perk Vibes**, **Unagi — Total Awareness & Nostalgia**. Existing saved answers remain valid.
-
-The PIVOT score stays separate from profiles/Python requests. Its hidden state starts at 100, is bounded 0–100, loses 25 for a blocked corner move and earns 10 once for a correct pivot. Bottom → first flight → corner → top remains deterministic. Reset restores poses, warnings and controls. Actual couch position/90-degree yaw track state; WebGL loss switches to synchronized CSS gameplay. Slide 5 uses **tension**, with **Game score only — not a clinical or cognitive assessment**. The authored route is not a physics solver.
-
-## Tests and screenshots
-
-With the server running:
+[Final compliance matrix](FINAL_COMPLIANCE_REPORT.md) separates repository evidence from external Moodle actions. [Adversarial review](RED_TEAM_REVIEW.md) records findings, fixes, retests and the limits of a same-session AI review.
 
 ```powershell
-py -3 tests/test_v05.py
-py -3 tests/test_v08.py
-py -3 tests/test_v09.py
+.venv/Scripts/python.exe -m unittest discover -s tests -p 'test_*.py' -v
 node tests/pivot-state-test.cjs
-$env:TEST_BASE = 'http://127.0.0.1:8009'
+$env:TEST_BASE='http://127.0.0.1:8000'
 node tests/browser-test.cjs
-node tests/stairwell-context-test.cjs
+node tests/v10-ux-test.cjs
+node tests/v10-layout-test.cjs
 node tests/chart-layout-test.cjs
-node tests/v09-ux-test.cjs
-node tests/v09-layout-test.cjs
-node tests/capture-v09.cjs
-powershell -NoProfile -File tests/make-contact-sheets.ps1 -Version v09
+node tests/stairwell-context-test.cjs
+node tests/capture-v10.cjs
 ```
 
-Executed November 2, 2026: **448 browser assertions, 60 dedicated v0.9 UX checks, 18 Python tests, 33 game-rule checks and 14 real WebGL context-loss checks passed**. No unexpected JavaScript errors or external requests occurred. Three expected renderer errors were confined to deliberate no-WebGL injection. The reset tests cover all six steps, normal refresh, reset refresh, new-answer matching, unrelated settings and a delayed old Python response. Python suites must run sequentially because legacy tests regenerate the same output file.
+Run browser suites sequentially to avoid competing software-WebGL processes. For `tests/v10-static-test.cjs`, set TEST_BASE to the clean static HTTP server. Browser QA uses installed Edge, Node's built-in CDP/WebSocket support and software WebGL; no Playwright dependency. Actual final results and screenshots are recorded in `screenshots/v10/visual-review.md` and its JSON reports. Python pixel/hash tests regenerate all exports in a temporary directory and compare bytes. Legacy test files and prior release screenshots remain historical evidence, not automatically claimed current passes.
 
-Supplemental checks passed: **97 categorical-chart/final-action layout checks**, including all seven measures at 1366×768 without scrolling; **18 retained Slide 6 chart checks**; **15 final capture/touch checks**; **8 static-HTTP checks** without a recommendation backend. All 18 slides were visually reviewed at 1440×1000 and 390×844. The original scans are on demand rather than the main visuals.
+## Accessibility, deployment and limitations
 
-To reproduce static-host QA, run `py -3 -m http.server 8010 --bind 127.0.0.1` in another terminal, set `$env:TEST_BASE = 'http://127.0.0.1:8010'`, then run `node tests/v09-static-test.cjs`. That server only serves files; it does **not** execute the recommendation engine. Restore `TEST_BASE` to the full Node server for Python integration tests. Pages serves the same pre-generated bundle/module assets, with JavaScript matching. v0.9 has not been deployed or pushed.
+Native buttons, semantic figures/dialogs, focus indicators, keyboard playback, source tables and text captions complement visuals. System reduced motion or the quiet-motion setting uses static Python posters, avoids forced animation and preserves all explanations. Large text/small viewports may scroll within slides. Fine source scans and in-frame text can be enlarged; adjacent HTML explanations remain available.
 
-Use the actual server port. Browser tests launch isolated headless Microsoft Edge through DevTools; set `BROWSER_PATH` for another Chromium executable. Software WebGL needs compilation/paint time; tests observe actual frames and score parity. Results are recorded in [v0.9 review notes](screenshots/v09/visual-review.md) and [browser results](screenshots/v09/v09-results.json).
+Publish only after explicit user approval, using the repository's existing GitHub Pages configuration; then verify the deployed v1.0 assets, all 18 slides and fallbacks. Do not infer deployment from a local commit. No repository permission changes, release tag or Moodle submission were performed.
 
-Contact sheets: [desktop 1–6](screenshots/v09/v09-contact-desktop-1.png), [7–12](screenshots/v09/v09-contact-desktop-2.png), [13–18](screenshots/v09/v09-contact-desktop-3.png); [mobile 1–6](screenshots/v09/v09-contact-mobile-1.png), [7–12](screenshots/v09/v09-contact-mobile-2.png), [13–18](screenshots/v09/v09-contact-mobile-3.png).
-
-![Enlarged PIVOT stairwell](screenshots/v09/v09-desktop-05.png)
-
-## Deployment, attribution and history
-
-GitHub Pages can publish the root HTML/CSS/JS plus `assets/`, `data/` and `vendor/` with relative paths intact. Static hosting cannot run the Python worker. Regenerate/validate data locally; select the repository branch/root in GitHub Settings → Pages. A separate push/deployment publishes changes; **no push is performed for this upgrade**.
-
-`assets/central-perk-original.png` and `assets/friends-couch-original.png` are user-created artwork, retained unchanged but absent from the UI from v0.6 onward. Research figures belong to their authors/publishers. Three.js r170 is bundled under MIT; see `vendor/THREE-LICENSE.txt`. No episodes or theme music are embedded. This is an unofficial educational project.
-
-- Initial deck: `738469b`.
-- v0.4 psychology deck: `feaf0e6`.
-- v0.5 research explorer/real Python recommender: `5c0f685`.
-- v0.6 research-first 18-slide redesign: `b6603ae`; [retained evidence](screenshots/v06/visual-review.md).
-- v0.7 brand, stairwell rules, Enter and Back to Start: `2864113`; [retained evidence](screenshots/v07/visual-review.md). Its deployment was verified during v0.8 work.
-- v0.8: `fe77a99`, continuous mug, focused visual layouts, validated research pipeline, six quote mappings, new profile labels and optional navigation; [retained evidence](screenshots/v08/visual-review.md).
-- v0.9: qualitative research charts, quieter chrome, VHS Rewind, lobster transition, final reveal redesign and complete Try Again reset. One new local commit after verification; no push.
-
-Previous documentation is preserved as historical release material in [v0.7 README](docs/v07-README.md) and [v0.7 PRD](docs/v07-PRD.md), plus [v0.8 README](docs/v08-README.md) and [v0.8 PRD](docs/v08-PRD.md); its historical behavior/test counts do not describe v0.9.
-
-OpenAI Codex assisted with implementation, test authoring, source verification, visual review and documentation. No live LLM is needed. [v0.8/v0.9 prompt history and decisions](llm_logs/llm_prompts_log.md) records this work without inventing earlier conversations.
-
-Known limitations: curated catalog and subjective comfort ratings; no clinical validity or comfort guarantee. Original figures need enlargement for fine text. Small screens and large fonts can scroll vertically. Actual Python needs a local interpreter; static hosts use fallback scoring, recorded in developer diagnostics. Reload retries 3D after WebGL context loss. Formal user testing, screen-reader certification and physical-device testing across browsers have not been performed. Restricted session storage may limit reload persistence.
+No physical-device or formal screen-reader testing, external human research review, clinical validation or new replication study is claimed. The older studies inform the educational narrative with the limits stated above. The optional game score and editorial episode match are independent of scientific assessment. See the compliance report for outstanding external actions.

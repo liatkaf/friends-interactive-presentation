@@ -1,0 +1,6 @@
+{
+  "passed": 10,
+  "errors": [],
+  "suite": "Static HTTP / Pages-compatible assets; no Python recommendation API",
+  "url": "http://127.0.0.1:8013"
+}

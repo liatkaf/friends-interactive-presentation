@@ -82,3 +82,8 @@ Moving tools into the taller dock exposed an idle-hide edge case above the origi
 ### Limitations
 
 The maps are qualitative reported-test summaries, not reconstructed outcome bars or effect sizes. Some exact p labels are unavailable and explicitly left unspecified. The project does not establish clinical treatment, cortisol reduction, physical cognitive-energy consumption or comfort guarantees. Runtime Python matching needs the local server; static Pages uses pre-generated chart data and JavaScript matching with developer diagnostics. Fine original-figure text needs enlargement; small screens/large fonts may scroll. No physical-device, formal screen-reader, user-study or clinical validation is claimed. No live LLM is required and no Git push is authorized or performed.
+
+
+## Version 1.0 FINAL ? November 6, 2026
+
+The final master request and interruption follow-up are recorded in [v1-finalization.md](v1-finalization.md), with authentic instruction summaries, implementation decisions, corrections, validation and limits. Earlier entries are preserved. See [the chronological index](README.md) and the root development/compliance reports.
