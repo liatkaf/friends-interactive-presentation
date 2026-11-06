@@ -40,17 +40,17 @@ body[data-comfort-mood=quiet] #slide-5 .challenge-controls,body[data-comfort-moo
  #slide-5 #pivot-feedback{grid-row:4;margin:8px 0 12px}
  .stairwell-stages{grid-row:5}.scene-stage{font-size:9px}
  .focus-label label:after{font-size:8px}
- #slide-18 h2{font-size:1.85rem;margin-bottom:14px}
- #slide-18 .engine-note{margin-bottom:12px}
- #slide-18 .episode-hero{padding-bottom:17px}
- #slide-18 .episode-hero h3{font-size:1.55rem;margin:8px 0}
- #slide-18 .episode-hero p{font-size:.8rem;line-height:1.5;margin:8px 0}
- #slide-18 .episode-hero .match-reason{font-size:.7rem}
- #slide-18 .alternatives{margin-top:15px;gap:11px}
- #slide-18 .alternatives h3{font-size:1rem;margin:5px 0}
- #slide-18 .alternatives p{font-size:.65rem}
- #slide-18 .final-actions{margin-top:17px;gap:8px}
- #slide-18 .final-actions>button:not(.text-button){padding:9px 10px;font-size:.65rem}
- #slide-18 .final-actions #back-to-start{order:-1;font-size:.65rem}
+ #slide-17 h2{font-size:1.85rem;margin-bottom:14px}
+ #slide-17 .engine-note{margin-bottom:12px}
+ #slide-17 .episode-hero{padding-bottom:17px}
+ #slide-17 .episode-hero h3{font-size:1.55rem;margin:8px 0}
+ #slide-17 .episode-hero p{font-size:.8rem;line-height:1.5;margin:8px 0}
+ #slide-17 .episode-hero .match-reason{font-size:.7rem}
+ #slide-17 .alternatives{margin-top:15px;gap:11px}
+ #slide-17 .alternatives h3{font-size:1rem;margin:5px 0}
+ #slide-17 .alternatives p{font-size:.65rem}
+ #slide-17 .final-actions{margin-top:17px;gap:8px}
+ #slide-17 .final-actions>button:not(.text-button){padding:9px 10px;font-size:.65rem}
+ #slide-17 .final-actions #back-to-start{order:-1;font-size:.65rem}
 }
 @media(max-width:350px){.friends-word i{margin:0 2px}}

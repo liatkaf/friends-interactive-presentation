@@ -6,3 +6,5 @@
 - Earlier Git commits provide authentic implementation history where prompt transcripts were not retained. No missing initial conversation or v0.10 session has been fabricated.
 
 The user supplied the topic, creative direction, refinements and acceptance criteria. Codex assisted code, artwork, Python generation, research verification, QA and documentation. No claim of independent human review or autonomous scientific experimentation is made.
+
+- [Final content refinement](v1-content-refinement.md): student review/design decision, approved 17-slide scope, new Joey interaction, exact image prompt and actual validation record.

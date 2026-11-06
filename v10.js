@@ -20,7 +20,7 @@
    host.pythonPlayer=this;players.add(this);this.poster();
   }
   get state(){return {key:this.key,frame:this.frame,playing:this.playing,pendingFrames:this.frameHandle?1:0,draws:this.draws,pythonAuthored:true};}
-  visible(){return !document.hidden&&!this.host.closest('[hidden]')&&(!this.host.closest('dialog')||this.host.closest('dialog').open);}
+  visible(){return !document.hidden&&!this.host.closest('[hidden]')&&(!this.host.closest('details')||this.host.closest('details').open)&&(!this.host.closest('dialog')||this.host.closest('dialog').open);}
   asset(){return manifest.animations[this.key];}
   poster(){this.canvas.style.backgroundImage=`url('${this.asset().paths.poster}')`;this.canvas.style.backgroundSize='100% 100%';this.canvas.style.backgroundPosition='0 0';this.frame=manifest.frames-1;this.host.querySelector('progress').value=this.frame;}
   setAnimation(key,label){this.pause(false);this.key=key;this.host.dataset.pythonAnimation=key;this.canvas.setAttribute('aria-label',label);this.poster();this.status.textContent='Python-authored frames. Play to explore.';this.host.dataset.playback='ready';}
@@ -67,19 +67,6 @@
   $('#pillar-takeaway').textContent=selectedPillar===null?'Why does this make Friends feel comforting? Choose an idea to explore.':pillars[id][5];
  });
 
- let comicStep=0;
- const comicCaptions=['A familiar setting gives us a starting point.','A small complication changes the details. The rhythm still feels recognizable.','The friends reconnect. Anticipating this familiar rhythm may feel comforting.'];
- function showComic(step){
-  comicStep=step;$('.comfort-comic').dataset.comicStep=String(step);
-  $$('[data-comic-scene]').forEach(b=>b.setAttribute('aria-pressed',String(Number(b.dataset.comicScene)===step)));
-  $('#comic-next').disabled=step===2;$('#comic-next').textContent=step===2?'A familiar ending':'What happens next? →';
-  $('#comic-counter').textContent=`Scene ${step+1} of 3`;$('#comic-takeaway').textContent=comicCaptions[step];
- }
- $('#comic-next').onclick=()=>showComic(Math.min(2,comicStep+1));$('#comic-replay').onclick=()=>showComic(0);
- $$('[data-comic-scene]').forEach(b=>b.onclick=()=>showComic(Number(b.dataset.comicScene)));
- showComic(0);
-
- new FramePlayer($('#slide-7 [data-python-animation="social-scene"]'));
  function design(id){
   const figure=figures[id];
   if(id<4)return `Study ${figure.study} experiment: recall a fight or list possessions, then describe favorite TV or whatever was on. Outcome: ${figure.evidence.outcome.toLowerCase()}.`;
@@ -110,22 +97,10 @@
   });select(initial);
  });
 
- let socialStep=1,socialChoice=null;
- function showSocial(step){
-  socialStep=step;$$('[data-social-stage]').forEach(panel=>panel.hidden=Number(panel.dataset.socialStage)!==step);
-  $$('.story-steps [data-social-step]').forEach(b=>b.setAttribute('aria-pressed',String(Number(b.dataset.socialStep)===step)));
-  players.forEach(player=>{if(!player.visible())player.pause();});
- }
- $$('[data-social-step]').forEach(b=>b.onclick=()=>showSocial(Number(b.dataset.socialStep)));
- $$('[data-comfort-choice]').forEach(b=>b.onclick=()=>{
-  socialChoice=b.dataset.comfortChoice;$$('[data-comfort-choice]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
-  $('#social-response').textContent=socialChoice==='familiar'?'A familiar world may feel inviting. Now compare that idea with what the researchers actually tested.':'A new story can be inviting too. This study tested recalled favorite TV, not your choice here.';
-  showSocial(3);
- });
  function pauseInactive(){players.forEach(player=>{if(!player.visible())player.pause();});}
  document.addEventListener('friends:slidechange',pauseInactive);document.addEventListener('visibilitychange',pauseInactive);
  function respectMotion(){if(quiet())players.forEach(player=>{player.pause(false);player.poster();player.host.dataset.playback='reduced';player.status.textContent='Static summary shown for reduced motion.';});}
  reduced.addEventListener('change',respectMotion);let lastQuiet=quiet();new MutationObserver(()=>{if(quiet()!==lastQuiet){lastQuiet=quiet();respectMotion();}}).observe(document.body,{attributes:true,attributeFilter:['class']});
  respectMotion();
- window.FriendsFinal={get state(){return {selectedPillar,comicStep,socialStep,socialChoice,players:[...players].map(p=>p.state)};},manifest};
+ window.FriendsFinal={get state(){return {selectedPillar,players:[...players].map(p=>p.state)};},manifest};
 })();

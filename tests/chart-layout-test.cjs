@@ -59,7 +59,7 @@ let browser,ws,send,ownedBrowser=false;
     if(width===1440||width===390)await screenshot('v08-'+(width===1440?'desktop':'mobile')+'-06');
   }
   test(errors.length===0,'no unexpected chart-layout errors');
-  const report={passed:checks,errors,desktop:'1440x1000',mobile:'390x844',primarySlides:18};
-  fs.writeFileSync(path.join(root,'test-results','v08-chart-layout-results.json'),JSON.stringify(report,null,2));
+  const report={passed:checks,errors,desktop:'1440x1000',mobile:'390x844',primarySlides:17};
+  fs.writeFileSync(path.join(root,'test-results','v10-final-chart-layout-results.json'),JSON.stringify(report,null,2));
   console.log(JSON.stringify(report));await send('Browser.close');ownedBrowser=false;
 })().catch(async error=>{console.error(error);if(send&&ws?.readyState===1)try{await send('Browser.close');}catch{}if(ownedBrowser)browser?.kill();process.exitCode=1;});

@@ -23,3 +23,9 @@ Documentation now distinguishes authentic prompt summaries, empirical evidence, 
 See `git log --oneline` for exact final commit identifiers, `llm_logs/README.md` for prompt records, and `FINAL_COMPLIANCE_REPORT.md` for verified evidence versus external actions.
 
 During finalization, a read-only remote check found `fdd4da7`, a documentation-only commit adding authentic chronological prompt history. It was fetched and merged locally as `15f1a4a`, preserving both existing histories and all uncommitted UI work. No push occurred. Original multilingual quotations remain unchanged as historical evidence; new product/documentation text is English.
+
+## Student-led final content refinement
+
+After reviewing the completed v1.0 implementation, the student considered the Slide 4 and Slide 7 animations visually weak and felt the stories lacked a meaningful payoff. According to the supplied review summary, several Slide 4 alternatives were explored; the student selected the recognizable Joey food gag from S10 E9 and explicitly requested that viewers understand why the interaction was shown. The student also approved removing the entire former Slide 7 to reduce repetition. This is a summarized design decision, not invented verbatim dialogue.
+
+The new Slide 4 uses original painted restaurant artwork, a prediction freeze, an unscored familiar reaction and a separated educational explanation. The deck now contains 17 slides. Unique belongingness findings, original figures and Python animations remain optional on Slide 6, while the self-control lab becomes Slide 7. All downstream numbering, profile/reset destinations, matching thresholds, styles, active test scripts and screenshot generation were audited. The earlier 18-slide captures remain historical; current evidence is in `screenshots/v10-final/`. No push or release tag is part of this refinement.

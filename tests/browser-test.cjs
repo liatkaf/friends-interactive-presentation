@@ -76,7 +76,7 @@ let browser,ws,send,ownedBrowser=false;
   await evaluate("for(let i=0;i<8;i++){goTo(0);goTo(1);}goTo(0)");await pause(200);
   await waitFor("document.querySelector('.coffee-experience').coffeeMug.state.active",'mug visible after repeated navigation');
   // Flush the headless compositor after coalesced hide/show mutations, then observe actual frames.
-  await screenshot('v10-mug-resumed');
+  await screenshot('v10-final-mug-resumed');
   const beforeCadence=await evaluate("document.querySelector('.coffee-experience').coffeeMug.state.renderCount");
   await waitFor(`document.querySelector('.coffee-experience').coffeeMug.state.renderCount>${beforeCadence}`,'mug renders after rapid visits');
   const cadence=await evaluate("(async()=>{const mug=document.querySelector('.coffee-experience').coffeeMug,a=mug.state.renderCount,t=performance.now();await new Promise(r=>setTimeout(r,1000));return {draws:mug.state.renderCount-a,elapsed:performance.now()-t};})()");
@@ -87,10 +87,10 @@ let browser,ws,send,ownedBrowser=false;
   await check("!FriendsNavigation.visible&&getComputedStyle(document.querySelector('#navigation-overlay')).opacity==='0'",'navigation hidden by default');
   const slideHeight=await evaluate('sections[0].clientHeight');
   await send('Input.dispatchMouseEvent',{type:'mouseMoved',x:720,y:990});
-  await waitFor("FriendsNavigation.visible",'bottom-edge hover reveals navigation');await pause(350);await screenshot('v10-navigation-visible');
+  await waitFor("FriendsNavigation.visible",'bottom-edge hover reveals navigation');await pause(350);await screenshot('v10-final-navigation-visible');
   test(await evaluate('sections[0].clientHeight')===slideHeight,'navigation causes no layout shift');
   await send('Input.dispatchMouseEvent',{type:'mouseMoved',x:720,y:130});await pause(1550);
-  await check("!FriendsNavigation.visible",'navigation hides after pointer leaves');await screenshot('v10-navigation-hidden');
+  await check("!FriendsNavigation.visible",'navigation hides after pointer leaves');await screenshot('v10-final-navigation-hidden');
   await evaluate("document.querySelector('#next').focus({preventScroll:true})");await waitFor("FriendsNavigation.visible",'keyboard focus reveals navigation');await pause(1500);await check("FriendsNavigation.visible",'navigation remains visible while focused');
   await evaluate('presentation.focus()');await pause(1550);await check("!FriendsNavigation.visible",'navigation hides after focus leaves');
   await send('Emulation.setTouchEmulationEnabled',{enabled:true,maxTouchPoints:1});
@@ -99,24 +99,24 @@ let browser,ws,send,ownedBrowser=false;
   await waitFor("FriendsNavigation.visible&&document.querySelector('#nav-toggle').getAttribute('aria-expanded')==='true'",'touch reveals navigation');
   await evaluate("document.querySelector('#nav-toggle').click();presentation.focus();FriendsNavigation.hide()");await send('Emulation.setTouchEmulationEnabled',{enabled:false});
   // v0.6 narrative, research figures, guided questionnaire and actual matching states.
-  const expected=['Welcome to the Friends Comfort Lab','Why Do We Rewatch Friends?','The Psychology of Comfort TV','The One Where You Know What Happens Next','PIVOT! Concentration & Spatial Focus','What the Research Shows','The One Where You Feel Left Out','The Self-Control Recovery Lab','The One With The Rewind','Finding Your Episode Lobster!','How Are You Feeling?',"What's Your Stress Level?","Who's Your Favorite Friend?",'Which Quote Speaks to You?','What Kind of Comfort Do You Need?','How Familiar Is Friends to You?','Finding Your Perfect Match','The One With Your Perfect Episode'];
-  test(JSON.stringify(await evaluate('slides.map(s=>s.title)'))===JSON.stringify(expected),'18 required slide titles in order');
-  await check("sections.length===18 && document.querySelectorAll('.dot').length===18",'18 primary slides and indicators');
+  const expected=['Welcome to the Friends Comfort Lab','Why Do We Rewatch Friends?','The Psychology of Comfort TV','The One With the Missing Punchline','PIVOT! Concentration & Spatial Focus','What the Research Shows','The Self-Control Recovery Lab','The One With The Rewind','Finding Your Episode Lobster!','How Are You Feeling?',"What's Your Stress Level?","Who's Your Favorite Friend?",'Which Quote Speaks to You?','What Kind of Comfort Do You Need?','How Familiar Is Friends to You?','Finding Your Perfect Match','The One With Your Perfect Episode'];
+  test(JSON.stringify(await evaluate('slides.map(s=>s.title)'))===JSON.stringify(expected),'17 required slide titles in order');
+  await check("sections.length===17 && document.querySelectorAll('.dot').length===17",'17 primary slides and indicators');
   await check("[...document.querySelectorAll('.slide')].every(s=>s.querySelectorAll('h1,h2').length===1)",'one headline per slide');
   await check("!document.querySelector('.slide img[src*=\"original.png\"]') && !document.querySelector('img[src*=\"central-perk-original\"],img[src*=\"friends-couch-original\"]')",'user artwork not in active UI');
   await check("document.querySelector('header.topbar').children.length===1 && document.querySelector('header.topbar').textContent.replace(/\s+/g,' ').trim()==='F\u00b7R\u00b7I\u00b7E\u00b7N\u00b7D\u00b7S| The Comfort Lab'",'only centered brand in topbar');
   await check("[...document.querySelectorAll('.friends-word i')].every((dot,i)=>getComputedStyle(dot).color===['rgb(231, 76, 60)','rgb(241, 196, 15)','rgb(52, 152, 219)'][i%3])",'classic alternating dot colors');
   await check("!document.querySelector('header.topbar').textContent.match(/v0\.|INTERACTIVE EDITION|New York/i) && !document.querySelector('.utility-bar')&&document.querySelector('#navigation-overlay [data-open=settings]')",'badge removed and settings retained separately');
-  await check("!sections[4].textContent.match(/stress/i) && sections[11].textContent.includes('Stress')",'Slide 5 terminology isolated from stress questionnaire');
+  await check("!sections[4].textContent.match(/stress/i) && sections[10].textContent.includes('Stress')",'Slide 5 terminology isolated from stress questionnaire');
   // Every background Enter advances once; repeats and interactive targets are exempt.
-  for(let i=0;i<17;i++){await evaluate(`goTo(${i});presentation.focus();presentation.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',bubbles:true,cancelable:true}))`);await check(`current===${i+1}`,'background Enter '+(i+1));}
-  await evaluate("presentation.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',bubbles:true,cancelable:true}))");await check("current===17",'Enter final boundary');
+  for(let i=0;i<16;i++){await evaluate(`goTo(${i});presentation.focus();presentation.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',bubbles:true,cancelable:true}))`);await check(`current===${i+1}`,'background Enter '+(i+1));}
+  await evaluate("presentation.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',bubbles:true,cancelable:true}))");await check("current===16",'Enter final boundary');
   await evaluate("goTo(2);presentation.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',repeat:true,bubbles:true,cancelable:true}))");await check("current===2",'held Enter does not skip slides');
-  await evaluate("goTo(10);window.beforeEnterProfile=JSON.stringify(FriendsLab.profile)");
-  await check("(()=>{const b=document.querySelector('[data-answer=mood]'),e=new KeyboardEvent('keydown',{key:'Enter',bubbles:true,cancelable:true});b.dispatchEvent(e);return current===10&&!e.defaultPrevented&&JSON.stringify(FriendsLab.profile)===window.beforeEnterProfile})()",'Enter leaves questionnaire activation to native buttons');
-  await evaluate("goTo(11)");await check("(()=>{const e=new KeyboardEvent('keydown',{key:'Enter',bubbles:true,cancelable:true});document.querySelector('#profile-stress').dispatchEvent(e);return current===11&&!e.defaultPrevented})()",'Enter on form input is not intercepted');
-  await check("(()=>{for(const html of ['<textarea></textarea>','<select><option>One</option></select>','<div contenteditable><span>Editable</span></div>','<a href=\"#slide-1\">Link</a>','<div role=\"button\" tabindex=\"0\">Custom control</div>']){const wrapper=document.createElement('div');wrapper.innerHTML=html;sections[11].append(wrapper);const target=wrapper.querySelector('span')||wrapper.firstElementChild,e=new KeyboardEvent('keydown',{key:'Enter',bubbles:true,cancelable:true});target.dispatchEvent(e);wrapper.remove();if(current!==11||e.defaultPrevented)return false;}return true;})()",'Enter exempts textarea, select, nested editable, link and custom control');
-  await evaluate("document.querySelector('[data-open=settings]').click();document.querySelector('#settings').dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',bubbles:true,cancelable:true}))");await check("current===11&&document.querySelector('#settings').open",'Enter does not navigate with modal open');
+  await evaluate("goTo(9);window.beforeEnterProfile=JSON.stringify(FriendsLab.profile)");
+  await check("(()=>{const b=document.querySelector('[data-answer=mood]'),e=new KeyboardEvent('keydown',{key:'Enter',bubbles:true,cancelable:true});b.dispatchEvent(e);return current===9&&!e.defaultPrevented&&JSON.stringify(FriendsLab.profile)===window.beforeEnterProfile})()",'Enter leaves questionnaire activation to native buttons');
+  await evaluate("goTo(10)");await check("(()=>{const e=new KeyboardEvent('keydown',{key:'Enter',bubbles:true,cancelable:true});document.querySelector('#profile-stress').dispatchEvent(e);return current===10&&!e.defaultPrevented})()",'Enter on form input is not intercepted');
+  await check("(()=>{for(const html of ['<textarea></textarea>','<select><option>One</option></select>','<div contenteditable><span>Editable</span></div>','<a href=\"#slide-1\">Link</a>','<div role=\"button\" tabindex=\"0\">Custom control</div>']){const wrapper=document.createElement('div');wrapper.innerHTML=html;sections[10].append(wrapper);const target=wrapper.querySelector('span')||wrapper.firstElementChild,e=new KeyboardEvent('keydown',{key:'Enter',bubbles:true,cancelable:true});target.dispatchEvent(e);wrapper.remove();if(current!==10||e.defaultPrevented)return false;}return true;})()",'Enter exempts textarea, select, nested editable, link and custom control');
+  await evaluate("document.querySelector('[data-open=settings]').click();document.querySelector('#settings').dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',bubbles:true,cancelable:true}))");await check("current===10&&document.querySelector('#settings').open",'Enter does not navigate with modal open');
   await evaluate("document.querySelector('#settings .dialog-close').click();goTo(4)");
   await waitFor("document.querySelector('#stairwell-view').dataset.mode==='three'",'Three.js stairwell mount',30000);
   await evaluate("document.querySelector('#reset-challenge').click()");
@@ -134,10 +134,10 @@ let browser,ws,send,ownedBrowser=false;
   await evaluate("document.querySelector('#pivot-couch').click()");await waitFor("!document.querySelector('#stairwell-view').stairwell.state.animating",'pivot animation settles');
   await check("PivotChallenge.state.pivotCompleted&&PivotChallenge.state.score===85&&document.querySelector('#pivot-couch').disabled&&document.querySelector('#pivot-feedback').textContent==='PERFECT PIVOT!'",'correct pivot rewards 10 exactly once');
   await check("Math.abs(document.querySelector('#stairwell-view').stairwell.state.rotation-Math.PI/2)<1e-6&&JSON.stringify(document.querySelector('#stairwell-view').stairwell.state.position)===window.cornerPosition",'couch rotates at actual corner');
-  await screenshot('v10-corner-pivoted');
+  await screenshot('v10-final-corner-pivoted');
   await evaluate("document.querySelector('#move-up').click()");await waitFor("!document.querySelector('#stairwell-view').stairwell.state.animating",'top movement settles');
   await check("PivotChallenge.state.stage===3&&document.querySelector('#move-up').disabled&&document.querySelector('#pivot-challenge').classList.contains('game-success')&&document.querySelector('#stairwell-view').stairwell.state.position[0]>0",'top landing success and spatial turn');
-  await screenshot('v10-game-success');
+  await screenshot('v10-final-game-success');
   for(let i=0;i<3;i++){await evaluate("document.querySelector('#reset-challenge').click()");await check("PivotChallenge.state.stage===0&&PivotChallenge.state.score===100&&!PivotChallenge.state.pivotCompleted&&JSON.stringify(document.querySelector('#stairwell-view').stairwell.state.position)===window.bottomPose&&document.querySelector('#stairwell-view').stairwell.state.rotation===0&&!document.querySelector('#move-up').disabled&&!document.querySelector('#pivot-challenge').classList.contains('game-failure')&&!document.querySelector('#pivot-challenge').classList.contains('game-success')",'complete repeated game reset '+i);}
   await evaluate("document.querySelector('#move-up').click();document.querySelector('#move-up').click();document.querySelector('#pivot-couch').click()");await check("PivotChallenge.state.score===100",'perfect run caps score at 100');
   await evaluate("document.querySelector('#reset-challenge').click();document.querySelector('#move-up').click();document.querySelector('#move-up').click();for(let i=0;i<6;i++)document.querySelector('#move-up').click()");await check("PivotChallenge.state.score===0",'game floor is zero');
@@ -147,8 +147,8 @@ let browser,ws,send,ownedBrowser=false;
   await send('Emulation.setEmulatedMedia',{features:[{name:'prefers-reduced-motion',value:'reduce'}]});await evaluate("goTo(4);document.querySelector('#move-up').click()");
   await check("!document.querySelector('#stairwell-view').stairwell.state.animating&&document.querySelector('#stairwell-view').stairwell.state.reducedMotion",'game reduced motion snaps to real state');
   await send('Emulation.setEmulatedMedia',{features:[{name:'prefers-reduced-motion',value:'no-preference'}]});await evaluate("document.querySelector('#reset-challenge').click()");
-  await check("sections.slice(0,10).every(s=>!s.querySelector('[data-answer],#profile-stress'))",'research precedes all questionnaire inputs');
-  await check("sections.slice(10,16).every(s=>s.querySelector('.question-progress'))",'six dedicated questionnaire slides');
+  await check("sections.slice(0,9).every(s=>!s.querySelector('[data-answer],#profile-stress'))",'research precedes all questionnaire inputs');
+  await check("sections.slice(9,15).every(s=>s.querySelector('.question-progress'))",'six dedicated questionnaire slides');
   await evaluate("goTo(1);document.querySelector('[data-metric=loneliness]').click();document.querySelector('[data-research]').focus();document.querySelector('[data-research]').click()");
   await evaluate("document.querySelector('[data-research]').click()");
   await check("document.querySelector('#research-tooltip').textContent.includes('2.64') && document.querySelector('#research-axis').textContent.includes('reverse-scored')",'published analytics remain interactive');
@@ -172,29 +172,29 @@ let browser,ws,send,ownedBrowser=false;
   await check("document.querySelector('#study1-tooltip').textContent.includes('2.64')&&document.querySelector('#study1-tooltip').textContent.includes('Reverse-scored')",'research bar focus/click tooltip explains measure');
   await evaluate("document.querySelector('[data-study-metric=doing]').click()");
   await check("document.querySelectorAll('#study1-bars .study-bar').length===4",'research series toggle');
-  await evaluate("document.querySelector('[data-study-metric=both]').click();goTo(13)");
-  await check("document.querySelectorAll('#slide-14 [data-answer=quote]').length===6",'exactly six iconic quote cards');
+  await evaluate("document.querySelector('[data-study-metric=both]').click();goTo(12)");
+  await check("document.querySelectorAll('#slide-13 [data-answer=quote]').length===6",'exactly six iconic quote cards');
   for(let i=0;i<6;i++){
-    await evaluate(`document.querySelectorAll('#slide-14 [data-answer=quote]')[${i}].click()`);
-    await check(`FriendsLab.profile.quote===FRIENDS_V05.quotes[${i}].id&&document.querySelectorAll('#slide-14 [aria-pressed=true]').length===1`,'single quote selected '+i);
-    await evaluate('goTo(12);goTo(13)');
-    await check(`document.querySelectorAll('#slide-14 [data-answer=quote]')[${i}].getAttribute('aria-pressed')==='true'`,'quote persists '+i);
+    await evaluate(`document.querySelectorAll('#slide-13 [data-answer=quote]')[${i}].click()`);
+    await check(`FriendsLab.profile.quote===FRIENDS_V05.quotes[${i}].id&&document.querySelectorAll('#slide-13 [aria-pressed=true]').length===1`,'single quote selected '+i);
+    await evaluate('goTo(11);goTo(12)');
+    await check(`document.querySelectorAll('#slide-13 [data-answer=quote]')[${i}].getAttribute('aria-pressed')==='true'`,'quote persists '+i);
   }
-  await evaluate("document.querySelectorAll('#slide-14 [data-answer=quote]')[2].focus()");await waitFor("document.activeElement===document.querySelectorAll('#slide-14 [data-answer=quote]')[2]",'quote Enter focus');
+  await evaluate("document.querySelectorAll('#slide-13 [data-answer=quote]')[2].focus()");await waitFor("document.activeElement===document.querySelectorAll('#slide-13 [data-answer=quote]')[2]",'quote Enter focus');
   await send('Input.dispatchKeyEvent',{type:'keyDown',key:'Enter',code:'Enter',windowsVirtualKeyCode:13,text:'\r'});await send('Input.dispatchKeyEvent',{type:'keyUp',key:'Enter',code:'Enter',windowsVirtualKeyCode:13});
-  await check("current===13&&FriendsLab.profile.quote==='We were on a break!'",'Enter selects quote without advancing');
-  await evaluate("document.querySelectorAll('#slide-14 [data-answer=quote]')[3].focus()");await waitFor("document.activeElement===document.querySelectorAll('#slide-14 [data-answer=quote]')[3]",'quote Space focus');
+  await check("current===12&&FriendsLab.profile.quote==='We were on a break!'",'Enter selects quote without advancing');
+  await evaluate("document.querySelectorAll('#slide-13 [data-answer=quote]')[3].focus()");await waitFor("document.activeElement===document.querySelectorAll('#slide-13 [data-answer=quote]')[3]",'quote Space focus');
   await send('Input.dispatchKeyEvent',{type:'keyDown',key:' ',code:'Space',windowsVirtualKeyCode:32,text:' '});await send('Input.dispatchKeyEvent',{type:'keyUp',key:' ',code:'Space',windowsVirtualKeyCode:32});
-  await check("current===13&&FriendsLab.profile.quote==='Could I BE any more...?'",'Space selects quote without advancing');
-  await evaluate('goTo(15)');
-  await check("['familiarity','nostalgia'].every(k=>{const cards=[...sections[15].querySelectorAll('[data-answer='+k+']')];return cards.length===3&&cards.every(b=>b.querySelector('strong').textContent===FRIENDS_V05.profile_labels[k][b.dataset.value])})",'exact familiarity and nostalgia labels and preserved IDs');
-  await evaluate("document.querySelector('[data-answer=familiarity][data-value=some]').click();document.querySelector('[data-answer=nostalgia][data-value=medium]').click();goTo(14);goTo(15)");
+  await check("current===12&&FriendsLab.profile.quote==='Could I BE any more...?'",'Space selects quote without advancing');
+  await evaluate('goTo(14)');
+  await check("['familiarity','nostalgia'].every(k=>{const cards=[...sections[14].querySelectorAll('[data-answer='+k+']')];return cards.length===3&&cards.every(b=>b.querySelector('strong').textContent===FRIENDS_V05.profile_labels[k][b.dataset.value])})",'exact familiarity and nostalgia labels and preserved IDs');
+  await evaluate("document.querySelector('[data-answer=familiarity][data-value=some]').click();document.querySelector('[data-answer=nostalgia][data-value=medium]').click();goTo(13);goTo(14)");
   await check("FriendsLab.profile.familiarity==='some'&&FriendsLab.profile.nostalgia==='medium'&&document.querySelector('[data-answer=familiarity][data-value=some]').getAttribute('aria-pressed')==='true'",'new labels persist with original scoring values');
   await evaluate("document.querySelector('[data-clear-step=\"6\"]').click()");
-  await check("!('familiarity' in FriendsLab.profile)&&!('nostalgia' in FriendsLab.profile)&&!sections[15].querySelector('[aria-pressed=true]')",'Clear Answer clears both Slide 16 answers');
-  await evaluate("sections[15].querySelector('.question-foot [data-go]').click()");await check("current===16&&!('familiarity' in FriendsLab.profile)",'Skip / Continue works without assigning values');
-  for(const [index,ids] of [[6,[0,1,2,3]],[7,[4,5,6]]]){
-    await evaluate(`goTo(${index});if(${index}===6)document.querySelector('[data-social-step="3"]').click()`);
+  await check("!('familiarity' in FriendsLab.profile)&&!('nostalgia' in FriendsLab.profile)&&!sections[14].querySelector('[aria-pressed=true]')",'Clear Answer clears both Slide 16 answers');
+  await evaluate("sections[14].querySelector('.question-foot [data-go]').click()");await check("current===15&&!('familiarity' in FriendsLab.profile)",'Skip / Continue works without assigning values');
+  for(const [index,ids] of [[5,[0,1,2,3]],[6,[4,5,6]]]){
+    await evaluate(`goTo(${index});if(${index}===5)document.querySelector('#belonging-evidence').open=true`);
     for(const id of ids){
       await evaluate(`document.querySelector('[data-inline-figure="${id}"]').click()`);
       await check(`sections[${index}].querySelector('.qualitative-explorer').dataset.measure==='${id}'&&sections[${index}].querySelectorAll('.evidence-row').length===FRIENDS_V05.research.figures[${id}].evidence.contrasts.length`,'Python qualitative evidence map '+id);
@@ -206,32 +206,32 @@ let browser,ws,send,ownedBrowser=false;
       await waitFor("!document.querySelector('#research-explorer').open && document.activeElement.matches('[data-enlarge]')",'figure Escape and focus restoration '+id);
     }
   }
-  await evaluate("goTo(6);document.querySelector('[data-inline-figure=\"3\"]').click();sections[6].querySelector('.evidence-table').open=true");
-  await check("sections[6].textContent.includes('marginal')",'marginal rejection result distinguished');
-  await evaluate("sections[6].querySelector('.evidence-table').open=false;document.querySelector('[data-inline-figure=\"1\"]').click()");
-  await evaluate("goTo(10);document.querySelector('[data-answer=mood][data-value=happy]').click();goTo(11);document.querySelector('#profile-stress').value=8;document.querySelector('#profile-stress').dispatchEvent(new Event('input'));goTo(12);document.querySelector('[data-answer=character][data-value=Ross]').click();goTo(13);document.querySelector('[data-answer=quote]').click();goTo(14);document.querySelector('[data-answer=experience][data-value=laughter]').click();goTo(15);document.querySelector('[data-answer=familiarity][data-value=rewatcher]').click();document.querySelector('[data-answer=nostalgia][data-value=high]').click()");
+  await evaluate("goTo(5);document.querySelector('[data-inline-figure=\"3\"]').click();sections[5].querySelector('.evidence-table').open=true");
+  await check("sections[5].textContent.includes('marginal')",'marginal rejection result distinguished');
+  await evaluate("sections[5].querySelector('.evidence-table').open=false;document.querySelector('[data-inline-figure=\"1\"]').click()");
+  await evaluate("goTo(9);document.querySelector('[data-answer=mood][data-value=happy]').click();goTo(10);document.querySelector('#profile-stress').value=8;document.querySelector('#profile-stress').dispatchEvent(new Event('input'));goTo(11);document.querySelector('[data-answer=character][data-value=Ross]').click();goTo(12);document.querySelector('[data-answer=quote]').click();goTo(13);document.querySelector('[data-answer=experience][data-value=laughter]').click();goTo(14);document.querySelector('[data-answer=familiarity][data-value=rewatcher]').click();document.querySelector('[data-answer=nostalgia][data-value=high]').click()");
   await check("FriendsLab.profile.stress===8 && FriendsLab.profile.quote==='PIVOT!' && FriendsLab.profile.character==='Ross' && document.querySelector('#profile-progress').textContent.includes('6 / 6')",'questionnaire inputs and six-step completion');
-  await evaluate("goTo(10)");
+  await evaluate("goTo(9)");
   await check("document.querySelector('[data-answer=mood][data-value=happy]').getAttribute('aria-pressed')==='true'",'answer persists across slide navigation');
-  await evaluate("window.labOriginalFetch=window.fetch;window.fetch=(url,...args)=>String(url)==='/api/recommend'?new Promise(resolve=>window.releaseMatch=()=>resolve(window.labOriginalFetch(url,...args))):window.labOriginalFetch(url,...args);goTo(16)");
+  await evaluate("window.labOriginalFetch=window.fetch;window.fetch=(url,...args)=>String(url)==='/api/recommend'?new Promise(resolve=>window.releaseMatch=()=>resolve(window.labOriginalFetch(url,...args))):window.labOriginalFetch(url,...args);goTo(15)");
   await check("document.querySelector('#matching-steps li').dataset.state==='done' && [...document.querySelectorAll('#matching-steps li')].slice(1).every(li=>li.dataset.state==='waiting') && document.querySelector('#view-result').disabled",'matching does not claim completion while Python request is pending');
   await evaluate("window.releaseMatch();window.fetch=window.labOriginalFetch");
   await waitFor("FriendsLab.engine.includes('Python 3') && !document.querySelector('#view-result').disabled",'real Python computation completes',30000);
   await check("[...document.querySelectorAll('#matching-steps li')].every(li=>li.dataset.state==='done') && document.querySelector('#matching-factors').textContent.includes('quote')",'matching completion reflects returned factors');
   await evaluate("document.querySelector('#view-result').click()");
-  await check("current===17 && document.querySelector('.episode-hero h3').textContent==='The One with the Cop' && document.querySelectorAll('.alternatives article').length===2",'selected profile returns Cop and two alternatives');
+  await check("current===16 && document.querySelector('.episode-hero h3').textContent==='The One with the Cop' && document.querySelectorAll('.alternatives article').length===2",'selected profile returns Cop and two alternatives');
   await check("!document.querySelector('.episode-hero').textContent.includes('undefined') && document.querySelector('.episode-hero').textContent.includes('S5 E16')",'episode numbering visible');
   await evaluate("window.savedReturnProfile=JSON.stringify(FriendsLab.profile);document.querySelector('#back-to-start').click()");
   await check("current===0&&location.hash==='#slide-1'&&document.querySelector('.dot').getAttribute('aria-current')==='step'&&document.querySelector('#current').textContent==='01'&&JSON.stringify(FriendsLab.profile)===window.savedReturnProfile",'Back to Start restores navigation and preserves answers');
-  await check("Math.abs(parseFloat(document.querySelector('#progress-fill').style.width)-100/18)<.01",'Back to Start updates progress');
-  await evaluate("goTo(17)");await check("document.querySelector('.episode-hero h3').textContent==='The One with the Cop'",'returning to recommendation preserves personalized match');
+  await check("Math.abs(parseFloat(document.querySelector('#progress-fill').style.width)-100/17)<.01",'Back to Start updates progress');
+  await evaluate("goTo(16)");await check("document.querySelector('.episode-hero h3').textContent==='The One with the Cop'",'returning to recommendation preserves personalized match');
   await evaluate("document.querySelector('#why-episode').click()");
   await check("document.querySelector('#score-details').open && document.querySelector('#score-content').textContent.includes('18 / 18')",'actual scoring points in Why This Episode');
-  await pause(700);await screenshot('v10-score-details');
+  await pause(700);await screenshot('v10-final-score-details');
   await evaluate("document.querySelector('#score-details .dialog-close').click();document.querySelector('#surprise-me').click()");
   await check("FriendsLab.result.engine==='JavaScript random discovery' && document.querySelector('.episode-hero h3').textContent!=='The One with the Cop' && FriendsLab.episodes.some(e=>e.title===document.querySelector('.episode-hero h3').textContent)",'Surprise Me selects a different real episode and identifies computation');
   await evaluate("document.querySelector('#try-again').click()");
-  await check("current===10 && Object.keys(FriendsLab.profile).length===0&&FriendsLab.result===null&&!document.querySelector('[data-answer][aria-pressed=true]')&&document.querySelector('#profile-stress').value==='5'&&document.querySelector('#profile-progress').textContent==='0 / 6 questions answered'",'Try Again resets answers, progress, controls and result');
+  await check("current===9 && Object.keys(FriendsLab.profile).length===0&&FriendsLab.result===null&&!document.querySelector('[data-answer][aria-pressed=true]')&&document.querySelector('#profile-stress').value==='5'&&document.querySelector('#profile-progress').textContent==='0 / 6 questions answered'",'Try Again resets answers, progress, controls and result');
   await send('Page.reload');
   await waitFor("window.FriendsLab && Object.keys(FriendsLab.profile).length===0&&!sessionStorage.getItem('friends-profile-v05')",'cleared answers stay cleared after refresh');
   const parity=await evaluate(`(async()=>{const canonical=x=>JSON.stringify(x,(_,v)=>v && typeof v==='object'&&!Array.isArray(v)?Object.fromEntries(Object.entries(v).sort(([a],[b])=>a.localeCompare(b))):v);for(const p of [...FRIENDS_V05.quotes.map(q=>({quote:q.id})),...['new','some','rewatcher'].flatMap(f=>['low','medium','high'].map(n=>({familiarity:f,nostalgia:n}))),{},{quote:'PIVOT!'},{mood:'overwhelmed',stress:10,character:'Phoebe',quote:'Smelly Cat',nostalgia:'low',familiarity:'new',predictability:'surprising',experience:'warmth'}]){const result=await(await fetch('/api/recommend',{method:'POST',body:JSON.stringify(p)})).json();const js=FriendsLab.episodes.map(e=>FriendsLab.fallbackScore(e,p)).sort((a,b)=>b.score-a.score||a.episode.season-b.episode.season||a.episode.episode-b.episode.episode).slice(0,3);if(canonical(result.recommendations)!==canonical(js))return false;}return true;})()`);
@@ -243,7 +243,7 @@ let browser,ws,send,ownedBrowser=false;
   await evaluate("document.querySelector('#couch-turn').value=90;document.querySelector('#couch-turn').dispatchEvent(new Event('input'))");
   await check("document.querySelector('#couch-view').dataset.angle==='90'",'optional couch slider');
   await evaluate("document.querySelector('#couch-view canvas').dispatchEvent(new KeyboardEvent('keydown',{key:'ArrowRight',bubbles:true}))");
-  await check("document.querySelector('#couch-view').dataset.angle==='100' && current===10",'couch keyboard consumes navigation');
+  await check("document.querySelector('#couch-view').dataset.angle==='100' && current===9",'couch keyboard consumes navigation');
   const couchBounds=await evaluate("(()=>{const r=document.querySelector('#couch-view canvas').getBoundingClientRect();return {x:r.x+r.width/2,y:r.y+r.height/2}})()");
   await send('Input.dispatchMouseEvent',{type:'mousePressed',...couchBounds,button:'left',clickCount:1});
   await send('Input.dispatchMouseEvent',{type:'mouseMoved',x:couchBounds.x+50,y:couchBounds.y,button:'left',buttons:1});
@@ -251,43 +251,43 @@ let browser,ws,send,ownedBrowser=false;
   await check("document.querySelector('#couch-view').dataset.angle!=='100'",'real couch drag');
   await evaluate("document.querySelector('#couch-reset').click()");
   await check("document.querySelector('#couch-view').dataset.angle==='25'",'optional couch reset');
-  await screenshot('v10-optional-pivot');
-  await evaluate("document.querySelector('#pivot-activity .dialog-close').click();document.querySelector('[data-open=settings]').click();document.querySelector('#reset-profile').click();goTo(16)");
+  await screenshot('v10-final-optional-pivot');
+  await evaluate("document.querySelector('#pivot-activity .dialog-close').click();document.querySelector('[data-open=settings]').click();document.querySelector('#reset-profile').click();goTo(15)");
   await waitFor("FriendsLab.result && Object.keys(FriendsLab.profile).length===0 && FriendsLab.engine.includes('Python 3')",'reset and incomplete profile Python match',30000);
   await check("FriendsLab.result.recommendations[0].score===0",'empty questionnaire is handled honestly');
-  await evaluate("goTo(10);document.querySelector('[data-answer=mood][data-value=sad]').click();window.labOriginalFetch=window.fetch;window.fetch=(url,...args)=>String(url).startsWith('/api/')?Promise.reject(Error('Deliberate test failure')):window.labOriginalFetch(url,...args);goTo(16)");
+  await evaluate("goTo(9);document.querySelector('[data-answer=mood][data-value=sad]').click();window.labOriginalFetch=window.fetch;window.fetch=(url,...args)=>String(url).startsWith('/api/')?Promise.reject(Error('Deliberate test failure')):window.labOriginalFetch(url,...args);goTo(15)");
   await waitFor("FriendsLab.engine.includes('JavaScript fallback') && !document.querySelector('#view-result').disabled",'Python failure remains usable and honestly labeled');
-  await evaluate("window.fetch=window.labOriginalFetch;goTo(13);document.querySelector('[data-answer=quote]').click();goTo(16)");
+  await evaluate("window.fetch=window.labOriginalFetch;goTo(12);document.querySelector('[data-answer=quote]').click();goTo(15)");
   await waitFor("FriendsLab.engine.includes('Python 3')",'Python resumes after fallback',30000);
   // Full navigation regression and screenshots of every slide at desktop and mobile.
-  for(let i=0;i<18;i++){
+  for(let i=0;i<17;i++){
     await evaluate(`document.querySelectorAll('.dot')[${i}].click()`);
     await check(`current===${i} && document.querySelectorAll('.slide:not([hidden])').length===1`,'indicator '+(i+1));
-    await check("document.querySelector('#current').textContent===String(current+1).padStart(2,'0') && Math.abs(parseFloat(document.querySelector('#progress-fill').style.width)-(current+1)/18*100)<.01",'counter and progress '+i);
+    await check("document.querySelector('#current').textContent===String(current+1).padStart(2,'0') && Math.abs(parseFloat(document.querySelector('#progress-fill').style.width)-(current+1)/17*100)<.01",'counter and progress '+i);
   }
   await check("document.querySelector('#next').disabled",'final boundary');
-  for(let i=16;i>=0;i--){await evaluate("document.querySelector('#previous').click()");await check(`current===${i}`,'Previous '+i);}
+  for(let i=15;i>=0;i--){await evaluate("document.querySelector('#previous').click()");await check(`current===${i}`,'Previous '+i);}
   await check("document.querySelector('#previous').disabled",'first boundary');
-  for(let i=1;i<18;i++){await evaluate("document.querySelector('#next').click()");await check(`current===${i}`,'Next '+i);}
-  for(const [key,index] of [['Home',0],['ArrowRight',1],['ArrowLeft',0],['End',17]]){await evaluate(`document.body.dispatchEvent(new KeyboardEvent('keydown',{key:'${key}',bubbles:true}))`);await check(`current===${index}`,'keyboard '+key);}
-  await evaluate("location.hash='#slide-8'");await waitFor("current===7",'deep link');
-  await send('Page.reload');await waitFor("window.FriendsLab && current===7",'deep-link reload');
+  for(let i=1;i<17;i++){await evaluate("document.querySelector('#next').click()");await check(`current===${i}`,'Next '+i);}
+  for(const [key,index] of [['Home',0],['ArrowRight',1],['ArrowLeft',0],['End',16]]){await evaluate(`document.body.dispatchEvent(new KeyboardEvent('keydown',{key:'${key}',bubbles:true}))`);await check(`current===${index}`,'keyboard '+key);}
+  await evaluate("location.hash='#slide-7'");await waitFor("current===6",'deep link');
+  await send('Page.reload');await waitFor("window.FriendsLab && current===6",'deep-link reload');
   await waitFor("document.querySelector('.coffee-experience')?.coffeeMug",'hidden mug mount',60000);
   await check("!document.querySelector('.coffee-experience').coffeeMug.state.active",'no mug autoplay on hidden slide');
   for(const width of [1440,1024,768,390,320]){
     await send('Emulation.setDeviceMetricsOverride',{width,height:width<600?844:1000,deviceScaleFactor:1,mobile:width<600});
     await check("(()=>{const b=document.querySelector('.lab-brand').getBoundingClientRect(),h=document.querySelector('.topbar').getBoundingClientRect();return Math.abs(b.x+b.width/2-innerWidth/2)<1&&Math.abs(b.y+b.height/2-h.y-h.height/2)<1&&b.left>=0&&b.right<=innerWidth&&!document.querySelector('.utility-bar')})()",'centered brand without secondary bar '+width);
-    for(let i=0;i<18;i++){
+    for(let i=0;i<17;i++){
       await evaluate(`goTo(${i})`);await pause(width===1440||width===390?700:90);
       await check("sections[current].scrollWidth<=sections[current].clientWidth",'no horizontal overflow '+width+'/'+i);
       await evaluate("document.querySelector('.controls button:not(:disabled)').focus({preventScroll:true});FriendsNavigation.show();getComputedStyle(document.querySelector('#navigation-overlay')).transform");await pause(500);await send('Page.captureScreenshot',{format:'png'});await pause(350);
       await check("document.querySelector('.controls').getBoundingClientRect().bottom<=innerHeight+1",'navigation fits '+width+'/'+i);
       await evaluate('presentation.focus();FriendsNavigation.hide()');await pause(320);
-      if(width===1440||width===390)await screenshot(`v10-${width===1440?'desktop':'mobile'}-${String(i+1).padStart(2,'0')}`);
+      if(width===1440||width===390)await screenshot(`v10-final-${width===1440?'desktop':'mobile'}-${String(i+1).padStart(2,'0')}`);
     }
   }
   await send('Emulation.setDeviceMetricsOverride',{width:1366,height:768,deviceScaleFactor:1,mobile:false});await evaluate('goTo(4)');await pause(400);
-  await check("sections[4].scrollHeight<=sections[4].clientHeight+1&&document.querySelector('#stairwell-view').clientHeight>=200",'PIVOT fits standard laptop without vertical scroll');await screenshot('v10-laptop-pivot');
+  await check("sections[4].scrollHeight<=sections[4].clientHeight+1&&document.querySelector('#stairwell-view').clientHeight>=200",'PIVOT fits standard laptop without vertical scroll');await screenshot('v10-final-laptop-pivot');
   await send('Emulation.setEmulatedMedia',{features:[{name:'prefers-reduced-motion',value:'reduce'}]});
   await evaluate("goTo(0)");await pause(300);
   await check("document.querySelector('.coffee-experience').coffeeMug.state.reducedMotion",'system reduced-motion mug');
@@ -302,15 +302,15 @@ let browser,ws,send,ownedBrowser=false;
   await evaluate('goTo(4)');await waitFor("document.querySelector('#stairwell-view').dataset.mode==='fallback'",'stairwell WebGL fallback');
   await evaluate("document.querySelector('#move-up').click();document.querySelector('#move-up').click();document.querySelector('#move-up').click();document.querySelector('#pivot-couch').click();document.querySelector('#move-up').click()");
   await check("PivotChallenge.state.stage===3&&PivotChallenge.state.score===85&&document.querySelector('#stairwell-view').dataset.stage==='3'&&document.querySelector('#stairwell-view').dataset.pivoted==='true'&&!document.querySelector('.stairwell-fallback').hidden",'fallback synchronizes position, pivot, penalties and success');
-  await screenshot('v10-game-fallback');await evaluate("document.querySelector('#reset-challenge').click()");await check("PivotChallenge.state.stage===0&&PivotChallenge.state.score===100",'fallback reset');
+  await screenshot('v10-final-game-fallback');await evaluate("document.querySelector('#reset-challenge').click()");await check("PivotChallenge.state.stage===0&&PivotChallenge.state.score===100",'fallback reset');
   await evaluate("document.querySelector('[data-open=\"pivot-activity\"]').click()");await waitFor("document.querySelector('#couch-view').dataset.state==='fallback'",'no-WebGL optional couch fallback');
-  await evaluate("document.querySelector('#couch-turn').value=80;document.querySelector('#couch-turn').dispatchEvent(new Event('input'));document.querySelector('#pivot-activity .dialog-close').click();goTo(17)");
-  await check("current===17 && document.querySelector('#couch-view').dataset.angle==='80'",'fallback controls and navigation');
+  await evaluate("document.querySelector('#couch-turn').value=80;document.querySelector('#couch-turn').dispatchEvent(new Event('input'));document.querySelector('#pivot-activity .dialog-close').click();goTo(16)");
+  await check("current===16 && document.querySelector('#couch-view').dataset.angle==='80'",'fallback controls and navigation');
   await send('Page.removeScriptToEvaluateOnNewDocument',{identifier:injected.identifier});
   await send('Page.navigate',{url:pathToFileURL(path.join(root,'index.html')).href});
   await waitFor("window.FriendsLab && document.querySelector('.coffee-experience').dataset.state==='fallback'",'direct file mode');
-  await evaluate('goTo(17)');await waitFor("FriendsLab.engine.includes('JavaScript fallback')",'file recommendations work without Python');
-  const report={passed:checks,errors:normalErrors,expectedFallbackErrors:errors.slice(normalErrors.length),externalRequests:requests.filter(url=>!url.startsWith(base)&&!url.startsWith('data:')&&!url.startsWith('file:')),screenshots:'test-results/v10-*.png'};
-  fs.writeFileSync(path.join(root,'test-results','v10-results.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report,null,2));
+  await evaluate('goTo(16)');await waitFor("FriendsLab.engine.includes('JavaScript fallback')",'file recommendations work without Python');
+  const report={passed:checks,errors:normalErrors,expectedFallbackErrors:errors.slice(normalErrors.length),externalRequests:requests.filter(url=>!url.startsWith(base)&&!url.startsWith('data:')&&!url.startsWith('file:')),screenshots:'test-results/v10-final-*.png'};
+  fs.writeFileSync(path.join(root,'test-results','v10-final-results.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report,null,2));
   await send('Browser.close');ownedBrowser=false;
 })().catch(async error=>{console.error(error);if(send&&ws?.readyState===1)try{await send('Browser.close');}catch{}if(ownedBrowser)browser?.kill();process.exitCode=1;});

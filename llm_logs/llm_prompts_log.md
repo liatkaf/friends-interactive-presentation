@@ -87,3 +87,8 @@ The maps are qualitative reported-test summaries, not reconstructed outcome bars
 ## Version 1.0 FINAL ? November 6, 2026
 
 The final master request and interruption follow-up are recorded in [v1-finalization.md](v1-finalization.md), with authentic instruction summaries, implementation decisions, corrections, validation and limits. Earlier entries are preserved. See [the chronological index](README.md) and the root development/compliance reports.
+
+
+## Final v1.0 content refinement
+
+The student approved a recognizable Joey food-gag interaction with explicit educational payoff and removal of the former Slide 7, yielding 17 slides. [Faithful instruction/design summary and exact artwork prompt](v1-content-refinement.md). Existing history is retained; no invented transcript of alternative discussions was added. Actual reruns are recorded in the current visual review.

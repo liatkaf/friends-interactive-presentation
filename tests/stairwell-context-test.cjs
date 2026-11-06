@@ -68,5 +68,5 @@ let browser,ws,send,ownedBrowser=false;
   await evaluate("document.querySelector('#reset-challenge').click()");await check("PivotChallenge.state.stage===0&&PivotChallenge.state.score===100",'reset after context loss');
   test(errors.length===0,'no unexpected errors during real context loss: '+errors.join(' '));
   const report={passed:checks,errors,suite:'Real WebGL context-loss recovery'};
-  fs.writeFileSync(path.join(root,'test-results','v09-context-results.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report));await send('Browser.close');ownedBrowser=false;
+  fs.writeFileSync(path.join(root,'test-results','v10-final-context-results.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report));await send('Browser.close');ownedBrowser=false;
 })().catch(async error=>{console.error(error);if(send&&ws?.readyState===1)try{await send('Browser.close');}catch{}if(ownedBrowser)browser?.kill();process.exitCode=1;});

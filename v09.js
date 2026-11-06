@@ -28,9 +28,9 @@
  $('#rewind').onclick=()=>{cancelRewind();concepts.hidden=true;rewind.dataset.state='rewinding';$('#rewind').setAttribute('aria-busy','true');if(quiet())completeRewind();else rewindTimer=setTimeout(completeRewind,1200);};
  function stopLobsters(){lobsterTimers.forEach(clearTimeout);lobsterTimers=[];}
  function startLobsters(){stopLobsters();story.dataset.step='0';if(quiet()){story.dataset.step='3';return;}[1,2,3].forEach((step,i)=>lobsterTimers.push(setTimeout(()=>{story.dataset.step=String(step);},200+i*700)));}
- document.addEventListener('friends:slidechange',event=>{if(event.detail.index!==8)cancelRewind();if(event.detail.index===9)startLobsters();else stopLobsters();});
- document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelRewind();stopLobsters();}else if(current===9)startLobsters();});
- function motion(){if(quiet()){if(rewind.dataset.state==='rewinding')completeRewind();stopLobsters();if(current===9)story.dataset.step='3';}}
+ document.addEventListener('friends:slidechange',event=>{if(event.detail.index!==7)cancelRewind();if(event.detail.index===8)startLobsters();else stopLobsters();});
+ document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelRewind();stopLobsters();}else if(current===8)startLobsters();});
+ function motion(){if(quiet()){if(rewind.dataset.state==='rewinding')completeRewind();stopLobsters();if(current===8)story.dataset.step='3';}}
  reduced.addEventListener('change',motion);let wasQuiet=quiet();new MutationObserver(()=>{if(quiet()!==wasQuiet){wasQuiet=quiet();motion();}}).observe(document.body,{attributes:true,attributeFilter:['class']});
- if(current===9)startLobsters();
+ if(current===8)startLobsters();
 })();

@@ -97,3 +97,76 @@ Incremental changes from the v0.9 baseline e9aef52, including the preserved remo
 - `v10.js`
 
 - `docs/V1_RELEASE_MANIFEST.md` (this manifest)
+
+## Approved 17-slide content refinement
+
+The earlier file list records the original v1.0 finalization. The student subsequently approved the Joey lesson and removal of the former Slide 7. Current additional/modified files follow; prior screenshots and prompt transcripts remain historical evidence. The new artwork is `assets/joey/restaurant-storyboard.png`; its exact built-in image-generation prompt is recorded in `llm_logs/v1-content-refinement.md`. No Python research/recommendation data or 3D model source was changed.
+
+- `DEVELOPMENT_JOURNEY.md`
+- `FINAL_COMPLIANCE_REPORT.md`
+- `PRD.md`
+- `README.md`
+- `RED_TEAM_REVIEW.md`
+- `assets/joey/restaurant-storyboard.png`
+- `docs/RESEARCH_INTEGRITY_AUDIT.md`
+- `docs/V1_AUDIT_AND_PLAN.md`
+- `index.html`
+- `joey.css`
+- `joey.js`
+- `llm_logs/README.md`
+- `llm_logs/llm_prompts_log.md`
+- `llm_logs/v1-content-refinement.md`
+- `screenshots/v10-final/v10-final-belonging-evidence.png`
+- `screenshots/v10-final/v10-final-capture-results.json`
+- `screenshots/v10-final/v10-final-chart-layout-results.json`
+- `screenshots/v10-final/v10-final-contact-desktop-1.png`
+- `screenshots/v10-final/v10-final-contact-desktop-2.png`
+- `screenshots/v10-final/v10-final-contact-desktop-3.png`
+- `screenshots/v10-final/v10-final-contact-mobile-1.png`
+- `screenshots/v10-final/v10-final-contact-mobile-2.png`
+- `screenshots/v10-final/v10-final-contact-mobile-3.png`
+- `screenshots/v10-final/v10-final-context-results.json`
+- `screenshots/v10-final/v10-final-desktop-01.png`
+- `screenshots/v10-final/v10-final-desktop-04.png`
+- `screenshots/v10-final/v10-final-desktop-05.png`
+- `screenshots/v10-final/v10-final-desktop-06.png`
+- `screenshots/v10-final/v10-final-desktop-07.png`
+- `screenshots/v10-final/v10-final-desktop-17.png`
+- `screenshots/v10-final/v10-final-game-results.json`
+- `screenshots/v10-final/v10-final-joey-desktop-freeze.png`
+- `screenshots/v10-final/v10-final-joey-desktop-ready.png`
+- `screenshots/v10-final/v10-final-joey-desktop-reveal.png`
+- `screenshots/v10-final/v10-final-joey-laptop-reveal.png`
+- `screenshots/v10-final/v10-final-joey-mobile-freeze.png`
+- `screenshots/v10-final/v10-final-joey-mobile-reveal.png`
+- `screenshots/v10-final/v10-final-joey-results.json`
+- `screenshots/v10-final/v10-final-layout-results.json`
+- `screenshots/v10-final/v10-final-mobile-07.png`
+- `screenshots/v10-final/v10-final-python-results.txt`
+- `screenshots/v10-final/v10-final-python-summary.json`
+- `screenshots/v10-final/v10-final-reset-profile.png`
+- `screenshots/v10-final/v10-final-results.json`
+- `screenshots/v10-final/v10-final-static-results.json`
+- `screenshots/v10-final/v10-final-ux-results.json`
+- `screenshots/v10-final/visual-review.md`
+- `script.js`
+- `tests/README.md`
+- `tests/browser-test.cjs`
+- `tests/capture-v10.cjs`
+- `tests/chart-layout-test.cjs`
+- `tests/joey-refinement-test.cjs`
+- `tests/make-contact-sheets.ps1`
+- `tests/stairwell-context-test.cjs`
+- `tests/v10-layout-test.cjs`
+- `tests/v10-static-test.cjs`
+- `tests/v10-ux-test.cjs`
+- `v05.css`
+- `v06.js`
+- `v07.css`
+- `v09.css`
+- `v09.js`
+- `v10-art.js`
+- `v10.css`
+- `v10.js`
+
+- `screenshots/v10-final/v10-final-integrity-results.json` (final source/syntax/link check)

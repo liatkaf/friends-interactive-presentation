@@ -51,7 +51,7 @@ let browser,ws,send,ownedBrowser=false;
   await waitFor("window.FriendsLab",'lab initialized');
   await waitFor("document.querySelector('.coffee-experience')?.coffeeMug",'mug mount',60000);
   await pause(1000);
-  await screenshot('v10-mug-before-touch');
+  await screenshot('v10-final-mug-before-touch');
   await send('Emulation.setTouchEmulationEnabled',{enabled:true,maxTouchPoints:1});
   const touchBounds=await evaluate("(()=>{const r=document.querySelector('.coffee-view canvas').getBoundingClientRect();return {x:r.x+r.width/2,y:r.y+r.height/2}})()");
   const touchYaw=await evaluate("document.querySelector('.coffee-experience').coffeeMug.state.yaw");
@@ -61,28 +61,27 @@ let browser,ws,send,ownedBrowser=false;
   await send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});
   await check("!document.querySelector('.coffee-experience').coffeeMug.state.dragging",'touch release ends drag');
   await send('Emulation.setTouchEmulationEnabled',{enabled:false});
-  await evaluate("goTo(10);document.querySelector('[data-answer=mood][data-value=happy]').click();goTo(11);document.querySelector('#profile-stress').value=8;document.querySelector('#profile-stress').dispatchEvent(new Event('input'));goTo(12);document.querySelector('[data-answer=character][data-value=Ross]').click();goTo(13);document.querySelector('[data-answer=quote]').click();goTo(14);document.querySelector('[data-answer=experience][data-value=laughter]').click();goTo(15);document.querySelector('[data-answer=familiarity][data-value=rewatcher]').click();document.querySelector('[data-answer=nostalgia][data-value=high]').click()");
-  for(const width of [1440,390]){
-    await send('Emulation.setDeviceMetricsOverride',{width,height:width===390?844:1000,deviceScaleFactor:1,mobile:width===390});
-    for(let i=0;i<18;i++){await evaluate('goTo('+i+')');if(i===2)await evaluate("if(FriendsFinal.state.selectedPillar!==0)document.querySelector('[data-pillar=\"0\"]').click()");if(i===3)await evaluate("document.querySelector('[data-comic-scene=\"2\"]').click()");if(i===6)await evaluate("document.querySelector('[data-social-step=\"1\"]').click()");if(i===4)await waitFor("document.querySelector('#stairwell-view').dataset.mode==='three'",'stairwell ready',30000);if(i===8){await evaluate("document.querySelector('#rewind').click()");await waitFor("document.querySelector('#rewind-stage').dataset.state==='ready'",'rewind revealed');}if(i===9)await waitFor("document.querySelector('#lobster-story').dataset.step==='3'",'lobsters meet');if(i>=16)await waitFor("FriendsLab.result && !document.querySelector('#view-result').disabled",'matching ready',30000);await evaluate('presentation.focus();FriendsNavigation.hide()');await pause(700);await screenshot('v10-'+(width===390?'mobile':'desktop')+'-'+String(i+1).padStart(2,'0'));}
-  }
-
+  await evaluate("goTo(9);document.querySelector('[data-answer=mood][data-value=happy]').click();goTo(10);document.querySelector('#profile-stress').value=8;document.querySelector('#profile-stress').dispatchEvent(new Event('input'));goTo(11);document.querySelector('[data-answer=character][data-value=Ross]').click();goTo(12);document.querySelector('[data-answer=quote]').click();goTo(13);document.querySelector('[data-answer=experience][data-value=laughter]').click();goTo(14);document.querySelector('[data-answer=familiarity][data-value=rewatcher]').click();document.querySelector('[data-answer=nostalgia][data-value=high]').click()");
   for(const width of [1440,390]){
     await send('Emulation.setDeviceMetricsOverride',{width,height:width===390?844:1000,deviceScaleFactor:1,mobile:width===390});
     const mode=width===390?'mobile':'desktop';
-    await evaluate("goTo(6);document.querySelector('[data-social-step=\"2\"]').click();presentation.focus();FriendsNavigation.hide()");await pause(500);await screenshot('v10-'+mode+'-07-choice');
-    await evaluate("document.querySelector('[data-comfort-choice=familiar]').click();document.querySelector('[data-inline-figure=\"0\"]').click();presentation.focus();FriendsNavigation.hide()");await pause(500);await screenshot('v10-'+mode+'-07-research');
-    await evaluate('goTo(7)');
-    for(const id of [4,5,6]){await evaluate(`document.querySelector('[data-inline-figure="${id}"]').click();presentation.focus();FriendsNavigation.hide()`);await pause(500);await screenshot('v10-'+mode+'-08-module-'+id);}
+    for(let i=0;i<17;i++){
+      await evaluate('goTo('+i+')');
+      if(i===2)await evaluate("if(FriendsFinal.state.selectedPillar!==0)document.querySelector('[data-pillar=\"0\"]').click()");
+      if(i===3){await evaluate("document.querySelector('#joey-play').click()");await waitFor("JoeyStory.state.stage==='freeze'",'Joey freezes');await evaluate("document.querySelector('[data-joey-choice=react]').click()");await waitFor("JoeyStory.state.stage==='complete'",'Joey payoff');}
+      if(i===7){await evaluate("document.querySelector('#rewind').click()");await waitFor("document.querySelector('#rewind-stage').dataset.state==='ready'",'rewind revealed');}
+      if(i===8)await waitFor("document.querySelector('#lobster-story').dataset.step==='3'",'lobsters meet');
+      if(i>=15)await waitFor("FriendsLab.result && !document.querySelector('#view-result').disabled",'matching ready',30000);
+      await evaluate('presentation.focus();FriendsNavigation.hide()');await pause(700);await screenshot('v10-final-'+mode+'-'+String(i+1).padStart(2,'0'));
+    }
+    await evaluate("goTo(5);document.querySelector('#belonging-evidence').open=true;document.querySelector('#belonging-evidence').scrollIntoView({block:'start'});presentation.focus({preventScroll:true});FriendsNavigation.hide()");await pause(400);await screenshot('v10-final-'+mode+'-06-evidence');
+    await evaluate('goTo(6)');
+    for(const id of [4,5,6]){await evaluate(`document.querySelector('[data-inline-figure="${id}"]').click();presentation.focus();FriendsNavigation.hide()`);await pause(400);await screenshot('v10-final-'+mode+'-07-module-'+id);}
   }
   await send('Emulation.setDeviceMetricsOverride',{width:1440,height:1000,deviceScaleFactor:1,mobile:false});
-  await evaluate("goTo(17);document.querySelector('#why-episode').click()");await evaluate('presentation.focus();FriendsNavigation.hide()');await pause(700);await screenshot('v10-score-details');
-  await evaluate("document.querySelector('#score-details .dialog-close').click();goTo(7);document.querySelector('[data-inline-figure=\"4\"]').click();document.querySelector('#slide-8 [data-enlarge]').click()");await pause(500);await screenshot('v10-research-enlarged');
-  await evaluate("document.querySelector('#research-explorer .dialog-close').click();goTo(7);document.querySelector('[data-inline-figure=\"6\"]').click();document.querySelector('#slide-8 [data-animation-enlarge]').click()");await pause(500);await screenshot('v10-animation-enlarged');
-  await evaluate("document.querySelector('#animation-viewer .dialog-close').click();goTo(17);document.querySelector('#try-again').click()");await pause(500);await screenshot('v10-reset-profile');
-  await check("Object.keys(FriendsLab.profile).length===0&&current===10",'final capture reset proof');
+  await evaluate("goTo(16);document.querySelector('#try-again').click()");await pause(400);await screenshot('v10-final-reset-profile');
+  await check("Object.keys(FriendsLab.profile).length===0&&current===9",'reset returns to renumbered first questionnaire slide');
   test(errors.length===0,'no unexpected screenshot-run JavaScript errors');
-  const report={passed:checks,errors,desktop:'1440x1000',mobile:'390x844',primarySlides:18};
-  fs.writeFileSync(path.join(root,'test-results','v10-capture-results.json'),JSON.stringify(report,null,2));
-  console.log(JSON.stringify(report));await send('Browser.close');ownedBrowser=false;
+  const report={passed:checks,errors,desktop:'1440x1000',mobile:'390x844',primarySlides:17};
+  fs.writeFileSync(path.join(root,'test-results','v10-final-capture-results.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report));await send('Browser.close');ownedBrowser=false;
 })().catch(async error=>{console.error(error);if(send&&ws?.readyState===1)try{await send('Browser.close');}catch{}if(ownedBrowser)browser?.kill();process.exitCode=1;});

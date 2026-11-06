@@ -4,11 +4,11 @@
 
 **Release status:** v1.0 is a local release candidate pending final review and publication approval. The public repository and Pages root returned HTTP 200 on November 6, 2026 ([read-only verification](llm_logs/v1-public-verification.json)). The published presentation is an earlier release, not evidence that v1.0 has been deployed. No push or release tag is part of this finalization.
 
-An original, research-first HTML presentation exploring why familiar television can feel comforting, followed by an optional six-step profile and an explainable recommendation from **22 real Friends episodes**. It has **18 primary slides**: ten research/story slides, six questionnaire slides and two recommendation slides. This retains the user's approved scope; the lecturer's approximately ten-slide suggestion is flexible.
+An original, research-first HTML presentation exploring why familiar television can feel comforting, followed by an optional six-step profile and an explainable recommendation from **22 real Friends episodes**. It has **17 primary slides**: nine research/story slides, six questionnaire slides and two recommendation slides. The student approved removing the previous social mini-story after review; the lecturer's approximately ten-slide suggestion remains flexible.
 
 ## Purpose and creative direction
 
-Friends provides a recognizable cultural example through which to explain belonging, familiarity and comfort viewing. The user selected the topic and directed successive changes to the narrative, branding, research presentation, 3D game, questionnaire and reset behavior. These choices, rather than an invented personal biography, demonstrate personal involvement. Original code illustrations translate the user's coffee-shop, VHS, lobster and comic concepts into a coherent purple, yellow, cream and orange visual identity.
+Friends provides a recognizable cultural example through which to explain belonging, familiarity and comfort viewing. The user selected the topic and directed successive changes to the narrative, branding, research presentation, 3D game, questionnaire and reset behavior. These choices, rather than an invented personal biography, demonstrate personal involvement. Original code illustrations translate the user's coffee-shop, VHS, lobster and recognizable sitcom concepts into a coherent purple, yellow, cream and orange visual identity.
 
 The featured papers did **not** test Friends as a clinical treatment. The presentation separates published evidence, broader psychological interpretations, fictional examples, editorial matching scores and educational simulations. It contains no episode footage or theme music.
 
@@ -30,16 +30,18 @@ python -m http.server 8013 --bind 127.0.0.1
 
 Open http://127.0.0.1:8013. Serve over HTTP; direct file opening is not the supported way to load Three.js modules.
 
-## What is new in v1.0
+## Final content refinement
 
-- **Slide 3:** four original SVG illustrated concept cards. Native buttons reveal explanations, a Friends example and the evidence level, updating a shared takeaway. Idle and interaction animations respect reduced motion.
-- **Slide 4:** an original three-scene coffee-shop comic: a familiar place, mixed-up orders, then a shared moment. Step, select and replay controls connect predictable structure to an explicitly interpretive comfort takeaway.
-- **Slide 7:** a gentle three-stage story: Python-animated fictional social moment, a familiar/new viewing choice, then actual research. The choice changes the narrative response without entering the profile or becoming experimental data. Four Python-authored research sequences retain the original figures and reported-test audit tables.
-- **Slide 8:** three selectable lab modules: Puzzle Performance, Negative Mood and Daily Diary, with distinct Python-authored animations, design explanations, reported findings, limits, playback, replay and enlargement.
+- **Slide 3:** four original SVG concept reveals remain unchanged.
+- **Slide 4 - The One With the Missing Punchline:** an original, polished restaurant illustration inspired by Joey's food gag in S10 E9, *The One with the Birth Mother*. Play the setup, freeze before his reaction, choose one of three predictions, then reveal the familiar catchphrase and the explicit educational takeaway. No score or right/wrong feedback. Replay clears the interaction; keyboard and reduced-motion modes preserve all content. Approximately 15-20 seconds at normal reading/choice pace, not a forced timed quiz.
+- **Previous Slide 7 removed:** the weak social mini-story was removed with the student's approval. Exactly 17 primary slides remain, with contiguous IDs, counters, hashes and navigation. The four unique Paper A findings, Python animations, original figures and accessible tables now live in the optional **More evidence: belonging, mood & rejection** disclosure on Slide 6, avoiding a second introductory story.
+- **Current Slide 7:** the three-module Self-Control Recovery Lab retains genuine Python-authored animations, source access, playback/replay and limitations.
 
-Preserved: continuous genuine Three.js mug with drag and inactive-slide pause; centered branding and idle-hidden navigation; 3D PIVOT stairwell and isolated game scoring; Study 1 chart; VHS rewind; lobster transition; six character and six quote choices; familiarity/nostalgia mapping; deterministic matching and alternatives; theme controls; keyboard navigation; responsive layouts; all seven original figures.
+The student reviewed the completed presentation, found the original Slide 4/7 animations visually weak and their stories lacking a meaningful payoff, considered alternatives, selected the recognizable Joey scene, explicitly requested an explanation of its educational purpose and approved removing repetition. This is a [summarized design decision](llm_logs/v1-content-refinement.md), not an invented conversation transcript.
 
-**Try Again clears the entire profile, persisted attempt, cached results and pending recommendation state, then returns to Slide 11. Back to Start and ordinary navigation preserve answers.** Enter advances only from noninteractive slide/background focus; native controls and dialogs keep normal keyboard behavior. Use the bottom Navigation button on touch devices or Tab to reach the dock.
+Preserved: continuous genuine Three.js mug with drag and inactive-slide pause; centered branding and idle-hidden navigation; 3D PIVOT stairwell and isolated game scoring; Study 1 chart; VHS rewind (Slide 8); lobster transition (Slide 9); six character and six quote choices; familiarity/nostalgia mapping; deterministic matching and alternatives; theme controls; keyboard navigation; responsive layouts; all seven original research figures.
+
+**Try Again clears the entire profile, persisted attempt, cached results and pending recommendation state, then returns to Slide 10. Back to Start and ordinary navigation preserve answers.** Enter advances only from noninteractive slide/background focus on Slides 1-16; native controls and dialogs keep normal keyboard behavior. The final recommendation is Slide 17. Use the bottom Navigation button on touch devices or Tab to reach the dock.
 
 ## Architecture: what actually runs
 
@@ -47,8 +49,9 @@ Preserved: continuous genuine Three.js mug with drag and inactive-slide pause; c
 |---|---|
 | HTML/CSS | Accessible presentation shell, visual identity, responsive cards, original scene composition |
 | `script.js`, `v06.js` | Slide templates/navigation, existing single profile state, recommendations and research dialogs |
-| `v10-art.js`, `v10.js`, `v10.css` | Original SVG cards/comic, branching story, finite Python-frame playback and lab UI |
+| `v10-art.js`, `v10.js`, `v10.css` | Original SVG cards, finite Python-frame playback and lab UI |
 | `v08.js`, `v09.js` | Research chart, qualitative evidence access, navigation dock, rewind and lobster interactions |
+| `joey.js`, `joey.css`, `assets/joey/restaurant-storyboard.png` | Original generated restaurant artwork, progressive setup/prediction/reaction, unscored payoff and replay |
 | `mug.js`, `couch.js`, bundled Three.js r170 | Genuine 3D coffee and stairwell; no remote CDN dependency |
 | `python/research_analytics.py` | Validate documented means and seven figure records; export research JSON |
 | `python/generate_animations.py` | Render every animation pixel with Pillow; export posters, sprite atlases and GIF previews |
@@ -71,51 +74,43 @@ py -3 -m venv .venv
 
 On macOS/Linux use `python3` and `.venv/bin/python`. Pillow 10.4.0 is pinned; the generator uses its bundled default scalable font. A clean virtual environment avoids the broken system Pillow DLL encountered during this build. Dependency download needs internet, but regeneration and presentation playback do not. pandas/Matplotlib are unnecessary for categorical evidence and original frame artwork; Pillow is the actual authoring library.
 
-Inputs: `data/research_source.json` (citations, verified means, study designs and categorical findings). Outputs: `data/research_analytics.json`, `data/v05-data.js`, `data/python_animations.json`, `data/python_animations.js`, and `assets/generated/`. The animation manifest records source/code/asset SHA-256 hashes. Eight sequences each have 16 frames, a 960x400 poster, a PNG frame atlas and a finite GIF preview: **24 image assets**, about 3.9 MB total. `--output <directory>` supports isolated generation. JavaScript does not redraw or invent the Python scenes; it displays the exported frames.
+Inputs: `data/research_source.json` (citations, verified means, study designs and categorical findings). Outputs: `data/research_analytics.json`, `data/v05-data.js`, `data/python_animations.json`, `data/python_animations.js`, and `assets/generated/`. The animation manifest records source/code/asset SHA-256 hashes. The reproducible archive contains eight sequences, seven of which remain accessible as research animations. The retired social-scene export is retained for historical reproducibility, not displayed. Each has 16 frames, a 960x400 poster, a PNG frame atlas and a finite GIF preview: **24 image assets**, about 3.9 MB total. `--output <directory>` supports isolated generation. JavaScript does not redraw or invent the Python scenes; it displays the exported frames.
 
 Historical `python/generate_data.py` produces explicitly synthetic educational illustrations, not published research measurements and not the data source for Slides 6-8. Do not confuse that retained artifact with the verified pipeline.
 
 ## Real screenshots and Python previews
 
-![Interactive psychology cards](screenshots/v10/v10-desktop-03.png)
-![Original interactive comic](screenshots/v10/v10-desktop-04.png)
-![Branching story and published research](screenshots/v10/v10-desktop-07-research.png)
-![Research lab](screenshots/v10/v10-desktop-08-module-6.png)
-
-Python-authored fictional scene (not a study or assessment):
-
-![Python-rendered social scene](assets/generated/social-scene-preview.gif)
-
-Python-authored Study 1 puzzle evidence animation (qualitative tests, not measured effect sizes):
+![Freeze and predict](screenshots/v10-final/v10-final-joey-desktop-freeze.png)
+![Reaction and educational purpose](screenshots/v10-final/v10-final-joey-desktop-reveal.png)
+![Retained research lab](screenshots/v10-final/v10-final-desktop-07.png)
 
 ![Python-rendered puzzle module](assets/generated/evidence-4-preview.gif)
 
-[All-slide contact sheets and visual review](screenshots/v10/visual-review.md) include desktop/mobile evidence, the preserved 3D game, reset and enlarged source/player views.
+[Current 17-slide visual review](screenshots/v10-final/visual-review.md) includes all-slide desktop/mobile contact sheets, new interaction states and actual test results. Earlier `screenshots/v10/` records the superseded 18-slide implementation and is retained as history.
 
-## The 18-slide scope
+## The 17-slide story
 
-| # | Slide | Main educational or interactive role |
-|---|---|---|
-| 1 | Welcome to the Friends Comfort Lab | Original 3D opening and framing |
-| 2 | Why Do We Rewatch Friends? | Introduce Study 1 descriptive comparisons |
-| 3 | The Psychology of Comfort TV | Four interactive illustrated concepts |
-| 4 | The One Where You Know What Happens Next | Original narrative comic |
-| 5 | PIVOT! Concentration & Spatial Focus | Optional playful spatial interaction, no assessment |
-| 6 | What the Research Shows | Detailed switchable Study 1 chart and data table |
-| 7 | The One Where You Feel Left Out | Fictional social story followed by actual evidence |
-| 8 | The Self-Control Recovery Lab | Three selectable Python research modules |
-| 9 | The One With The Rewind | Broader nostalgia/ease interpretation |
-| 10 | Finding Your Episode Lobster! | Explain entertainment matching, start questionnaire |
-| 11 | How Are You Feeling? | Optional mood |
-| 12 | What's Your Stress Level? | Optional 0-10 self-report, no diagnostic scale |
-| 13 | Who's Your Favorite Friend? | Six character choices |
-| 14 | Which Quote Speaks to You? | Six integrated quote choices |
-| 15 | What Kind of Comfort Do You Need? | Desired viewing experience |
-| 16 | How Familiar Is Friends to You? | Familiarity and nostalgia, one profile step |
-| 17 | Finding Your Perfect Match | Actual computation state and reveal |
-| 18 | The One With Your Perfect Episode | Main match, two alternatives, explanations, restart/reset |
+| # | Headline |
+|---|---|
+| 1 | Welcome to the Friends Comfort Lab |
+| 2 | Why Do We Rewatch Friends? |
+| 3 | The Psychology of Comfort TV |
+| 4 | The One With the Missing Punchline |
+| 5 | PIVOT! Concentration & Spatial Focus |
+| 6 | What the Research Shows (optional belonging evidence) |
+| 7 | The Self-Control Recovery Lab |
+| 8 | The One With The Rewind |
+| 9 | Finding Your Episode Lobster! |
+| 10 | How Are You Feeling? |
+| 11 | What's Your Stress Level? |
+| 12 | Who's Your Favorite Friend? |
+| 13 | Which Quote Speaks to You? |
+| 14 | What Kind of Comfort Do You Need? |
+| 15 | How Familiar Is Friends to You? |
+| 16 | Finding Your Perfect Match |
+| 17 | The One With Your Perfect Episode |
 
-Slides 2 and 6 intentionally preview then explain the same descriptive data. Slides 7 and 8 differ in interaction and research design. All 18 were retained and reviewed for purpose; none were merged without approval.
+Slide 2 previews the descriptive data unpacked on Slide 6. Unique belongingness findings remain optional on Slide 6. The student explicitly approved the removal of the former Slide 7; remaining slides retain their order and functionality.
 
 ## Recommendation and data provenance
 
@@ -142,18 +137,29 @@ node tests/pivot-state-test.cjs
 $env:TEST_BASE='http://127.0.0.1:8000'
 node tests/browser-test.cjs
 node tests/v10-ux-test.cjs
+node tests/joey-refinement-test.cjs
 node tests/v10-layout-test.cjs
 node tests/chart-layout-test.cjs
 node tests/stairwell-context-test.cjs
 node tests/capture-v10.cjs
 ```
 
-Run browser suites sequentially to avoid competing software-WebGL processes. For `tests/v10-static-test.cjs`, set TEST_BASE to the clean static HTTP server. Browser QA uses installed Edge, Node's built-in CDP/WebSocket support and software WebGL; no Playwright dependency. Actual final results and screenshots are recorded in `screenshots/v10/visual-review.md` and its JSON reports. Python pixel/hash tests regenerate all exports in a temporary directory and compare bytes. Legacy test files and prior release screenshots remain historical evidence, not automatically claimed current passes.
+[Current test entry points](tests/README.md) identify active versus historical fixtures. Run browser suites sequentially to avoid competing software-WebGL processes. For `tests/v10-static-test.cjs`, set TEST_BASE to the clean static HTTP server. Browser QA uses installed Edge, Node's built-in CDP/WebSocket support and software WebGL; no Playwright dependency. Actual final results and screenshots are recorded in `screenshots/v10-final/visual-review.md` and its JSON reports. Python pixel/hash tests regenerate all exports in a temporary directory and compare bytes. Legacy test files and prior release screenshots remain historical evidence, not automatically claimed current passes.
 
 ## Accessibility, deployment and limitations
 
 Native buttons, semantic figures/dialogs, focus indicators, keyboard playback, source tables and text captions complement visuals. System reduced motion or the quiet-motion setting uses static Python posters, avoids forced animation and preserves all explanations. Large text/small viewports may scroll within slides. Fine source scans and in-frame text can be enlarged; adjacent HTML explanations remain available.
 
-Publish only after explicit user approval, using the repository's existing GitHub Pages configuration; then verify the deployed v1.0 assets, all 18 slides and fallbacks. Do not infer deployment from a local commit. No repository permission changes, release tag or Moodle submission were performed.
+Publish only after explicit user approval, using the repository's existing GitHub Pages configuration; then verify the deployed v1.0 assets, all 17 slides and fallbacks. Do not infer deployment from a local commit. No repository permission changes, release tag or Moodle submission were performed.
 
 No physical-device or formal screen-reader testing, external human research review, clinical validation or new replication study is claimed. The older studies inform the educational narrative with the limits stated above. The optional game score and editorial episode match are independent of scientific assessment. See the compliance report for outstanding external actions.
+
+### New illustration provenance and episode accuracy
+
+`assets/joey/restaurant-storyboard.png` is newly generated original restaurant artwork, produced with the built-in image-generation tool under student direction; `joey.js` controls its two poses and timing. It is not a Python-generated asset, copied episode footage or a television screenshot. Its full generation prompt and tool mode are recorded in [the refinement log](llm_logs/v1-content-refinement.md).
+
+[Apple TV confirms S10 E9 and the date taking food](https://tv.apple.com/us/episode/the-one-with-the-birth-mother/umc.cmc.5tjhrgg9ujwfuj7q0mff5gt4h). The familiar catchphrase occurs in Joey's conversation with his friends; this classroom interaction combines the food incident and catchphrase as an explicitly labelled illustrated adaptation, not an exact restaurant-scene transcript. It illustrates anticipation without being a scientific experiment.
+
+### Final refinement QA summary
+
+Executed: 433 browser regression checks, 41 dedicated Joey checks, 91 focused UX checks, 101 layout checks and 23 Python tests, plus game/context/chart/static-host/capture suites. All passed. All 17 slides were reviewed on desktop/mobile, including the new lesson and retained sources. [Actual reports and visual review](screenshots/v10-final/visual-review.md). No push or release tag has been made.

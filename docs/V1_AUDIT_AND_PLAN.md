@@ -1,3 +1,5 @@
+**Historical audit note:** this plan describes the original 18-slide v1.0 scope. The student subsequently approved removing the former Slide 7 and replacing Slide 4; current scope is 17 slides. See `llm_logs/v1-content-refinement.md` and `screenshots/v10-final/visual-review.md`.
+
 # v1.0 FINAL: audit and implementation plan
 
 Audit started November 6, 2026; resumed after interruption by inspecting disk and background processes. Baseline: `main`, `e9aef526e7d9260d7c506e697edb958bebcd8771` (v0.9). The only unrelated untracked file is the research ZIP; it stays untouched/uncommitted. No v0.10 implementation or separate v0.10 prompt was found; the current master prompt defines the four upgrades.

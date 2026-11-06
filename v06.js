@@ -58,7 +58,7 @@ function resetProfile(){
  syncProfile();$('#recommendation-results').replaceChildren();$('#score-content').replaceChildren();$('#matching-factors').replaceChildren();
  $('#matching-status').textContent='Ready for your next comfort story.';$('#recommendation-status').textContent='Your next favorite is waiting.';
  setSteps(['idle','idle','idle','idle','idle']);['view-result','why-episode','surprise-me'].forEach(id=>$('#'+id).disabled=true);
- if($('#score-details').open)$('#score-details').close();if($('#settings').open)$('#settings').close();goTo(10);
+ if($('#score-details').open)$('#score-details').close();if($('#settings').open)$('#settings').close();goTo(9);
 }
 $('#reset-profile').onclick=resetProfile;
 makeDialog('pivot-activity','PIVOT! An optional coffee break',`<p class="dialog-intro">An original 3D orange couch. Drag, use the slider, or focus the couch and use Left / Right.</p><div id="couch-view" aria-label="Interactive orange couch"><div class="sofa"><i></i><i></i><i></i></div></div><label for="couch-turn">Couch rotation</label><input id="couch-turn" type="range" min="-180" max="180" value="25"><div class="couch-controls"><output id="couch-angle">25 degrees</output><button id="couch-reset">Reset couch</button></div><p id="couch-status" role="status">Open the activity to explore.</p>`);
@@ -81,7 +81,7 @@ async function loadRecommendation(){const fingerprint=JSON.stringify(profile);if
 $('#why-episode').onclick=()=>openDialog('score-details',$('#why-episode'));
 $('#try-again').onclick=resetProfile;
 $('#surprise-me').onclick=()=>{if(!lastResult)return;const pool=episodes.filter(e=>e.id!==lastResult.recommendations[0].episode.id);const pick=pool[Math.floor(Math.random()*pool.length)];const first=fallbackScore(pick,profile);const ranked=fallbackRecommend().recommendations.filter(r=>r.episode.id!==pick.id);lastResult={engine:'JavaScript random discovery',recommendations:[first,...ranked.slice(0,2)]};lastFingerprint='';renderResult(lastResult,true);};
-document.addEventListener('friends:slidechange',event=>{if(event.detail.index>=16)loadRecommendation();});
-if(current>=16)loadRecommendation();
+document.addEventListener('friends:slidechange',event=>{if(event.detail.index>=15)loadRecommendation();});
+if(current>=15)loadRecommendation();
 window.FriendsLab={get profile(){return {...profile};},get result(){return lastResult;},get engine(){return lastEngine;},get diagnostics(){return {engine:lastEngine,pending:!!pendingMatch,generation,fingerprint:lastFingerprint};},fallbackScore,fallbackRecommend,loadRecommendation,episodes,figures};
 })();

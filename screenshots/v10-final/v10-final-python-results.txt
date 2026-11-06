@@ -1,0 +1,28 @@
+test_all_factors_and_validation (test_v05.Version05Tests) ... ok
+test_catalog (test_v05.Version05Tests) ... ok
+test_incomplete_and_deterministic (test_v05.Version05Tests) ... ok
+test_published_means (test_v05.Version05Tests) ... ok
+test_quote_drives_matching (test_v05.Version05Tests) ... ok
+test_simulation (test_v05.Version05Tests) ... ok
+test_supplied_assets (test_v05.Version05Tests) ... ok
+test_all_six_quotes_are_real_inputs (test_v08.Version08Tests) ... ok
+test_invalid_research_rejected (test_v08.Version08Tests) ... ok
+test_labels_preserve_internal_values (test_v08.Version08Tests) ... ok
+test_means_and_display_transform (test_v08.Version08Tests) ... ok
+test_original_figures_not_estimated (test_v08.Version08Tests) ... ok
+test_pipeline_reproducible (test_v08.Version08Tests) ... ok
+test_quote_changes_score (test_v08.Version08Tests) ... ok
+test_pipeline_matches_static_bundle (test_v09.Version09Tests) ... ok
+test_rejects_invented_measurements (test_v09.Version09Tests) ... ok
+test_reported_distinctions (test_v09.Version09Tests) ... ok
+test_seven_sourced_maps (test_v09.Version09Tests) ... ok
+test_eight_real_frame_sequences (test_v10_animations.FinalAnimations) ... ok
+test_manifest_and_hashes (test_v10_animations.FinalAnimations) ... ok
+test_python_authors_the_social_pixels (test_v10_animations.FinalAnimations) ... ok
+test_reproducible_exports (test_v10_animations.FinalAnimations) ... ok
+test_research_identity_and_no_invented_measurements (test_v10_animations.FinalAnimations) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 46.306s
+
+OK

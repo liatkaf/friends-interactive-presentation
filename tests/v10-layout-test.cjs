@@ -50,34 +50,34 @@ let browser,ws,send,ownedBrowser=false;
 
 
   await waitFor("window.FriendsLab&&document.querySelector('.evidence-map .evidence-row')",'v1.0 layout initialized');
-  await evaluate("goTo(10);document.querySelector('[data-answer=mood][data-value=happy]').click();goTo(11);document.querySelector('#profile-stress').value=8;document.querySelector('#profile-stress').dispatchEvent(new Event('input'));goTo(12);document.querySelector('[data-answer=character][data-value=Ross]').click();goTo(13);document.querySelector('[data-answer=quote]').click();goTo(14);document.querySelector('[data-answer=experience][data-value=laughter]').click();goTo(15);document.querySelector('[data-answer=familiarity][data-value=rewatcher]').click();document.querySelector('[data-answer=nostalgia][data-value=high]').click()");
+  await evaluate("goTo(9);document.querySelector('[data-answer=mood][data-value=happy]').click();goTo(10);document.querySelector('#profile-stress').value=8;document.querySelector('#profile-stress').dispatchEvent(new Event('input'));goTo(11);document.querySelector('[data-answer=character][data-value=Ross]').click();goTo(12);document.querySelector('[data-answer=quote]').click();goTo(13);document.querySelector('[data-answer=experience][data-value=laughter]').click();goTo(14);document.querySelector('[data-answer=familiarity][data-value=rewatcher]').click();document.querySelector('[data-answer=nostalgia][data-value=high]').click()");
   for(const width of [1440,1024,768,390,320]){
     await send('Emulation.setDeviceMetricsOverride',{width,height:width<600?844:1000,deviceScaleFactor:1,mobile:width<600});
     await evaluate('goTo(2);document.querySelectorAll("[data-pillar]")[0].click()');
     await check("[...document.querySelectorAll('#slide-3 .pillar-detail')].every(x=>x.hidden?getComputedStyle(x).display==='none':getComputedStyle(x).display==='block')&&sections[2].scrollWidth<=sections[2].clientWidth",'expanded concept text remains readable without inherited columns '+width);
-    for(const [slide,ids] of [[6,[0,1,2,3]],[7,[4,5,6]]]){
-      await evaluate('goTo('+slide+');if(current===6)document.querySelectorAll("[data-social-step]")[2].click()');
+    for(const [slide,ids] of [[5,[0,1,2,3]],[6,[4,5,6]]]){
+      await evaluate('goTo('+slide+');if(current===5)document.querySelector("#belonging-evidence").open=true');
       for(const id of ids){
         await evaluate(`document.querySelector('[data-inline-figure="${id}"]').click()`);await pause(90);
         await check("sections[current].scrollWidth<=sections[current].clientWidth",'research map no horizontal overflow '+width+'/'+id);
         await check("[...document.querySelectorAll('.slide.active .python-canvas')].some(x=>x.getBoundingClientRect().width>200)",'Python player remains readable '+width+'/'+id);
       }
-      if(width===1440)await check("sections[current].scrollHeight<=sections[current].clientHeight+1",'research fits standard desktop slide '+slide);
+      if(width===1440&&slide===6)await check("sections[current].scrollHeight<=sections[current].clientHeight+1",'research fits standard desktop slide '+slide);
     }
-    await evaluate('goTo(17);presentation.focus();FriendsNavigation.hide()');await waitFor('FriendsLab.result','result ready');await pause(500);
+    await evaluate('goTo(16);presentation.focus();FriendsNavigation.hide()');await waitFor('FriendsLab.result','result ready');await pause(500);
     await check("getComputedStyle(document.querySelector('#back-to-start')).backgroundColor==='rgb(244, 197, 66)'&&document.querySelector('.home-action').getBoundingClientRect().top>=document.querySelector('.final-actions').getBoundingClientRect().bottom",'prominent lower Back to Start '+width);
-    await check("sections[17].scrollWidth<=sections[17].clientWidth&&document.querySelectorAll('.alternatives article').length===2",'result cards fit '+width);
-    if(width===1440||width===390)await screenshot('v10-'+(width===1440?'desktop':'mobile')+'-18');
+    await check("sections[16].scrollWidth<=sections[16].clientWidth&&document.querySelectorAll('.alternatives article').length===2",'result cards fit '+width);
+    if(width===1440||width===390)await screenshot('v10-final-'+(width===1440?'desktop':'mobile')+'-17');
   }
   await send('Emulation.setDeviceMetricsOverride',{width:1366,height:768,deviceScaleFactor:1,mobile:false});
-  for(const [slide,ids] of [[6,[0,1,2,3]],[7,[4,5,6]]]){
-    await evaluate('goTo('+slide+');if(current===6)document.querySelectorAll("[data-social-step]")[2].click()');
-    for(const id of ids){await evaluate(`document.querySelector('[data-inline-figure="${id}"]').click()`);await check("sections[current].scrollHeight<=sections[current].clientHeight+1",'research fits laptop without scrolling '+id);}
-    await evaluate(`document.querySelector('[data-inline-figure="${ids[0]}"]').click();presentation.focus();FriendsNavigation.hide()`);await pause(500);await screenshot('v10-laptop-'+(slide+1));
+  for(const [slide,ids] of [[5,[0,1,2,3]],[6,[4,5,6]]]){
+    await evaluate('goTo('+slide+');if(current===5)document.querySelector("#belonging-evidence").open=true');
+    for(const id of ids){await evaluate(`document.querySelector('[data-inline-figure="${id}"]').click()`);await check("current===5?(document.querySelector('#belonging-evidence').open&&sections[5].getBoundingClientRect().height<=innerHeight):sections[current].scrollHeight<=sections[current].clientHeight+1",'lab fits laptop; optional evidence stays in slide scroll container '+id);}
+    await evaluate(`document.querySelector('[data-inline-figure="${ids[0]}"]').click();presentation.focus();FriendsNavigation.hide()`);await pause(500);await screenshot('v10-final-laptop-'+(slide+1));
   }
-  await evaluate("document.querySelector('#comfort-mood').value='night';document.querySelector('#comfort-mood').dispatchEvent(new Event('change'));goTo(6)");
+  await evaluate("document.querySelector('#comfort-mood').value='night';document.querySelector('#comfort-mood').dispatchEvent(new Event('change'));goTo(5)");
   await check("getComputedStyle(document.querySelector('.study-finding')).color==='rgb(227, 198, 143)'",'research text remains legible in optional night theme');
   test(errors.length===0,'no unexpected layout errors: '+errors.join(' '));
   const report={passed:checks,errors,suite:'v1.0 categorical chart and final-action layout at five widths'};
-  fs.writeFileSync(path.join(root,'test-results','v10-layout-results.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report));await send('Browser.close');ownedBrowser=false;
+  fs.writeFileSync(path.join(root,'test-results','v10-final-layout-results.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report));await send('Browser.close');ownedBrowser=false;
 })().catch(async error=>{console.error(error);if(send&&ws?.readyState===1)try{await send('Browser.close');}catch{}if(ownedBrowser)browser?.kill();process.exitCode=1;});
