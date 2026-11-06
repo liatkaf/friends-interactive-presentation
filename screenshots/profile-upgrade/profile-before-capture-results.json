@@ -1,0 +1,15 @@
+{
+  "passed": 14,
+  "errors": [],
+  "phase": "before",
+  "slides": [
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "desktop": "1440x1000",
+  "mobile": "390x844"
+}

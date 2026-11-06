@@ -1,0 +1,58 @@
+{
+  "objective": "Six distinct questionnaire mini-experiences on verified Slides 10-15 of the existing 17-slide deck; preserve all original values, scoring, persistence and skip/clear/reset behavior.",
+  "tool": "Built-in image_gen imagegen, not CLI/API",
+  "reference": "assets/joey/restaurant-storyboard.png",
+  "initialRequests": [
+    {
+      "name": "monica",
+      "prompt": "Use case: illustration-story. Generate ONE new character portrait for a coordinated six-portrait Friends Comfort Lab gallery. The supplied restaurant illustration is STYLE REFERENCE ONLY: borrow its hand-painted semi-realistic editorial detail, expressive natural anatomy, warm amber cinematic lighting, refined facial shading and plum/cream/gold palette. Do not copy its composition or include its second person. Shoulders-up single sitter, face looking toward viewer, head fully inside frame with generous breathing room, centered consistent scale, soft brushed warm cream background with muted plum vignette, no furniture or props, no lettering, no logo, no watermark. A polished painted illustration, clearly not a photographic cutout, not a geometric cartoon. 1990s Friends era, authentic recognizable character likeness, tasteful original fan-inspired portrait. Soft friendly expression. Portrait orientation. Subject: Monica Geller (Courteney Cox in Friends), distinctive bright blue eyes, straight dark brown shoulder-length hair with a center part, defined cheekbones, gentle confident smile, burgundy blouse."
+    },
+    {
+      "name": "rachel",
+      "prompt": "Use case: illustration-story. Generate ONE new character portrait for a coordinated six-portrait Friends Comfort Lab gallery. The supplied restaurant illustration is STYLE REFERENCE ONLY: borrow its hand-painted semi-realistic editorial detail, expressive natural anatomy, warm amber cinematic lighting, refined facial shading and plum/cream/gold palette. Do not copy its composition or include its second person. Shoulders-up single sitter, face looking toward viewer, head fully inside frame with generous breathing room, centered consistent scale, soft brushed warm cream background with muted plum vignette, no furniture or props, no lettering, no logo, no watermark. A polished painted illustration, clearly not a photographic cutout, not a geometric cartoon. 1990s Friends era, authentic recognizable character likeness, tasteful original fan-inspired portrait. Soft friendly expression. Portrait orientation. Subject: Rachel Green (Jennifer Aniston in Friends), recognizable green-blue eyes, iconic layered honey-brown Rachel haircut framing her face, warm smile, cream knit top."
+    },
+    {
+      "name": "phoebe",
+      "prompt": "Use case: illustration-story. Generate ONE new character portrait for a coordinated six-portrait Friends Comfort Lab gallery. The supplied restaurant illustration is STYLE REFERENCE ONLY: borrow its hand-painted semi-realistic editorial detail, expressive natural anatomy, warm amber cinematic lighting, refined facial shading and plum/cream/gold palette. Do not copy its composition or include its second person. Shoulders-up single sitter, face looking toward viewer, head fully inside frame with generous breathing room, centered consistent scale, soft brushed warm cream background with muted plum vignette, no furniture or props, no lettering, no logo, no watermark. A polished painted illustration, clearly not a photographic cutout, not a geometric cartoon. 1990s Friends era, authentic recognizable character likeness, tasteful original fan-inspired portrait. Soft friendly expression. Portrait orientation. Subject: Phoebe Buffay (Lisa Kudrow in Friends), recognizable long blonde hair with soft bangs, distinctive gentle face and blue eyes, whimsical warm smile, muted lavender blouse, small delicate earrings."
+    },
+    {
+      "name": "joey",
+      "prompt": "Use case: illustration-story. Generate ONE new character portrait for a coordinated six-portrait Friends Comfort Lab gallery. The supplied restaurant illustration is STYLE REFERENCE ONLY: borrow its hand-painted semi-realistic editorial detail, expressive natural anatomy, warm amber cinematic lighting, refined facial shading and plum/cream/gold palette. Do not copy its composition or include its second person. Shoulders-up single sitter, face looking toward viewer, head fully inside frame with generous breathing room, centered consistent scale, soft brushed warm cream background with muted plum vignette, no furniture or props, no lettering, no logo, no watermark. A polished painted illustration, clearly not a photographic cutout, not a geometric cartoon. 1990s Friends era, authentic recognizable character likeness, tasteful original fan-inspired portrait. Soft friendly expression. Portrait orientation. Subject: Joey Tribbiani (Matt LeBlanc in Friends), recognizable thick dark hair, expressive brown eyes, broad warm smile and strong jaw, dark open shirt over cream tee, same painted sophistication as the man in the style reference."
+    },
+    {
+      "name": "chandler",
+      "prompt": "Use case: illustration-story. Generate ONE new character portrait for a coordinated six-portrait Friends Comfort Lab gallery. The supplied restaurant illustration is STYLE REFERENCE ONLY: borrow its hand-painted semi-realistic editorial detail, expressive natural anatomy, warm amber cinematic lighting, refined facial shading and plum/cream/gold palette. Do not copy its composition or include its second person. Shoulders-up single sitter, face looking toward viewer, head fully inside frame with generous breathing room, centered consistent scale, soft brushed warm cream background with muted plum vignette, no furniture or props, no lettering, no logo, no watermark. A polished painted illustration, clearly not a photographic cutout, not a geometric cartoon. 1990s Friends era, authentic recognizable character likeness, tasteful original fan-inspired portrait. Soft friendly expression. Portrait orientation. Subject: Chandler Bing (Matthew Perry in 1990s Friends), unmistakable youthful face, short chestnut-brown hair, blue eyes, lightly amused lopsided smile, muted sage collared shirt."
+    },
+    {
+      "name": "ross",
+      "prompt": "Use case: illustration-story. Generate ONE new character portrait for a coordinated six-portrait Friends Comfort Lab gallery. The supplied restaurant illustration is STYLE REFERENCE ONLY: borrow its hand-painted semi-realistic editorial detail, expressive natural anatomy, warm amber cinematic lighting, refined facial shading and plum/cream/gold palette. Do not copy its composition or include its second person. Shoulders-up single sitter, face looking toward viewer, head fully inside frame with generous breathing room, centered consistent scale, soft brushed warm cream background with muted plum vignette, no furniture or props, no lettering, no logo, no watermark. A polished painted illustration, clearly not a photographic cutout, not a geometric cartoon. 1990s Friends era, authentic recognizable character likeness, tasteful original fan-inspired portrait. Soft friendly expression. Portrait orientation. Subject: Ross Geller (David Schwimmer in Friends), unmistakable long expressive face, dark slightly wavy hair, distinctive eyebrows and earnest brown eyes, subtle friendly smile, warm brown collared shirt."
+    }
+  ],
+  "revisedFictionalRequests": [
+    {
+      "name": "rachel",
+      "prompt": "Create one original fictional sitcom-character interpretation for a Friends-inspired character gallery, using the supplied image as a painterly STYLE reference only. It must NOT reproduce an actor or any real person's face. Warm semi-realistic hand-painted editorial illustration, nuanced natural face drawing and hair, amber cinematic light, muted cream background with soft plum vignette, centered shoulders-up portrait, head fully visible with breathing room, same scale as a coordinated six-character gallery, no text, no logo, no watermark, no photographic cutout or geometric cartoon. Fictional character Rachel Green: an independent fashion-minded young woman, layered shoulder-length honey-brown hair with face-framing feathered strands, expressive green eyes, thoughtful confident smile, cream knit top. Original facial design, not a real actress likeness."
+    },
+    {
+      "name": "phoebe",
+      "prompt": "Create one original fictional sitcom-character interpretation for a Friends-inspired character gallery, using the supplied image as a painterly STYLE reference only. It must NOT reproduce an actor or any real person's face. Warm semi-realistic hand-painted editorial illustration, nuanced natural face drawing and hair, amber cinematic light, muted cream background with soft plum vignette, centered shoulders-up portrait, head fully visible with breathing room, same scale as a coordinated six-character gallery, no text, no logo, no watermark, no photographic cutout or geometric cartoon. Fictional character Phoebe Buffay: a whimsical free-spirited young woman, long light blonde hair with a small loose braid and wispy fringe, expressive blue eyes, kind smile, muted lavender blouse and small bohemian earrings. Original facial design, not a real actress likeness."
+    }
+  ],
+  "finalOriginalFashionRequest": "Use case: illustration-story. Create a NEW ORIGINAL fictional adult woman for an editorial portrait gallery. Do not depict or resemble a celebrity, a real person, or an existing screen character. Distinct original face design: softly rounded face, warm brown eyes, softly arched brows, gentle upturned nose, subtle closed-lip smile; layered medium-length honey-brown hair with feathered strands, cream knit top. 1990s fashion feeling. Single centered shoulders-up portrait, generous head breathing room. Use the supplied image ONLY as a painted-medium and lighting reference: detailed semi-realistic brushwork, visible paint texture, amber cinematic light, subtle warm cream and muted plum background. Natural anatomy, refined color shading. No text, no logo, no watermark, not a photograph, not geometric or childish. This should be a cohesive original editorial interpretation, not a portrait of any named person.",
+  "outcomes": {
+    "initial": {
+      "monica": "accepted",
+      "rachel": "rejected: input public-figure moderation",
+      "phoebe": "rejected: output moderation (other)",
+      "joey": "accepted",
+      "chandler": "accepted",
+      "ross": "accepted"
+    },
+    "revised": {
+      "rachel": "rejected: output moderation (other)",
+      "phoebe": "accepted"
+    },
+    "originalFashionPortrait": "accepted; used for Rachel card as an interpretation, not actor likeness"
+  },
+  "optimization": "python/prepare_portraits.py exports six 400x500 WebP images using existing Pillow 10.4.0; Python is not the image author."
+}

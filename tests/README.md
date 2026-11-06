@@ -21,3 +21,16 @@ For `v10-static-test.cjs`, point TEST_BASE to a clean static HTTP server (no `/a
 Earlier `capture-v06/v07/v08/v09` and `v09-*-test.cjs` files are retained historical UI fixtures for superseded slide structures, not current entry points or claimed current passes. Active v10 scripts were updated in place for the approved 17-slide deck, while new outputs use `v10-final-*` to avoid overwriting the prior committed evidence. For reproducing historical UI fixtures use the corresponding historical commit; do not weaken current assertions to satisfy the old 18-slide scope.
 
 Actual executed results, fixture corrections and visual-review limits are recorded in `screenshots/v10-final/visual-review.md`. No screenshot or generated-code success alone is counted as a functional test pass.
+
+## Final six-experience questionnaire upgrade
+
+```powershell
+$env:TEST_BASE='http://127.0.0.1:8011'
+node tests/profile-experience-test.cjs
+node tests/profile-layout-test.cjs
+$env:PROFILE_PHASE='after'
+node tests/profile-capture.cjs
+./tests/profile-contact-sheets.ps1
+```
+
+For file-only static QA, start `python python/static_preview.py --port 8013`, set TEST_BASE to that URL and run `node tests/profile-static-test.cjs`. This helper sets the WebP MIME type even on Windows Python 3.8; it has no recommendation API. The new Python asset/golden tests run with the existing full unittest discovery command. Twenty fixtures were captured before UI changes at b9e1c2c. Before capture refuses to overwrite that fixture or label an enhanced page as a pre-upgrade page. Current before/after evidence is in `screenshots/profile-upgrade/visual-review.md`; earlier reports remain historical.

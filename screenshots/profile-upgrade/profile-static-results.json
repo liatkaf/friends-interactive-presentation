@@ -1,0 +1,6 @@
+{
+  "passed": 34,
+  "errors": [],
+  "goldenCases": 20,
+  "mode": "Clean static HTTP, no Python API"
+}

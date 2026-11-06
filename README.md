@@ -2,7 +2,7 @@
 
 [Published presentation](https://liatkaf.github.io/friends-interactive-presentation/) - [Public repository](https://github.com/liatkaf/friends-interactive-presentation)
 
-**Release status:** v1.0 is a local release candidate pending final review and publication approval. The public repository and Pages root returned HTTP 200 on November 6, 2026 ([read-only verification](llm_logs/v1-public-verification.json)). The published presentation is an earlier release, not evidence that v1.0 has been deployed. No push or release tag is part of this finalization.
+**Release status:** final publication is explicitly authorized following migration to D:. See the [final publication report](docs/FINAL_PUBLICATION.md) for current checks and deployment outcome. Earlier local-only notes below describe historical review stages. No release tag or Moodle submission is implied.
 
 An original, research-first HTML presentation exploring why familiar television can feel comforting, followed by an optional six-step profile and an explainable recommendation from **22 real Friends episodes**. It has **17 primary slides**: nine research/story slides, six questionnaire slides and two recommendation slides. The student approved removing the previous social mini-story after review; the lecturer's approximately ten-slide suggestion remains flexible.
 
@@ -20,12 +20,12 @@ Requirements: Node.js 18+ (22+ for browser QA), Python 3.8+, a modern browser; W
 node serve.cjs
 ```
 
-Open http://127.0.0.1:8000. On Windows the server invokes `py -3`; elsewhere `python3`. Set `FRIENDS_PYTHON` to a Python executable if necessary. The current review session uses http://127.0.0.1:8011.
+Open http://127.0.0.1:8000. The server prefers the project's `.venv` interpreter; otherwise it invokes `py -3` on Windows or `python3` elsewhere. `FRIENDS_PYTHON` overrides either choice. After migration, Python 3.11.9 and Pillow 10.4.0 are verified on D:. The review session uses http://127.0.0.1:8011.
 
 For a clean static-host preview:
 
 ```powershell
-python -m http.server 8013 --bind 127.0.0.1
+python python/static_preview.py --port 8013 --bind 127.0.0.1
 ```
 
 Open http://127.0.0.1:8013. Serve over HTTP; direct file opening is not the supported way to load Three.js modules.
@@ -163,3 +163,32 @@ No physical-device or formal screen-reader testing, external human research revi
 ### Final refinement QA summary
 
 Executed: 433 browser regression checks, 41 dedicated Joey checks, 91 focused UX checks, 101 layout checks and 23 Python tests, plus game/context/chart/static-host/capture suites. All passed. All 17 slides were reviewed on desktop/mobile, including the new lesson and retained sources. [Actual reports and visual review](screenshots/v10-final/visual-review.md). No push or release tag has been made.
+
+## Personal Comfort Profile - six distinct experiences
+
+The existing questionnaire remains on **Slides 10-15** (indices 9-14). It now uses six different presentation interactions without adding questions or changing recommendation inputs:
+
+| Slide | Interaction | Preserved contract |
+|---|---|---|
+| 10 | Six original mood symbols respond to hover/focus and selection | Same six mood values and grid |
+| 11 | Retro Stress-O-Meter, moving needle, native slider and playful caption | Same 0-10 input; midpoint preview does not count as an answer |
+| 12 | Six warm painted portraits; selected card reveals its personality description | Same character values, one selection, persistent on revisit |
+| 13 | Gold-framed Quote Wall; selection reveals character/theme | Same six exact quote IDs, text and scoring mappings |
+| 14 | Central Perk menu with five illustrated items and immediate order ticket | Same experience values; no checkout step |
+| 15 | TV-remote familiarity buttons plus independent nostalgia dial and completion cue | Same three values per field; no automatic navigation |
+
+The existing progress, Skip / Continue, Clear Answer, refresh persistence and full Try Again reset remain. Individual familiarity/nostalgia clear controls use the existing clear handler. `v06.js` still owns the single profile store; `profile-experience.js` only renders its state after `friends:profilechange`. No new storage, scoring rules or recommendation fields. Twenty pre-upgrade recommendation fixtures verify ranking/factor equivalence.
+
+**Portrait provenance:** generated with the actual built-in image tool using Slide 4 as the painted-style reference. The Rachel card uses an original fashion-character interpretation after image-tool rejections, so exact actor likeness is not claimed; Phoebe uses an original fictional interpretation. [Exact prompts/outcomes](llm_logs/profile-portrait-prompts.json) and [asset hashes](assets/portraits/provenance.json) document this limitation. The six optimized WebP assets total about **189 KB**. No new dependency: the existing Pillow 10.4.0 is used solely for resizing/encoding, not portrait authorship. The local server includes the WebP MIME type; static hosting needs no Python runtime for these assets.
+
+To re-export from the original generated PNGs (not included as large runtime assets), name them `monica.png` through `ross.png` and run:
+
+```powershell
+.venv/Scripts/python.exe python/prepare_portraits.py --input-dir test-results/portrait-sources
+```
+
+Original generation is nondeterministic and needs an image-generation capability; the app itself uses only the bundled optimized files. [Current before/after screenshots, executed tests and limitations](screenshots/profile-upgrade/visual-review.md). [Recorded instruction and design rationale](llm_logs/profile-upgrade.md). No publication or release is part of this local upgrade.
+
+![Updated painted character gallery](screenshots/profile-upgrade/profile-after-desktop-12.png)
+
+[Changed and added files](docs/PROFILE_UPGRADE_FILES.md). Executed current QA: 267 dedicated profile checks, 433 presentation checks, 91 retained UX checks, 26 Python tests, 36 layout cases and 34 static-host checks; before/after capture runs each passed 14 checks. See the current profile visual review for raw results and the Rachel likeness limitation.

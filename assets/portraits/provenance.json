@@ -1,0 +1,80 @@
+{
+  "origin": "Built-in image-generation tool; Python only resizes/encodes the artwork.",
+  "reference": "assets/joey/restaurant-storyboard.png",
+  "limitation": "Rachel is an original fashion-character interpretation after tool rejection, not an actor likeness. Phoebe uses an original fictional-character interpretation.",
+  "export": "Pillow 10.4.0 / 400x500 WebP / quality 86 / method 6",
+  "portraits": [
+    {
+      "character": "monica",
+      "width": 400,
+      "height": 500,
+      "bytes": 26216,
+      "source_dimensions": [
+        1122,
+        1402
+      ],
+      "source_sha256": "6a7f6fe0251c03a0b6e22cc8b92e5d38765d74da72fb6edf73a7ad11c5cf11cc",
+      "optimized_sha256": "365d57f8df10901ace4d967bc6e7fcea0ef2d38305f7b4b29e8b504f82d85fe2"
+    },
+    {
+      "character": "rachel",
+      "width": 400,
+      "height": 500,
+      "bytes": 39968,
+      "source_dimensions": [
+        1199,
+        1312
+      ],
+      "source_sha256": "b2890f5a21ba085f0511295a32dca20f572300abe75006e9282c9ecbe7ea22fc",
+      "optimized_sha256": "b68c0bc15f67ba6950e8bf3d3eb50ffa943e7ccbcc4435ccec86db55c136f9dd"
+    },
+    {
+      "character": "phoebe",
+      "width": 400,
+      "height": 500,
+      "bytes": 39126,
+      "source_dimensions": [
+        1312,
+        1199
+      ],
+      "source_sha256": "667a4a723cac5a2251a789d0d2f9d22f6b8a21527a650520a5425856ac1ff5f0",
+      "optimized_sha256": "f954baf01150f065276f7d12bc2098199480e0581b5f491e3a65ef19a569204f"
+    },
+    {
+      "character": "joey",
+      "width": 400,
+      "height": 500,
+      "bytes": 28818,
+      "source_dimensions": [
+        1086,
+        1448
+      ],
+      "source_sha256": "f416fc2549bc6f3d5a925af8ce0f9bfd65268a82cc0b3eb74671027342bbba96",
+      "optimized_sha256": "b2083d23ee2ed832b8657c888b964655864e9b66d6820de25a6d8677223b6c50"
+    },
+    {
+      "character": "chandler",
+      "width": 400,
+      "height": 500,
+      "bytes": 26302,
+      "source_dimensions": [
+        1086,
+        1448
+      ],
+      "source_sha256": "3cd8821941e005a2a79dd58ede1037a52adda1d6919a86cdc48d00bcdf6a2092",
+      "optimized_sha256": "f7b1fead8563f116901de8080456dece59bf608cf3717c53efe3dda548f19267"
+    },
+    {
+      "character": "ross",
+      "width": 400,
+      "height": 500,
+      "bytes": 28194,
+      "source_dimensions": [
+        1086,
+        1448
+      ],
+      "source_sha256": "6a36db3832e004150256808023ea7eeaa6fdd484948ae0cf938ce1159d394d49",
+      "optimized_sha256": "db9598ec3af2c66f47aad3df4a9d3e25ca143e53fed92ca0094d7ee48978ee63"
+    }
+  ]
+}

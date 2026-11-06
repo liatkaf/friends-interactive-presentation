@@ -1,5 +1,7 @@
 # v1.0 FINAL - Adversarial Review
 
+**Publication continuation:** final GitHub publication is now user-authorized after migration to D:. [Migration checks and deployment evidence](docs/FINAL_PUBLICATION.md) supplement this historical review. The questionnaire upgrade has its own [review and limitations](screenshots/profile-upgrade/visual-review.md).
+
 **Current approved refinement:** the deck now has 17 slides. The historical 18-slide review below remains evidence of the preceding implementation; current verification is in `screenshots/v10-final/visual-review.md`. The new student-directed Joey lesson replaces the weak comic, and the former social-story slide is removed. Its unique evidence remains optional on Slide 6. The new artwork was visually reviewed as original painted illustration, not reused geometric figures or episode footage. Source context explicitly identifies the combined food incident/catchphrase as an adaptation.
 
 The final revision review checks hidden answers before selection, all three unscored paths, timed reveal and explicit educational purpose, Replay, no profile mutation, timer cancellation, reduced motion, laptop/mobile and night-theme readability, contiguous numbering, reset destinations and legacy final-hash clamping. Current regression results supersede previous counts. No unresolved critical/high local defect was found in the executed scope. This remains a same-session evaluator-perspective pass, not independent human certification.

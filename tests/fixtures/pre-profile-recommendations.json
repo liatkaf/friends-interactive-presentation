@@ -1,0 +1,3304 @@
+{
+  "baselineCommit": "b9e1c2c406f817d03b604376d79938b82cf2554e",
+  "cases": [
+    {
+      "profile": {},
+      "recommendations": [
+        {
+          "episode": {
+            "id": "s01e01",
+            "season": 1,
+            "episode": 1,
+            "title": "The One Where Monica Gets a Roommate",
+            "description": "Rachel starts over with help from an old friend.",
+            "characters": [
+              "Rachel",
+              "Monica"
+            ],
+            "moments": [
+              "A new arrival at Central Perk"
+            ],
+            "quotes": [],
+            "comedy": 3,
+            "warmth": 5,
+            "nostalgia": 5,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "lonely",
+              "sad",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "predictable"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [],
+          "points": 0,
+          "maximum": 0,
+          "score": 0,
+          "explanation": "No matching preferences yet. Browse this real episode or add choices."
+        },
+        {
+          "episode": {
+            "id": "s01e03",
+            "season": 1,
+            "episode": 3,
+            "title": "The One with the Thumb",
+            "description": "Phoebe discovers an unusual problem with a soda.",
+            "characters": [
+              "Phoebe",
+              "Chandler"
+            ],
+            "moments": [
+              "An unexpected soda discovery"
+            ],
+            "quotes": [],
+            "comedy": 4,
+            "warmth": 3,
+            "nostalgia": 4,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "bored",
+              "happy"
+            ],
+            "story_tags": [
+              "surprising"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [],
+          "points": 0,
+          "maximum": 0,
+          "score": 0,
+          "explanation": "No matching preferences yet. Browse this real episode or add choices."
+        },
+        {
+          "episode": {
+            "id": "s01e07",
+            "season": 1,
+            "episode": 7,
+            "title": "The One with the Blackout",
+            "description": "A power outage brings the friends together.",
+            "characters": [
+              "Chandler",
+              "Ross",
+              "Rachel"
+            ],
+            "moments": [
+              "A citywide blackout"
+            ],
+            "quotes": [],
+            "comedy": 4,
+            "warmth": 5,
+            "nostalgia": 5,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "lonely",
+              "stressed",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "predictable"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [],
+          "points": 0,
+          "maximum": 0,
+          "score": 0,
+          "explanation": "No matching preferences yet. Browse this real episode or add choices."
+        }
+      ]
+    },
+    {
+      "profile": {
+        "stress": 0
+      },
+      "recommendations": [
+        {
+          "episode": {
+            "id": "s01e18",
+            "season": 1,
+            "episode": 18,
+            "title": "The One with All the Poker",
+            "description": "The friends bring their competitive sides to a card game.",
+            "characters": [
+              "Rachel",
+              "Ross",
+              "Monica"
+            ],
+            "moments": [
+              "A group poker game"
+            ],
+            "quotes": [],
+            "comedy": 5,
+            "warmth": 4,
+            "nostalgia": 5,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "bored",
+              "happy"
+            ],
+            "story_tags": [
+              "predictable"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "stress",
+              "points": 10,
+              "maximum": 10,
+              "reason": "Editorial warmth/comedy blend weighted by your self-reported stress; no predicted health effect."
+            }
+          ],
+          "points": 10,
+          "maximum": 10,
+          "score": 100,
+          "explanation": "Editorial warmth/comedy blend weighted by your self-reported stress; no predicted health effect."
+        },
+        {
+          "episode": {
+            "id": "s02e06",
+            "season": 2,
+            "episode": 6,
+            "title": "The One with the Baby on the Bus",
+            "description": "Babysitting becomes an adventure while Phoebe faces a cafe change.",
+            "characters": [
+              "Joey",
+              "Chandler",
+              "Phoebe"
+            ],
+            "moments": [
+              "A bus mishap; Smelly Cat"
+            ],
+            "quotes": [
+              "Smelly Cat"
+            ],
+            "comedy": 5,
+            "warmth": 4,
+            "nostalgia": 5,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "bored",
+              "happy"
+            ],
+            "story_tags": [
+              "surprising"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-2/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "stress",
+              "points": 10,
+              "maximum": 10,
+              "reason": "Editorial warmth/comedy blend weighted by your self-reported stress; no predicted health effect."
+            }
+          ],
+          "points": 10,
+          "maximum": 10,
+          "score": 100,
+          "explanation": "Editorial warmth/comedy blend weighted by your self-reported stress; no predicted health effect."
+        },
+        {
+          "episode": {
+            "id": "s03e02",
+            "season": 3,
+            "episode": 2,
+            "title": "The One Where No One's Ready",
+            "description": "Getting everyone ready for a formal event proves difficult.",
+            "characters": [
+              "Ross",
+              "Joey",
+              "Chandler"
+            ],
+            "moments": [
+              "A battle over a chair"
+            ],
+            "quotes": [],
+            "comedy": 5,
+            "warmth": 3,
+            "nostalgia": 5,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "bored",
+              "happy"
+            ],
+            "story_tags": [
+              "predictable"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-3/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "stress",
+              "points": 10,
+              "maximum": 10,
+              "reason": "Editorial warmth/comedy blend weighted by your self-reported stress; no predicted health effect."
+            }
+          ],
+          "points": 10,
+          "maximum": 10,
+          "score": 100,
+          "explanation": "Editorial warmth/comedy blend weighted by your self-reported stress; no predicted health effect."
+        }
+      ]
+    },
+    {
+      "profile": {
+        "stress": 10
+      },
+      "recommendations": [
+        {
+          "episode": {
+            "id": "s01e01",
+            "season": 1,
+            "episode": 1,
+            "title": "The One Where Monica Gets a Roommate",
+            "description": "Rachel starts over with help from an old friend.",
+            "characters": [
+              "Rachel",
+              "Monica"
+            ],
+            "moments": [
+              "A new arrival at Central Perk"
+            ],
+            "quotes": [],
+            "comedy": 3,
+            "warmth": 5,
+            "nostalgia": 5,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "lonely",
+              "sad",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "predictable"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "stress",
+              "points": 10,
+              "maximum": 10,
+              "reason": "Editorial warmth/comedy blend weighted by your self-reported stress; no predicted health effect."
+            }
+          ],
+          "points": 10,
+          "maximum": 10,
+          "score": 100,
+          "explanation": "Editorial warmth/comedy blend weighted by your self-reported stress; no predicted health effect."
+        },
+        {
+          "episode": {
+            "id": "s01e07",
+            "season": 1,
+            "episode": 7,
+            "title": "The One with the Blackout",
+            "description": "A power outage brings the friends together.",
+            "characters": [
+              "Chandler",
+              "Ross",
+              "Rachel"
+            ],
+            "moments": [
+              "A citywide blackout"
+            ],
+            "quotes": [],
+            "comedy": 4,
+            "warmth": 5,
+            "nostalgia": 5,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "lonely",
+              "stressed",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "predictable"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "stress",
+              "points": 10,
+              "maximum": 10,
+              "reason": "Editorial warmth/comedy blend weighted by your self-reported stress; no predicted health effect."
+            }
+          ],
+          "points": 10,
+          "maximum": 10,
+          "score": 100,
+          "explanation": "Editorial warmth/comedy blend weighted by your self-reported stress; no predicted health effect."
+        },
+        {
+          "episode": {
+            "id": "s01e09",
+            "season": 1,
+            "episode": 9,
+            "title": "The One Where Underdog Gets Away",
+            "description": "Thanksgiving plans take an unexpected turn.",
+            "characters": [
+              "Monica",
+              "Rachel",
+              "Joey"
+            ],
+            "moments": [
+              "An escaped parade balloon"
+            ],
+            "quotes": [],
+            "comedy": 4,
+            "warmth": 5,
+            "nostalgia": 5,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "lonely",
+              "sad",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "surprising"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "stress",
+              "points": 10,
+              "maximum": 10,
+              "reason": "Editorial warmth/comedy blend weighted by your self-reported stress; no predicted health effect."
+            }
+          ],
+          "points": 10,
+          "maximum": 10,
+          "score": 100,
+          "explanation": "Editorial warmth/comedy blend weighted by your self-reported stress; no predicted health effect."
+        }
+      ]
+    },
+    {
+      "profile": {
+        "quote": "PIVOT!"
+      },
+      "recommendations": [
+        {
+          "episode": {
+            "id": "s05e16",
+            "season": 5,
+            "episode": 16,
+            "title": "The One with the Cop",
+            "description": "Moving a sofa turns into a very vocal group effort.",
+            "characters": [
+              "Ross",
+              "Rachel",
+              "Chandler",
+              "Phoebe"
+            ],
+            "moments": [
+              "PIVOT! on the staircase"
+            ],
+            "quotes": [
+              "PIVOT!"
+            ],
+            "comedy": 5,
+            "warmth": 3,
+            "nostalgia": 5,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "bored",
+              "happy"
+            ],
+            "story_tags": [
+              "predictable"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-5/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "quote",
+              "points": 18,
+              "maximum": 18,
+              "reason": "Exact selected quote association: PIVOT!."
+            }
+          ],
+          "points": 18,
+          "maximum": 18,
+          "score": 100,
+          "explanation": "Exact selected quote association: PIVOT!."
+        },
+        {
+          "episode": {
+            "id": "s01e01",
+            "season": 1,
+            "episode": 1,
+            "title": "The One Where Monica Gets a Roommate",
+            "description": "Rachel starts over with help from an old friend.",
+            "characters": [
+              "Rachel",
+              "Monica"
+            ],
+            "moments": [
+              "A new arrival at Central Perk"
+            ],
+            "quotes": [],
+            "comedy": 3,
+            "warmth": 5,
+            "nostalgia": 5,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "lonely",
+              "sad",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "predictable"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "quote",
+              "points": 0,
+              "maximum": 18,
+              "reason": "Exact selected quote association: PIVOT!."
+            }
+          ],
+          "points": 0,
+          "maximum": 18,
+          "score": 0,
+          "explanation": "No matching preferences yet. Browse this real episode or add choices."
+        },
+        {
+          "episode": {
+            "id": "s01e03",
+            "season": 1,
+            "episode": 3,
+            "title": "The One with the Thumb",
+            "description": "Phoebe discovers an unusual problem with a soda.",
+            "characters": [
+              "Phoebe",
+              "Chandler"
+            ],
+            "moments": [
+              "An unexpected soda discovery"
+            ],
+            "quotes": [],
+            "comedy": 4,
+            "warmth": 3,
+            "nostalgia": 4,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "bored",
+              "happy"
+            ],
+            "story_tags": [
+              "surprising"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "quote",
+              "points": 0,
+              "maximum": 18,
+              "reason": "Exact selected quote association: PIVOT!."
+            }
+          ],
+          "points": 0,
+          "maximum": 18,
+          "score": 0,
+          "explanation": "No matching preferences yet. Browse this real episode or add choices."
+        }
+      ]
+    },
+    {
+      "profile": {
+        "quote": "How you doin'?"
+      },
+      "recommendations": [
+        {
+          "episode": {
+            "id": "s04e13",
+            "season": 4,
+            "episode": 13,
+            "title": "The One with Rachel's Crush",
+            "description": "Rachel explores a crush as the apartments feel different.",
+            "characters": [
+              "Rachel",
+              "Joey",
+              "Chandler"
+            ],
+            "moments": [
+              "Joey offers his signature greeting"
+            ],
+            "quotes": [
+              "How you doin'?"
+            ],
+            "comedy": 4,
+            "warmth": 3,
+            "nostalgia": 4,
+            "beginner_friendly": false,
+            "mood_tags": [
+              "bored",
+              "happy"
+            ],
+            "story_tags": [
+              "predictable"
+            ],
+            "familiarity_tags": [
+              "continuity"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-4/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "quote",
+              "points": 18,
+              "maximum": 18,
+              "reason": "Exact selected quote association: How you doin'?."
+            }
+          ],
+          "points": 18,
+          "maximum": 18,
+          "score": 100,
+          "explanation": "Exact selected quote association: How you doin'?."
+        },
+        {
+          "episode": {
+            "id": "s01e01",
+            "season": 1,
+            "episode": 1,
+            "title": "The One Where Monica Gets a Roommate",
+            "description": "Rachel starts over with help from an old friend.",
+            "characters": [
+              "Rachel",
+              "Monica"
+            ],
+            "moments": [
+              "A new arrival at Central Perk"
+            ],
+            "quotes": [],
+            "comedy": 3,
+            "warmth": 5,
+            "nostalgia": 5,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "lonely",
+              "sad",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "predictable"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "quote",
+              "points": 0,
+              "maximum": 18,
+              "reason": "Exact selected quote association: How you doin'?."
+            }
+          ],
+          "points": 0,
+          "maximum": 18,
+          "score": 0,
+          "explanation": "No matching preferences yet. Browse this real episode or add choices."
+        },
+        {
+          "episode": {
+            "id": "s01e03",
+            "season": 1,
+            "episode": 3,
+            "title": "The One with the Thumb",
+            "description": "Phoebe discovers an unusual problem with a soda.",
+            "characters": [
+              "Phoebe",
+              "Chandler"
+            ],
+            "moments": [
+              "An unexpected soda discovery"
+            ],
+            "quotes": [],
+            "comedy": 4,
+            "warmth": 3,
+            "nostalgia": 4,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "bored",
+              "happy"
+            ],
+            "story_tags": [
+              "surprising"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "quote",
+              "points": 0,
+              "maximum": 18,
+              "reason": "Exact selected quote association: How you doin'?."
+            }
+          ],
+          "points": 0,
+          "maximum": 18,
+          "score": 0,
+          "explanation": "No matching preferences yet. Browse this real episode or add choices."
+        }
+      ]
+    },
+    {
+      "profile": {
+        "quote": "We were on a break!"
+      },
+      "recommendations": [
+        {
+          "episode": {
+            "id": "s01e07",
+            "season": 1,
+            "episode": 7,
+            "title": "The One with the Blackout",
+            "description": "A power outage brings the friends together.",
+            "characters": [
+              "Chandler",
+              "Ross",
+              "Rachel"
+            ],
+            "moments": [
+              "A citywide blackout"
+            ],
+            "quotes": [],
+            "comedy": 4,
+            "warmth": 5,
+            "nostalgia": 5,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "lonely",
+              "stressed",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "predictable"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "quote",
+              "points": 9,
+              "maximum": 18,
+              "reason": "Editorial quote-to-character match: We were on a break! → Ross. Half credit when featured; no exact scene claimed."
+            }
+          ],
+          "points": 9,
+          "maximum": 18,
+          "score": 50,
+          "explanation": "Editorial quote-to-character match: We were on a break! → Ross. Half credit when featured; no exact scene claimed."
+        },
+        {
+          "episode": {
+            "id": "s01e10",
+            "season": 1,
+            "episode": 10,
+            "title": "The One with the Monkey",
+            "description": "New Year plans come with unexpected company.",
+            "characters": [
+              "Ross",
+              "Phoebe",
+              "Joey"
+            ],
+            "moments": [
+              "Marcel arrives"
+            ],
+            "quotes": [],
+            "comedy": 4,
+            "warmth": 4,
+            "nostalgia": 4,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "bored",
+              "happy",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "surprising"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "quote",
+              "points": 9,
+              "maximum": 18,
+              "reason": "Editorial quote-to-character match: We were on a break! → Ross. Half credit when featured; no exact scene claimed."
+            }
+          ],
+          "points": 9,
+          "maximum": 18,
+          "score": 50,
+          "explanation": "Editorial quote-to-character match: We were on a break! → Ross. Half credit when featured; no exact scene claimed."
+        },
+        {
+          "episode": {
+            "id": "s01e12",
+            "season": 1,
+            "episode": 12,
+            "title": "The One with the Dozen Lasagnas",
+            "description": "Monica has more food than she knows what to do with.",
+            "characters": [
+              "Monica",
+              "Rachel",
+              "Ross"
+            ],
+            "moments": [
+              "A surplus of lasagnas"
+            ],
+            "quotes": [],
+            "comedy": 3,
+            "warmth": 4,
+            "nostalgia": 4,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "stressed",
+              "overwhelmed",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "predictable"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "quote",
+              "points": 9,
+              "maximum": 18,
+              "reason": "Editorial quote-to-character match: We were on a break! → Ross. Half credit when featured; no exact scene claimed."
+            }
+          ],
+          "points": 9,
+          "maximum": 18,
+          "score": 50,
+          "explanation": "Editorial quote-to-character match: We were on a break! → Ross. Half credit when featured; no exact scene claimed."
+        }
+      ]
+    },
+    {
+      "profile": {
+        "quote": "Could I BE any more...?"
+      },
+      "recommendations": [
+        {
+          "episode": {
+            "id": "s01e03",
+            "season": 1,
+            "episode": 3,
+            "title": "The One with the Thumb",
+            "description": "Phoebe discovers an unusual problem with a soda.",
+            "characters": [
+              "Phoebe",
+              "Chandler"
+            ],
+            "moments": [
+              "An unexpected soda discovery"
+            ],
+            "quotes": [],
+            "comedy": 4,
+            "warmth": 3,
+            "nostalgia": 4,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "bored",
+              "happy"
+            ],
+            "story_tags": [
+              "surprising"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "quote",
+              "points": 9,
+              "maximum": 18,
+              "reason": "Editorial quote-to-character match: Could I BE any more...? → Chandler. Half credit when featured; no exact scene claimed."
+            }
+          ],
+          "points": 9,
+          "maximum": 18,
+          "score": 50,
+          "explanation": "Editorial quote-to-character match: Could I BE any more...? → Chandler. Half credit when featured; no exact scene claimed."
+        },
+        {
+          "episode": {
+            "id": "s01e07",
+            "season": 1,
+            "episode": 7,
+            "title": "The One with the Blackout",
+            "description": "A power outage brings the friends together.",
+            "characters": [
+              "Chandler",
+              "Ross",
+              "Rachel"
+            ],
+            "moments": [
+              "A citywide blackout"
+            ],
+            "quotes": [],
+            "comedy": 4,
+            "warmth": 5,
+            "nostalgia": 5,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "lonely",
+              "stressed",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "predictable"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "quote",
+              "points": 9,
+              "maximum": 18,
+              "reason": "Editorial quote-to-character match: Could I BE any more...? → Chandler. Half credit when featured; no exact scene claimed."
+            }
+          ],
+          "points": 9,
+          "maximum": 18,
+          "score": 50,
+          "explanation": "Editorial quote-to-character match: Could I BE any more...? → Chandler. Half credit when featured; no exact scene claimed."
+        },
+        {
+          "episode": {
+            "id": "s02e06",
+            "season": 2,
+            "episode": 6,
+            "title": "The One with the Baby on the Bus",
+            "description": "Babysitting becomes an adventure while Phoebe faces a cafe change.",
+            "characters": [
+              "Joey",
+              "Chandler",
+              "Phoebe"
+            ],
+            "moments": [
+              "A bus mishap; Smelly Cat"
+            ],
+            "quotes": [
+              "Smelly Cat"
+            ],
+            "comedy": 5,
+            "warmth": 4,
+            "nostalgia": 5,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "bored",
+              "happy"
+            ],
+            "story_tags": [
+              "surprising"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-2/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "quote",
+              "points": 9,
+              "maximum": 18,
+              "reason": "Editorial quote-to-character match: Could I BE any more...? → Chandler. Half credit when featured; no exact scene claimed."
+            }
+          ],
+          "points": 9,
+          "maximum": 18,
+          "score": 50,
+          "explanation": "Editorial quote-to-character match: Could I BE any more...? → Chandler. Half credit when featured; no exact scene claimed."
+        }
+      ]
+    },
+    {
+      "profile": {
+        "quote": "Smelly Cat"
+      },
+      "recommendations": [
+        {
+          "episode": {
+            "id": "s02e06",
+            "season": 2,
+            "episode": 6,
+            "title": "The One with the Baby on the Bus",
+            "description": "Babysitting becomes an adventure while Phoebe faces a cafe change.",
+            "characters": [
+              "Joey",
+              "Chandler",
+              "Phoebe"
+            ],
+            "moments": [
+              "A bus mishap; Smelly Cat"
+            ],
+            "quotes": [
+              "Smelly Cat"
+            ],
+            "comedy": 5,
+            "warmth": 4,
+            "nostalgia": 5,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "bored",
+              "happy"
+            ],
+            "story_tags": [
+              "surprising"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-2/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "quote",
+              "points": 18,
+              "maximum": 18,
+              "reason": "Exact selected quote association: Smelly Cat."
+            }
+          ],
+          "points": 18,
+          "maximum": 18,
+          "score": 100,
+          "explanation": "Exact selected quote association: Smelly Cat."
+        },
+        {
+          "episode": {
+            "id": "s02e17",
+            "season": 2,
+            "episode": 17,
+            "title": "The One Where Eddie Moves In",
+            "description": "New living arrangements unsettle the familiar routine.",
+            "characters": [
+              "Joey",
+              "Chandler",
+              "Phoebe"
+            ],
+            "moments": [
+              "Smelly Cat recording"
+            ],
+            "quotes": [
+              "Smelly Cat"
+            ],
+            "comedy": 4,
+            "warmth": 4,
+            "nostalgia": 5,
+            "beginner_friendly": false,
+            "mood_tags": [
+              "sad",
+              "bored",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "surprising"
+            ],
+            "familiarity_tags": [
+              "continuity"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-2/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "quote",
+              "points": 18,
+              "maximum": 18,
+              "reason": "Exact selected quote association: Smelly Cat."
+            }
+          ],
+          "points": 18,
+          "maximum": 18,
+          "score": 100,
+          "explanation": "Exact selected quote association: Smelly Cat."
+        },
+        {
+          "episode": {
+            "id": "s01e01",
+            "season": 1,
+            "episode": 1,
+            "title": "The One Where Monica Gets a Roommate",
+            "description": "Rachel starts over with help from an old friend.",
+            "characters": [
+              "Rachel",
+              "Monica"
+            ],
+            "moments": [
+              "A new arrival at Central Perk"
+            ],
+            "quotes": [],
+            "comedy": 3,
+            "warmth": 5,
+            "nostalgia": 5,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "lonely",
+              "sad",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "predictable"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "quote",
+              "points": 0,
+              "maximum": 18,
+              "reason": "Exact selected quote association: Smelly Cat."
+            }
+          ],
+          "points": 0,
+          "maximum": 18,
+          "score": 0,
+          "explanation": "No matching preferences yet. Browse this real episode or add choices."
+        }
+      ]
+    },
+    {
+      "profile": {
+        "quote": "I know!"
+      },
+      "recommendations": [
+        {
+          "episode": {
+            "id": "s01e01",
+            "season": 1,
+            "episode": 1,
+            "title": "The One Where Monica Gets a Roommate",
+            "description": "Rachel starts over with help from an old friend.",
+            "characters": [
+              "Rachel",
+              "Monica"
+            ],
+            "moments": [
+              "A new arrival at Central Perk"
+            ],
+            "quotes": [],
+            "comedy": 3,
+            "warmth": 5,
+            "nostalgia": 5,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "lonely",
+              "sad",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "predictable"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "quote",
+              "points": 9,
+              "maximum": 18,
+              "reason": "Editorial quote-to-character match: I know! → Monica. Half credit when featured; no exact scene claimed."
+            }
+          ],
+          "points": 9,
+          "maximum": 18,
+          "score": 50,
+          "explanation": "Editorial quote-to-character match: I know! → Monica. Half credit when featured; no exact scene claimed."
+        },
+        {
+          "episode": {
+            "id": "s01e09",
+            "season": 1,
+            "episode": 9,
+            "title": "The One Where Underdog Gets Away",
+            "description": "Thanksgiving plans take an unexpected turn.",
+            "characters": [
+              "Monica",
+              "Rachel",
+              "Joey"
+            ],
+            "moments": [
+              "An escaped parade balloon"
+            ],
+            "quotes": [],
+            "comedy": 4,
+            "warmth": 5,
+            "nostalgia": 5,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "lonely",
+              "sad",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "surprising"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "quote",
+              "points": 9,
+              "maximum": 18,
+              "reason": "Editorial quote-to-character match: I know! → Monica. Half credit when featured; no exact scene claimed."
+            }
+          ],
+          "points": 9,
+          "maximum": 18,
+          "score": 50,
+          "explanation": "Editorial quote-to-character match: I know! → Monica. Half credit when featured; no exact scene claimed."
+        },
+        {
+          "episode": {
+            "id": "s01e12",
+            "season": 1,
+            "episode": 12,
+            "title": "The One with the Dozen Lasagnas",
+            "description": "Monica has more food than she knows what to do with.",
+            "characters": [
+              "Monica",
+              "Rachel",
+              "Ross"
+            ],
+            "moments": [
+              "A surplus of lasagnas"
+            ],
+            "quotes": [],
+            "comedy": 3,
+            "warmth": 4,
+            "nostalgia": 4,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "stressed",
+              "overwhelmed",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "predictable"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "quote",
+              "points": 9,
+              "maximum": 18,
+              "reason": "Editorial quote-to-character match: I know! → Monica. Half credit when featured; no exact scene claimed."
+            }
+          ],
+          "points": 9,
+          "maximum": 18,
+          "score": 50,
+          "explanation": "Editorial quote-to-character match: I know! → Monica. Half credit when featured; no exact scene claimed."
+        }
+      ]
+    },
+    {
+      "profile": {
+        "familiarity": "new",
+        "nostalgia": "low"
+      },
+      "recommendations": [
+        {
+          "episode": {
+            "id": "s01e03",
+            "season": 1,
+            "episode": 3,
+            "title": "The One with the Thumb",
+            "description": "Phoebe discovers an unusual problem with a soda.",
+            "characters": [
+              "Phoebe",
+              "Chandler"
+            ],
+            "moments": [
+              "An unexpected soda discovery"
+            ],
+            "quotes": [],
+            "comedy": 4,
+            "warmth": 3,
+            "nostalgia": 4,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "bored",
+              "happy"
+            ],
+            "story_tags": [
+              "surprising"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "nostalgia",
+              "points": 2.5,
+              "maximum": 10,
+              "reason": "Closeness to your nostalgia preference (editorial 1–5 rating)."
+            },
+            {
+              "factor": "familiarity",
+              "points": 8,
+              "maximum": 8,
+              "reason": "New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+            }
+          ],
+          "points": 10.5,
+          "maximum": 18,
+          "score": 58.33,
+          "explanation": "Closeness to your nostalgia preference (editorial 1–5 rating).; New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+        },
+        {
+          "episode": {
+            "id": "s01e10",
+            "season": 1,
+            "episode": 10,
+            "title": "The One with the Monkey",
+            "description": "New Year plans come with unexpected company.",
+            "characters": [
+              "Ross",
+              "Phoebe",
+              "Joey"
+            ],
+            "moments": [
+              "Marcel arrives"
+            ],
+            "quotes": [],
+            "comedy": 4,
+            "warmth": 4,
+            "nostalgia": 4,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "bored",
+              "happy",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "surprising"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "nostalgia",
+              "points": 2.5,
+              "maximum": 10,
+              "reason": "Closeness to your nostalgia preference (editorial 1–5 rating)."
+            },
+            {
+              "factor": "familiarity",
+              "points": 8,
+              "maximum": 8,
+              "reason": "New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+            }
+          ],
+          "points": 10.5,
+          "maximum": 18,
+          "score": 58.33,
+          "explanation": "Closeness to your nostalgia preference (editorial 1–5 rating).; New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+        },
+        {
+          "episode": {
+            "id": "s01e12",
+            "season": 1,
+            "episode": 12,
+            "title": "The One with the Dozen Lasagnas",
+            "description": "Monica has more food than she knows what to do with.",
+            "characters": [
+              "Monica",
+              "Rachel",
+              "Ross"
+            ],
+            "moments": [
+              "A surplus of lasagnas"
+            ],
+            "quotes": [],
+            "comedy": 3,
+            "warmth": 4,
+            "nostalgia": 4,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "stressed",
+              "overwhelmed",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "predictable"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "nostalgia",
+              "points": 2.5,
+              "maximum": 10,
+              "reason": "Closeness to your nostalgia preference (editorial 1–5 rating)."
+            },
+            {
+              "factor": "familiarity",
+              "points": 8,
+              "maximum": 8,
+              "reason": "New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+            }
+          ],
+          "points": 10.5,
+          "maximum": 18,
+          "score": 58.33,
+          "explanation": "Closeness to your nostalgia preference (editorial 1–5 rating).; New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+        }
+      ]
+    },
+    {
+      "profile": {
+        "familiarity": "new",
+        "nostalgia": "medium"
+      },
+      "recommendations": [
+        {
+          "episode": {
+            "id": "s01e03",
+            "season": 1,
+            "episode": 3,
+            "title": "The One with the Thumb",
+            "description": "Phoebe discovers an unusual problem with a soda.",
+            "characters": [
+              "Phoebe",
+              "Chandler"
+            ],
+            "moments": [
+              "An unexpected soda discovery"
+            ],
+            "quotes": [],
+            "comedy": 4,
+            "warmth": 3,
+            "nostalgia": 4,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "bored",
+              "happy"
+            ],
+            "story_tags": [
+              "surprising"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "nostalgia",
+              "points": 7.5,
+              "maximum": 10,
+              "reason": "Closeness to your nostalgia preference (editorial 1–5 rating)."
+            },
+            {
+              "factor": "familiarity",
+              "points": 8,
+              "maximum": 8,
+              "reason": "New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+            }
+          ],
+          "points": 15.5,
+          "maximum": 18,
+          "score": 86.11,
+          "explanation": "Closeness to your nostalgia preference (editorial 1–5 rating).; New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+        },
+        {
+          "episode": {
+            "id": "s01e10",
+            "season": 1,
+            "episode": 10,
+            "title": "The One with the Monkey",
+            "description": "New Year plans come with unexpected company.",
+            "characters": [
+              "Ross",
+              "Phoebe",
+              "Joey"
+            ],
+            "moments": [
+              "Marcel arrives"
+            ],
+            "quotes": [],
+            "comedy": 4,
+            "warmth": 4,
+            "nostalgia": 4,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "bored",
+              "happy",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "surprising"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "nostalgia",
+              "points": 7.5,
+              "maximum": 10,
+              "reason": "Closeness to your nostalgia preference (editorial 1–5 rating)."
+            },
+            {
+              "factor": "familiarity",
+              "points": 8,
+              "maximum": 8,
+              "reason": "New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+            }
+          ],
+          "points": 15.5,
+          "maximum": 18,
+          "score": 86.11,
+          "explanation": "Closeness to your nostalgia preference (editorial 1–5 rating).; New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+        },
+        {
+          "episode": {
+            "id": "s01e12",
+            "season": 1,
+            "episode": 12,
+            "title": "The One with the Dozen Lasagnas",
+            "description": "Monica has more food than she knows what to do with.",
+            "characters": [
+              "Monica",
+              "Rachel",
+              "Ross"
+            ],
+            "moments": [
+              "A surplus of lasagnas"
+            ],
+            "quotes": [],
+            "comedy": 3,
+            "warmth": 4,
+            "nostalgia": 4,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "stressed",
+              "overwhelmed",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "predictable"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "nostalgia",
+              "points": 7.5,
+              "maximum": 10,
+              "reason": "Closeness to your nostalgia preference (editorial 1–5 rating)."
+            },
+            {
+              "factor": "familiarity",
+              "points": 8,
+              "maximum": 8,
+              "reason": "New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+            }
+          ],
+          "points": 15.5,
+          "maximum": 18,
+          "score": 86.11,
+          "explanation": "Closeness to your nostalgia preference (editorial 1–5 rating).; New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+        }
+      ]
+    },
+    {
+      "profile": {
+        "familiarity": "new",
+        "nostalgia": "high"
+      },
+      "recommendations": [
+        {
+          "episode": {
+            "id": "s01e01",
+            "season": 1,
+            "episode": 1,
+            "title": "The One Where Monica Gets a Roommate",
+            "description": "Rachel starts over with help from an old friend.",
+            "characters": [
+              "Rachel",
+              "Monica"
+            ],
+            "moments": [
+              "A new arrival at Central Perk"
+            ],
+            "quotes": [],
+            "comedy": 3,
+            "warmth": 5,
+            "nostalgia": 5,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "lonely",
+              "sad",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "predictable"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "nostalgia",
+              "points": 10,
+              "maximum": 10,
+              "reason": "Closeness to your nostalgia preference (editorial 1–5 rating)."
+            },
+            {
+              "factor": "familiarity",
+              "points": 8,
+              "maximum": 8,
+              "reason": "New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+            }
+          ],
+          "points": 18,
+          "maximum": 18,
+          "score": 100,
+          "explanation": "Closeness to your nostalgia preference (editorial 1–5 rating).; New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+        },
+        {
+          "episode": {
+            "id": "s01e07",
+            "season": 1,
+            "episode": 7,
+            "title": "The One with the Blackout",
+            "description": "A power outage brings the friends together.",
+            "characters": [
+              "Chandler",
+              "Ross",
+              "Rachel"
+            ],
+            "moments": [
+              "A citywide blackout"
+            ],
+            "quotes": [],
+            "comedy": 4,
+            "warmth": 5,
+            "nostalgia": 5,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "lonely",
+              "stressed",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "predictable"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "nostalgia",
+              "points": 10,
+              "maximum": 10,
+              "reason": "Closeness to your nostalgia preference (editorial 1–5 rating)."
+            },
+            {
+              "factor": "familiarity",
+              "points": 8,
+              "maximum": 8,
+              "reason": "New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+            }
+          ],
+          "points": 18,
+          "maximum": 18,
+          "score": 100,
+          "explanation": "Closeness to your nostalgia preference (editorial 1–5 rating).; New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+        },
+        {
+          "episode": {
+            "id": "s01e09",
+            "season": 1,
+            "episode": 9,
+            "title": "The One Where Underdog Gets Away",
+            "description": "Thanksgiving plans take an unexpected turn.",
+            "characters": [
+              "Monica",
+              "Rachel",
+              "Joey"
+            ],
+            "moments": [
+              "An escaped parade balloon"
+            ],
+            "quotes": [],
+            "comedy": 4,
+            "warmth": 5,
+            "nostalgia": 5,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "lonely",
+              "sad",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "surprising"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "nostalgia",
+              "points": 10,
+              "maximum": 10,
+              "reason": "Closeness to your nostalgia preference (editorial 1–5 rating)."
+            },
+            {
+              "factor": "familiarity",
+              "points": 8,
+              "maximum": 8,
+              "reason": "New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+            }
+          ],
+          "points": 18,
+          "maximum": 18,
+          "score": 100,
+          "explanation": "Closeness to your nostalgia preference (editorial 1–5 rating).; New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+        }
+      ]
+    },
+    {
+      "profile": {
+        "familiarity": "some",
+        "nostalgia": "low"
+      },
+      "recommendations": [
+        {
+          "episode": {
+            "id": "s01e03",
+            "season": 1,
+            "episode": 3,
+            "title": "The One with the Thumb",
+            "description": "Phoebe discovers an unusual problem with a soda.",
+            "characters": [
+              "Phoebe",
+              "Chandler"
+            ],
+            "moments": [
+              "An unexpected soda discovery"
+            ],
+            "quotes": [],
+            "comedy": 4,
+            "warmth": 3,
+            "nostalgia": 4,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "bored",
+              "happy"
+            ],
+            "story_tags": [
+              "surprising"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "nostalgia",
+              "points": 2.5,
+              "maximum": 10,
+              "reason": "Closeness to your nostalgia preference (editorial 1–5 rating)."
+            },
+            {
+              "factor": "familiarity",
+              "points": 6,
+              "maximum": 8,
+              "reason": "New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+            }
+          ],
+          "points": 8.5,
+          "maximum": 18,
+          "score": 47.22,
+          "explanation": "Closeness to your nostalgia preference (editorial 1–5 rating).; New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+        },
+        {
+          "episode": {
+            "id": "s01e10",
+            "season": 1,
+            "episode": 10,
+            "title": "The One with the Monkey",
+            "description": "New Year plans come with unexpected company.",
+            "characters": [
+              "Ross",
+              "Phoebe",
+              "Joey"
+            ],
+            "moments": [
+              "Marcel arrives"
+            ],
+            "quotes": [],
+            "comedy": 4,
+            "warmth": 4,
+            "nostalgia": 4,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "bored",
+              "happy",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "surprising"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "nostalgia",
+              "points": 2.5,
+              "maximum": 10,
+              "reason": "Closeness to your nostalgia preference (editorial 1–5 rating)."
+            },
+            {
+              "factor": "familiarity",
+              "points": 6,
+              "maximum": 8,
+              "reason": "New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+            }
+          ],
+          "points": 8.5,
+          "maximum": 18,
+          "score": 47.22,
+          "explanation": "Closeness to your nostalgia preference (editorial 1–5 rating).; New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+        },
+        {
+          "episode": {
+            "id": "s01e12",
+            "season": 1,
+            "episode": 12,
+            "title": "The One with the Dozen Lasagnas",
+            "description": "Monica has more food than she knows what to do with.",
+            "characters": [
+              "Monica",
+              "Rachel",
+              "Ross"
+            ],
+            "moments": [
+              "A surplus of lasagnas"
+            ],
+            "quotes": [],
+            "comedy": 3,
+            "warmth": 4,
+            "nostalgia": 4,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "stressed",
+              "overwhelmed",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "predictable"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "nostalgia",
+              "points": 2.5,
+              "maximum": 10,
+              "reason": "Closeness to your nostalgia preference (editorial 1–5 rating)."
+            },
+            {
+              "factor": "familiarity",
+              "points": 6,
+              "maximum": 8,
+              "reason": "New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+            }
+          ],
+          "points": 8.5,
+          "maximum": 18,
+          "score": 47.22,
+          "explanation": "Closeness to your nostalgia preference (editorial 1–5 rating).; New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+        }
+      ]
+    },
+    {
+      "profile": {
+        "familiarity": "some",
+        "nostalgia": "medium"
+      },
+      "recommendations": [
+        {
+          "episode": {
+            "id": "s01e03",
+            "season": 1,
+            "episode": 3,
+            "title": "The One with the Thumb",
+            "description": "Phoebe discovers an unusual problem with a soda.",
+            "characters": [
+              "Phoebe",
+              "Chandler"
+            ],
+            "moments": [
+              "An unexpected soda discovery"
+            ],
+            "quotes": [],
+            "comedy": 4,
+            "warmth": 3,
+            "nostalgia": 4,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "bored",
+              "happy"
+            ],
+            "story_tags": [
+              "surprising"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "nostalgia",
+              "points": 7.5,
+              "maximum": 10,
+              "reason": "Closeness to your nostalgia preference (editorial 1–5 rating)."
+            },
+            {
+              "factor": "familiarity",
+              "points": 6,
+              "maximum": 8,
+              "reason": "New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+            }
+          ],
+          "points": 13.5,
+          "maximum": 18,
+          "score": 75,
+          "explanation": "Closeness to your nostalgia preference (editorial 1–5 rating).; New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+        },
+        {
+          "episode": {
+            "id": "s01e10",
+            "season": 1,
+            "episode": 10,
+            "title": "The One with the Monkey",
+            "description": "New Year plans come with unexpected company.",
+            "characters": [
+              "Ross",
+              "Phoebe",
+              "Joey"
+            ],
+            "moments": [
+              "Marcel arrives"
+            ],
+            "quotes": [],
+            "comedy": 4,
+            "warmth": 4,
+            "nostalgia": 4,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "bored",
+              "happy",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "surprising"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "nostalgia",
+              "points": 7.5,
+              "maximum": 10,
+              "reason": "Closeness to your nostalgia preference (editorial 1–5 rating)."
+            },
+            {
+              "factor": "familiarity",
+              "points": 6,
+              "maximum": 8,
+              "reason": "New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+            }
+          ],
+          "points": 13.5,
+          "maximum": 18,
+          "score": 75,
+          "explanation": "Closeness to your nostalgia preference (editorial 1–5 rating).; New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+        },
+        {
+          "episode": {
+            "id": "s01e12",
+            "season": 1,
+            "episode": 12,
+            "title": "The One with the Dozen Lasagnas",
+            "description": "Monica has more food than she knows what to do with.",
+            "characters": [
+              "Monica",
+              "Rachel",
+              "Ross"
+            ],
+            "moments": [
+              "A surplus of lasagnas"
+            ],
+            "quotes": [],
+            "comedy": 3,
+            "warmth": 4,
+            "nostalgia": 4,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "stressed",
+              "overwhelmed",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "predictable"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "nostalgia",
+              "points": 7.5,
+              "maximum": 10,
+              "reason": "Closeness to your nostalgia preference (editorial 1–5 rating)."
+            },
+            {
+              "factor": "familiarity",
+              "points": 6,
+              "maximum": 8,
+              "reason": "New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+            }
+          ],
+          "points": 13.5,
+          "maximum": 18,
+          "score": 75,
+          "explanation": "Closeness to your nostalgia preference (editorial 1–5 rating).; New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+        }
+      ]
+    },
+    {
+      "profile": {
+        "familiarity": "some",
+        "nostalgia": "high"
+      },
+      "recommendations": [
+        {
+          "episode": {
+            "id": "s01e01",
+            "season": 1,
+            "episode": 1,
+            "title": "The One Where Monica Gets a Roommate",
+            "description": "Rachel starts over with help from an old friend.",
+            "characters": [
+              "Rachel",
+              "Monica"
+            ],
+            "moments": [
+              "A new arrival at Central Perk"
+            ],
+            "quotes": [],
+            "comedy": 3,
+            "warmth": 5,
+            "nostalgia": 5,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "lonely",
+              "sad",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "predictable"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "nostalgia",
+              "points": 10,
+              "maximum": 10,
+              "reason": "Closeness to your nostalgia preference (editorial 1–5 rating)."
+            },
+            {
+              "factor": "familiarity",
+              "points": 6,
+              "maximum": 8,
+              "reason": "New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+            }
+          ],
+          "points": 16,
+          "maximum": 18,
+          "score": 88.89,
+          "explanation": "Closeness to your nostalgia preference (editorial 1–5 rating).; New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+        },
+        {
+          "episode": {
+            "id": "s01e07",
+            "season": 1,
+            "episode": 7,
+            "title": "The One with the Blackout",
+            "description": "A power outage brings the friends together.",
+            "characters": [
+              "Chandler",
+              "Ross",
+              "Rachel"
+            ],
+            "moments": [
+              "A citywide blackout"
+            ],
+            "quotes": [],
+            "comedy": 4,
+            "warmth": 5,
+            "nostalgia": 5,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "lonely",
+              "stressed",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "predictable"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "nostalgia",
+              "points": 10,
+              "maximum": 10,
+              "reason": "Closeness to your nostalgia preference (editorial 1–5 rating)."
+            },
+            {
+              "factor": "familiarity",
+              "points": 6,
+              "maximum": 8,
+              "reason": "New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+            }
+          ],
+          "points": 16,
+          "maximum": 18,
+          "score": 88.89,
+          "explanation": "Closeness to your nostalgia preference (editorial 1–5 rating).; New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+        },
+        {
+          "episode": {
+            "id": "s01e09",
+            "season": 1,
+            "episode": 9,
+            "title": "The One Where Underdog Gets Away",
+            "description": "Thanksgiving plans take an unexpected turn.",
+            "characters": [
+              "Monica",
+              "Rachel",
+              "Joey"
+            ],
+            "moments": [
+              "An escaped parade balloon"
+            ],
+            "quotes": [],
+            "comedy": 4,
+            "warmth": 5,
+            "nostalgia": 5,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "lonely",
+              "sad",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "surprising"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "nostalgia",
+              "points": 10,
+              "maximum": 10,
+              "reason": "Closeness to your nostalgia preference (editorial 1–5 rating)."
+            },
+            {
+              "factor": "familiarity",
+              "points": 6,
+              "maximum": 8,
+              "reason": "New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+            }
+          ],
+          "points": 16,
+          "maximum": 18,
+          "score": 88.89,
+          "explanation": "Closeness to your nostalgia preference (editorial 1–5 rating).; New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+        }
+      ]
+    },
+    {
+      "profile": {
+        "familiarity": "rewatcher",
+        "nostalgia": "low"
+      },
+      "recommendations": [
+        {
+          "episode": {
+            "id": "s01e03",
+            "season": 1,
+            "episode": 3,
+            "title": "The One with the Thumb",
+            "description": "Phoebe discovers an unusual problem with a soda.",
+            "characters": [
+              "Phoebe",
+              "Chandler"
+            ],
+            "moments": [
+              "An unexpected soda discovery"
+            ],
+            "quotes": [],
+            "comedy": 4,
+            "warmth": 3,
+            "nostalgia": 4,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "bored",
+              "happy"
+            ],
+            "story_tags": [
+              "surprising"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "nostalgia",
+              "points": 2.5,
+              "maximum": 10,
+              "reason": "Closeness to your nostalgia preference (editorial 1–5 rating)."
+            },
+            {
+              "factor": "familiarity",
+              "points": 6.4,
+              "maximum": 8,
+              "reason": "New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+            }
+          ],
+          "points": 8.9,
+          "maximum": 18,
+          "score": 49.44,
+          "explanation": "Closeness to your nostalgia preference (editorial 1–5 rating).; New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+        },
+        {
+          "episode": {
+            "id": "s01e10",
+            "season": 1,
+            "episode": 10,
+            "title": "The One with the Monkey",
+            "description": "New Year plans come with unexpected company.",
+            "characters": [
+              "Ross",
+              "Phoebe",
+              "Joey"
+            ],
+            "moments": [
+              "Marcel arrives"
+            ],
+            "quotes": [],
+            "comedy": 4,
+            "warmth": 4,
+            "nostalgia": 4,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "bored",
+              "happy",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "surprising"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "nostalgia",
+              "points": 2.5,
+              "maximum": 10,
+              "reason": "Closeness to your nostalgia preference (editorial 1–5 rating)."
+            },
+            {
+              "factor": "familiarity",
+              "points": 6.4,
+              "maximum": 8,
+              "reason": "New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+            }
+          ],
+          "points": 8.9,
+          "maximum": 18,
+          "score": 49.44,
+          "explanation": "Closeness to your nostalgia preference (editorial 1–5 rating).; New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+        },
+        {
+          "episode": {
+            "id": "s01e12",
+            "season": 1,
+            "episode": 12,
+            "title": "The One with the Dozen Lasagnas",
+            "description": "Monica has more food than she knows what to do with.",
+            "characters": [
+              "Monica",
+              "Rachel",
+              "Ross"
+            ],
+            "moments": [
+              "A surplus of lasagnas"
+            ],
+            "quotes": [],
+            "comedy": 3,
+            "warmth": 4,
+            "nostalgia": 4,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "stressed",
+              "overwhelmed",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "predictable"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "nostalgia",
+              "points": 2.5,
+              "maximum": 10,
+              "reason": "Closeness to your nostalgia preference (editorial 1–5 rating)."
+            },
+            {
+              "factor": "familiarity",
+              "points": 6.4,
+              "maximum": 8,
+              "reason": "New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+            }
+          ],
+          "points": 8.9,
+          "maximum": 18,
+          "score": 49.44,
+          "explanation": "Closeness to your nostalgia preference (editorial 1–5 rating).; New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+        }
+      ]
+    },
+    {
+      "profile": {
+        "familiarity": "rewatcher",
+        "nostalgia": "medium"
+      },
+      "recommendations": [
+        {
+          "episode": {
+            "id": "s01e03",
+            "season": 1,
+            "episode": 3,
+            "title": "The One with the Thumb",
+            "description": "Phoebe discovers an unusual problem with a soda.",
+            "characters": [
+              "Phoebe",
+              "Chandler"
+            ],
+            "moments": [
+              "An unexpected soda discovery"
+            ],
+            "quotes": [],
+            "comedy": 4,
+            "warmth": 3,
+            "nostalgia": 4,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "bored",
+              "happy"
+            ],
+            "story_tags": [
+              "surprising"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "nostalgia",
+              "points": 7.5,
+              "maximum": 10,
+              "reason": "Closeness to your nostalgia preference (editorial 1–5 rating)."
+            },
+            {
+              "factor": "familiarity",
+              "points": 6.4,
+              "maximum": 8,
+              "reason": "New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+            }
+          ],
+          "points": 13.9,
+          "maximum": 18,
+          "score": 77.22,
+          "explanation": "Closeness to your nostalgia preference (editorial 1–5 rating).; New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+        },
+        {
+          "episode": {
+            "id": "s01e10",
+            "season": 1,
+            "episode": 10,
+            "title": "The One with the Monkey",
+            "description": "New Year plans come with unexpected company.",
+            "characters": [
+              "Ross",
+              "Phoebe",
+              "Joey"
+            ],
+            "moments": [
+              "Marcel arrives"
+            ],
+            "quotes": [],
+            "comedy": 4,
+            "warmth": 4,
+            "nostalgia": 4,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "bored",
+              "happy",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "surprising"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "nostalgia",
+              "points": 7.5,
+              "maximum": 10,
+              "reason": "Closeness to your nostalgia preference (editorial 1–5 rating)."
+            },
+            {
+              "factor": "familiarity",
+              "points": 6.4,
+              "maximum": 8,
+              "reason": "New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+            }
+          ],
+          "points": 13.9,
+          "maximum": 18,
+          "score": 77.22,
+          "explanation": "Closeness to your nostalgia preference (editorial 1–5 rating).; New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+        },
+        {
+          "episode": {
+            "id": "s01e12",
+            "season": 1,
+            "episode": 12,
+            "title": "The One with the Dozen Lasagnas",
+            "description": "Monica has more food than she knows what to do with.",
+            "characters": [
+              "Monica",
+              "Rachel",
+              "Ross"
+            ],
+            "moments": [
+              "A surplus of lasagnas"
+            ],
+            "quotes": [],
+            "comedy": 3,
+            "warmth": 4,
+            "nostalgia": 4,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "stressed",
+              "overwhelmed",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "predictable"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "nostalgia",
+              "points": 7.5,
+              "maximum": 10,
+              "reason": "Closeness to your nostalgia preference (editorial 1–5 rating)."
+            },
+            {
+              "factor": "familiarity",
+              "points": 6.4,
+              "maximum": 8,
+              "reason": "New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+            }
+          ],
+          "points": 13.9,
+          "maximum": 18,
+          "score": 77.22,
+          "explanation": "Closeness to your nostalgia preference (editorial 1–5 rating).; New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+        }
+      ]
+    },
+    {
+      "profile": {
+        "familiarity": "rewatcher",
+        "nostalgia": "high"
+      },
+      "recommendations": [
+        {
+          "episode": {
+            "id": "s01e01",
+            "season": 1,
+            "episode": 1,
+            "title": "The One Where Monica Gets a Roommate",
+            "description": "Rachel starts over with help from an old friend.",
+            "characters": [
+              "Rachel",
+              "Monica"
+            ],
+            "moments": [
+              "A new arrival at Central Perk"
+            ],
+            "quotes": [],
+            "comedy": 3,
+            "warmth": 5,
+            "nostalgia": 5,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "lonely",
+              "sad",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "predictable"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "nostalgia",
+              "points": 10,
+              "maximum": 10,
+              "reason": "Closeness to your nostalgia preference (editorial 1–5 rating)."
+            },
+            {
+              "factor": "familiarity",
+              "points": 8,
+              "maximum": 8,
+              "reason": "New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+            }
+          ],
+          "points": 18,
+          "maximum": 18,
+          "score": 100,
+          "explanation": "Closeness to your nostalgia preference (editorial 1–5 rating).; New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+        },
+        {
+          "episode": {
+            "id": "s01e07",
+            "season": 1,
+            "episode": 7,
+            "title": "The One with the Blackout",
+            "description": "A power outage brings the friends together.",
+            "characters": [
+              "Chandler",
+              "Ross",
+              "Rachel"
+            ],
+            "moments": [
+              "A citywide blackout"
+            ],
+            "quotes": [],
+            "comedy": 4,
+            "warmth": 5,
+            "nostalgia": 5,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "lonely",
+              "stressed",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "predictable"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "nostalgia",
+              "points": 10,
+              "maximum": 10,
+              "reason": "Closeness to your nostalgia preference (editorial 1–5 rating)."
+            },
+            {
+              "factor": "familiarity",
+              "points": 8,
+              "maximum": 8,
+              "reason": "New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+            }
+          ],
+          "points": 18,
+          "maximum": 18,
+          "score": 100,
+          "explanation": "Closeness to your nostalgia preference (editorial 1–5 rating).; New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+        },
+        {
+          "episode": {
+            "id": "s01e09",
+            "season": 1,
+            "episode": 9,
+            "title": "The One Where Underdog Gets Away",
+            "description": "Thanksgiving plans take an unexpected turn.",
+            "characters": [
+              "Monica",
+              "Rachel",
+              "Joey"
+            ],
+            "moments": [
+              "An escaped parade balloon"
+            ],
+            "quotes": [],
+            "comedy": 4,
+            "warmth": 5,
+            "nostalgia": 5,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "lonely",
+              "sad",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "surprising"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "nostalgia",
+              "points": 10,
+              "maximum": 10,
+              "reason": "Closeness to your nostalgia preference (editorial 1–5 rating)."
+            },
+            {
+              "factor": "familiarity",
+              "points": 8,
+              "maximum": 8,
+              "reason": "New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+            }
+          ],
+          "points": 18,
+          "maximum": 18,
+          "score": 100,
+          "explanation": "Closeness to your nostalgia preference (editorial 1–5 rating).; New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+        }
+      ]
+    },
+    {
+      "profile": {
+        "mood": "stressed",
+        "stress": 8,
+        "character": "Joey",
+        "quote": "How you doin'?",
+        "experience": "warmth",
+        "familiarity": "rewatcher",
+        "nostalgia": "high"
+      },
+      "recommendations": [
+        {
+          "episode": {
+            "id": "s01e09",
+            "season": 1,
+            "episode": 9,
+            "title": "The One Where Underdog Gets Away",
+            "description": "Thanksgiving plans take an unexpected turn.",
+            "characters": [
+              "Monica",
+              "Rachel",
+              "Joey"
+            ],
+            "moments": [
+              "An escaped parade balloon"
+            ],
+            "quotes": [],
+            "comedy": 4,
+            "warmth": 5,
+            "nostalgia": 5,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "lonely",
+              "sad",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "surprising"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-1/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "mood",
+              "points": 18,
+              "maximum": 18,
+              "reason": "Mood tag: stressed matches."
+            },
+            {
+              "factor": "stress",
+              "points": 9.6,
+              "maximum": 10,
+              "reason": "Editorial warmth/comedy blend weighted by your self-reported stress; no predicted health effect."
+            },
+            {
+              "factor": "character",
+              "points": 18,
+              "maximum": 18,
+              "reason": "Featured character match: Joey."
+            },
+            {
+              "factor": "quote",
+              "points": 0,
+              "maximum": 18,
+              "reason": "Exact selected quote association: How you doin'?."
+            },
+            {
+              "factor": "nostalgia",
+              "points": 10,
+              "maximum": 10,
+              "reason": "Closeness to your nostalgia preference (editorial 1–5 rating)."
+            },
+            {
+              "factor": "familiarity",
+              "points": 8,
+              "maximum": 8,
+              "reason": "New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+            },
+            {
+              "factor": "experience",
+              "points": 10,
+              "maximum": 10,
+              "reason": "Desired experience: warmth matched to editorial rating."
+            }
+          ],
+          "points": 73.6,
+          "maximum": 92,
+          "score": 80,
+          "explanation": "Mood tag: stressed matches.; Editorial warmth/comedy blend weighted by your self-reported stress; no predicted health effect.; Featured character match: Joey.; Closeness to your nostalgia preference (editorial 1–5 rating).; New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit.; Desired experience: warmth matched to editorial rating."
+        },
+        {
+          "episode": {
+            "id": "s02e17",
+            "season": 2,
+            "episode": 17,
+            "title": "The One Where Eddie Moves In",
+            "description": "New living arrangements unsettle the familiar routine.",
+            "characters": [
+              "Joey",
+              "Chandler",
+              "Phoebe"
+            ],
+            "moments": [
+              "Smelly Cat recording"
+            ],
+            "quotes": [
+              "Smelly Cat"
+            ],
+            "comedy": 4,
+            "warmth": 4,
+            "nostalgia": 5,
+            "beginner_friendly": false,
+            "mood_tags": [
+              "sad",
+              "bored",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "surprising"
+            ],
+            "familiarity_tags": [
+              "continuity"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-2/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "mood",
+              "points": 18,
+              "maximum": 18,
+              "reason": "Mood tag: stressed matches."
+            },
+            {
+              "factor": "stress",
+              "points": 8,
+              "maximum": 10,
+              "reason": "Editorial warmth/comedy blend weighted by your self-reported stress; no predicted health effect."
+            },
+            {
+              "factor": "character",
+              "points": 18,
+              "maximum": 18,
+              "reason": "Featured character match: Joey."
+            },
+            {
+              "factor": "quote",
+              "points": 0,
+              "maximum": 18,
+              "reason": "Exact selected quote association: How you doin'?."
+            },
+            {
+              "factor": "nostalgia",
+              "points": 10,
+              "maximum": 10,
+              "reason": "Closeness to your nostalgia preference (editorial 1–5 rating)."
+            },
+            {
+              "factor": "familiarity",
+              "points": 8,
+              "maximum": 8,
+              "reason": "New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+            },
+            {
+              "factor": "experience",
+              "points": 8,
+              "maximum": 10,
+              "reason": "Desired experience: warmth matched to editorial rating."
+            }
+          ],
+          "points": 70,
+          "maximum": 92,
+          "score": 76.09,
+          "explanation": "Mood tag: stressed matches.; Editorial warmth/comedy blend weighted by your self-reported stress; no predicted health effect.; Featured character match: Joey.; Closeness to your nostalgia preference (editorial 1–5 rating).; New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit.; Desired experience: warmth matched to editorial rating."
+        },
+        {
+          "episode": {
+            "id": "s04e08",
+            "season": 4,
+            "episode": 8,
+            "title": "The One with Chandler in a Box",
+            "description": "Thanksgiving includes an unusual attempt at making amends.",
+            "characters": [
+              "Chandler",
+              "Joey",
+              "Monica"
+            ],
+            "moments": [
+              "A box at Thanksgiving"
+            ],
+            "quotes": [],
+            "comedy": 4,
+            "warmth": 5,
+            "nostalgia": 4,
+            "beginner_friendly": false,
+            "mood_tags": [
+              "sad",
+              "lonely",
+              "overwhelmed",
+              "stressed"
+            ],
+            "story_tags": [
+              "surprising"
+            ],
+            "familiarity_tags": [
+              "continuity"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-4/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "mood",
+              "points": 18,
+              "maximum": 18,
+              "reason": "Mood tag: stressed matches."
+            },
+            {
+              "factor": "stress",
+              "points": 9.6,
+              "maximum": 10,
+              "reason": "Editorial warmth/comedy blend weighted by your self-reported stress; no predicted health effect."
+            },
+            {
+              "factor": "character",
+              "points": 18,
+              "maximum": 18,
+              "reason": "Featured character match: Joey."
+            },
+            {
+              "factor": "quote",
+              "points": 0,
+              "maximum": 18,
+              "reason": "Exact selected quote association: How you doin'?."
+            },
+            {
+              "factor": "nostalgia",
+              "points": 7.5,
+              "maximum": 10,
+              "reason": "Closeness to your nostalgia preference (editorial 1–5 rating)."
+            },
+            {
+              "factor": "familiarity",
+              "points": 6.4,
+              "maximum": 8,
+              "reason": "New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+            },
+            {
+              "factor": "experience",
+              "points": 10,
+              "maximum": 10,
+              "reason": "Desired experience: warmth matched to editorial rating."
+            }
+          ],
+          "points": 69.5,
+          "maximum": 92,
+          "score": 75.54,
+          "explanation": "Mood tag: stressed matches.; Editorial warmth/comedy blend weighted by your self-reported stress; no predicted health effect.; Featured character match: Joey.; Closeness to your nostalgia preference (editorial 1–5 rating).; New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit.; Desired experience: warmth matched to editorial rating."
+        }
+      ]
+    },
+    {
+      "profile": {
+        "mood": "happy",
+        "stress": 2,
+        "character": "Monica",
+        "quote": "I know!",
+        "experience": "laughter",
+        "familiarity": "some",
+        "nostalgia": "medium"
+      },
+      "recommendations": [
+        {
+          "episode": {
+            "id": "s04e12",
+            "season": 4,
+            "episode": 12,
+            "title": "The One with the Embryos",
+            "description": "A trivia challenge tests how well the friends know each other.",
+            "characters": [
+              "Monica",
+              "Rachel",
+              "Joey",
+              "Chandler",
+              "Ross",
+              "Phoebe"
+            ],
+            "moments": [
+              "The apartment trivia contest"
+            ],
+            "quotes": [],
+            "comedy": 5,
+            "warmth": 5,
+            "nostalgia": 5,
+            "beginner_friendly": true,
+            "mood_tags": [
+              "bored",
+              "happy",
+              "lonely"
+            ],
+            "story_tags": [
+              "surprising"
+            ],
+            "familiarity_tags": [
+              "standalone"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-4/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "mood",
+              "points": 18,
+              "maximum": 18,
+              "reason": "Mood tag: happy matches."
+            },
+            {
+              "factor": "stress",
+              "points": 10,
+              "maximum": 10,
+              "reason": "Editorial warmth/comedy blend weighted by your self-reported stress; no predicted health effect."
+            },
+            {
+              "factor": "character",
+              "points": 18,
+              "maximum": 18,
+              "reason": "Featured character match: Monica."
+            },
+            {
+              "factor": "quote",
+              "points": 9,
+              "maximum": 18,
+              "reason": "Editorial quote-to-character match: I know! → Monica. Half credit when featured; no exact scene claimed."
+            },
+            {
+              "factor": "nostalgia",
+              "points": 5,
+              "maximum": 10,
+              "reason": "Closeness to your nostalgia preference (editorial 1–5 rating)."
+            },
+            {
+              "factor": "familiarity",
+              "points": 6,
+              "maximum": 8,
+              "reason": "New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+            },
+            {
+              "factor": "experience",
+              "points": 10,
+              "maximum": 10,
+              "reason": "Desired experience: laughter matched to editorial rating."
+            }
+          ],
+          "points": 76,
+          "maximum": 92,
+          "score": 82.61,
+          "explanation": "Mood tag: happy matches.; Editorial warmth/comedy blend weighted by your self-reported stress; no predicted health effect.; Featured character match: Monica.; Editorial quote-to-character match: I know! → Monica. Half credit when featured; no exact scene claimed.; Closeness to your nostalgia preference (editorial 1–5 rating).; New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit.; Desired experience: laughter matched to editorial rating."
+        },
+        {
+          "episode": {
+            "id": "s05e08",
+            "season": 5,
+            "episode": 8,
+            "title": "The One with All the Thanksgivings",
+            "description": "The friends look back on memorable holiday mishaps.",
+            "characters": [
+              "Monica",
+              "Chandler",
+              "Ross",
+              "Rachel"
+            ],
+            "moments": [
+              "Thanksgiving flashbacks"
+            ],
+            "quotes": [],
+            "comedy": 5,
+            "warmth": 5,
+            "nostalgia": 5,
+            "beginner_friendly": false,
+            "mood_tags": [
+              "sad",
+              "lonely",
+              "happy"
+            ],
+            "story_tags": [
+              "surprising"
+            ],
+            "familiarity_tags": [
+              "continuity"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-5/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "mood",
+              "points": 18,
+              "maximum": 18,
+              "reason": "Mood tag: happy matches."
+            },
+            {
+              "factor": "stress",
+              "points": 10,
+              "maximum": 10,
+              "reason": "Editorial warmth/comedy blend weighted by your self-reported stress; no predicted health effect."
+            },
+            {
+              "factor": "character",
+              "points": 18,
+              "maximum": 18,
+              "reason": "Featured character match: Monica."
+            },
+            {
+              "factor": "quote",
+              "points": 9,
+              "maximum": 18,
+              "reason": "Editorial quote-to-character match: I know! → Monica. Half credit when featured; no exact scene claimed."
+            },
+            {
+              "factor": "nostalgia",
+              "points": 5,
+              "maximum": 10,
+              "reason": "Closeness to your nostalgia preference (editorial 1–5 rating)."
+            },
+            {
+              "factor": "familiarity",
+              "points": 6,
+              "maximum": 8,
+              "reason": "New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+            },
+            {
+              "factor": "experience",
+              "points": 10,
+              "maximum": 10,
+              "reason": "Desired experience: laughter matched to editorial rating."
+            }
+          ],
+          "points": 76,
+          "maximum": 92,
+          "score": 82.61,
+          "explanation": "Mood tag: happy matches.; Editorial warmth/comedy blend weighted by your self-reported stress; no predicted health effect.; Featured character match: Monica.; Editorial quote-to-character match: I know! → Monica. Half credit when featured; no exact scene claimed.; Closeness to your nostalgia preference (editorial 1–5 rating).; New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit.; Desired experience: laughter matched to editorial rating."
+        },
+        {
+          "episode": {
+            "id": "s05e14",
+            "season": 5,
+            "episode": 14,
+            "title": "The One Where Everybody Finds Out",
+            "description": "A secret inspires a playful contest of bluffing.",
+            "characters": [
+              "Phoebe",
+              "Chandler",
+              "Monica",
+              "Rachel"
+            ],
+            "moments": [
+              "They know that we know"
+            ],
+            "quotes": [],
+            "comedy": 5,
+            "warmth": 5,
+            "nostalgia": 5,
+            "beginner_friendly": false,
+            "mood_tags": [
+              "bored",
+              "happy"
+            ],
+            "story_tags": [
+              "surprising"
+            ],
+            "familiarity_tags": [
+              "continuity"
+            ],
+            "source": "https://www.tvguide.com/tvshows/friends/episodes-season-5/1030937287/"
+          },
+          "factors": [
+            {
+              "factor": "mood",
+              "points": 18,
+              "maximum": 18,
+              "reason": "Mood tag: happy matches."
+            },
+            {
+              "factor": "stress",
+              "points": 10,
+              "maximum": 10,
+              "reason": "Editorial warmth/comedy blend weighted by your self-reported stress; no predicted health effect."
+            },
+            {
+              "factor": "character",
+              "points": 18,
+              "maximum": 18,
+              "reason": "Featured character match: Monica."
+            },
+            {
+              "factor": "quote",
+              "points": 9,
+              "maximum": 18,
+              "reason": "Editorial quote-to-character match: I know! → Monica. Half credit when featured; no exact scene claimed."
+            },
+            {
+              "factor": "nostalgia",
+              "points": 5,
+              "maximum": 10,
+              "reason": "Closeness to your nostalgia preference (editorial 1–5 rating)."
+            },
+            {
+              "factor": "familiarity",
+              "points": 6,
+              "maximum": 8,
+              "reason": "New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit."
+            },
+            {
+              "factor": "experience",
+              "points": 10,
+              "maximum": 10,
+              "reason": "Desired experience: laughter matched to editorial rating."
+            }
+          ],
+          "points": 76,
+          "maximum": 92,
+          "score": 82.61,
+          "explanation": "Mood tag: happy matches.; Editorial warmth/comedy blend weighted by your self-reported stress; no predicted health effect.; Featured character match: Monica.; Editorial quote-to-character match: I know! → Monica. Half credit when featured; no exact scene claimed.; Closeness to your nostalgia preference (editorial 1–5 rating).; New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit.; Desired experience: laughter matched to editorial rating."
+        }
+      ]
+    }
+  ]
+}

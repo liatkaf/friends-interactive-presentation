@@ -12,3 +12,6 @@ Thumbs.db
 *.log
 test-results/
 playwright-report/
+.tools/
+.venv-migrated-backup/
+friends-v05-research-assets.zip

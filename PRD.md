@@ -68,7 +68,7 @@ Desktop and mobile layouts may scroll vertically at small sizes or large fonts b
 - [x] Genuine Three.js and preserved game rules/context recovery verified.
 - [x] All 17 desktop/mobile slides captured and visually reviewed; corrections and retests recorded in the visual report.
 - [x] Research source/design audit recorded in `docs/RESEARCH_INTEGRITY_AUDIT.md`.
-- [ ] Final v1.0 GitHub Pages deployment: pending explicit push approval and post-deployment verification.
+- [ ] Final v1.0 GitHub Pages deployment: push is now explicitly approved; see `docs/FINAL_PUBLICATION.md` for deployment verification.
 - [ ] Physical-device and formal assistive-technology testing: not performed; not a claimed release certification.
 - [ ] External human academic review and Moodle submission: outside completed local repository work.
 
@@ -77,3 +77,13 @@ Exact executed suite results, remaining limitations and compliance statuses are 
 ## Approved final content decision
 
 The student found the original Slide 4 and former Slide 7 visually weak and lacking a meaningful payoff, selected a recognizable Joey food gag after considering alternatives, required a clear educational purpose, and explicitly approved removing the repetitive slide. This is a summarized decision, not fabricated verbatim dialogue. See `llm_logs/v1-content-refinement.md` and the current `screenshots/v10-final/visual-review.md`. Historical 18-slide reports remain clearly identified as earlier evidence.
+
+## Final questionnaire experience enhancement
+
+Scope remains 17 slides, with exactly the existing six optional profile steps on Slides 10-15. Each step has a distinct visual/interaction pattern: responsive mood-symbol grid; retro semicircular Stress-O-Meter with a native 0-10 range input; coordinated painted portrait gallery with selected personality description; framed Quote Wall with selected character/theme; illustrated Central Perk menu with immediate order feedback; TV remote and separate nostalgia selector. All six characters and all choices remain available; selecting an answer never navigates automatically.
+
+The authoritative state remains in `v06.js`. Existing values, weights, six quote mappings, independent familiarity/nostalgia fields, session key, progress, skip/clear/change/revisit and Try Again behavior must remain unchanged. The stress midpoint is a preview, not an automatically submitted default. New rendering observes `friends:profilechange`; it does not introduce another answer store or modify engine logic. Individual clear buttons reuse the existing handler.
+
+Portraits are actual built-in-tool generated artwork, optimized to 400x500 WebP using existing Pillow. The Rachel card is an original fashion-character interpretation after image-tool rejection, not a claimed actor likeness. The other portraits and overall palette follow the Slide 4 painted reference. The six files must load, be distinct, have clear focus/selected states, and reveal the correct descriptions. Exact actor fidelity is a documented limitation for Rachel. No footage, copied screenshots or new paid service/API key is required.
+
+Acceptance evidence for mouse/keyboard/touch inputs, 0-10 gauge mapping, all values and descriptions, independent fields/clearing, persistence, no default answer, unchanged pre-upgrade rankings, full reset, desktop/mobile/compact layouts and reduced motion is recorded in `screenshots/profile-upgrade/visual-review.md`. Do not infer completion from older 17-slide test counts. No push, release, deployment or repository-setting change is included.

@@ -1,5 +1,7 @@
 # Friends Comfort Lab - v1.0 FINAL Compliance Report
 
+**Publication continuation:** final commit/push and Pages verification are explicitly user-authorized after migration to D:. See [current evidence](docs/FINAL_PUBLICATION.md). Earlier pending-approval entries record the prior review stage; Moodle remains separate.
+
 Verification date: November 6, 2026. Scope: lecturer requirements as provided in the user's master instruction; the original Moodle assignment page was not independently accessed. "Pass" means the listed local evidence was checked, not a claim of lecturer approval. Public v1.0 deployment and Moodle submission are separate external actions.
 
 ## Mandatory lecturer requirements

@@ -1,0 +1,65 @@
+# Personal Comfort Profile upgrade - file manifest
+
+Questionnaire changes prepared from b9e1c2c, now included in the user-authorized final publication. The unrelated research ZIP and ignored raw test/image-generation sources are excluded. Existing historical prompt transcripts and previous screenshot directories are preserved. See [final publication](FINAL_PUBLICATION.md) for current status.
+
+- `DEVELOPMENT_JOURNEY.md`
+- `PRD.md`
+- `README.md`
+- `assets/portraits/chandler.webp`
+- `assets/portraits/joey.webp`
+- `assets/portraits/monica.webp`
+- `assets/portraits/phoebe.webp`
+- `assets/portraits/provenance.json`
+- `assets/portraits/rachel.webp`
+- `assets/portraits/ross.webp`
+- `index.html`
+- `llm_logs/README.md`
+- `llm_logs/llm_prompts_log.md`
+- `llm_logs/profile-portrait-prompts.json`
+- `llm_logs/profile-upgrade.md`
+- `profile-art.js`
+- `profile-experience.css`
+- `profile-experience.js`
+- `python/prepare_portraits.py`
+- `python/static_preview.py`
+- `screenshots/profile-upgrade/integrity-results.json`
+- `screenshots/profile-upgrade/presentation-regression-results.json`
+- `screenshots/profile-upgrade/preserved-ux-results.json`
+- `screenshots/profile-upgrade/profile-after-capture-results.json`
+- `screenshots/profile-upgrade/profile-after-contact-desktop.png`
+- `screenshots/profile-upgrade/profile-after-contact-mobile.png`
+- `screenshots/profile-upgrade/profile-after-desktop-10.png`
+- `screenshots/profile-upgrade/profile-after-desktop-11.png`
+- `screenshots/profile-upgrade/profile-after-desktop-12.png`
+- `screenshots/profile-upgrade/profile-after-desktop-13.png`
+- `screenshots/profile-upgrade/profile-after-desktop-14.png`
+- `screenshots/profile-upgrade/profile-after-desktop-15.png`
+- `screenshots/profile-upgrade/profile-after-mobile-10.png`
+- `screenshots/profile-upgrade/profile-after-mobile-11.png`
+- `screenshots/profile-upgrade/profile-after-mobile-12.png`
+- `screenshots/profile-upgrade/profile-after-mobile-13.png`
+- `screenshots/profile-upgrade/profile-after-mobile-14.png`
+- `screenshots/profile-upgrade/profile-after-mobile-15.png`
+- `screenshots/profile-upgrade/profile-before-capture-results.json`
+- `screenshots/profile-upgrade/profile-before-contact-desktop.png`
+- `screenshots/profile-upgrade/profile-before-contact-mobile.png`
+- `screenshots/profile-upgrade/profile-before-desktop-12.png`
+- `screenshots/profile-upgrade/profile-experience-results.json`
+- `screenshots/profile-upgrade/profile-layout-results.json`
+- `screenshots/profile-upgrade/profile-python-results.txt`
+- `screenshots/profile-upgrade/profile-python-summary.json`
+- `screenshots/profile-upgrade/profile-static-results.json`
+- `screenshots/profile-upgrade/visual-review.md`
+- `script.js`
+- `serve.cjs`
+- `tests/README.md`
+- `tests/fixtures/pre-profile-recommendations.json`
+- `tests/profile-capture.cjs`
+- `tests/profile-contact-sheets.ps1`
+- `tests/profile-experience-test.cjs`
+- `tests/profile-layout-test.cjs`
+- `tests/profile-static-test.cjs`
+- `tests/test_profile_assets.py`
+- `v06.js`
+
+- `docs/PROFILE_UPGRADE_FILES.md` (this manifest)

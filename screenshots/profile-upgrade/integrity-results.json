@@ -1,0 +1,10 @@
+{
+  "nonQuestionSlidesUnchanged": 11,
+  "protectedFilesUnchanged": 23,
+  "syntaxFiles": 9,
+  "missingCurrentDocLinks": [],
+  "secretPatternFiles": [],
+  "errors": [],
+  "baseline": "b9e1c2c406f817d03b604376d79938b82cf2554e",
+  "note": "Targeted source/link/pattern checks; not an exhaustive security audit."
+}

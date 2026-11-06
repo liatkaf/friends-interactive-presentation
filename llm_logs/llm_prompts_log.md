@@ -92,3 +92,8 @@ The final master request and interruption follow-up are recorded in [v1-finaliza
 ## Final v1.0 content refinement
 
 The student approved a recognizable Joey food-gag interaction with explicit educational payoff and removal of the former Slide 7, yielding 17 slides. [Faithful instruction/design summary and exact artwork prompt](v1-content-refinement.md). Existing history is retained; no invented transcript of alternative discussions was added. Actual reruns are recorded in the current visual review.
+
+
+## Final Personal Comfort Profile upgrade
+
+The user requested six distinct Friends-inspired questionnaire experiences while preserving the exact data/scoring/persistence contract. [Faithful instruction and actual decisions](profile-upgrade.md); [actual portrait prompts and tool outcomes](profile-portrait-prompts.json). Earlier history is preserved. The image-generation limitation for Rachel is explicitly recorded; no earlier conversation or test result is reconstructed as a transcript.

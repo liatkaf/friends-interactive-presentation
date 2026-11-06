@@ -48,12 +48,15 @@ let browser,ws,send,ownedBrowser=false;
   await send('Emulation.setDeviceMetricsOverride',{width:1440,height:1000,deviceScaleFactor:1,mobile:false});
   await send('Page.navigate',{url:base});
 
-  await waitFor("window.FriendsLab && document.querySelectorAll('.slide').length===18",'published presentation mounts',60000);
+  await waitFor("window.FriendsLab && document.querySelectorAll('.slide').length===17",'published final 17-slide presentation mounts',60000);
   await waitFor("document.querySelector('.coffee-experience')?.coffeeMug",'published mug mounts',60000);
   const figuresLoaded=await evaluate("Promise.all(FriendsLab.figures.map(f=>new Promise(resolve=>{const img=new Image();img.onload=()=>resolve(img.naturalWidth>0);img.onerror=()=>resolve(false);img.src='assets/research/'+f[3]}))).then(v=>v.every(Boolean))");
   test(figuresLoaded,'all seven published research figures load');
   await evaluate('goTo(4)');await waitFor("document.querySelector('#stairwell-view').dataset.mode==='three'",'published PIVOT mounts',30000);
   test(errors.length===0,'published frontend has no unexpected JavaScript errors: '+errors.join(' '));
-  const report={url:base,verifiedAt:new Date().toISOString(),publishedBaseline:'v0.7',v08Published:false,checks:checks,primarySlides:18,researchFiguresLoaded:7,threeJsMug:true,stairwell:true,errors};
-  fs.mkdirSync(path.join(root,'llm_logs'),{recursive:true});fs.writeFileSync(path.join(root,'llm_logs','pages_verification.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report));await send('Browser.close');ownedBrowser=false;
+  await evaluate('goTo(11)');
+  await waitFor("document.querySelectorAll('.portrait-gallery img').length===6&&[...document.querySelectorAll('.portrait-gallery img')].every(i=>i.complete&&i.naturalWidth===400)",'six published painted portraits load',60000);
+  await check("document.querySelector('#stress-o-meter')&&document.querySelector('.comfort-menu')&&document.querySelector('.fan-remote')",'latest questionnaire assets mounted');
+  const report={url:base,verifiedAt:new Date().toISOString(),publishedVersion:'v1.0 FINAL',checks:checks,primarySlides:17,researchFiguresLoaded:7,portraitsLoaded:6,threeJsMug:true,stairwell:true,errors};
+  fs.mkdirSync(path.join(root,'test-results'),{recursive:true});fs.writeFileSync(path.join(root,'test-results','final-pages-verification.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report));await send('Browser.close');ownedBrowser=false;
 })().catch(async error=>{console.error(error);if(send&&ws?.readyState===1)try{await send('Browser.close');}catch{}if(ownedBrowser)browser?.kill();process.exitCode=1;});

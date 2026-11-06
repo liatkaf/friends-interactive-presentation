@@ -18,6 +18,7 @@ function syncProfile(){
  $('#profile-stress').value=profile.stress??5;
  $('#profile-stress-value').textContent=profile.stress??'—';
  $('#profile-stress').style.setProperty('--stress-fill',((profile.stress??5)*10)+'%');
+ document.dispatchEvent(new CustomEvent('friends:profilechange'));
 }
 function updateProfile(key,value){if(value===undefined)delete profile[key];else profile[key]=value;generation++;lastFingerprint='';lastResult=null;pendingMatch=null;syncProfile();}
 $$('[data-answer]').forEach(b=>b.onclick=()=>updateProfile(b.dataset.answer,b.dataset.value));

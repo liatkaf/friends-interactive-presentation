@@ -10,8 +10,9 @@ let pythonWorker, sequence=0;
 const pendingPython=new Map();
 function executePython(operation,payload){
   if(!pythonWorker){
-    const command=process.env.FRIENDS_PYTHON || (process.platform==='win32'?'py':'python3');
-    const args=[...(process.platform==='win32'&&!process.env.FRIENDS_PYTHON?['-3']:[]),path.join(root,'python','episode_recommender.py'),'--worker'];
+    const localPython=path.join(root,'.venv',process.platform==='win32'?'Scripts/python.exe':'bin/python');
+    const command=process.env.FRIENDS_PYTHON || (fs.existsSync(localPython)?localPython:(process.platform==='win32'?'py':'python3'));
+    const args=[...(command==='py'?['-3']:[]),path.join(root,'python','episode_recommender.py'),'--worker'];
     const worker=spawn(command,args,{cwd:root,windowsHide:true,stdio:['pipe','pipe','pipe']});
     pythonWorker=worker;
     const fail=()=>{if(pythonWorker===worker)pythonWorker=undefined;for(const item of pendingPython.values()){clearTimeout(item.timer);item.reject(Error('Python unavailable'));}pendingPython.clear();};
@@ -21,7 +22,7 @@ function executePython(operation,payload){
   return new Promise((resolve,reject)=>{const id=++sequence;const timer=setTimeout(()=>{pendingPython.delete(id);reject(Error('Python timeout'));},12000);pendingPython.set(id,{resolve,reject,timer});pythonWorker.stdin.write(JSON.stringify({id,operation,payload})+'\n');});
 }
 process.on('exit',()=>pythonWorker?.kill());
-const types = { '.html': 'text/html', '.css': 'text/css', '.js': 'text/javascript', '.mjs': 'text/javascript', '.svg': 'image/svg+xml', '.png': 'image/png', '.gif': 'image/gif', '.json': 'application/json', '.md': 'text/plain', '.txt': 'text/plain' };
+const types = { '.html': 'text/html', '.css': 'text/css', '.js': 'text/javascript', '.mjs': 'text/javascript', '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp', '.gif': 'image/gif', '.json': 'application/json', '.md': 'text/plain', '.txt': 'text/plain' };
 const server = http.createServer((request, response) => {
   if (request.url === '/api/recommend' || request.url === '/api/simulate') {
     if(request.method !== 'POST') {response.writeHead(405).end();return;}
