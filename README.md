@@ -2,7 +2,7 @@
 
 [Published presentation](https://liatkaf.github.io/friends-interactive-presentation/) - [Public repository](https://github.com/liatkaf/friends-interactive-presentation)
 
-**Release status:** final publication is explicitly authorized following migration to D:. See the [final publication report](docs/FINAL_PUBLICATION.md) for current checks and deployment outcome. Earlier local-only notes below describe historical review stages. No release tag or Moodle submission is implied.
+**Release status:** v1.0 FINAL is published on GitHub Pages and verified November 6, 2026: 17 slides, six painted portraits, research/3D assets and static questionnaire matching. See the [final publication report](docs/FINAL_PUBLICATION.md). Earlier local-only notes below describe historical review stages. No release tag or Moodle submission was created.
 
 An original, research-first HTML presentation exploring why familiar television can feel comforting, followed by an optional six-step profile and an explainable recommendation from **22 real Friends episodes**. It has **17 primary slides**: nine research/story slides, six questionnaire slides and two recommendation slides. The student approved removing the previous social mini-story after review; the lecturer's approximately ten-slide suggestion remains flexible.
 

@@ -1,5 +1,9 @@
 # Development Journey - Friends Comfort Lab
 
+## Final migration and publication
+
+The complete project was moved to D: after C: ran out of space. The user explicitly authorized final publication while preserving the original project and all history. The Python environment was rebuilt on D:, current tests passed, and commit `371ab83` published the 17-slide deck and latest questionnaire/portraits. Live Pages browser, ranking and 77-file asset checks passed. See [publication evidence and remaining university tasks](docs/FINAL_PUBLICATION.md).
+
 This is a reconstructed summary supported by actual repository history and recorded user instructions, not a transcript of missing conversations.
 
 The user chose Friends as the topic and directed a warm Central Perk/purple-door visual identity. The early presentation became a research-informed interactive experience rather than a collection of trivia. Git records the initial project (`738469b`) and v0.4 (`feaf0e6`). These commits are retained, not rewritten.

@@ -68,7 +68,7 @@ Desktop and mobile layouts may scroll vertically at small sizes or large fonts b
 - [x] Genuine Three.js and preserved game rules/context recovery verified.
 - [x] All 17 desktop/mobile slides captured and visually reviewed; corrections and retests recorded in the visual report.
 - [x] Research source/design audit recorded in `docs/RESEARCH_INTEGRITY_AUDIT.md`.
-- [ ] Final v1.0 GitHub Pages deployment: push is now explicitly approved; see `docs/FINAL_PUBLICATION.md` for deployment verification.
+- [x] Final v1.0 GitHub Pages deployment: user-authorized push and live browser/asset verification completed; see `docs/FINAL_PUBLICATION.md`.
 - [ ] Physical-device and formal assistive-technology testing: not performed; not a claimed release certification.
 - [ ] External human academic review and Moodle submission: outside completed local repository work.
 
