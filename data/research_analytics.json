@@ -226,8 +226,8 @@
         "outcome": "Correct RAT items",
         "original_unit": "Number of correct puzzle answers",
         "source_locator": "Study 1 results and Figure 1",
-        "verified_on": "2026-11-02",
-        "verification_url": "https://citeseerx.ist.psu.edu/document?doi=cfe2b9c03f302fe27a2702d4391a56f11105ee71&repid=rep1&type=pdf",
+        "verified_on": "2026-11-06",
+        "verification_url": "https://www.researchgate.net/publication/235665383_Energized_by_Television_Familiar_Fictional_Worlds_Restore_Self-Control",
         "contrasts": [
           {
             "comparison": "Writing regulation by recall interaction",
@@ -265,8 +265,8 @@
         "outcome": "Negative mood",
         "original_unit": "Mean rating, 1-7",
         "source_locator": "Study 1 results and Figure 2",
-        "verified_on": "2026-11-02",
-        "verification_url": "https://citeseerx.ist.psu.edu/document?doi=cfe2b9c03f302fe27a2702d4391a56f11105ee71&repid=rep1&type=pdf",
+        "verified_on": "2026-11-06",
+        "verification_url": "https://www.researchgate.net/publication/235665383_Energized_by_Television_Familiar_Fictional_Worlds_Restore_Self-Control",
         "contrasts": [
           {
             "comparison": "Writing regulation by recall interaction",
@@ -304,8 +304,8 @@
         "outcome": "Day 3 negative mood",
         "original_unit": "Mean rating, 1-7",
         "source_locator": "Study 2 results, Table 2 and Figure 3",
-        "verified_on": "2026-11-02",
-        "verification_url": "https://citeseerx.ist.psu.edu/document?doi=cfe2b9c03f302fe27a2702d4391a56f11105ee71&repid=rep1&type=pdf",
+        "verified_on": "2026-11-06",
+        "verification_url": "https://www.researchgate.net/publication/235665383_Energized_by_Television_Familiar_Fictional_Worlds_Restore_Self-Control",
         "contrasts": [
           {
             "comparison": "Day 1 self-control by Day 2 familiar-world use",
@@ -338,5 +338,5 @@
   ],
   "generated_by": "Python 3 build-time research_analytics.py; not a live browser Python session",
   "transform_note": "Bar widths are mean / 7 \u00d7 100 for display only. No figure values are estimated.",
-  "source_sha256": "d419b8bff7e652218cfa5de062980f89fa6720a8092775de9b70bc8c98c00930"
+  "source_sha256": "707fc54ffb2d1e1d36994d9df8bc6b3b25ca138440f7b6f67db035dc8c9fae1f"
 }

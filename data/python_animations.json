@@ -1,0 +1,125 @@
+{
+  "version": "1.0 FINAL",
+  "renderer": "Python / Pillow 10.4.0",
+  "width": 960,
+  "height": 400,
+  "frames": 16,
+  "duration_ms": 2400,
+  "author_source": "python/generate_animations.py",
+  "source_sha256": "707fc54ffb2d1e1d36994d9df8bc6b3b25ca138440f7b6f67db035dc8c9fae1f",
+  "code_sha256": "f6d123323e734215f9da9deacd27337d47839cfcbc0e578303e72ccccf5a4b42",
+  "animations": {
+    "social-scene": {
+      "kind": "fictional illustration",
+      "figure_index": null,
+      "paths": {
+        "atlas": "assets/generated/social-scene-atlas.png",
+        "poster": "assets/generated/social-scene-poster.png",
+        "preview": "assets/generated/social-scene-preview.gif"
+      },
+      "sha256": {
+        "atlas": "99cd5524d43970f3e032d13f0e1afa3f73951934f5ef49845ea7a22ddc13b216",
+        "poster": "b687a62849405715885b02a5fd0b88e501b1823ee1bd5363aede47cccbdd9066",
+        "preview": "b1365b3f452ca2441626db55d7f558a1407aab7a41d6d1a9f55185fa78136653"
+      }
+    },
+    "evidence-0": {
+      "kind": "qualitative research summary",
+      "figure_index": 0,
+      "paths": {
+        "atlas": "assets/generated/evidence-0-atlas.png",
+        "poster": "assets/generated/evidence-0-poster.png",
+        "preview": "assets/generated/evidence-0-preview.gif"
+      },
+      "sha256": {
+        "atlas": "b45dc1f6f56b30953e3ca82aa731a3ca8041de88d1f6442ab772ca790ee04272",
+        "poster": "216eaaafadc10dafae6b7d78e53f92ef2a8bc346942af673c983cee4cbf60e82",
+        "preview": "35e5ac4c51f14b90e4035bea0d8b8fd549d0ab0da95ba9b01b08f7df54bd62aa"
+      }
+    },
+    "evidence-1": {
+      "kind": "qualitative research summary",
+      "figure_index": 1,
+      "paths": {
+        "atlas": "assets/generated/evidence-1-atlas.png",
+        "poster": "assets/generated/evidence-1-poster.png",
+        "preview": "assets/generated/evidence-1-preview.gif"
+      },
+      "sha256": {
+        "atlas": "188ee4dc12ae9ce5d1cb3c96646f5feacffdfa39e253308f025fdc3731943f89",
+        "poster": "98a78bf3aeff90e84612ea4f90bef3a1a473b7bdc94fe768c3a1da7d55991929",
+        "preview": "bbdd6bfa1c609856abb643a6c17c910db230c12410b2d02764236a8b3235bf16"
+      }
+    },
+    "evidence-2": {
+      "kind": "qualitative research summary",
+      "figure_index": 2,
+      "paths": {
+        "atlas": "assets/generated/evidence-2-atlas.png",
+        "poster": "assets/generated/evidence-2-poster.png",
+        "preview": "assets/generated/evidence-2-preview.gif"
+      },
+      "sha256": {
+        "atlas": "629211747b90d41aba9f06860445e74c19bab059df24c6f98477c3837076b0d3",
+        "poster": "c727dbe4744c63bdc66cd7d769642a9836b455b393636b8883b294c6baf3dd24",
+        "preview": "1684c26ca7a311076d2a8848e3cc3df19ee4fbca3024c863e2f50330e05425c4"
+      }
+    },
+    "evidence-3": {
+      "kind": "qualitative research summary",
+      "figure_index": 3,
+      "paths": {
+        "atlas": "assets/generated/evidence-3-atlas.png",
+        "poster": "assets/generated/evidence-3-poster.png",
+        "preview": "assets/generated/evidence-3-preview.gif"
+      },
+      "sha256": {
+        "atlas": "0a7804d62317748ee8126da046331fc4e23d041daaaa0c74e99e6c9a276e6ae9",
+        "poster": "9a1e6b0f392c98d0ed802a5e414f69ba2330eaa9feca3a1bbc6d1f90ef564504",
+        "preview": "c5cf10cac48e0217b960614082ef6b0562d4995d2f2bf2c060d8604e03ca637c"
+      }
+    },
+    "evidence-4": {
+      "kind": "qualitative research summary",
+      "figure_index": 4,
+      "paths": {
+        "atlas": "assets/generated/evidence-4-atlas.png",
+        "poster": "assets/generated/evidence-4-poster.png",
+        "preview": "assets/generated/evidence-4-preview.gif"
+      },
+      "sha256": {
+        "atlas": "7dae537e8849a0c366e5b4298b031585c5e69b1e4e47e70c51da32caee54e4d1",
+        "poster": "28a23948954b30772ad3f090ebc236b100f70f3dce3ac7e7a6b0c04e34061c67",
+        "preview": "7a67ace88af9499bfddf6a39dfe68a4cac954ad5e9bf8915f5481574010577a6"
+      }
+    },
+    "evidence-5": {
+      "kind": "qualitative research summary",
+      "figure_index": 5,
+      "paths": {
+        "atlas": "assets/generated/evidence-5-atlas.png",
+        "poster": "assets/generated/evidence-5-poster.png",
+        "preview": "assets/generated/evidence-5-preview.gif"
+      },
+      "sha256": {
+        "atlas": "f369b1f28e0b1a4ff1922ab62c07705f0df9266d13c0798aac6f78e4ff85940a",
+        "poster": "cefee46ac1493d6d51c9aa38264b0a4c34a89bfb4b365b828110ab1b240ad771",
+        "preview": "c031fd7457ab4178f963e96a5821ba0d454c8a7c4762be8d4044b7b4d4ac8a05"
+      }
+    },
+    "evidence-6": {
+      "kind": "qualitative research summary",
+      "figure_index": 6,
+      "paths": {
+        "atlas": "assets/generated/evidence-6-atlas.png",
+        "poster": "assets/generated/evidence-6-poster.png",
+        "preview": "assets/generated/evidence-6-preview.gif"
+      },
+      "sha256": {
+        "atlas": "b356645f97e34bdd341e69046ef145e301db753d3b443372aa7150e65dc59ab3",
+        "poster": "91bf8ac3e04e085a6ec2c198445cd1173415e1e46adf45388df423e723716249",
+        "preview": "7a1347dacbb409202b27b696766bc41a4efd401b76bd306524551f5e11647188"
+      }
+    }
+  }
+}

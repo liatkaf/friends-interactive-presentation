@@ -1,0 +1,3 @@
+# Only the offline asset-authoring step needs this dependency.
+# Tested with Python 3.8.8; the presentation itself needs no Pillow installation.
+Pillow==10.4.0
