@@ -9,7 +9,11 @@ function fallbackScore(e,p){
  const t=(p.stress??5)/10;add('stress',(t*e.warmth+(1-t)*e.comedy)/5,'Editorial warmth/comedy blend weighted by your self-reported stress; no predicted health effect.');
  add('character',Number(e.characters.includes(p.character)),`Featured character match: ${p.character}.`);
  const quote=window.FRIENDS_V05.quotes.find(q=>q.id===p.quote);
- if(quote?.match_mode==='character')add('quote',e.characters.includes(quote.character)?0.5:0,`Editorial quote-to-character match: ${quote.label} \u2192 ${quote.character}. Half credit when featured; no exact scene claimed.`);
+ if(quote?.match_mode==='editorial'){
+   const preferred=quote.episode_affinities.includes(e.id),featured=e.characters.includes(quote.character);
+   add('quote',preferred?1:featured?0.5:0,`Editorial quote-theme match: ${quote.label} \u2192 ${quote.match_theme}. ${preferred?'Preferred thematic episode':featured?'Featured character affinity':'No thematic or character match'}; no exact scene or health effect claimed.`);
+ }
+ else if(quote?.match_mode==='character')add('quote',e.characters.includes(quote.character)?0.5:0,`Editorial quote-to-character match: ${quote.label} \u2192 ${quote.character}. Half credit when featured; no exact scene claimed.`);
  else add('quote',Number(e.quotes.includes(p.quote)),`Exact selected quote association: ${p.quote}.`);
  add('nostalgia',1-Math.abs(e.nostalgia-({low:1,medium:3,high:5}[p.nostalgia]??3))/4,'Closeness to your nostalgia preference (editorial 1–5 rating).');
  add('familiarity',p.familiarity==='new'?Number(e.beginner_friendly):p.familiarity==='rewatcher'?e.nostalgia/5:.75,'New viewers favor standalone stories; rewatchers favor editorial nostalgia; some familiarity receives 0.75 credit.');

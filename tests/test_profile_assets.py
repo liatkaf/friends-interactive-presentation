@@ -27,7 +27,10 @@ class ProfileAssets(unittest.TestCase):
     def test_pre_upgrade_python_rankings(self):
         baseline=json.loads((ROOT/'tests/fixtures/pre-profile-recommendations.json').read_text(encoding='utf-8'))
         self.assertEqual(len(baseline['cases']),20)
-        for case in baseline['cases']:
+        current_quotes={q['id'] for q in json.loads((ROOT/'data/quotes.json').read_text(encoding='utf-8'))}
+        current_cases=[c for c in baseline['cases'] if not c['profile'].get('quote') or c['profile']['quote'] in current_quotes]
+        self.assertEqual(len(current_cases),18)  # Two intentionally replaced quote-only cases remain historical.
+        for case in current_cases:
             self.assertEqual(recommend(case['profile'])['recommendations'],case['recommendations'])
 
 if __name__=='__main__':unittest.main()

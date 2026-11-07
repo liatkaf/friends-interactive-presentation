@@ -164,11 +164,11 @@ The profile screenshots use deliberately selected example answers: Happy, stress
 
 ![Slide 13 of 17: Which Quote Speaks to You?](screenshots/readme-tour/slide-13.webp)
 
-**Purpose:** Capture a different kind of affinity through a memorable quote rather than repeating the character question.
+**Purpose:** Connect Rachel's search for independence and Chandler's humor in uncomfortable moments with the broader theme of emotional comfort.
 
-**What makes it special:** Select one of six gold-framed quotes to reveal its character and theme. The chosen frame lifts and brightens, while the quote's original identifier remains the recommendation input.
+**What makes it special:** Choose among six framed quotes, one per character. Selection lifts the frame and reveals its character and theme; Clear Answer removes it without changing other preferences.
 
-**Behind the scenes:** HTML buttons, CSS frame styling and JavaScript share the authoritative quote catalog. Scoring distinguishes exact quote associations from editorial character affinity; the result explains which kind contributed.
+**Behind the scenes:** HTML/CSS and JavaScript retain the interaction. Rachel's independence and Chandler's humor-as-coping lines use explicit editorial episode affinities, labelled as thematic matches rather than verified quote scenes.
 
 ### Slide 14 — What Kind of Comfort Do You Need?
 
@@ -327,11 +327,11 @@ The existing questionnaire remains on **Slides 10-15** (indices 9-14). It now us
 | 10 | Six original mood symbols respond to hover/focus and selection | Same six mood values and grid |
 | 11 | Retro Stress-O-Meter, moving needle, native slider and playful caption | Same 0-10 input; midpoint preview does not count as an answer |
 | 12 | Six warm painted portraits; selected card reveals its personality description | Same character values, one selection, persistent on revisit |
-| 13 | Gold-framed Quote Wall; selection reveals character/theme | Same six exact quote IDs, text and scoring mappings |
+| 13 | Gold-framed Quote Wall; selection reveals character/theme | Six characters, one each; final Rachel/Chandler lines and their explicit editorial mappings |
 | 14 | Central Perk menu with five illustrated items and immediate order ticket | Same experience values; no checkout step |
 | 15 | TV-remote familiarity buttons plus independent nostalgia dial and completion cue | Same three values per field; no automatic navigation |
 
-The existing progress, Skip / Continue, Clear Answer, refresh persistence and full Try Again reset remain. Individual familiarity/nostalgia clear controls use the existing clear handler. `v06.js` still owns the single profile store; `profile-experience.js` only renders its state after `friends:profilechange`. No new storage, scoring rules or recommendation fields. Twenty pre-upgrade recommendation fixtures verify ranking/factor equivalence.
+The existing progress, Skip / Continue, Clear Answer, refresh persistence and full Try Again reset remain. Individual familiarity/nostalgia clear controls use the existing clear handler. `v06.js` still owns the single profile store; `profile-experience.js` only renders its state after `friends:profilechange`. The [final quote update](docs/SLIDE13_QUOTE_UPDATE.md) changes only Rachel's and Chandler's quote inputs and editorial affinities. All 18 still-current pre-upgrade cases retain exact ranking/factor equivalence; two retired quote-only cases remain in the unchanged historical fixture.
 
 **Portrait provenance:** generated with the actual built-in image tool using Slide 4 as the painted-style reference. The Rachel card uses an original fashion-character interpretation after image-tool rejections, so exact actor likeness is not claimed; Phoebe uses an original fictional interpretation. [Exact prompts/outcomes](llm_logs/profile-portrait-prompts.json) and [asset hashes](assets/portraits/provenance.json) document this limitation. The six optimized WebP assets total about **189 KB**. No new dependency: the existing Pillow 10.4.0 is used solely for resizing/encoding, not portrait authorship. The local server includes the WebP MIME type; static hosting needs no Python runtime for these assets.
 
@@ -344,7 +344,7 @@ To re-export from the original generated PNGs (not included as large runtime ass
 Original generation is nondeterministic and needs an image-generation capability; the app itself uses only the bundled optimized files. [Current before/after screenshots, executed tests and limitations](screenshots/profile-upgrade/visual-review.md). [Recorded instruction and design rationale](llm_logs/profile-upgrade.md). That earlier upgrade was subsequently included in the published v1.0 FINAL release.
 
 
-[Changed and added files](docs/PROFILE_UPGRADE_FILES.md). Executed current QA: 267 dedicated profile checks, 433 presentation checks, 91 retained UX checks, 26 Python tests, 36 layout cases and 34 static-host checks; before/after capture runs each passed 14 checks. See the current profile visual review for raw results and the Rachel likeness limitation.
+[Changed and added files](docs/PROFILE_UPGRADE_FILES.md). Profile-upgrade milestone QA: 267 dedicated profile checks, 433 presentation checks, 91 retained UX checks, 26 Python tests, 36 layout cases and 34 static-host checks; before/after capture runs each passed 14 checks. See the profile visual review for those results and the Rachel likeness limitation; the subsequent [final quote update](docs/SLIDE13_QUOTE_UPDATE.md) records current quote-specific checks.
 
 ### Verification and reproducibility
 

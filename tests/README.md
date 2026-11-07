@@ -1,5 +1,9 @@
 # Current test entry points - final 17-slide refinement
 
+## Final Slide 13 quotes
+
+Run `node tests/quote-update-test.cjs` against `TEST_BASE` for the exact six cards, one character each, mouse/keyboard selection, transitions, persistence, clear/skip/reset, 15 layout cases, all-slide navigation and the retained PIVOT scene. Set `TEST_PYTHON=1` on the local API server to include Python/JavaScript parity for both new quotes. The same suite runs against static HTTP and Pages without that flag. `test_quote_update.py` is included in full Python discovery. The two retired quote-only cases remain untouched in the historical golden fixture; current profile suites still compare all 18 unaffected cases exactly.
+
 Run browser suites sequentially against the already running local preview; avoid duplicate headless/software-WebGL processes. Check listener ports before starting a server. The current review preview is http://127.0.0.1:8011.
 
 ```powershell

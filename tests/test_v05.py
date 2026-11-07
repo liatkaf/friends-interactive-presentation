@@ -24,8 +24,8 @@ class Version05Tests(unittest.TestCase):
         self.assertEqual(next(e for e in data if 'PIVOT!' in e['quotes'])['id'],'s05e16')
         self.assertEqual(next(e for e in data if "How you doin'?" in e['quotes'])['id'],'s04e13')
     def test_quote_drives_matching(self):
-        r=recommend({'quote':'PIVOT!'})['recommendations'][0]
-        self.assertEqual(r['episode']['id'],'s05e16')
+        r=recommend({'quote':"I'm gonna go get one of those job things."})['recommendations'][0]
+        self.assertEqual(r['episode']['id'],'s01e01')
         self.assertEqual(r['score'],100)
         self.assertEqual(r['factors'][0]['points'],18)
     def test_incomplete_and_deterministic(self):
@@ -42,7 +42,7 @@ class Version05Tests(unittest.TestCase):
                     if f['points']>0:self.assertIn(f['reason'],r['explanation'])
         self.assertEqual(recommend({})['recommendations'][0]['score'],0)
     def test_all_factors_and_validation(self):
-        p=dict(mood='happy',stress=6,character='Ross',quote='PIVOT!',nostalgia='high',familiarity='rewatcher',predictability='predictable',experience='laughter')
+        p=dict(mood='happy',stress=6,character='Ross',quote="I'm gonna go get one of those job things.",nostalgia='high',familiarity='rewatcher',predictability='predictable',experience='laughter')
         self.assertEqual(len(recommend(p)['recommendations'][0]['factors']),8)
         self.assertEqual(clean_profile({'stress':float('nan'),'quote':'fake','mood':'happy'}),{'mood':'happy'})
         self.assertEqual(clean_profile({'stress':True}),{})

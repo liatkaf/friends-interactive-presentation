@@ -1,8 +1,66 @@
 [
-  {"id":"PIVOT!","label":"PIVOT!","character":"Ross","name":"Ross Geller","theme":"Comic chaos and determination","match_mode":"scene","source_note":"Exact scene association retained: S5E16."},
-  {"id":"How you doin'?","label":"How you doin'?","character":"Joey","name":"Joey Tribbiani","theme":"Playful confidence and charm","match_mode":"scene","source_note":"Exact greeting association retained: S4E13."},
-  {"id":"We were on a break!","label":"We were on a break!","character":"Ross","name":"Ross Geller","theme":"Defensive passion and iconic debate","match_mode":"character","source_note":"Recurring Ross catchphrase. Editorial character association; no exact episode occurrence asserted."},
-  {"id":"Could I BE any more...?","label":"Could I BE any more...?","character":"Chandler","name":"Chandler Bing","theme":"Sarcastic wit and self-deprecation","match_mode":"character","source_note":"Catchphrase template rather than a complete scene quotation. Editorial Chandler association only."},
-  {"id":"Smelly Cat","label":"Smelly Cat","character":"Phoebe","name":"Phoebe Buffay","theme":"Quirky individuality and humor","match_mode":"scene","source_note":"Exact performance/recording associations retained: S2E6/S2E17."},
-  {"id":"I know!","label":"I know!","character":"Monica","name":"Monica Geller","theme":"High energy and perfectionism","match_mode":"character","source_note":"Recurring Monica catchphrase. Editorial character association; no exact episode occurrence asserted."}
+  {
+    "id": "I'm gonna go get one of those job things.",
+    "label": "I'm gonna go get one of those job things.",
+    "character": "Rachel",
+    "name": "Rachel Green",
+    "theme": "Finding independence, one awkward step at a time.",
+    "match_mode": "editorial",
+    "match_theme": "independence and personal growth",
+    "episode_affinities": [
+      "s01e01"
+    ],
+    "source_note": "User-selected Rachel line; publisher supports the wording and independence context. Episode affinity is editorial, not an exact scene-occurrence claim.",
+    "source_url": "https://www.hachette.com.au/oh/the-one-about-their-best-one-liners-the-little-guide-to-friends"
+  },
+  {
+    "id": "How you doin'?",
+    "label": "How you doin'?",
+    "character": "Joey",
+    "name": "Joey Tribbiani",
+    "theme": "Playful confidence and charm",
+    "match_mode": "scene",
+    "source_note": "Exact greeting association retained: S4E13."
+  },
+  {
+    "id": "We were on a break!",
+    "label": "We were on a break!",
+    "character": "Ross",
+    "name": "Ross Geller",
+    "theme": "Defensive passion and iconic debate",
+    "match_mode": "character",
+    "source_note": "Recurring Ross catchphrase. Editorial character association; no exact episode occurrence asserted."
+  },
+  {
+    "id": "I make jokes when I'm uncomfortable.",
+    "label": "I make jokes when I'm uncomfortable.",
+    "character": "Chandler",
+    "name": "Chandler Bing",
+    "theme": "Turning awkward moments into laughter.",
+    "match_mode": "editorial",
+    "match_theme": "humor and emotional comfort",
+    "episode_affinities": [
+      "s04e08"
+    ],
+    "source_note": "User-requested excerpt of the longer Chandler line beginning with his self-introduction, supported by the publisher. Humor-as-coping is an educational interpretation; episode affinity is editorial, not an exact scene claim.",
+    "source_url": "https://www.hachette.com.au/oh/the-one-about-their-best-one-liners-the-little-guide-to-friends"
+  },
+  {
+    "id": "Smelly Cat",
+    "label": "Smelly Cat",
+    "character": "Phoebe",
+    "name": "Phoebe Buffay",
+    "theme": "Quirky individuality and humor",
+    "match_mode": "scene",
+    "source_note": "Exact performance/recording associations retained: S2E6/S2E17."
+  },
+  {
+    "id": "I know!",
+    "label": "I know!",
+    "character": "Monica",
+    "name": "Monica Geller",
+    "theme": "High energy and perfectionism",
+    "match_mode": "character",
+    "source_note": "Recurring Monica catchphrase. Editorial character association; no exact episode occurrence asserted."
+  }
 ]

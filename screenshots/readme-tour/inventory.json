@@ -554,22 +554,18 @@
       },
       "profile": {
         "mood": "happy",
-        "stress": 5,
-        "character": "Monica",
-        "quote": "I know!",
-        "experience": "warmth",
-        "familiarity": "rewatcher",
-        "nostalgia": "high"
+        "quote": "I know!"
       },
-      "url": "https://liatkaf.github.io/friends-interactive-presentation/#slide-13",
+      "url": "http://127.0.0.1:8030/#slide-13",
       "portraitsLoaded": true,
       "file": "screenshots/readme-tour/slide-13.webp",
-      "sha256": "d7a52244ecf59dcbf13e19aede4f5c77b4ec623590b30496cdeb8965488147c9",
-      "raw_sha256": "f7ee5c193cc4690f416c5f25480ece0295161159fe47887e0425dd17dc4d522d",
+      "sha256": "d907a6deb4830d95045603770c5587356f196f4a2f5caf334c620041e873ad18",
+      "raw_sha256": "9624f0e88f7391f496787dfcc715af2d08b1a3596a631b29508c27307febf7f8",
       "width": 1440,
       "height": 1000,
-      "bytes": 59616,
-      "visualReview": "Verified individually: correct numbered slide, expected content/state, complete primary-slide framing and legible at full resolution."
+      "bytes": 64996,
+      "visualReview": "Individually checked: all six final quotes in correct positions, selected Monica state, complete 1440x1000 framing.",
+      "amendment": "Final approved Rachel and Chandler quote replacements; captured from the release-candidate source and verified after Pages publication."
     },
     {
       "name": "slide-14",
@@ -1075,5 +1071,13 @@
       "goldenCases": 20,
       "mode": "Clean static HTTP, no Python API"
     }
+  },
+  "quoteUpdateAmendment": {
+    "baselineCommit": "d5cd3f00622399aa8f606a12885eafc8635fb10e",
+    "onlyPrimaryImageReplaced": "slide-13.webp",
+    "quoteInventory": "../../data/quotes.json",
+    "checks": 65,
+    "layoutCases": 15,
+    "source": "release-candidate local HTTP; published content verified after push"
   }
 }

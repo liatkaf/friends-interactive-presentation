@@ -1,0 +1,175 @@
+{
+  "passed": 65,
+  "errors": [],
+  "quotes": [
+    [
+      "I'm gonna go get one of those job things.",
+      "Rachel Green",
+      "Finding independence, one awkward step at a time."
+    ],
+    [
+      "How you doin'?",
+      "Joey Tribbiani",
+      "Playful confidence and charm"
+    ],
+    [
+      "We were on a break!",
+      "Ross Geller",
+      "Defensive passion and iconic debate"
+    ],
+    [
+      "I make jokes when I'm uncomfortable.",
+      "Chandler Bing",
+      "Turning awkward moments into laughter."
+    ],
+    [
+      "Smelly Cat",
+      "Phoebe Buffay",
+      "Quirky individuality and humor"
+    ],
+    [
+      "I know!",
+      "Monica Geller",
+      "High energy and perfectionism"
+    ]
+  ],
+  "layouts": [
+    {
+      "width": 1440,
+      "height": 1000,
+      "selected": 0,
+      "scroll": 936,
+      "client": 936,
+      "clientWidth": 1440,
+      "labels": true
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "selected": 3,
+      "scroll": 936,
+      "client": 936,
+      "clientWidth": 1440,
+      "labels": true
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "selected": 5,
+      "scroll": 936,
+      "client": 936,
+      "clientWidth": 1440,
+      "labels": true
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "selected": 0,
+      "scroll": 704,
+      "client": 704,
+      "clientWidth": 1366,
+      "labels": true
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "selected": 3,
+      "scroll": 704,
+      "client": 704,
+      "clientWidth": 1366,
+      "labels": true
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "selected": 5,
+      "scroll": 704,
+      "client": 704,
+      "clientWidth": 1366,
+      "labels": true
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "selected": 0,
+      "scroll": 704,
+      "client": 704,
+      "clientWidth": 1024,
+      "labels": true
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "selected": 3,
+      "scroll": 704,
+      "client": 704,
+      "clientWidth": 1024,
+      "labels": true
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "selected": 5,
+      "scroll": 704,
+      "client": 704,
+      "clientWidth": 1024,
+      "labels": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "selected": 0,
+      "scroll": 786,
+      "client": 786,
+      "clientWidth": 390,
+      "labels": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "selected": 3,
+      "scroll": 786,
+      "client": 786,
+      "clientWidth": 390,
+      "labels": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "selected": 5,
+      "scroll": 786,
+      "client": 786,
+      "clientWidth": 390,
+      "labels": true
+    },
+    {
+      "width": 320,
+      "height": 844,
+      "selected": 0,
+      "scroll": 786,
+      "client": 786,
+      "clientWidth": 320,
+      "labels": true
+    },
+    {
+      "width": 320,
+      "height": 844,
+      "selected": 3,
+      "scroll": 786,
+      "client": 786,
+      "clientWidth": 320,
+      "labels": true
+    },
+    {
+      "width": 320,
+      "height": 844,
+      "selected": 5,
+      "scroll": 786,
+      "client": 786,
+      "clientWidth": 320,
+      "labels": true
+    }
+  ],
+  "primarySlides": 17,
+  "mode": "Local Python and JavaScript"
+}

@@ -40,7 +40,13 @@ def score_episode(episode, profile):
     add('stress', fit, 'Editorial warmth/comedy blend weighted by your self-reported stress; no predicted health effect.')
     add('character', int(p.get('character') in e['characters']), 'Featured character match: ' + str(p.get('character')) + '.')
     quote = QUOTES.get(p.get('quote'))
-    if quote and quote['match_mode'] == 'character':
+    if quote and quote['match_mode'] == 'editorial':
+        preferred = e['id'] in quote['episode_affinities']
+        featured = quote['character'] in e['characters']
+        match = 'Preferred thematic episode' if preferred else 'Featured character affinity' if featured else 'No thematic or character match'
+        add('quote', 1 if preferred else 0.5 if featured else 0,
+            'Editorial quote-theme match: '+quote['label']+' → '+quote['match_theme']+'. '+match+'; no exact scene or health effect claimed.')
+    elif quote and quote['match_mode'] == 'character':
         add('quote', 0.5 if quote['character'] in e['characters'] else 0,
             'Editorial quote-to-character match: '+quote['label']+' → '+quote['character']+'. Half credit when featured; no exact scene claimed.')
     else:

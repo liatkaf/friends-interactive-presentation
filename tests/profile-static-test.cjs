@@ -58,6 +58,8 @@ let browser,ws,send,ownedBrowser=false;
   await evaluate("goTo(10);document.querySelector('#profile-stress').value=7;document.querySelector('#profile-stress').dispatchEvent(new Event('input'))");
   await check("FriendsLab.profile.stress===7&&document.querySelector('#stress-o-meter').dataset.band==='high'&&document.querySelector('#profile-stress-value').textContent==='7'",'static native input drives gauge');
   const fixture=JSON.parse(fs.readFileSync(path.join(root,'tests','fixtures','pre-profile-recommendations.json'),'utf8'));
+  const currentQuotes=new Set(JSON.parse(fs.readFileSync(path.join(root,'data','quotes.json'),'utf8')).map(q=>q.id));
+  fixture.cases=fixture.cases.filter(c=>!c.profile.quote||currentQuotes.has(c.profile.quote)); // Retired quote cases remain in the historical fixture.
   for(let i=0;i<fixture.cases.length;i++){
     const item=fixture.cases[i];
     await check(`(()=>{const canonical=x=>JSON.stringify(x,(_,v)=>v&&typeof v==='object'&&!Array.isArray(v)?Object.fromEntries(Object.entries(v).sort(([a],[b])=>a.localeCompare(b))):v);return canonical(FriendsLab.fallbackRecommend(${JSON.stringify(item.profile)}).recommendations)===canonical(${JSON.stringify(item.recommendations)});})()`,'static ranking remains baseline-equivalent '+i);
