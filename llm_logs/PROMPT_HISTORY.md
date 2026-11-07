@@ -5764,3 +5764,17 @@ Session: `6ae1f91c-6554-83eb-be3c-5b7a154ec917`; source locator: turn c09e8b06-b
 ## Existing project summaries — separate secondary evidence
 
 The original `llm_logs/llm_prompts_log.md` is preserved at [sources/project/llm_logs/llm_prompts_log.md](sources/project/llm_logs/llm_prompts_log.md). It describes v0.8–v0.9 in summarized form. It is not a verbatim conversation and is not substituted for missing messages. README/PRD snapshots likewise describe requirements or implementation, not original dialogue.
+
+## Subsequent Slide 13 update — 2026-11-07
+
+The following entries summarize the latest user instructions in the current conversation. They are editorial summaries, not verbatim transcripts; no unavailable timestamp, session identifier, or assistant response is reconstructed.
+
+### User prompt 1 — approved final quote changes and publication
+
+The user requested two targeted replacements on Slide 13 while preserving the 17-slide presentation and its existing interactions. Replace the first card, formerly Ross Geller's “PIVOT!”, with Rachel Green's “I'm gonna go get one of those job things.” and the description “Finding independence, one awkward step at a time.” Replace Chandler Bing's “Could I BE any more...?” with “I make jokes when I'm uncomfortable.” and “Turning awkward moments into laughter.” Keep the other four cards, including Ross's “We were on a break!”, in place; do not change the Slide 5 PIVOT game.
+
+The user also requested updating Rachel/Chandler recommendation affinities only where necessary, refreshing the README's Slide 13 screenshot and explanation, preserving other project history and content, running targeted and regression checks, and publishing the authorized changes to the existing `main` branch without creating a release tag.
+
+### User prompt 2 — check and append prompt history
+
+The user asked whether the latest Slide 13 instructions were already represented in the AI prompt history. If missing, append them chronologically, clearly identifying both quote replacements and the README update. Existing historical prompts must remain unchanged; no presentation, tests, or other documentation should be modified.
