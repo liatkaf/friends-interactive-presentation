@@ -1,5 +1,7 @@
 # Guided README tour — inventory and review
 
+**Local Slide 1 author-credit preview (2026-11-10):** the primary image now shows Livnat Benson and Liat Kafezider with their requested IDs. It was captured from the local working copy; the public presentation and public README are unchanged until approval. Only `slide-01.webp` was replaced; hashes for the other 16 primary images and all 8 interaction-state images remain unchanged. Desktop, laptop, mobile and README-sized captures were checked for readable text, clipping and overlap. The inventory marks Slide 1's local-only source.
+
 **Current Slide 13 amendment:** Rachel and Chandler now have the final user-selected lines. Only `slide-13.webp` was replaced; all other tour images are unchanged. See [quote-update scope and QA](SLIDE13_QUOTE_UPDATE.md). The inventory preserves the original tour-stage evidence and marks the new Slide 13 capture separately.
 
 The user reviewed the prepared revision and explicitly approved committing and pushing this documentation-only update. The following inventory records the checks performed before publication; live public README verification follows the push. No presentation change or release tag is included.

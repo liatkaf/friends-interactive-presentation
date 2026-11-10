@@ -48,32 +48,43 @@
     {
       "a": "slide-05",
       "b": "pivot-success",
-      "phash_distance": 2
+      "phash_distance": 2,
+      "review": "Distinct intentional interaction state; Same stairwell; couch moves from the bottom to the top landing and success feedback replaces the initial prompt."
     },
     {
       "a": "slide-04",
       "b": "joey-prediction",
-      "phash_distance": 4
+      "phash_distance": 4,
+      "review": "Distinct intentional interaction state; Same setup illustration; ready state has Play, frozen state shows FREEZE and three prediction buttons."
     },
     {
       "a": "slide-07",
       "b": "research-animation",
-      "phash_distance": 6
+      "phash_distance": 6,
+      "review": "Distinct intentional interaction state; Same workbench; final poster includes the conclusion, while paused playback shows an intermediate frame and progress."
     },
     {
       "a": "slide-04",
       "b": "joey-payoff",
-      "phash_distance": 8
+      "phash_distance": 8,
+      "review": "Distinct intentional interaction state; Two different illustrated poses; starting caption and Play are replaced by the punchline and educational takeaway."
     },
     {
       "a": "slide-12",
       "b": "portrait-selected",
-      "phash_distance": 8
+      "phash_distance": 8,
+      "review": "Distinct intentional interaction state; Six portraits stay visible; highlight and personality text move from Monica to Joey."
     },
     {
       "a": "joey-payoff",
       "b": "joey-prediction",
-      "phash_distance": 8
+      "phash_distance": 8,
+      "review": "Distinct intentional interaction state; Prediction controls precede the reaction; completed state shows a different pose, catchphrase and takeaway."
+    },
+    {
+      "a": "slide-01",
+      "b": "slide-13",
+      "phash_distance": 14
     },
     {
       "a": "slide-02",
@@ -84,11 +95,6 @@
       "a": "slide-11",
       "b": "slide-16",
       "phash_distance": 16
-    },
-    {
-      "a": "slide-01",
-      "b": "slide-13",
-      "phash_distance": 18
     },
     {
       "a": "slide-03",
@@ -135,15 +141,17 @@
         "familiarity": "rewatcher",
         "nostalgia": "high"
       },
-      "url": "https://liatkaf.github.io/friends-interactive-presentation/#slide-1",
+      "url": "http://127.0.0.1:8000/#slide-1",
       "portraitsLoaded": true,
       "file": "screenshots/readme-tour/slide-01.webp",
-      "sha256": "216bfbc1d599424a4b3c843946745a3f9bdb63882c6c1d7e9f9be6b7881f9796",
-      "raw_sha256": "ec248c9286cbe217c4bc3a44b9d14a64812113d2fc4fe0dfbd54cfe0053c34fc",
+      "sha256": "bbfc9d660d9cea1daab69f7bf5881cf66815a61e3df921313d16a2fcc936bb66",
+      "raw_sha256": "e89742d8b6be91b9d75b5199a48e44edb482bbcc7d0b20b90644916d2f3db7a3",
       "width": 1440,
       "height": 1000,
-      "bytes": 70576,
-      "visualReview": "Verified individually: correct numbered slide, expected content/state, complete primary-slide framing and legible at full resolution."
+      "bytes": 73086,
+      "visualReview": "Verified: slide 1/17, both authors and IDs readable, full framing, no overlap with 3D cup or navigation; desktop design matches baseline.",
+      "captureSource": "Local v1.0 baseline plus requested author-credit addition; not deployed.",
+      "captureDate": "2026-11-10"
     },
     {
       "name": "slide-02",
@@ -1070,7 +1078,18 @@
       "errors": [],
       "goldenCases": 20,
       "mode": "Clean static HTTP, no Python API"
-    }
+    },
+    "slide1AuthorPreview": {
+      "visible": true,
+      "uniqueAuthors": [
+        "Livnat Benson",
+        "Liat Kafezider"
+      ],
+      "idsVisible": true,
+      "noHorizontalOverflow": true,
+      "localOnly": true
+    },
+    "all25ScreenshotHashesUnique": true
   },
   "quoteUpdateAmendment": {
     "baselineCommit": "d5cd3f00622399aa8f606a12885eafc8635fb10e",
@@ -1079,5 +1098,18 @@
     "checks": 65,
     "layoutCases": 15,
     "source": "release-candidate local HTTP; published content verified after push"
+  },
+  "localSlide1Amendment": {
+    "capturedAt": "2026-11-10",
+    "baselineCommit": "5ba331b5e5a6ea571a7aee45746f85078ea6eec2",
+    "status": "Local preview only; publication awaits explicit user approval.",
+    "verificationViewports": [
+      "1920x1080",
+      "1366x768",
+      "390x844"
+    ],
+    "readmeCapture": "1440x1000",
+    "otherPrimaryScreenshotsReplaced": 0,
+    "additionalInteractionScreenshotsReplaced": 0
   }
 }

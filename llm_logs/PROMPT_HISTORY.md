@@ -5778,3 +5778,655 @@ The user also requested updating Rachel/Chandler recommendation affinities only 
 ### User prompt 2 — check and append prompt history
 
 The user asked whether the latest Slide 13 instructions were already represented in the AI prompt history. If missing, append them chronologically, clearly identifying both quote replacements and the README update. Existing historical prompts must remain unchanged; no presentation, tests, or other documentation should be modified.
+
+## Version 1.1 final submission polish — 2026-11-10
+
+### USER PROMPT — ORIGINAL, VERBATIM AS AVAILABLE IN THIS CONVERSATION
+
+````text
+# FRIENDS COMFORT LAB — VERSION 1.1
+## Final Submission Polish, Author Identification & Red Team Audit
+
+You are working on the existing **Friends Comfort Lab** project.
+
+**Local repository:** `D:\friends-interactive-presentation`
+
+**GitHub repository:**  
+https://github.com/liatkaf/friends-interactive-presentation
+
+**Live presentation:**  
+https://liatkaf.github.io/friends-interactive-presentation/
+
+## CRITICAL INSTRUCTION — PRESERVE THE APPROVED PROJECT
+
+The current published **v1.0 FINAL** is the approved baseline.
+
+The presentation currently contains **17 slides**.
+
+This task is NOT a redesign, reconstruction, or expansion of the presentation.
+
+Do not use outdated v0.10 specifications or restore previously removed slides.
+
+Do not modify existing slide content, interactions, visual design, animations, questionnaire logic, or recommendation behavior unless a verified technical defect requires a minimal correction.
+
+In particular:
+
+- Preserve the existing 17-slide structure.
+- Preserve the 3D coffee cup and its animations.
+- Preserve the PIVOT game on Slide 5.
+- Preserve the final Rachel Green and Chandler Bing quotes on Slide 13.
+- Preserve the six-character questionnaire structure.
+- Preserve all existing Python-generated charts and animations.
+- Preserve the personalized recommendation engine.
+- Preserve the existing README guided tour.
+- Preserve all historical prompts and development records.
+
+**Do not commit, push, deploy, create a release, or modify Git history without explicit user approval.**
+
+---
+
+# PHASE 1 — MINIMAL SLIDE 1 AUTHOR INFORMATION UPDATE
+
+## Objective
+
+Add the two students' names and identification numbers to the existing Slide 1.
+
+**The slide must look exactly the same as it currently does, except for the addition of the author information.**
+
+### Required text
+
+**PRESENTED BY**
+
+Livnat Benson — 207304213  
+Liat Kafezider — 213069693
+
+### Visual requirements
+
+- Preserve the existing title, subtitle, background, typography, colors, spacing, and overall composition.
+- Preserve the existing Three.js coffee cup, lighting, movement, and animations.
+- Preserve all existing navigation buttons and interactions.
+- Do not replace or redesign any existing element.
+- Do not add a new title slide.
+- Do not change slide numbering.
+- Do not add new decorative elements.
+- Do not introduce unnecessary visual effects.
+- Place the author information in an available area without covering existing content.
+- Use typography consistent with the current presentation.
+- Make the information readable but visually secondary to the main title.
+- Ensure the author information does not overlap the 3D animation or navigation controls.
+- Maintain correct responsive behavior on desktop and mobile.
+
+If the existing layout has insufficient space, make the smallest possible local adjustment to accommodate the author information.
+
+Do not change the overall appearance or composition of Slide 1.
+
+### Visual verification
+
+Capture screenshots of Slide 1 at:
+
+- Desktop resolution: 1920 × 1080
+- Laptop resolution: 1366 × 768
+- Mobile resolution: 390 × 844
+
+Check:
+
+1. Both names are visible.
+2. Both student IDs are correct.
+3. Text is readable.
+4. No overlapping elements.
+5. The 3D coffee cup remains visible and animated.
+6. Navigation still works.
+7. The slide maintains its original visual identity.
+
+If screenshots reveal a problem, correct only the author information placement.
+
+---
+
+# PHASE 2 — README & DOCUMENTATION CONSISTENCY
+
+Review the existing repository documentation.
+
+## README.md
+
+The README currently contains a guided tour of all 17 slides with screenshots and descriptions.
+
+Preserve its existing structure and content.
+
+Update only what is necessary:
+
+- Replace the Slide 1 screenshot with an accurate screenshot showing the added author information.
+- Update the Slide 1 description to mention the authors.
+- Verify that all 17 primary screenshots match their corresponding slides.
+- Verify that additional interactive-state screenshots remain accurate.
+- Verify that no screenshots are duplicated incorrectly.
+- Verify that all images render correctly on GitHub.
+- Verify that all internal and external links work.
+
+Do not regenerate unrelated screenshots unless a verified issue requires it.
+
+## PRD.md
+
+Check whether the PRD accurately describes the current 17-slide presentation.
+
+Identify outdated references to:
+
+- Previous slide counts.
+- Removed slides.
+- Old questionnaire behavior.
+- Outdated slide numbering.
+- Previous quote selections.
+- Deprecated features.
+
+Correct only factual inconsistencies in current project documentation.
+
+Preserve the project's original requirements, historical decisions, and development evolution.
+
+## AI Prompt History
+
+Inspect the existing prompt history, including:
+
+`llm_logs/PROMPT_HISTORY.md`
+
+Verify that the documentation accurately reflects the project's development process, including:
+
+- Initial concept and planning.
+- Presentation development.
+- Interactive features.
+- Three.js implementation.
+- Python integration.
+- Questionnaire development.
+- Red Team reviews.
+- Slide revisions.
+- Rachel and Chandler quote updates.
+- README improvements.
+- Final submission preparation.
+
+Do not fabricate missing prompts, dates, decisions, or development steps.
+
+Do not rewrite historical prompts.
+
+If any recent prompt is missing, identify the gap and report it. Append the exact prompt only when its original wording is available.
+
+---
+
+# PHASE 3 — GITHUB PAGES & ASSET INTEGRITY AUDIT
+
+Perform a comprehensive technical audit of the repository.
+
+## 3.1 Asset Verification
+
+Inspect all asset references used by the presentation.
+
+Verify:
+
+- Image files exist at the referenced paths.
+- Video and animation assets load correctly.
+- JavaScript and CSS files are correctly referenced.
+- Python-generated output files are present where required.
+- Three.js resources load correctly.
+- No missing fonts or other required dependencies.
+- No broken relative paths.
+- No incorrect filename capitalization.
+- No obsolete asset references that cause runtime errors.
+
+Pay special attention to case-sensitive paths on GitHub Pages.
+
+## 3.2 GitHub Pages Compatibility
+
+Verify that the application works correctly when hosted under:
+
+`/friends-interactive-presentation/`
+
+Check for:
+
+- Incorrect root-relative URLs.
+- Broken links.
+- Missing assets.
+- JavaScript console errors.
+- Failed resource requests.
+- Routing problems.
+- Deployment configuration inconsistencies.
+
+Verify that the README links to the correct public repository and live presentation.
+
+Do not change working URLs unnecessarily.
+
+## 3.3 Repository Hygiene
+
+Inspect the repository for:
+
+- Accidental temporary files.
+- Unnecessary generated artifacts.
+- Broken references.
+- Missing required documentation.
+- Incorrectly tracked files.
+- Exposed secrets or credentials.
+- Inconsistent project names or version references.
+
+Do not delete files automatically.
+
+Report any questionable files before proposing removal.
+
+**Audit first. Fix only confirmed issues, using minimal changes.**
+
+---
+
+# PHASE 4 — FUNCTIONAL & REGRESSION TESTING
+
+Run the relevant existing tests to ensure the project remains fully functional.
+
+Do not repeatedly execute lengthy test suites that have already passed unless necessary.
+
+## Slide Navigation
+
+Verify:
+
+- All 17 slides are accessible.
+- Next and Previous navigation work.
+- Slide numbering remains correct.
+- Keyboard navigation works where supported.
+- No navigation loops or broken transitions.
+
+## Interactive Features
+
+Verify:
+
+- Slide 1 Three.js coffee cup.
+- Psychology reveal cards.
+- Joey prediction and punchline interaction.
+- PIVOT game.
+- Python-generated research visualizations.
+- VHS rewind interaction.
+- Questionnaire animations.
+- Mood selection.
+- Stress-O-Meter.
+- Character selection.
+- Quote selection.
+- Comfort preference selection.
+- Familiarity controls.
+- Personalized episode recommendation.
+- Try Again and reset functionality.
+
+## Questionnaire Integrity
+
+Confirm:
+
+- All six questions remain intact.
+- Answers are preserved during navigation.
+- Skipped questions behave correctly.
+- Reset clears previous responses.
+- Recommendation logic remains consistent.
+- No outdated quote identifiers remain in active code.
+- Rachel and Chandler's final quotes are correctly handled.
+
+Do not change the questionnaire scoring or recommendation algorithm unless a confirmed defect is discovered.
+
+## Responsive Design
+
+Test representative desktop, laptop, and mobile viewports.
+
+Report any:
+
+- Overlapping elements.
+- Unreadable text.
+- Clipped content.
+- Broken interactive controls.
+- Unexpected scrolling.
+- Missing visual assets.
+
+---
+
+# PHASE 5 — ACADEMIC REQUIREMENTS COMPLIANCE AUDIT
+
+Review the project against the lecturer's assignment requirements.
+
+Use the actual assignment instructions available in the repository.
+
+If the complete assignment instructions are not available, explicitly identify which requirements cannot be verified.
+
+Do not assume compliance without evidence.
+
+Evaluate the following areas:
+
+## Technical Implementation
+
+- Meaningful HTML and JavaScript implementation.
+- Functional and relevant Three.js animation.
+- Meaningful, reproducible Python implementation.
+- Integration between generated assets and the presentation.
+- Functional interactive components.
+- Appropriate technical complexity.
+
+## Documentation
+
+- README completeness.
+- Accurate screenshots.
+- Explanation of what each feature does.
+- Explanation of how features were implemented.
+- Explanation of why the technologies were selected.
+- PRD completeness.
+- Authentic AI prompt history.
+- Git commit history.
+- Public repository accessibility.
+
+## Academic Integrity
+
+- Research claims supported by appropriate sources.
+- Correct distinction between empirical findings and illustrative data.
+- Accurate citations.
+- No fabricated research findings.
+- No unsupported claims about psychological effects.
+- Transparent explanation of the recommendation algorithm.
+- Clear distinction between AI-generated content and verified research.
+
+Do not invent citations or research results.
+
+## Submission Readiness
+
+Check whether the repository includes everything needed for the final submission.
+
+Verify that the project information is consistent with:
+
+- Project title: Friends Comfort Lab.
+- Authors: Livnat Benson and Liat Kafezider.
+- Group identifier: use the actual registered group ID; do not invent one.
+- Current presentation: 17 slides.
+- Repository and GitHub Pages URLs.
+
+Also report any external submission requirements that cannot be verified from the repository, such as the official submission form, required PDF filename, or individual student submissions.
+
+---
+
+# PHASE 6 — FINAL RED TEAM REVIEW
+
+Perform a critical review of the finished project from the perspective of a strict academic evaluator and automated LLM-based assessment system.
+
+The objective is to identify real weaknesses, not to artificially justify a perfect grade.
+
+Evaluate:
+
+1. Technical reliability.
+2. Creativity and originality.
+3. User experience.
+4. Quality of interactions.
+5. Meaningful technology integration.
+6. Research credibility.
+7. Documentation quality.
+8. Reproducibility.
+9. Academic transparency.
+10. Compliance with assignment requirements.
+
+For every identified issue, provide:
+
+- Description.
+- Severity: Critical / High / Medium / Low.
+- Supporting evidence.
+- Potential effect on grading.
+- Recommended correction.
+- Whether the issue has already been fixed.
+
+Do not report speculative issues as confirmed defects.
+
+Do not make major design changes as part of this audit.
+
+## Self-Assessment
+
+Our current proposed self-assessment grade is:
+
+**93/100**
+
+Evaluate whether this grade is justified by the actual project quality and assignment requirements.
+
+Do not automatically agree with this score.
+
+Provide an independent assessment with a brief explanation of any discrepancy.
+
+---
+
+# PHASE 7 — FINAL QUALITY REPORT
+
+Produce a clear final report containing:
+
+## A. Implemented Changes
+
+List the exact files modified.
+
+Explain the Slide 1 author information addition.
+
+Confirm that the original visual design was preserved.
+
+## B. Technical Audit Results
+
+Summarize:
+
+- Asset verification.
+- Broken links, if any.
+- GitHub Pages compatibility.
+- JavaScript errors, if any.
+- Responsive behavior.
+- Test results.
+
+## C. Documentation Audit
+
+Report the status of:
+
+- README.md
+- PRD.md
+- AI prompt history
+- Screenshots
+- Research references
+- Git history
+
+## D. Academic Compliance
+
+Provide a checklist of the lecturer's requirements:
+
+- Pass
+- Partial
+- Fail
+- Not verified
+
+Include supporting evidence for each assessment.
+
+## E. Red Team Findings
+
+List remaining weaknesses, prioritized by severity.
+
+## F. Final Submission Recommendation
+
+Provide:
+
+- Recommended self-assessment grade.
+- Critical issues requiring correction before submission.
+- Optional improvements.
+- Final readiness assessment.
+
+---
+
+# PHASE 8 — STOP BEFORE PUBLICATION
+
+After completing the changes, tests, and audit:
+
+**STOP AND WAIT FOR USER APPROVAL.**
+
+Do not:
+
+- Commit.
+- Push.
+- Deploy.
+- Create a release tag.
+- Rewrite Git history.
+- Modify unrelated files.
+- Perform a major redesign.
+
+Show the updated Slide 1 screenshots and the final audit report.
+
+Clearly distinguish between:
+
+1. Changes completed locally.
+2. Issues identified but not modified.
+3. Changes recommended for future approval.
+
+Wait for explicit user authorization before publishing anything to GitHub.
+
+---
+
+# FINAL SUCCESS CRITERIA
+
+This task is successful only if:
+
+1. Slide 1 looks the same as before, with the two authors' names and IDs added.
+2. The existing 17-slide presentation remains intact.
+3. All previously approved interactions and visual features are preserved.
+4. README and current documentation accurately reflect the project.
+5. All referenced assets and public links are verified.
+6. Relevant regression tests pass.
+7. A comprehensive Red Team and academic compliance report is produced.
+8. No unsupported claims or fabricated documentation are introduced.
+9. No changes are published without explicit approval.
+
+**Primary principle: Preserve the approved presentation, make the smallest necessary improvements, and provide an evidence-based final submission audit.**
+````
+
+## v1.1 final GitHub publication — 2026-11-10
+
+### USER PROMPT — ORIGINAL, VERBATIM AS AVAILABLE IN THIS CONVERSATION
+
+````text
+# FRIENDS COMFORT LAB v1.1 — FINAL GITHUB PUBLICATION
+
+The updated Slide 1 design has been reviewed and approved.
+
+You are now authorized to publish the approved v1.1 changes to the existing GitHub repository.
+
+Project directory:
+`D:\friends-interactive-presentation`
+
+Repository:
+https://github.com/liatkaf/friends-interactive-presentation
+
+Live presentation:
+https://liatkaf.github.io/friends-interactive-presentation/
+
+## 1. Verify the Approved Presentation
+
+Before publishing, confirm that:
+
+- Slide 1 includes both authors and their correct student IDs:
+  - Livnat Benson — 207304213
+  - Liat Kafezider — 213069693
+- The original Slide 1 design, 3D coffee cup and animations are preserved.
+- All 17 slides remain intact.
+- The final Rachel and Chandler quotes on Slide 13 remain unchanged.
+- All existing interactions and recommendation functionality are preserved.
+
+Do not make additional visual or functional changes.
+
+## 2. Update README.md
+
+Ensure the README reflects the final v1.1 presentation.
+
+- Include both authors' names.
+- Include the approved Slide 1 screenshot with the student information.
+- Preserve the complete 17-slide guided tour.
+- Verify all screenshots and captions.
+- Verify that the repository and live presentation links are correct.
+- Preserve existing technical explanations and documentation.
+
+## 3. Update PRD.md
+
+Ensure the PRD accurately reflects the final project.
+
+- Version: v1.1.
+- Current presentation structure: 17 slides.
+- Both authors' names.
+- Approved Slide 1 author information.
+- Current interactive features and questionnaire behavior.
+- Final Slide 13 quotes.
+
+Preserve the original requirements and development history. Do not rewrite historical decisions.
+
+## 4. Update AI Prompt History
+
+Update:
+
+`llm_logs/PROMPT_HISTORY.md`
+
+Ensure the prompt history includes the latest development stages:
+
+- Slide 1 author information addition.
+- Final v1.1 technical and academic audit.
+- README and PRD updates.
+- Final publication instructions.
+
+Append the exact current publication prompt if available.
+
+Preserve all previous prompts and their chronological order.
+
+Do not fabricate prompts, dates or development actions.
+
+## 5. Group Information
+
+The final group identifier is:
+
+**LIATLVNT**
+
+It contains exactly eight characters.
+
+Ensure the group identifier is correctly documented in the current project information where appropriate.
+
+Do not modify historical records or invent a university registration confirmation.
+
+## 6. Final Verification
+
+Before publishing:
+
+- Review `git status` and the staged changes.
+- Ensure only intended files are included.
+- Run relevant targeted tests.
+- Confirm the approved Slide 1 screenshot is accurate.
+- Check that README, PRD and prompt history are consistent.
+- Confirm no existing slide or interaction has been unintentionally modified.
+
+Avoid unnecessary repetition of lengthy test suites that already passed.
+
+## 7. Commit and Push
+
+After successful verification:
+
+1. Stage the approved presentation and documentation changes.
+2. Create a commit with a clear message, such as:
+   `Publish Friends Comfort Lab v1.1 final submission update`
+3. Push to the existing `main` branch.
+4. Wait for GitHub Pages deployment to finish.
+5. Verify the public presentation displays the updated Slide 1.
+6. Verify the public README displays the correct Slide 1 screenshot.
+7. Verify the published PRD and prompt history contain the latest updates.
+8. Confirm the working tree is clean.
+
+Do not create a new release tag or rewrite Git history.
+
+## 8. Final Report
+
+Provide:
+
+- Commit hash.
+- Files changed.
+- Test results.
+- GitHub Pages deployment status.
+- Confirmation that README.md was updated.
+- Confirmation that PRD.md was updated.
+- Confirmation that llm_logs/PROMPT_HISTORY.md was updated.
+- Confirmation that group ID LIATLVNT appears correctly.
+- Confirmation that all 17 slides remain functional.
+
+Provide direct links to:
+
+1. Live presentation.
+2. GitHub repository.
+3. README.md.
+4. PRD.md.
+5. llm_logs/PROMPT_HISTORY.md.
+
+**Success criterion:** The approved v1.1 presentation and all three documentation files are successfully published, synchronized and publicly accessible on GitHub.
+````

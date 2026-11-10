@@ -1,6 +1,8 @@
-# Friends Comfort Lab — v1.0 FINAL
+# Friends Comfort Lab — v1.1 FINAL
 
 [Explore the live presentation](https://liatkaf.github.io/friends-interactive-presentation/) · [GitHub repository](https://github.com/liatkaf/friends-interactive-presentation) · [PRD](PRD.md)
+
+**Authors:** Livnat Benson and Liat Kafezider · **Group:** LIATLVNT.
 
 ## Project Overview
 
@@ -10,7 +12,7 @@ The project connects careful reading of two research papers with original visual
 
 **An educational experience and entertainment recommender, not a clinical assessment.** Published findings, broader interpretation, fictional examples and editorial recommendations are labelled separately. The papers did not test Friends as a treatment. No episode footage, theme music, live AI service or API key is used.
 
-v1.0 FINAL is already [published and verified](docs/FINAL_PUBLICATION.md). This walkthrough documents that version. [Screenshot inventory and review](docs/README_GUIDED_TOUR_REVIEW.md) records provenance, numbering, clipping and duplicate checks.
+v1.1 FINAL carries forward the verified 17-slide v1.0 presentation and adds the approved author credit to Slide 1. The guided tour below documents the approved v1.1 presentation. [Screenshot inventory and review](docs/README_GUIDED_TOUR_REVIEW.md) records provenance, numbering, clipping and duplicate checks; the earlier v1.0 publication record remains available in [the release report](docs/FINAL_PUBLICATION.md).
 
 [Highlights](#highlights) · [All 17 slides](#a-guided-tour-of-all-17-slides) · [Interactions](#interactive-features-in-action) · [Technology](#technologies-and-development-process) · [Research and documentation](#research-and-academic-documentation)
 
@@ -36,7 +38,7 @@ Selecting Joey enlarges his painted card and reveals his description. Slide 12 b
 
 ## A Guided Tour of All 17 Slides
 
-Follow the presentation in its actual order. Every primary image below was captured directly from the **published site** at 1440 × 1000, with its live title, slide ID and content dimensions checked. Each image appears once in this README; click it for full resolution.
+Follow the presentation in its actual order. The Slide 1 image shows the approved author credit; the other 16 primary images were captured directly from the **published site** at 1440 × 1000, with each live title, slide ID and content dimensions checked against the unchanged slide content. Each primary image appears once in this README; click it for full resolution.
 
 The profile screenshots use deliberately selected example answers: Happy, stress 5, Monica, “I know!”, Warmth, rewatcher and high nostalgia. They are not defaults. The later interaction examples identify their changed states.
 
@@ -44,7 +46,7 @@ The profile screenshots use deliberately selected example answers: Happy, stress
 
 ![Slide 01 of 17: Welcome to the Friends Comfort Lab](screenshots/readme-tour/slide-01.webp)
 
-**Purpose:** Welcome visitors into a familiar fictional world and introduce the question behind the project: why can rewatching feel comforting?
+**Purpose:** Welcome visitors into a familiar fictional world, introduce the question behind the project—why can rewatching feel comforting?—and credit the two student authors.
 
 **What makes it special:** Drag the coffee mug or use its keyboard controls to change the view. Its gentle rotation stops when the slide is hidden, keeping the welcome scene alive without distracting from later slides.
 

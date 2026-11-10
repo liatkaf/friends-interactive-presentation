@@ -1,8 +1,14 @@
-# Friends Comfort Lab - v1.0 FINAL Product Requirements
+# Friends Comfort Lab - v1.1 FINAL Product Requirements
 
 ## Vision and audience
 
-FriendsAnxietyStudio is an 17-slide HTML educational presentation for a university professor, AI evaluation agent and classroom viewers. It uses Friends as an accessible cultural example for a carefully qualified research narrative, then offers an optional entertainment recommendation. It is not a clinical assessment or treatment tool.
+Friends Comfort Lab is a 17-slide HTML educational presentation for a university professor, AI evaluation agent and classroom viewers. It uses Friends as an accessible cultural example for a carefully qualified research narrative, then offers an optional entertainment recommendation. It is not a clinical assessment or treatment tool.
+
+**Authors:** Livnat Benson and Liat Kafezider.
+
+**Group identifier supplied for submission:** LIATLVNT.
+
+Version 1.1 adds the approved authors' names and student IDs to the existing Slide 1. It preserves the approved v1.0 visual design and all 17 slides, interactions and recommendation behavior; it does not introduce a new release tag.
 
 Educational goals: explain familiarity and belonging research; distinguish experiments from diary associations and interpretation; demonstrate meaningful HTML/CSS, JavaScript, Python and animated Three.js; document the user's creative direction and iterative AI-assisted development honestly.
 
@@ -10,7 +16,7 @@ Educational goals: explain familiarity and belonging research; distinguish exper
 
 | Slide | Scope and behavior |
 |---|---|
-| 1 | Welcome: continuously rotating genuine 3D mug, manual drag, pause when hidden |
+| 1 | Welcome: continuously rotating genuine 3D mug, manual drag, pause when hidden; credits Livnat Benson (207304213) and Liat Kafezider (213069693) |
 | 2 | Why rewatch: published descriptive means preview |
 | 3 | Psychology: four original illustrated reveal cards with dynamic takeaway |
 | 4 | Missing Punchline: original Joey restaurant adaptation, timed setup, prediction freeze, unscored reveal, explicit purpose and Replay |
@@ -22,7 +28,7 @@ Educational goals: explain familiarity and belonging research; distinguish exper
 | 10 | Optional mood |
 | 11 | Optional self-reported stress, 0-10 |
 | 12 | Six character cards |
-| 13 | Six integrated iconic quote cards |
+| 13 | Six selectable quote cards, one per main character: Rachel Green — “I'm gonna go get one of those job things.”; Joey Tribbiani — “How you doin'?”; Ross Geller — “We were on a break!”; Chandler Bing — “I make jokes when I'm uncomfortable.”; Phoebe Buffay — “Smelly Cat”; Monica Geller — “I know!” |
 | 14 | Desired comfort experience |
 | 15 | Familiarity and nostalgia |
 | 16 | Actual matching process and reveal |
